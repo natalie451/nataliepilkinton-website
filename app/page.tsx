@@ -45,6 +45,14 @@ const paths = [
     cta: "Start the investor path",
     secondary: { href: "/investors/beginner", label: "How to start investing" },
   },
+  {
+    eyebrow: "Agents",
+    title: "Join my team",
+    body: "For licensed agents and people working toward a license. Start with a free commission audit and a conversation about joining Natalie.",
+    href: "/join-my-team",
+    cta: "See how to join",
+    secondary: { href: "/booking", label: "Book a call" },
+  },
 ];
 
 export default function HomePage() {
@@ -80,9 +88,9 @@ export default function HomePage() {
             Choose your path
           </h2>
           <p className="max-w-[42rem] text-gray-dark mb-xl">
-            Three different jobs, three different next steps. Pick the one that matches what you are doing right now.
+            Buyers, sellers, investors, and agents each have a next step. Pick the one that matches what you are doing right now.
           </p>
-          <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-lg">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-lg">
             {paths.map((path) => (
               <article
                 key={path.href}

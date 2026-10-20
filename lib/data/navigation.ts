@@ -51,6 +51,7 @@ export const primaryNav: NavItem[] = [
       { label: "Case Studies", href: "/investors/case-studies" },
     ],
   },
+  { label: "Join My Team", href: "/join-my-team" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   {
@@ -63,7 +64,6 @@ export const primaryNav: NavItem[] = [
       { label: "Blog", href: "/blog" },
       { label: "Resources", href: "/resources" },
       { label: "Realtors", href: "/realtors" },
-      { label: "Join My Team", href: "/join-my-team" },
       { label: "Vendors", href: "/vendor-sponsorship" },
     ],
   },
@@ -116,7 +116,7 @@ export const footerNav = {
     title: "Company",
     links: [
       { label: "Why HomeRock", href: "/about" },
-      { label: "Join Our Team", href: "/join-my-team" },
+      { label: "Join My Team", href: "/join-my-team" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/terms-of-service" },
     ] as NavChild[],
