@@ -63,6 +63,7 @@ export const primaryNav: NavItem[] = [
       { label: "Blog", href: "/blog" },
       { label: "Resources", href: "/resources" },
       { label: "Realtors", href: "/realtors" },
+      { label: "Join My Team", href: "/join-my-team" },
       { label: "Vendors", href: "/vendor-sponsorship" },
     ],
   },
@@ -70,7 +71,9 @@ export const primaryNav: NavItem[] = [
 
 export const bookingCta: NavChild = { label: "Book a Call", href: "/booking" };
 
-/** Spring is the home market. The rest are the only other cities she serves. */
+/** Spring is home base. She serves all of Greater Houston, with the focus on this corridor. */
+export const serviceRegion = "Greater Houston, especially north of I-10 up to Huntsville";
+
 export const serviceAreas = [
   "Spring",
   "Houston",
@@ -78,6 +81,10 @@ export const serviceAreas = [
   "The Woodlands",
   "Tomball",
   "Magnolia",
+  "Huntsville",
+  "Humble",
+  "Klein",
+  "Kingwood",
 ] as const;
 
 export function formatCityList(cities: readonly string[]) {
@@ -109,7 +116,7 @@ export const footerNav = {
     title: "Company",
     links: [
       { label: "Why HomeRock", href: "/about" },
-      { label: "Join Our Team", href: "/realtors/join" },
+      { label: "Join Our Team", href: "/join-my-team" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/terms-of-service" },
     ] as NavChild[],
@@ -120,7 +127,7 @@ export const footerNav = {
       { label: "Facebook", href: "https://www.facebook.com/natalie.pilkinton.1" },
       { label: "Instagram", href: "https://instagram.com/nataliepilkinton" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/nataliepilkinton1" },
-      { label: "YouTube", href: "https://www.youtube.com/channel/UCuXN_TctvXKZFs2ImP_sCBA" },
+      { label: "YouTube", href: "https://www.youtube.com/@NataliePilkintonRealtor" },
       { label: "HAR.com Profile", href: "https://www.har.com/web/nataliepilkinton" },
     ] as NavChild[],
   },

@@ -12,7 +12,7 @@ import { sellerJourney } from "@/lib/content/sellers";
 export const metadata: Metadata = buildMetadata({
   title: "Sell a Home in Spring, TX",
   description:
-    "Selling in Spring, Houston, Conroe, The Woodlands, Tomball, or Magnolia? REALTOR Natalie Pilkinton helps with pricing, marketing, and timing. Call or text (832) 863-3468.",
+    "Selling in Spring, TX or Greater Houston? Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/sellers",
 });
 
@@ -36,7 +36,7 @@ export default function SellersPage() {
   return (
     <AcademyLayout
       title="Sell a Home in Spring, TX"
-      subheading="Pricing, marketing, and a selling plan for homes in Spring and nearby North Houston communities."
+      subheading="Pricing, marketing, and a selling plan for homes in Spring and Greater Houston, especially north of I-10 up to Huntsville."
       ctaTitle="Ready to talk about selling?"
       ctaDescription="Request a home value conversation, or call and text Natalie to talk through timing and next steps."
       ctaLabel="What's my home worth?"

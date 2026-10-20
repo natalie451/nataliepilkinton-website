@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { CTA } from "@/components/sections/CTA";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { formatCityList, serviceAreas, siteConfig } from "@/lib/data/navigation";
+import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { faqSchema, jsonLdScriptProps } from "@/lib/seo/schema";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   title: "About Natalie Pilkinton, Spring TX REALTOR | HomeRock Realty",
   absoluteTitle: true,
   description:
-    "Natalie Pilkinton is a Spring, TX REALTOR with HomeRock Realty and a real estate investor with 20+ years of experience helping buyers, sellers, and investors.",
+    "Natalie Pilkinton is a Spring, TX REALTOR with HomeRock Realty. She serves Greater Houston, especially north of I-10 up to Huntsville, and has 20+ years of experience helping buyers, sellers, and investors.",
   path: "/about",
 });
 
@@ -67,7 +67,7 @@ const faqs = [
   {
     question: "What areas does Natalie Pilkinton serve?",
     answer:
-      `Natalie is based in Spring, TX. She works with buyers, sellers, and investors in ${formatCityList(serviceAreas)}.`,
+      `Natalie is based in Spring, TX. She serves ${serviceRegion}, including ${formatCityList(serviceAreas)}.`,
   },
   {
     question: "Is Natalie Pilkinton a licensed Realtor?",
@@ -223,7 +223,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2>Markets served</h2>
-              <p>Based in Spring, TX, and also working in {formatCityList(serviceAreas.slice(1))}:</p>
+              <p>Based in Spring, TX. She serves {serviceRegion}, including {formatCityList(serviceAreas.slice(1))}:</p>
               <ul className="flex flex-wrap gap-sm list-none p-0">
                 {serviceAreas.map((market) => (
                   <li key={market} className="px-md py-xs rounded-full border border-gray-light bg-white text-navy text-sm font-semibold">

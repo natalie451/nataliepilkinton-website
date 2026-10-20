@@ -10,7 +10,7 @@ import { MeetupCallout } from "@/components/content/MeetupCallout";
 export const metadata: Metadata = buildMetadata({
   title: "Real Estate Investing in Spring, TX",
   description:
-    "Invest around Spring, Houston, Conroe, The Woodlands, Tomball, and Magnolia with Natalie Pilkinton, a REALTOR who invests herself. Call or text (832) 863-3468.",
+    "Invest in Spring, TX and Greater Houston with Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/investors",
 });
 
@@ -94,7 +94,7 @@ export default function InvestorsPage() {
   return (
     <AcademyLayout
       title="Invest in Spring, TX Real Estate"
-      subheading="Rentals, financing, and strategy for Spring and nearby communities, from a REALTOR who invests her own money."
+      subheading="Rentals, financing, and strategy for Spring and Greater Houston, especially north of I-10 up to Huntsville, from a REALTOR who invests her own money."
       ctaTitle="Ready to talk through a deal?"
       ctaDescription="Call or text Natalie, or book a time to review your goals, your budget, and what a deal needs to look like."
       ctaLabel="Book an investor call"

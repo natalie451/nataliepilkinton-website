@@ -9,14 +9,14 @@ import { ContactActions } from "@/components/cta/ContactActions";
 import { RealtorVideos } from "@/components/sections/RealtorVideos";
 import { homeStats } from "@/lib/data/stats";
 import { realtorChannelUrl } from "@/lib/data/videos";
-import { formatCityList, serviceAreas, siteConfig } from "@/lib/data/navigation";
+import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
   title: "Spring TX REALTOR | Natalie Pilkinton | Buy, Sell, or Invest",
   absoluteTitle: true,
   description:
-    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. Also serving Houston, Conroe, The Woodlands, Tomball, and Magnolia. Call or text (832) 863-3468.",
+    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/",
 });
 
@@ -24,7 +24,7 @@ const paths = [
   {
     eyebrow: "Buyers",
     title: "Buy a home",
-    body: "First-time buyers, move-up buyers, and people relocating into Spring and nearby communities. Financing, offers, and closing, explained before you shop.",
+    body: "First-time buyers, move-up buyers, and people relocating into Spring and Greater Houston. Financing, offers, and closing, explained before you shop.",
     href: "/buyers",
     cta: "Start the buyer path",
     secondary: { href: "/listings", label: "See current listings" },
@@ -64,7 +64,7 @@ export default function HomePage() {
             Buy, sell, or invest with Natalie Pilkinton
           </h1>
           <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
-            HomeRock Realty. Based in Spring, and also working in {formatCityList(serviceAreas.slice(1))}. Call or text{" "}
+            HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text{" "}
             <a href={siteConfig.phoneHref} className="text-white font-semibold underline underline-offset-2">
               {siteConfig.phone}
             </a>
@@ -120,10 +120,10 @@ export default function HomePage() {
 
       <Section>
         <Container>
-          <h2>Real estate in Spring, TX and nearby</h2>
+          <h2>Real estate in Spring and Greater Houston</h2>
           <p className="max-w-[44rem] text-gray-dark">
             Natalie is based at {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region}{" "}
-            {siteConfig.address.postalCode}. Spring is home base. She also works with clients in{" "}
+            {siteConfig.address.postalCode}. Spring is home base. She serves {serviceRegion}, including{" "}
             {formatCityList(serviceAreas.slice(1))}.
           </p>
           <ul className="flex flex-wrap gap-sm list-none p-0 mt-lg mb-lg">
@@ -151,7 +151,7 @@ export default function HomePage() {
 
       <CTA
         title="Talk with Natalie about your next move"
-        description="Call or text, send an email, or pick a time. She works with buyers, sellers, and investors across Spring and nearby communities."
+        description="Call or text, send an email, or pick a time. She works with buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville."
       >
         <ContactActions tone="on-dark" />
       </CTA>

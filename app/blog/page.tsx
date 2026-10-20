@@ -150,7 +150,7 @@ export default async function BlogPage() {
                   <h3 className="text-lg font-bold mb-sm">Natalie Pilkinton</h3>
                   <p className="text-sm text-gray-300 mb-md font-semibold">REALTOR®</p>
                   <p className="text-xs text-gray-400 mb-lg leading-relaxed">
-                    Helping buyers, sellers, and investors achieve their real estate goals in Houston.
+                    Helping buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville.
                   </p>
                   <Link
                     href="https://calendly.com/nataliepilkinton"

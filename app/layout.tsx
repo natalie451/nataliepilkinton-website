@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name} - ${siteConfig.brand}`,
   },
   description:
-    "Spring, TX REALTOR Natalie Pilkinton helps buyers, sellers, and investors in Spring, Houston, Conroe, The Woodlands, Tomball, and Magnolia. Call or text (832) 863-3468.",
+    "Spring, TX REALTOR Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   keywords:
-    "Spring TX REALTOR, Natalie Pilkinton, buy home Spring TX, sell home Spring TX, real estate investor Spring TX, Houston, Conroe, The Woodlands, Tomball, Magnolia, HomeRock Realty",
+    "Spring TX REALTOR, Natalie Pilkinton, Greater Houston, north of I-10, Huntsville, Houston, Conroe, The Woodlands, Tomball, Magnolia, Humble, Klein, Kingwood, HomeRock Realty",
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.brand,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: `${siteConfig.name} - ${siteConfig.brand}`,
     title: "Natalie Pilkinton, Spring TX REALTOR | Buyers, Sellers & Investors",
     description:
-      "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. Also serving Houston, Conroe, The Woodlands, Tomball, and Magnolia.",
+      "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville.",
     images: [
       {
         url: "https://assets.cdn.filesafe.space/p6coQEMK9WucfxjPnduV/media/6a58be7f524a3ec4c61853f3.png",

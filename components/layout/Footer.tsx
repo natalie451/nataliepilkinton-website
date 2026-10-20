@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { footerNav, formatCityList, serviceAreas, siteConfig } from "@/lib/data/navigation";
+import { footerNav, formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { SocialIcons } from "@/components/layout/SocialIcons";
 import { Newsletter } from "@/components/forms/Newsletter";
 
@@ -24,7 +24,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-cream/80 text-sm max-w-[24rem] mb-md">
-              Spring, TX REALTOR with HomeRock Realty. Helping buyers, sellers, and investors in{" "}
+              Spring, TX REALTOR with HomeRock Realty. Serving {serviceRegion}, including{" "}
               {formatCityList(serviceAreas)}.
             </p>
             <ul className="list-none space-y-xs mb-lg text-sm">
