@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/data/navigation";
+import { formatCityList, siteConfig } from "@/lib/data/navigation";
 import type { Listing } from "@/lib/listings/types";
 
 /** JSON-LD builders. Render via <script type="application/ld+json"> in each page. */
@@ -50,7 +50,7 @@ export function personSchema() {
     url: `${siteConfig.siteUrl}/about`,
     image: siteConfig.headshotUrl,
     jobTitle: "REALTOR®",
-    description: `Spring, TX REALTOR® and real estate investor with ${siteConfig.yearsExperience} years of experience helping buyers, sellers, and investors in Spring, Conroe, Willis, Montgomery, Splendora, and New Caney.`,
+    description: `Spring, TX REALTOR® and real estate investor with ${siteConfig.yearsExperience} years of experience helping buyers, sellers, and investors in ${formatCityList(siteConfig.areasServed)}.`,
     worksFor: { "@id": schemaIds.brokerage },
     address: postalAddress,
     telephone: "+1-832-863-3468",
@@ -90,7 +90,7 @@ export function localBusinessSchema() {
     address: postalAddress,
     areaServed: siteConfig.areasServed.map((city) => ({ "@type": "City", name: `${city}, TX` })),
     description:
-      "Spring, TX real estate agent helping buyers, sellers, and investors in Spring, Conroe, Willis, Montgomery, Splendora, and New Caney.",
+      `Spring, TX real estate agent helping buyers, sellers, and investors in ${formatCityList(siteConfig.areasServed)}.`,
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-832-863-3468",

@@ -153,7 +153,7 @@ export default async function BlogPage() {
                     Helping buyers, sellers, and investors achieve their real estate goals in Houston.
                   </p>
                   <Link
-                    href="https://calendly.com/nataliepilkinton/30min"
+                    href="https://calendly.com/nataliepilkinton"
                     className="w-full px-lg py-sm rounded font-semibold transition-colors text-center"
                     style={{ backgroundColor: "#c9a227", color: "#0a1a33" }}
                   >

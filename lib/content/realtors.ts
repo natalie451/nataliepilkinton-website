@@ -23,7 +23,7 @@ export const commissionStructure = {
     "$50 residential lease fee (client paid)",
     "$595 commercial (sale or lease)",
   ],
-  example: "On $100,000 in gross commission income (GCI): $90,000 to the agent, $10,000 to the brokerage (the annual cap — after that, the agent keeps 100%).",
+  example: "On $100,000 in gross commission income (GCI): $90,000 to the agent, $10,000 to the brokerage (the annual cap; after that, the agent keeps 100%).",
 };
 
 export const businessTools = [
@@ -58,7 +58,7 @@ export const missionVision = {
   vision:
     "HomeRock Realty's vision is to be recognized as the leading value-based real estate firm in our local markets, delivering a guaranteed 5-Star Client Experience in every transaction.",
   mission:
-    "HomeRock Realty's mission is to deliver a guaranteed 5-Star Client Experience by utilizing a talented, organized, and service-driven real estate team — providing guidance, education, and value before, during, and long after the transaction through a fully integrated ecosystem of real estate, mortgage, insurance, and trusted service partners.",
+    "HomeRock Realty's mission is to deliver a guaranteed 5-Star Client Experience by utilizing a talented, organized, and service-driven real estate team, providing guidance, education, and value before, during, and long after the transaction through a fully integrated ecosystem of real estate, mortgage, insurance, and trusted service partners.",
 };
 
 export const founders = [

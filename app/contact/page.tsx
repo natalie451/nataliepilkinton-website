@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Natalie Pilkinton, Spring TX REALTOR",
   description:
-    "Call or text (832) 863-3468, email natalie@nataliepilkinton.com, or book a time. Natalie Pilkinton serves Spring, Conroe, Willis, Montgomery, Splendora, and New Caney.",
+    "Call or text (832) 863-3468, email natalie@nataliepilkinton.com, or book a time. Natalie Pilkinton serves Spring, Houston, Conroe, The Woodlands, Tomball, and Magnolia.",
   path: "/contact",
 });
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
     <>
       <Hero
         title="Contact Natalie"
-        subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Serving ${formatCityList(serviceAreas.slice(0, 6))}.`}
+        subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Serving ${formatCityList(serviceAreas)}.`}
       >
         <ContactActions tone="on-dark" showReview />
       </Hero>

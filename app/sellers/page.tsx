@@ -12,7 +12,7 @@ import { sellerJourney } from "@/lib/content/sellers";
 export const metadata: Metadata = buildMetadata({
   title: "Sell a Home in Spring, TX",
   description:
-    "Selling in Spring, Conroe, Willis, Montgomery, Splendora, or New Caney? REALTOR Natalie Pilkinton helps with pricing, marketing, and timing. Call or text (832) 863-3468.",
+    "Selling in Spring, Houston, Conroe, The Woodlands, Tomball, or Magnolia? REALTOR Natalie Pilkinton helps with pricing, marketing, and timing. Call or text (832) 863-3468.",
   path: "/sellers",
 });
 

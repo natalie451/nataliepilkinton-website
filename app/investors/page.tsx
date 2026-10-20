@@ -10,7 +10,7 @@ import { MeetupCallout } from "@/components/content/MeetupCallout";
 export const metadata: Metadata = buildMetadata({
   title: "Real Estate Investing in Spring, TX",
   description:
-    "Invest around Spring, Conroe, Willis, Montgomery, Splendora, and New Caney with Natalie Pilkinton, a REALTOR who invests herself. Call or text (832) 863-3468.",
+    "Invest around Spring, Houston, Conroe, The Woodlands, Tomball, and Magnolia with Natalie Pilkinton, a REALTOR who invests herself. Call or text (832) 863-3468.",
   path: "/investors",
 });
 

@@ -75,8 +75,21 @@ export default function BookingPage() {
 
       <Section tone="light">
         <Container className="max-w-[48rem]">
-          <h2 className="text-center">Client Testimonials</h2>
+          <h2 className="text-center">Google reviews</h2>
+          <p className="text-center text-gray-dark mb-xl">
+            These reviews are shown as written on Natalie&rsquo;s Google Business Profile.
+          </p>
           <TestimonialGrid items={bookingTestimonials} onWhite />
+          <p className="text-center mt-lg mb-0">
+            <a
+              href={siteConfig.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-ink font-semibold underline underline-offset-2"
+            >
+              Read my Google reviews
+            </a>
+          </p>
         </Container>
       </Section>
     </>

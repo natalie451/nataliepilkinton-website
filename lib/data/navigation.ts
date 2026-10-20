@@ -70,18 +70,13 @@ export const primaryNav: NavItem[] = [
 
 export const bookingCta: NavChild = { label: "Book a Call", href: "/booking" };
 
-/** Spring first. The opening cities are the ones to lead with in headings and schema. */
+/** Spring is the home market. The rest are the only other cities she serves. */
 export const serviceAreas = [
   "Spring",
+  "Houston",
   "Conroe",
-  "Willis",
-  "Montgomery",
-  "Splendora",
-  "New Caney",
   "The Woodlands",
   "Tomball",
-  "Houston",
-  "Cypress",
   "Magnolia",
 ] as const;
 
@@ -191,7 +186,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/natalie.pilkinton.1",
     instagram: "https://instagram.com/nataliepilkinton",
     linkedin: "https://www.linkedin.com/in/nataliepilkinton1",
-    youtube: "https://www.youtube.com/channel/UCuXN_TctvXKZFs2ImP_sCBA",
+    youtube: "https://www.youtube.com/@NataliePilkintonRealtor",
   },
   siteUrl: "https://www.nataliepilkinton.com",
 };

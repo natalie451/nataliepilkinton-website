@@ -15,7 +15,7 @@ import { buyerJourney, buyerFaq, buyerModules } from "@/lib/content/buyers";
 export const metadata: Metadata = buildMetadata({
   title: "Buy a Home in Spring, TX",
   description:
-    "Buying in Spring, Conroe, Willis, Montgomery, Splendora, or New Caney? REALTOR Natalie Pilkinton walks you through financing, offers, and closing. Call or text (832) 863-3468.",
+    "Buying in Spring, Houston, Conroe, The Woodlands, Tomball, or Magnolia? REALTOR Natalie Pilkinton walks you through financing, offers, and closing. Call or text (832) 863-3468.",
   path: "/buyers",
 });
 
@@ -52,7 +52,7 @@ export default function BuyersPage() {
   return (
     <AcademyLayout
       title="Buy a Home in Spring, TX"
-      subheading="Financing, offers, and closing for buyers in Spring, Conroe, Willis, Montgomery, Splendora, and New Caney."
+      subheading="Financing, offers, and closing for buyers in Spring, Houston, Conroe, The Woodlands, Tomball, and Magnolia."
       ctaTitle="Ready to talk about buying?"
       ctaDescription="Call or text Natalie, or book a time to go through your price range, loan options, and next steps."
       ctaLabel="Book a buyer call"

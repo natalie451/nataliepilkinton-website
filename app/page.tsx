@@ -6,7 +6,9 @@ import { Stats } from "@/components/sections/Stats";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { RealtorVideos } from "@/components/sections/RealtorVideos";
 import { homeStats } from "@/lib/data/stats";
+import { realtorChannelUrl } from "@/lib/data/videos";
 import { formatCityList, serviceAreas, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -14,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Spring TX REALTOR | Natalie Pilkinton | Buy, Sell, or Invest",
   absoluteTitle: true,
   description:
-    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. Also serving Conroe, Willis, Montgomery, Splendora, and New Caney. Call or text (832) 863-3468.",
+    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. Also serving Houston, Conroe, The Woodlands, Tomball, and Magnolia. Call or text (832) 863-3468.",
   path: "/",
 });
 
@@ -62,7 +64,7 @@ export default function HomePage() {
             Buy, sell, or invest with Natalie Pilkinton
           </h1>
           <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
-            HomeRock Realty. Based in Spring and working in {formatCityList(serviceAreas.slice(0, 6))}. Call or text{" "}
+            HomeRock Realty. Based in Spring, and also working in {formatCityList(serviceAreas.slice(1))}. Call or text{" "}
             <a href={siteConfig.phoneHref} className="text-white font-semibold underline underline-offset-2">
               {siteConfig.phone}
             </a>
@@ -103,6 +105,21 @@ export default function HomePage() {
 
       <Section tone="light">
         <Container>
+          <h2>Videos from Natalie</h2>
+          <p className="max-w-[42rem] text-gray-dark mb-xl">
+            Recent videos from her real estate channel: client stories and what is happening around north Houston.
+          </p>
+          <RealtorVideos />
+          <div className="mt-lg">
+            <Button href={realtorChannelUrl} external variant="secondary">
+              Watch on YouTube
+            </Button>
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
           <h2>Real estate in Spring, TX and nearby</h2>
           <p className="max-w-[44rem] text-gray-dark">
             Natalie is based at {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region}{" "}
@@ -122,7 +139,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <Section>
+      <Section tone="light">
         <Container>
           <h2 className="text-center">Experience you can ask about</h2>
           <p className="text-center max-w-[40rem] mx-auto text-gray-dark">
