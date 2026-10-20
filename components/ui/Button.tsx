@@ -2,7 +2,7 @@ import Link from "next/link";
 import { type ButtonHTMLAttributes, type AnchorHTMLAttributes } from "react";
 import { cn } from "@/lib/utils/cn";
 
-type Variant = "primary" | "secondary" | "outline" | "outline-light";
+type Variant = "primary" | "secondary" | "outline" | "outline-light" | "gold";
 type Size = "small" | "base" | "large";
 
 const variantClasses: Record<Variant, string> = {
@@ -10,6 +10,7 @@ const variantClasses: Record<Variant, string> = {
   secondary: "bg-cream text-navy border border-navy hover:bg-navy hover:text-white",
   outline: "bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white",
   "outline-light": "bg-transparent text-white border-2 border-white hover:bg-white hover:text-navy",
+  gold: "bg-gold text-navy hover:bg-white hover:text-navy shadow-brand-sm",
 };
 
 const sizeClasses: Record<Size, string> = {
@@ -50,24 +51,30 @@ export function Button(props: ButtonProps) {
   const classes = cn(baseClasses, variantClasses[variant], sizeClasses[size], className);
 
   if ("href" in props && props.href) {
-    const { href, external, children, ...rest } = props;
-    if (external) {
+    const { href, external, children, variant: _variant, size: _size, className: _className, ...rest } = props;
+    const nativeProtocol = /^(tel:|sms:|mailto:)/.test(href);
+    if (external || nativeProtocol) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={classes} {...rest}>
+        <a
+          href={href}
+          {...rest}
+          {...(external && !nativeProtocol ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          className={classes}
+        >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={classes} {...rest}>
+      <Link href={href} {...rest} className={classes}>
         {children}
       </Link>
     );
   }
 
-  const { children, ...rest } = props as ButtonAsButton;
+  const { children, variant: _variant, size: _size, className: _className, ...rest } = props as ButtonAsButton;
   return (
-    <button className={classes} {...rest}>
+    <button {...rest} className={classes}>
       {children}
     </button>
   );

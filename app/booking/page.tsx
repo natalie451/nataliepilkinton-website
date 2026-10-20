@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Callout } from "@/components/ui/Callout";
+import { ContactActions } from "@/components/cta/ContactActions";
 import { TestimonialGrid } from "@/components/sections/Testimonial";
 import { siteConfig } from "@/lib/data/navigation";
 import { bookingTestimonials } from "@/lib/data/testimonials";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Book Your Free Strategy Session",
+  title: "Book a Call with Natalie Pilkinton",
   description:
-    "Book a free 30-minute strategy session with Natalie Pilkinton to discuss your real estate goals and create an action plan.",
+    "Book a call with Spring, TX REALTOR Natalie Pilkinton. Prefer to talk now? Call or text (832) 863-3468 or email natalie@nataliepilkinton.com.",
   path: "/booking",
 });
 
@@ -27,9 +29,11 @@ export default function BookingPage() {
   return (
     <>
       <Hero
-        title="Book Your FREE Strategy Session"
-        subheading="30 minutes to discuss your real estate goals and create an action plan"
-      />
+        title="Book a time with Natalie"
+        subheading="Pick a time on her calendar. If you would rather talk now, call or text."
+      >
+        <ContactActions tone="on-dark" showBook={false} />
+      </Hero>
 
       <Section>
         <Container>
@@ -48,28 +52,20 @@ export default function BookingPage() {
             </div>
 
             <div>
-              <h2>Schedule Your Session</h2>
-              <div className="bg-white border border-gray-light rounded-xs p-lg">
-                <p className="mb-lg">
-                  Choose your preferred date and time. Sessions are conducted via Zoom or phone.
-                </p>
-
-                <div className="bg-gradient-to-br from-navy to-[#1a2d4a] rounded-xs p-xl mb-lg text-center">
-                  <p className="text-white mb-lg text-lg font-medium">
-                    Book Your Free 30-Minute Strategy Session
-                  </p>
-                  <a
-                    href={siteConfig.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-lg py-md rounded-xs font-semibold bg-navy text-white hover:bg-gold hover:text-navy transition-all"
-                  >
-                    Open Calendar &amp; Book Now →
+              <h2>Schedule your call</h2>
+              <div className="bg-white border border-gray-light rounded-xs overflow-hidden">
+                <div
+                  className="calendly-inline-widget"
+                  data-url={siteConfig.bookingUrl}
+                  style={{ minWidth: "320px", height: "720px" }}
+                />
+                <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+                <p className="text-center text-gray-dark text-sm px-lg pb-lg mb-0">
+                  If the calendar does not load,{" "}
+                  <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-gold-ink underline underline-offset-2">
+                    open Calendly in a new tab
                   </a>
-                </div>
-
-                <p className="text-center text-gray-dark text-sm mb-0">
-                  Calendar opens in a new tab. Confirmation email with meeting details sent immediately.
+                  .
                 </p>
               </div>
             </div>

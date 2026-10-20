@@ -4,21 +4,9 @@ import { homeRockMortgage, lenderDisclosure } from "@/lib/content/academy/provid
 /**
  * Investor Academy guides.
  *
- * Natalie's perspective comes from her own teaching on the Sugar, Spice &
- * Spirits podcast (episode 45, "Is 10 Rental Properties Actually Enough to
- * Retire?"). Lending and tax facts were checked against the sources listed on
+ * Lending and tax facts were checked against the sources listed on
  * each guide on Oct 5, 2026 — re-check them when updating.
  */
-
-const EP45 = {
-  label: "Sugar, Spice & Spirits episode 45: Is 10 Rental Properties Actually Enough to Retire?",
-  href: "/podcast/transcripts/ep45-is-10-rental-properties-enough-to-retire",
-};
-
-const EP56 = {
-  label: "Sugar, Spice & Spirits episode 56: Hard Money Lending Explained, with Eddie Gant of Jet Lending",
-  href: "/podcast/transcripts/ep56-hard-money-lending-explained",
-};
 
 const investorBooking = {
   title: "Ready to Run the Numbers on Your First Deal?",
@@ -107,7 +95,6 @@ export const beginnerGuide: AcademyGuide = {
       "If something breaks and it isn't my tenant's fault, I pay for it, because I want them to renew. A vacancy can cost me $2,000 at the end of the year, and charging a good tenant $200 here and $200 there hurts them a lot more than it helps me.",
       "And if you know you can't have a hard conversation or handle an eviction, hire a property manager — or invest passively with a solid operator instead of owning rentals directly.",
     ],
-    source: EP45,
   },
   faqs: [
     {
@@ -255,7 +242,6 @@ export const brrrrGuide: AcademyGuide = {
       "You can get into properties with very little down today, even with DSCR loans. But you have to be able to absorb the backslide when rents soften or values dip.",
       "I've watched people walk away from houses in a down market when two more years of holding on would have saved them. Make sure you're not over-leveraged, and keep reserves so a bad month doesn't become a foreclosure.",
     ],
-    source: EP45,
   },
   faqs: [
     {
@@ -358,7 +344,6 @@ export const dscrGuide: AcademyGuide = {
       "DSCR loans make it possible to get into properties with very minimal down. That's an opportunity, but you have to be able to absorb a backslide in rents.",
       "Run your numbers with today's taxes and insurance, keep your reserves, and make sure the rent covers your PITI with something left over before you count on appreciation.",
     ],
-    source: EP45,
   },
   recommended: {
     heading: "Where Natalie sends investors for DSCR loans",
@@ -469,12 +454,11 @@ export const privateLendingGuide: AcademyGuide = {
       "Be very careful who you work with, how you pay them and what you give them access to. Don't trust everybody right away.",
       "Do your diligence. Check that the payment is going to the name you expect, get everything in writing, keep copies of IDs, and put every change on paper.",
     ],
-    source: EP45,
   },
   recommended: {
     heading: "Who Natalie works with on financing",
     intro:
-      "For the long-term loan you refinance into, including DSCR loans, Natalie works with Brian Lupton at HomeRock Mortgage. To hear how short-term hard money works from a Houston lender's side, listen to Natalie's conversation with Eddie Gant of Jet Lending on [podcast episode 56](/podcast/transcripts/ep56-hard-money-lending-explained).",
+      "For the long-term loan you refinance into, including DSCR loans, Natalie works with Brian Lupton at HomeRock Mortgage.",
     providers: [homeRockMortgage],
     disclosure: lenderDisclosure,
   },
@@ -503,7 +487,7 @@ export const privateLendingGuide: AcademyGuide = {
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where short-term money fits in the cycle." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The long-term refinance after private money." },
-    { label: "Podcast: Hard money lending explained", href: EP56.href, description: "Natalie's episode with Eddie Gant of Jet Lending." },
+    { label: "How to start investing", href: "/investors/beginner", description: "What to look for in a first rental." },
     { label: "Investor-friendly vendors", href: "/investors/vendors", description: "Lenders, title and contractors who work with investors." },
   ],
   sources: [

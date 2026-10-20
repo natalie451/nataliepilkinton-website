@@ -3,7 +3,6 @@ import { siteConfig } from "@/lib/data/navigation";
 import { blogCategories } from "@/lib/content/blog";
 import { getAllBlogFilePosts } from "@/lib/content/blogFiles";
 import { marketUpdates } from "@/lib/content/market-updates";
-import { podcastTranscripts } from "@/lib/content/podcastTranscripts";
 import { getListingSlugs } from "@/lib/listings";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
 
@@ -53,7 +52,6 @@ const staticPaths = [
   "/realtors/coaching",
   "/realtors/training",
 
-  "/podcast",
   "/market-updates",
 
   "/resources",
@@ -92,7 +90,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: `/market-updates/${update.slug}`,
       lastModified: parseDate(update.date),
     })),
-    ...podcastTranscripts.map((transcript) => ({ path: `/podcast/transcripts/${transcript.slug}` })),
     ...getListingSlugs().map((slug) => ({ path: `/listings/${slug}` })),
   ];
 

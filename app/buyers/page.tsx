@@ -13,9 +13,9 @@ import { BuyerSeminarCallout } from "@/components/content/BuyerSeminarCallout";
 import { buyerJourney, buyerFaq, buyerModules } from "@/lib/content/buyers";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Home Buyer Academy",
+  title: "Buy a Home in Spring, TX",
   description:
-    "Learn conventional, FHA, USDA, and VA loan requirements, Texas down payment assistance programs, and closing cost budgeting with Natalie Pilkinton's Home Buyer Academy.",
+    "Buying in Spring, Conroe, Willis, Montgomery, Splendora, or New Caney? REALTOR Natalie Pilkinton walks you through financing, offers, and closing. Call or text (832) 863-3468.",
   path: "/buyers",
 });
 
@@ -51,18 +51,18 @@ const resources = [
 export default function BuyersPage() {
   return (
     <AcademyLayout
-      title="Home Buyer Academy"
-      subheading="Master the home buying process from pre-approval to closing"
-      ctaTitle="Ready to Start Your Buying Journey?"
-      ctaDescription="Book a free consultation to discuss your home buying goals."
-      ctaLabel="Schedule a Consultation →"
+      title="Buy a Home in Spring, TX"
+      subheading="Financing, offers, and closing for buyers in Spring, Conroe, Willis, Montgomery, Splendora, and New Caney."
+      ctaTitle="Ready to talk about buying?"
+      ctaDescription="Call or text Natalie, or book a time to go through your price range, loan options, and next steps."
+      ctaLabel="Book a buyer call"
     >
       <Section>
         <Container>
           <h2>Start Here</h2>
           <p className="max-w-[48rem] text-gray-dark mb-xl">
-            Natalie&rsquo;s step-by-step guides for buying a home in Houston and across Texas, built from her Home
-            Buyer Masterclass with lender Brian Lupton.
+            Step-by-step guides for buying a home in Spring, TX and nearby communities, built from Natalie&rsquo;s
+            Home Buyer Masterclass with lender Brian Lupton.
           </p>
           <div className="grid grid-cols-3 max-md:grid-cols-1 gap-lg">
             {guides.map((guide) => (

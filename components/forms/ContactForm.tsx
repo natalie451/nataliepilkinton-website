@@ -19,7 +19,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="bg-cream border-l-4 border-gold p-lg rounded-xs">
-        <p className="mb-0">Thanks for reaching out — Natalie&rsquo;s team will be in touch shortly.</p>
+        <p className="mb-0">Thanks for reaching out. Natalie&rsquo;s team will be in touch shortly.</p>
       </div>
     );
   }

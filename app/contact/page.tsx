@@ -4,12 +4,14 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { siteConfig } from "@/lib/data/navigation";
+import { ContactActions } from "@/components/cta/ContactActions";
+import { formatCityList, serviceAreas, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
-  description: "Have a question for Natalie Pilkinton or HomeRock Realty? Reach out by phone, email, or the contact form.",
+  title: "Contact Natalie Pilkinton, Spring TX REALTOR",
+  description:
+    "Call or text (832) 863-3468, email natalie@nataliepilkinton.com, or book a time. Natalie Pilkinton serves Spring, Conroe, Willis, Montgomery, Splendora, and New Caney.",
   path: "/contact",
 });
 
@@ -23,7 +25,12 @@ const socialLinks = [
 export default function ContactPage() {
   return (
     <>
-      <Hero title="Get in Touch" subheading="Have a question? We'd love to hear from you." />
+      <Hero
+        title="Contact Natalie"
+        subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Serving ${formatCityList(serviceAreas.slice(0, 6))}.`}
+      >
+        <ContactActions tone="on-dark" showReview />
+      </Hero>
 
       <Section>
         <Container>
@@ -43,17 +50,26 @@ export default function ContactPage() {
               </div>
 
               <div className="mb-2xl">
-                <h4 className="mb-md text-lg">Phone</h4>
-                <p className="mb-0">
+                <h4 className="mb-md text-lg">Phone and text</h4>
+                <p className="mb-sm">
                   <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
+                </p>
+                <p className="mb-0">
+                  <a href={siteConfig.smsHref}>Text {siteConfig.phone}</a>
                 </p>
               </div>
 
               <div className="mb-2xl">
                 <h4 className="mb-md text-lg">Email</h4>
                 <p className="mb-0">
-                  <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+                  <a href={siteConfig.emailHref}>{siteConfig.email}</a>
                 </p>
+              </div>
+
+              <div className="mb-2xl">
+                <h4 className="mb-md text-lg">Book a time</h4>
+                <p className="mb-sm">Pick a time on Natalie&rsquo;s calendar.</p>
+                <Button href="/booking">Book a time</Button>
               </div>
 
               <div>

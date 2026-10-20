@@ -26,9 +26,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   }
 
   return buildMetadata({
-    title: `${transcript.title} — Episode ${transcript.episodeNumber} Transcript`,
+    title: `Episode ${transcript.episodeNumber}: ${transcript.title}`,
     description: transcript.excerpt,
     path: `/podcast/transcripts/${transcript.slug}`,
+    noindex: true,
   });
 }
 
@@ -51,7 +52,7 @@ export default async function TranscriptPage({ params }: { params: Promise<Param
 
       <Hero
         title={transcript.title}
-        subheading={`Sugar, Spice & Spirits Podcast · Episode ${transcript.episodeNumber} · ${transcript.guest} · ${transcript.readTime}`}
+        subheading={`Episode ${transcript.episodeNumber} · ${transcript.guest} · ${transcript.readTime}`}
         align="left"
       />
 

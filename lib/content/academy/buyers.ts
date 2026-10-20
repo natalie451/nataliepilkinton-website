@@ -5,22 +5,11 @@ import { homeRockMortgageForBuyers, lenderDisclosure } from "@/lib/content/acade
  * Home Buyer Academy guides.
  *
  * Natalie's perspective comes from her Home Buyer Masterclass (co-presented
- * with Brian Lupton) and the Sugar, Spice & Spirits podcast (episodes 35 and
- * 45). Lending, Texas contract and property-tax facts were checked against the
+ * with Brian Lupton). Lending, Texas contract and property-tax facts were checked against the
  * sources listed on each guide on Oct 6, 2026 — re-check them when updating.
  */
 
 const DATE = "2026-10-06";
-
-const EP35 = {
-  label: "Sugar, Spice & Spirits episode 35: Stop Overpaying Your Mortgage: Insurance, Property Taxes & Escrow",
-  href: "/podcast/transcripts/ep35-stop-overpaying-your-mortgage",
-};
-
-const EP45 = {
-  label: "Sugar, Spice & Spirits episode 45: Is 10 Rental Properties Actually Enough to Retire?",
-  href: "/podcast/transcripts/ep45-is-10-rental-properties-enough-to-retire",
-};
 
 const buyerBooking = {
   title: "Want Your Real Numbers?",
@@ -140,7 +129,6 @@ export const closingCostsGuide: AcademyGuide = {
       "If you bought a home and never filed your homestead exemption, congratulations, you've been overpaying. It's not automatic; you have to apply. Title companies do not file this paperwork. It is up to the homeowner.",
       "And stop being loyal on insurance. I shopped my own homeowners insurance this year and shaved about $5,000 off the premium — almost $500 a month in my escrow. Get three or four quotes, from different people and different agencies.",
     ],
-    source: EP35,
   },
   faqs: [
     {
@@ -270,7 +258,6 @@ export const howMuchMoneyGuide: AcademyGuide = {
       "I've seen people's escrow come back negative $3,000. Not only do they have to make up that $3,000 — about $250 a month — they also have to build in another $3,000 for next year. That's an extra $500 a month if you're not watching your escrow account.",
       "You can request an escrow review any time. Your mortgage company is a billing department, not your financial coach, so look at your balance yourself.",
     ],
-    source: EP35,
   },
   recommended: recommendedLender,
   faqs: [
@@ -394,7 +381,6 @@ export const creditGuide: AcademyGuide = {
       "This is where the disconnect is. A lot of people don't qualify not because they weren't pre-qualified in the beginning, but because they don't do what the lenders are asking. They're not giving full document packages.",
       "Bank statements means page one through six — even page six that just has the FDIC logo on it. Do everything they ask, and do it with a quickness. You might even close quicker.",
     ],
-    source: EP45,
   },
   recommended: recommendedLender,
   faqs: [
@@ -632,7 +618,6 @@ export const firstTimeBuyerGuide: AcademyGuide = {
       "I had a buyer reach out on TikTok who was moving from Colorado for a new job, with a hiccup on his credit. I went to four or five builders in his price point and found an inventory home in Waller, off the Grand Parkway — already the cheapest three-bed, two-bath in the area. We tied it up under contract and the builder came down another $5,000.",
       "He's moving in with roughly $50,000 in equity compared with similar homes nearby, and we worked on his financing at the same time. Builders want to keep their crews working, so inventory homes can be a real opportunity — you just have to know who you're working with.",
     ],
-    source: EP45,
   },
   faqs: [
     {

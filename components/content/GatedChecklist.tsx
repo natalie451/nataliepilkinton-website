@@ -17,7 +17,7 @@ export function GatedChecklist({ resource, sections }: GatedChecklistProps) {
       <div className="max-w-[28rem] mx-auto bg-cream border border-gray-light rounded-xs p-xl text-center">
         <h3 className="mt-0 mb-sm">Get the Free Checklist</h3>
         <p className="text-sm text-gray-dark mb-lg">
-          Enter your name and email and we&rsquo;ll unlock the full checklist below — plus send you a copy and add
+          Enter your name and email and we&rsquo;ll unlock the full checklist below, send you a copy, and add
           you to Natalie&rsquo;s newsletter.
         </p>
         <LeadMagnetForm resource={resource} onSuccess={() => setUnlocked(true)} />

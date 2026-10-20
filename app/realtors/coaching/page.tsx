@@ -10,7 +10,7 @@ import { reasonsAgentsJoin } from "@/lib/content/realtors";
 
 export const metadata: Metadata = buildMetadata({
   title: "Realtor Coaching",
-  description: "Real estate agent coaching in Texas with Natalie Pilkinton — mentoring, accountability, and revenue share.",
+  description: "Real estate agent coaching in Texas with Natalie Pilkinton: mentoring, accountability, and revenue share.",
   path: "/realtors/coaching",
 });
 

@@ -10,15 +10,15 @@ import { WebinarCard } from "@/components/cards/WebinarCard";
 import { PodcastFeed } from "@/components/content/PodcastFeed";
 import { EpisodeList } from "@/components/podcast/EpisodeList";
 import { EpisodeListSkeleton } from "@/components/podcast/EpisodeListSkeleton";
-import { subscribeLinks } from "@/lib/content/podcast";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Watch & Listen",
-  description: "Videos, webinars, and the Sugar Spice & Spirits podcast, hosted by Natalie Pilkinton, Mindy Price and Kelly Williams.",
+  title: "Watch and Listen",
+  description: "Videos and webinars from Natalie Pilkinton.",
   path: "/podcast",
+  noindex: true,
 });
 
 const videoCourses = [
@@ -54,8 +54,8 @@ const playlistId = process.env.YOUTUBE_PLAYLIST_ID;
 
 const podcastSeriesSchema = {
   "@context": "https://schema.org",
-  "@type": "PodcastSeries",
-  name: "Sugar Spice & Spirits",
+  "@type": "VideoGallery",
+  name: "Videos from Natalie Pilkinton",
   url: `${siteConfig.siteUrl}/podcast`,
   ...(playlistId && {
     webFeed: `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`,
@@ -94,7 +94,7 @@ export default function PodcastPage() {
 
       <Section>
         <Container>
-          <h2>Sugar Spice &amp; Spirits Podcast</h2>
+          <h2>Videos</h2>
           <Suspense fallback={<div className="bg-cream p-lg rounded-sm mb-lg animate-pulse h-[280px] md:h-[400px]" aria-hidden="true" />}>
             <PodcastFeed />
           </Suspense>
@@ -104,16 +104,6 @@ export default function PodcastPage() {
             <EpisodeList />
           </Suspense>
 
-          <div className="mt-2xl p-lg bg-cream rounded-sm text-center">
-            <p className="text-navy font-semibold mb-md">📱 Subscribe &amp; Listen Everywhere</p>
-            <div className="flex gap-md justify-center flex-wrap">
-              {subscribeLinks.map((link) => (
-                <a key={link.label} href={link.href} className="text-gold-ink font-semibold text-sm">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
         </Container>
       </Section>
 

@@ -62,7 +62,7 @@ export function LeadMagnetForm({ resource, onSuccess }: LeadMagnetFormProps) {
         {status === "submitting" ? "Sending..." : "Get the Checklist →"}
       </Button>
       {status === "error" && (
-        <p className="text-sm text-red-700 mb-0">Something went wrong — please try again in a moment.</p>
+        <p className="text-sm text-red-700 mb-0">Something went wrong. Please try again in a moment.</p>
       )}
     </form>
   );

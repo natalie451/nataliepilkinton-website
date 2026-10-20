@@ -45,7 +45,7 @@ export default function NewConstructionPage() {
 
       <CTA
         title="Touring a Model Home Soon?"
-        description="Bring your own representation before you sign anything — book a free consultation with Natalie's team first."
+        description="Bring your own representation before you sign anything. Book a free consultation with Natalie's team first."
       >
         <Button href="/booking">Schedule a Consultation →</Button>
       </CTA>
