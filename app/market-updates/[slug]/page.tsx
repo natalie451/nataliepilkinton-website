@@ -145,10 +145,10 @@ export default async function MarketUpdatePage({ params }: { params: Promise<{ s
                   <h3 className="text-lg font-bold mb-sm">Natalie Pilkinton</h3>
                   <p className="text-sm text-gray-300 mb-md font-semibold">REALTOR®</p>
                   <p className="text-xs text-gray-400 mb-lg leading-relaxed">
-                    Helping buyers, sellers, and investors achieve their real estate goals in Houston.
+                    Helping buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville.
                   </p>
                   <Link
-                    href="https://calendly.com/nataliepilkinton/30min"
+                    href="https://calendly.com/nataliepilkinton"
                     className="w-full px-lg py-sm rounded font-semibold transition-colors text-center"
                     style={{ backgroundColor: "#c9a227", color: "#0a1a33" }}
                   >

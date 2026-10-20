@@ -33,7 +33,7 @@ export default function WebinarPage() {
       <Hero
         eyebrow="Free Live Webinar · Houston Home Buyers · Every 2nd & 4th Tuesday"
         title="Could You Buy a Home With Less Cash Than You Think?"
-        subheading="Discover financing strategies that many first-time buyers don't know about — explained simply, live, by a Houston-area Realtor."
+        subheading="Discover financing strategies that many first-time buyers don't know about, explained simply, live, by a Spring-area REALTOR."
         align="centered"
       >
         <Button href={webinarRegistrationUrl} external size="large">
@@ -181,7 +181,7 @@ export default function WebinarPage() {
         </Container>
       </Section>
 
-      <CTA title="Ready to Learn Your Home Buying Options?" description="Reserve your free seat now — space is limited for each live session.">
+      <CTA title="Ready to Learn Your Home Buying Options?" description="Reserve your free seat now. Space is limited for each live session.">
         <Button href={webinarRegistrationUrl} external>
           Save My Free Webinar Seat
         </Button>

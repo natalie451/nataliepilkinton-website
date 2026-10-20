@@ -33,7 +33,7 @@ export function buildMetadata({ title, description, path, image, noindex = false
       description,
       url,
       siteName: `${siteConfig.name} | ${siteConfig.brand}`,
-      images: [{ url: ogImage, alt: `${siteConfig.name} — ${siteConfig.brand}` }],
+      images: [{ url: ogImage, alt: `${siteConfig.name}, ${siteConfig.brand}` }],
       locale: "en_US",
       type: "website",
     },

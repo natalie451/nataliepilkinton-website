@@ -136,14 +136,14 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Mistake #1: Not Getting Pre-Approved",
         paragraphs: [
-          "The biggest mistake I see is jumping into the home search before getting pre-approved for a mortgage. Pre-approval isn't just helpful—it's essential. It tells you exactly how much house you can afford, gives sellers confidence in your offer, and speeds up the closing process.",
+          "The biggest mistake I see is jumping into the home search before getting pre-approved for a mortgage. Pre-approval isn't just helpful. It's essential. It tells you exactly how much house you can afford, gives sellers confidence in your offer, and speeds up the closing process.",
           "Get pre-approved BEFORE you start looking. This takes 1-2 days and gives you a concrete number to work with. Pre-approval (not pre-qualification) means a lender has verified your income, credit, and assets.",
         ]
       },
       {
         heading: "Mistake #2: Making Large Purchases Before Closing",
         paragraphs: [
-          "This one trips up more buyers than you'd think. You get excited about your new home and buy furniture, a new car, or max out a credit card—all before closing. Your lender re-checks your credit and debt-to-income ratio right before closing. New debt can kill your approval or require a higher interest rate.",
+          "This one trips up more buyers than you'd think. You get excited about your new home and buy furniture, a new car, or max out a credit card, all before closing. Your lender re-checks your credit and debt-to-income ratio right before closing. New debt can kill your approval or require a higher interest rate.",
           "Simple rule: don't make ANY major purchases between pre-approval and closing. No new cars, no furniture loans, no credit cards. Your lender WILL notice.",
         ]
       },
@@ -157,7 +157,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Mistake #4: Making Emotional Offers",
         paragraphs: [
-          "You fall in love with a house, and suddenly you're offering $50,000 over asking price with no inspection contingency. Emotions have no place in real estate transactions. Make offers based on comparable sales (comps), market conditions, and your budget—not feelings.",
+          "You fall in love with a house, and suddenly you're offering $50,000 over asking price with no inspection contingency. Emotions have no place in real estate transactions. Make offers based on comparable sales (comps), market conditions, and your budget, not feelings.",
           "Your agent should pull comps for you. Let data guide your offer, not emotion.",
         ]
       },
@@ -181,7 +181,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         paragraphs: [
-          "Staging is one of the highest ROI investments you can make when selling a home. Studies show staged homes sell 88% faster and for 20% more money than unstaged homes. Yet many sellers skip it to save a few thousand dollars—and leave tens of thousands on the table.",
+          "Staging is one of the highest ROI investments you can make when selling a home. Studies show staged homes sell 88% faster and for 20% more money than unstaged homes. Yet many sellers skip it to save a few thousand dollars and leave tens of thousands on the table.",
         ]
       },
       {
@@ -195,7 +195,7 @@ export const blogArticles: BlogArticle[] = [
         paragraphs: [
           "1. Curb Appeal: Your front entrance is the first impression. Fresh paint, landscaping, a clean front door, and outdoor lighting matter enormously.",
           "2. Declutter: Remove 30-50% of your personal items. Buyers want to see empty counter space and closets, not your collections and memorabilia.",
-          "3. Lighting & Cleanliness: Natural light is beautiful; make sure windows are spotless. Add warm lighting in evenings. A clean home is a sold home—no shortcuts here.",
+          "3. Lighting & Cleanliness: Natural light is beautiful; make sure windows are spotless. Add warm lighting in evenings. A clean home is a sold home. No shortcuts here.",
           "4. Space Perception: Arrange furniture to make rooms feel larger and flow better. Remove oversized furniture that crowds a space. Empty rooms feel bigger than cramped ones.",
         ]
       },
@@ -218,7 +218,7 @@ export const blogArticles: BlogArticle[] = [
     content: [
       {
         paragraphs: [
-          "Analyzing investment properties isn't magic—it's math. Learn these five key metrics and you'll be able to evaluate almost any real estate deal quickly and accurately.",
+          "Analyzing investment properties isn't magic. It's math. Learn these five key metrics and you'll be able to evaluate almost any real estate deal quickly and accurately.",
         ]
       },
       {
@@ -658,7 +658,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Inspection Ready",
         paragraphs: [
-          "Fix glaring issues before inspection. You'll discover problems anyway—fix them proactively to avoid buyer concerns.",
+          "Fix glaring issues before inspection. You'll discover problems anyway. Fix them proactively to avoid buyer concerns.",
         ]
       },
       {
@@ -848,7 +848,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Balanced Market",
         paragraphs: [
-          "Houston has achieved a balanced market—not favoring buyers or sellers. This is healthy and sustainable. It means rational pricing, adequate inventory, and fair terms for all parties.",
+          "Houston has achieved a balanced market, not favoring buyers or sellers. This is healthy and sustainable. It means rational pricing, adequate inventory, and fair terms for all parties.",
         ]
       },
       {
@@ -1058,7 +1058,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Bottom Line",
         paragraphs: [
-          "Cypress represents genuine opportunity. Growth is not speculative—it's driven by infrastructure, jobs, and population trends. Perfect time to buy before rapid appreciation.",
+          "Cypress represents genuine opportunity. Growth is not speculative. It's driven by infrastructure, jobs, and population trends. Perfect time to buy before rapid appreciation.",
         ]
       }
     ]
@@ -1110,7 +1110,7 @@ export const blogArticles: BlogArticle[] = [
       {
         heading: "Conclusion",
         paragraphs: [
-          "Houston real estate isn't just good—it's exceptional. Whether you're buying your first home, growing your investment portfolio, or seeking appreciation, Houston deserves serious consideration.",
+          "Houston real estate isn't just good. It's exceptional. Whether you're buying your first home, growing your investment portfolio, or seeking appreciation, Houston deserves serious consideration.",
         ]
       }
     ]

@@ -6,16 +6,17 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { CTA } from "@/components/sections/CTA";
+import { ContactActions } from "@/components/cta/ContactActions";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { siteConfig } from "@/lib/data/navigation";
+import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { faqSchema, jsonLdScriptProps } from "@/lib/seo/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Natalie Pilkinton | Houston Realtor, Investor & Educator | HomeRock Realty",
+  title: "About Natalie Pilkinton, Spring TX REALTOR | HomeRock Realty",
   absoluteTitle: true,
   description:
-    "Natalie Pilkinton is a Houston-area REALTOR® with HomeRock Realty, a real estate investor and an educator with 20+ years of experience serving buyers, sellers and investors.",
+    "Natalie Pilkinton is a Spring, TX REALTOR with HomeRock Realty. She serves Greater Houston, especially north of I-10 up to Huntsville, and has 20+ years of experience helping buyers, sellers, and investors.",
   path: "/about",
 });
 
@@ -52,13 +53,11 @@ const audiences = [
   },
 ];
 
-const marketsServed = ["Spring", "Houston", "The Woodlands", "Tomball", "Conroe", "Cypress", "Magnolia", "Montgomery"];
-
 const faqs = [
   {
     question: "Who is Natalie Pilkinton?",
     answer:
-      "Natalie Pilkinton is a Houston-area REALTOR® with HomeRock Realty, a real estate investor and a real estate educator. She has more than 20 years of experience and has helped 500+ families buy homes.",
+      "Natalie Pilkinton is a Spring, TX REALTOR® with HomeRock Realty, a real estate investor, and an educator. She has more than 20 years of experience and has helped 500+ families buy homes.",
   },
   {
     question: "Where does Natalie Pilkinton work?",
@@ -68,7 +67,7 @@ const faqs = [
   {
     question: "What areas does Natalie Pilkinton serve?",
     answer:
-      "Spring, Houston, The Woodlands, Tomball, Conroe, Cypress, Magnolia, Montgomery and the surrounding greater Houston area.",
+      `Natalie is based in Spring, TX. She serves ${serviceRegion}, including ${formatCityList(serviceAreas)}.`,
   },
   {
     question: "Is Natalie Pilkinton a licensed Realtor?",
@@ -212,13 +211,6 @@ export default function AboutPage() {
                   </Link>
                   .
                 </li>
-                <li>
-                  Co-hosts the{" "}
-                  <Link href="/podcast" className="text-gold-ink underline underline-offset-2 hover:text-navy">
-                    Sugar, Spice &amp; Spirits podcast
-                  </Link>
-                  .
-                </li>
                 <li>Volunteers with the Houston Livestock Show &amp; Rodeo Speakers Committee.</li>
                 <li>
                   Publishes a monthly{" "}
@@ -231,9 +223,9 @@ export default function AboutPage() {
             </div>
             <div>
               <h2>Markets served</h2>
-              <p>Based in Spring and working across greater Houston and Montgomery County:</p>
+              <p>Based in Spring, TX. She serves {serviceRegion}, including {formatCityList(serviceAreas.slice(1))}:</p>
               <ul className="flex flex-wrap gap-sm list-none p-0">
-                {marketsServed.map((market) => (
+                {serviceAreas.map((market) => (
                   <li key={market} className="px-md py-xs rounded-full border border-gray-light bg-white text-navy text-sm font-semibold">
                     {market}
                   </li>
@@ -291,8 +283,11 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      <CTA title="Let's Connect" description="Ready to discuss your real estate goals? I'd love to help you on your journey.">
-        <Button href="/booking">Book A Strategy Session</Button>
+      <CTA title="Let's connect" description="Call, text, or book a time to talk through buying, selling, or investing.">
+        <Button href="/booking" variant="gold">
+          Book a time
+        </Button>
+        <ContactActions tone="on-dark" showBook={false} />
       </CTA>
     </>
   );

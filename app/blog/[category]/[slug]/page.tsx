@@ -158,7 +158,7 @@ export default async function ArticlePage({ params }: { params: Params }) {
                   </h3>
                   <p className="text-sm text-gray-300 mb-md font-semibold">REALTOR® · Investor · Educator</p>
                   <p className="text-xs text-gray-400 mb-lg leading-relaxed">
-                    20+ years helping buyers, sellers and investors across Houston, Spring and The Woodlands with {siteConfig.brand}.
+                    20+ years helping buyers, sellers and investors from Spring across Greater Houston, especially north of I-10 up to Huntsville, with {siteConfig.brand}.
                   </p>
                   <Link
                     href="/booking"

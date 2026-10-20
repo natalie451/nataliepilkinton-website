@@ -27,7 +27,7 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
       className={cn(
         "hidden lg:flex gap-lg list-none items-center",
         mobileOpen &&
-          "max-lg:flex max-lg:flex-col max-lg:fixed max-lg:top-[60px] max-lg:left-0 max-lg:right-0 max-lg:bg-white max-lg:border-b max-lg:border-gray-light max-lg:p-lg max-lg:gap-xs max-lg:z-[999] max-lg:shadow-brand-md max-lg:max-h-[calc(100vh-60px)] max-lg:overflow-y-auto max-lg:animate-[fade-in_0.15s_ease-out]",
+          "max-lg:flex max-lg:flex-col max-lg:fixed max-lg:top-[4.25rem] max-lg:left-0 max-lg:right-0 max-lg:bg-white max-lg:border-b max-lg:border-gray-light max-lg:p-lg max-lg:pb-28 max-lg:gap-xs max-lg:z-[999] max-lg:shadow-brand-md max-lg:max-h-[calc(100vh-4.25rem)] max-lg:overflow-y-auto max-lg:animate-[fade-in_0.15s_ease-out]",
       )}
     >
       {primaryNav.map((item: NavItem) => {
@@ -74,15 +74,17 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
                     open ? "max-lg:block lg:opacity-100 lg:visible lg:translate-y-0" : "max-lg:hidden",
                   )}
                 >
-                  <li className="max-lg:hidden lg:block">
-                    <Link
-                      href={item.href}
-                      className="block px-md py-sm text-sm text-navy hover:text-gold-ink hover:bg-cream transition-colors font-semibold border-b border-gray-light mb-xs"
-                      onClick={onNavigate}
-                    >
-                      {item.label} Overview
-                    </Link>
-                  </li>
+                  {!item.hideOverview && (
+                    <li>
+                      <Link
+                        href={item.href}
+                        className="block px-md py-sm text-sm text-navy hover:text-gold-ink hover:bg-cream transition-colors font-semibold border-b border-gray-light mb-xs"
+                        onClick={onNavigate}
+                      >
+                        {item.label} overview
+                      </Link>
+                    </li>
+                  )}
                   {item.children.map((child) => (
                     <li key={child.href}>
                       <Link

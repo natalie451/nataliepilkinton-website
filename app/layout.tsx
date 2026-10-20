@@ -2,17 +2,20 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { MobileContactBar } from "@/components/cta/MobileContactBar";
 import { siteConfig } from "@/lib/data/navigation";
 import { jsonLdScriptProps, siteGraphSchema } from "@/lib/seo/schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Natalie Pilkinton, Houston REALTOR® | Home Buyers, Sellers & Investors | Spring TX",
+    default: "Natalie Pilkinton, Spring TX REALTOR | Buyers, Sellers & Investors",
     template: `%s | ${siteConfig.name} - ${siteConfig.brand}`,
   },
-  description: "Houston REALTOR® Natalie Pilkinton guides buyers, sellers & investors through Texas real estate. Specializing in Spring, The Woodlands, Katy & more. Schedule your free consultation today. Call (832) 863-3468.",
-  keywords: "Houston REALTOR, Houston real estate agent, buy home Spring TX, sell home Houston, real estate investing Houston, HomeRock Realty",
+  description:
+    "Spring, TX REALTOR Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
+  keywords:
+    "Spring TX REALTOR, Natalie Pilkinton, Greater Houston, north of I-10, Huntsville, Houston, Conroe, The Woodlands, Tomball, Magnolia, Humble, Klein, Kingwood, HomeRock Realty",
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.brand,
@@ -21,8 +24,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.siteUrl,
     siteName: `${siteConfig.name} - ${siteConfig.brand}`,
-    title: "Natalie Pilkinton, Houston REALTOR® | Home Buyers, Sellers & Investors",
-    description: "Houston REALTOR® Natalie Pilkinton guides buyers, sellers & investors through Texas real estate.",
+    title: "Natalie Pilkinton, Spring TX REALTOR | Buyers, Sellers & Investors",
+    description:
+      "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville.",
     images: [
       {
         url: "https://assets.cdn.filesafe.space/p6coQEMK9WucfxjPnduV/media/6a58be7f524a3ec4c61853f3.png",
@@ -69,6 +73,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <MobileContactBar />
       </body>
     </html>
   );

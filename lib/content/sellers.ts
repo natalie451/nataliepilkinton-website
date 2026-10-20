@@ -28,7 +28,7 @@ export const sellerFaq = [
   {
     question: "Do I need to be home during showings?",
     answer:
-      "No — homes typically show best when the seller isn't present. Most agents use an electronic lockbox so buyers' agents can access the property; the box also logs every time it's opened, so you always know who came through.",
+      "No. Homes typically show best when the seller isn't present. Most agents use an electronic lockbox so buyers' agents can access the property; the box also logs every time it's opened, so you always know who came through.",
   },
   {
     question: "Is selling For Sale By Owner (FSBO) or through a flat-fee service a good way to save money?",
@@ -38,11 +38,11 @@ export const sellerFaq = [
   {
     question: "How does my home actually get marketed to buyers?",
     answer:
-      "Primarily through the Multiple Listing Service (MLS) — the database every real estate agent uses to search for properties on behalf of buyers. It's the single most effective marketing tool for reaching serious, represented buyers.",
+      "Primarily through the Multiple Listing Service (MLS), the database every real estate agent uses to search for properties on behalf of buyers. It's the single most effective marketing tool for reaching serious, represented buyers.",
   },
   {
     question: "What happens if I receive multiple offers?",
     answer:
-      "Your Realtor helps you evaluate and negotiate between them — not just comparing the highest number, but weighing offer strength, whether it's cash or financed, the loan type, and the buyer's likelihood of closing.",
+      "Your Realtor helps you evaluate and negotiate between them, not just comparing the highest number, but weighing offer strength, whether it's cash or financed, the loan type, and the buyer's likelihood of closing.",
   },
 ];

@@ -10,7 +10,7 @@ import { missionVision, commissionStructure, founders } from "@/lib/content/real
 
 export const metadata: Metadata = buildMetadata({
   title: "Join HomeRock Realty",
-  description: "Why join HomeRock Realty as a licensed Texas real estate agent — our mission, commission structure, and founders.",
+  description: "Why join HomeRock Realty as a licensed Texas real estate agent: mission, commission structure, and founders.",
   path: "/realtors/join",
 });
 

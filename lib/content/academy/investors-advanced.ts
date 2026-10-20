@@ -1,23 +1,13 @@
 import type { AcademyGuide } from "@/lib/content/academy/types";
 
 /**
- * Multifamily and Passive Investing guides — general education plus Natalie's
- * own perspective from the Sugar, Spice & Spirits podcast (episodes 42 and 45).
+ * Multifamily and Passive Investing guides. General education plus Natalie's
+ * own perspective.
  * No personal portfolio figures are stated here; add them only once Natalie
  * confirms them. Facts checked Oct 5, 2026 against the cited sources.
  */
 
 const DATE = "2026-10-05";
-
-const EP42 = {
-  label: "Sugar, Spice & Spirits episode 42: $100K Investment Without a Coach? Here's Why That Fails",
-  href: "/podcast/transcripts/ep42-100k-investment-without-a-coach",
-};
-
-const EP45 = {
-  label: "Sugar, Spice & Spirits episode 45: Is 10 Rental Properties Actually Enough to Retire?",
-  href: "/podcast/transcripts/ep45-is-10-rental-properties-enough-to-retire",
-};
 
 const investorBooking = {
   title: "Want a Second Set of Eyes on a Deal?",
@@ -61,7 +51,7 @@ export const multifamilyGuide: AcademyGuide = {
       heading: "How apartment buildings are valued",
       paragraphs: [
         "Larger multifamily is valued on income: value = net operating income (NOI) ÷ capitalization (cap) rate. NOI is the property's income after operating expenses, before the mortgage.",
-        "That means raising NOI — through better management, renovations that support higher rents, or cutting waste — raises the value of the building. It also means a building is only worth what its real numbers support.",
+        "That means raising NOI (through better management, renovations that support higher rents, or cutting waste) raises the value of the building. It also means a building is only worth what its real numbers support.",
       ],
     },
     {
@@ -70,7 +60,7 @@ export const multifamilyGuide: AcademyGuide = {
         "Rent roll: every unit, its rent, lease dates and who lives there.",
         "Trailing 12-month operating statement (T-12): actual income and expenses, month by month.",
         "Occupancy: physical (units filled) and economic (rent actually collected).",
-        "The use of each unit — long-term leases vs furnished short-term rentals change the income picture completely.",
+        "The use of each unit: long-term leases vs furnished short-term rentals change the income picture completely.",
         "Debt service coverage: whether NOI covers the loan payment with a cushion. See [DSCR loans](/investors/dscr-loans-texas).",
         "Capital needs: roofs, HVAC, plumbing, parking lots and deferred maintenance.",
       ],
@@ -92,7 +82,7 @@ export const multifamilyGuide: AcademyGuide = {
     {
       heading: "Three ways to invest in multifamily",
       steps: [
-        { title: "Buy a small multifamily yourself", body: "A duplex, triplex or fourplex — the closest step up from a single-family rental. See [how to start investing](/investors/beginner)." },
+        { title: "Buy a small multifamily yourself", body: "A duplex, triplex or fourplex, the closest step up from a single-family rental. See [how to start investing](/investors/beginner)." },
         { title: "Buy an apartment building with partners", body: "More capital, a commercial loan and professional management. Experience and a strong team matter more as the building gets bigger." },
         {
           title: "Invest passively",
@@ -104,10 +94,9 @@ export const multifamilyGuide: AcademyGuide = {
   natalieTake: {
     heading: "The devil's in the details",
     paragraphs: [
-      "I've seen apartment deals with solid operators go south on just one deal because they took their eye off the ball. They didn't do the detailed rent analysis and unit analysis, so they missed that units were set up as pre-furnished Airbnbs in a market that wasn't an Airbnb market — and they ended up with 20% vacancy they hadn't planned for.",
+      "I've seen apartment deals with solid operators go south on just one deal because they took their eye off the ball. They didn't do the detailed rent analysis and unit analysis, so they missed that units were set up as pre-furnished Airbnbs in a market that wasn't an Airbnb market, and they ended up with 20% vacancy they hadn't planned for.",
       "Inspect what you expect. And if you know you can't handle tenants or evictions yourself, invest in multifamily with a good, solid operator instead.",
     ],
-    source: EP45,
   },
   faqs: [
     {
@@ -175,11 +164,11 @@ export const passiveGuide: AcademyGuide = {
         rows: [
           ["Sponsor (general partner, GP)", "Finds the deal, arranges the loan, runs the business plan and reports to investors."],
           ["Passive investors (limited partners, LPs)", "Provide most of the equity, have limited liability and no day-to-day role."],
-          ["Property manager", "Leases units, collects rent and handles maintenance — sometimes affiliated with the sponsor."],
+          ["Property manager", "Leases units, collects rent and handles maintenance, sometimes affiliated with the sponsor."],
         ],
       },
       paragraphs: [
-        "Investors typically earn returns three ways: cash flow distributions while the property is held, proceeds if it's refinanced, and profit when it's sold. Many deals pay investors a preferred return before the sponsor shares in profits, then split the rest. Sponsors also charge fees, such as acquisition and asset management fees — read exactly what they are.",
+        "Investors typically earn returns three ways: cash flow distributions while the property is held, proceeds if it's refinanced, and profit when it's sold. Many deals pay investors a preferred return before the sponsor shares in profits, then split the rest. Sponsors also charge fees, such as acquisition and asset management fees. Read exactly what they are.",
       ],
     },
     {
@@ -196,7 +185,7 @@ export const passiveGuide: AcademyGuide = {
     {
       heading: "How to vet an operator",
       steps: [
-        { title: "Track record", body: "How many deals have they taken full cycle — bought, run and sold — and how did investors actually do?" },
+        { title: "Track record", body: "How many deals have they taken full cycle (bought, run, and sold), and how did investors actually do?" },
         { title: "Reputation on the street", body: "Ask lenders, brokers and other investors, not just online reviews. Local reputation is often where the real story is." },
         { title: "Underwriting", body: "Are the rent, expense, vacancy and exit assumptions conservative? Ask to see the rent roll and T-12 behind them." },
         { title: "Skin in the game", body: "Does the sponsor invest their own money alongside yours?" },
@@ -210,7 +199,7 @@ export const passiveGuide: AcademyGuide = {
         "Real estate investment trusts (REITs), which trade like stocks and can be sold quickly.",
         "Private real estate funds that hold several properties.",
         "Private lending secured by real estate. See [private lending](/investors/private-lending).",
-        "Owning rentals with a property manager handling the day-to-day — less passive, but you keep control. See [how to start investing](/investors/beginner).",
+        "Owning rentals with a property manager handling the day-to-day. That is less passive, but you keep control. See [how to start investing](/investors/beginner).",
         "Investing retirement money through a self-directed IRA, which must follow strict IRS rules. Work with a custodian and CPA.",
       ],
     },
@@ -224,10 +213,9 @@ export const passiveGuide: AcademyGuide = {
   natalieTake: {
     heading: "Let me review the docs first",
     paragraphs: [
-      "A client came to me about to invest $100,000 with a group. He was already investing in multifamily and very diligent with his money. I told him: before you put your money with any syndicator or owner-operator, let me help you review the documents and tell you what their reputation is on the street — because there's the street reputation, there's the online reputation, and you don't always know what's going on underneath.",
+      "A client came to me about to invest $100,000 with a group. He was already investing in multifamily and very diligent with his money. I told him: before you put your money with any syndicator or owner-operator, let me help you review the documents and tell you what their reputation is on the street, because there's the street reputation, there's the online reputation, and you don't always know what's going on underneath.",
       "When I reviewed his documents, my jaw hit the ground. There was no way he could move forward with that opportunity. Get a second set of experienced eyes on any deal before you wire money.",
     ],
-    source: EP42,
   },
   faqs: [
     {
@@ -259,8 +247,7 @@ export const passiveGuide: AcademyGuide = {
   related: [
     { label: "Multifamily investing", href: "/investors/multifamily", description: "How apartment deals are valued and run." },
     { label: "Private lending", href: "/investors/private-lending", description: "Another way to invest without managing property." },
-    { label: "How to start investing", href: "/investors/beginner", description: "Owning rentals directly." },
-    { label: "Podcast: $100K investment without a coach", href: EP42.href, description: "The syndication story in full." },
+    { label: "How to start investing", href: "/investors/beginner", description: "Owning rentals directly, before a syndication." },
   ],
   sources: [
     { label: "Nasdaq: Accredited investor definition and qualifications", url: "https://www.nasdaq.com/articles/accredited-investor-definition-qualifications-rules" },

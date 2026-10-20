@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValueEvent, useScroll, useReducedMotion } from "framer-motion";
 import { Navigation } from "@/components/layout/Navigation";
 import { MobileMenuToggle } from "@/components/layout/MobileMenuToggle";
 import { Button } from "@/components/ui/Button";
@@ -15,12 +14,6 @@ export function Header() {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
-  const prefersReducedMotion = useReducedMotion();
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 24);
-  });
 
   const closeAll = () => {
     setMobileOpen(false);
@@ -45,31 +38,37 @@ export function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <motion.header
-      initial={prefersReducedMotion ? false : { y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+    <header
       className={cn(
-        "sticky top-0 z-[1000] border-b transition-[background-color,backdrop-filter,box-shadow,border-color] duration-300",
-        scrolled
-          ? "bg-white/80 backdrop-blur-md border-gray-light shadow-brand-md"
-          : "bg-white border-gray-light shadow-brand-sm",
+        "sticky top-0 z-[1000] border-b transition-[background-color,box-shadow,border-color] duration-300",
+        scrolled ? "bg-white/95 border-gray-light shadow-brand-md" : "bg-white border-gray-light shadow-brand-sm",
       )}
     >
       <nav
         ref={navRef}
-        className="max-w-[80rem] mx-auto px-lg py-lg flex justify-between items-center gap-md max-md:px-md max-md:py-md max-sm:flex-wrap max-sm:p-sm"
+        className="max-w-[80rem] mx-auto px-lg py-md flex justify-between items-center gap-md max-md:px-md max-sm:px-sm"
       >
-        <Link href="/" onClick={closeAll} className="shrink-0 inline-flex items-center py-1.5 -my-1.5">
+        <Link href="/" onClick={closeAll} className="shrink-0 inline-flex items-center gap-sm py-1" aria-label="Natalie Pilkinton home">
           <Image
             src={siteConfig.logoUrl}
-            alt={siteConfig.logoAlt}
+            alt=""
             width={160}
             height={160}
-            className="h-10 w-10 max-md:h-8 max-md:w-8 cursor-pointer transition-transform duration-300 hover:scale-105"
+            className="h-10 w-10 max-md:h-8 max-md:w-8"
             priority
           />
+          <span className="flex flex-col leading-tight">
+            <span className="text-sm font-semibold text-navy">Natalie Pilkinton</span>
+            <span className="hidden sm:block text-xs text-gray-dark">Spring, TX REALTOR</span>
+          </span>
         </Link>
 
         <Navigation
@@ -79,12 +78,19 @@ export function Header() {
           onNavigate={closeAll}
         />
 
-        <Button href={bookingCta.href} className="whitespace-nowrap max-sm:hidden" onClick={closeAll}>
-          {bookingCta.label}
-        </Button>
-
-        <MobileMenuToggle active={mobileOpen} onClick={() => setMobileOpen((open) => !open)} />
+        <div className="flex items-center gap-sm shrink-0">
+          <a
+            href={siteConfig.phoneHref}
+            className="hidden lg:inline text-sm font-semibold text-navy whitespace-nowrap hover:text-gold-ink"
+          >
+            {siteConfig.phone}
+          </a>
+          <Button href={bookingCta.href} size="small" className="whitespace-nowrap max-sm:hidden" onClick={closeAll}>
+            {bookingCta.label}
+          </Button>
+          <MobileMenuToggle active={mobileOpen} onClick={() => setMobileOpen((open) => !open)} />
+        </div>
       </nav>
-    </motion.header>
+    </header>
   );
 }

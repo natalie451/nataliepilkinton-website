@@ -5,22 +5,11 @@ import { homeRockMortgageForBuyers, lenderDisclosure } from "@/lib/content/acade
  * Home Buyer Academy guides.
  *
  * Natalie's perspective comes from her Home Buyer Masterclass (co-presented
- * with Brian Lupton) and the Sugar, Spice & Spirits podcast (episodes 35 and
- * 45). Lending, Texas contract and property-tax facts were checked against the
+ * with Brian Lupton). Lending, Texas contract and property-tax facts were checked against the
  * sources listed on each guide on Oct 6, 2026 — re-check them when updating.
  */
 
 const DATE = "2026-10-06";
-
-const EP35 = {
-  label: "Sugar, Spice & Spirits episode 35: Stop Overpaying Your Mortgage: Insurance, Property Taxes & Escrow",
-  href: "/podcast/transcripts/ep35-stop-overpaying-your-mortgage",
-};
-
-const EP45 = {
-  label: "Sugar, Spice & Spirits episode 45: Is 10 Rental Properties Actually Enough to Retire?",
-  href: "/podcast/transcripts/ep45-is-10-rental-properties-enough-to-retire",
-};
 
 const buyerBooking = {
   title: "Want Your Real Numbers?",
@@ -138,9 +127,8 @@ export const closingCostsGuide: AcademyGuide = {
     heading: "Two things buyers forget",
     paragraphs: [
       "If you bought a home and never filed your homestead exemption, congratulations, you've been overpaying. It's not automatic; you have to apply. Title companies do not file this paperwork. It is up to the homeowner.",
-      "And stop being loyal on insurance. I shopped my own homeowners insurance this year and shaved about $5,000 off the premium — almost $500 a month in my escrow. Get three or four quotes, from different people and different agencies.",
+      "And stop being loyal on insurance. I shopped my own homeowners insurance this year and shaved about $5,000 off the premium, almost $500 a month in my escrow. Get three or four quotes, from different people and different agencies.",
     ],
-    source: EP35,
   },
   faqs: [
     {
@@ -155,7 +143,7 @@ export const closingCostsGuide: AcademyGuide = {
     {
       question: "Can the seller pay my closing costs?",
       answer:
-        "Yes, through seller concessions, up to the limit your loan allows — commonly 3% to 9% on conventional loans, 6% on FHA and USDA, and 4% plus normal closing costs on VA.",
+        "Yes, through seller concessions, up to the limit your loan allows, commonly 3% to 9% on conventional loans, 6% on FHA and USDA, and 4% plus normal closing costs on VA.",
     },
     {
       question: "Can closing costs be rolled into my loan?",
@@ -199,7 +187,7 @@ export const howMuchMoneyGuide: AcademyGuide = {
   datePublished: DATE,
   shortAnswer: [
     "Plan for four things: a down payment (from 0% with VA or USDA loans, 3.5% with FHA, or 3% to 5% with conventional loans), closing costs of about 2% to 5% of the price, upfront costs while you're under contract, and some reserves.",
-    "On a $300,000 Houston home with an FHA loan, that often adds up to roughly $17,000 to $26,500 in total cash before any help. Down payment assistance, seller concessions and builder incentives can cut that substantially — sometimes close to zero.",
+    "On a $300,000 Houston home with an FHA loan, that often adds up to roughly $17,000 to $26,500 in total cash before any help. Down payment assistance, seller concessions and builder incentives can cut that substantially, sometimes close to zero.",
   ],
   sections: [
     {
@@ -243,7 +231,7 @@ export const howMuchMoneyGuide: AcademyGuide = {
       ],
     },
     {
-      heading: "Where the money can — and can't — come from",
+      heading: "Where the money can, and can't, come from",
       bullets: [
         "Acceptable: savings, gift funds from family, 401(k) or other retirement accounts, and liquid stocks or bonds.",
         "Not acceptable: credit cards or unsecured personal loans. Secured loans can be.",
@@ -256,7 +244,7 @@ export const howMuchMoneyGuide: AcademyGuide = {
         "Your monthly payment covers principal, interest, taxes and insurance (PITI). Your lender calculates the principal and interest; in the Houston area, taxes and insurance often add as much again.",
       ],
       bullets: [
-        "Property taxes: Texas has no state income tax, so property taxes are high — commonly around 2% to 3% of your home's assessed value a year, and often more in communities with a municipal utility district (MUD).",
+        "Property taxes: Texas has no state income tax, so property taxes are high, commonly around 2% to 3% of your home's assessed value a year, and often more in communities with a municipal utility district (MUD).",
         "Homeowners insurance: often $2,200–$4,500 a year in the Houston area, plus flood insurance if the home is in a flood zone.",
         "Mortgage insurance: required on FHA loans and on conventional loans with less than 20% down.",
         "HOA dues: from a few hundred dollars a year to well over $1,000 in new communities with large amenity packages.",
@@ -267,10 +255,9 @@ export const howMuchMoneyGuide: AcademyGuide = {
   natalieTake: {
     heading: "Watch your escrow",
     paragraphs: [
-      "I've seen people's escrow come back negative $3,000. Not only do they have to make up that $3,000 — about $250 a month — they also have to build in another $3,000 for next year. That's an extra $500 a month if you're not watching your escrow account.",
+      "I've seen people's escrow come back negative $3,000. Not only do they have to make up that $3,000 (about $250 a month). They also have to build in another $3,000 for next year. That's an extra $500 a month if you're not watching your escrow account.",
       "You can request an escrow review any time. Your mortgage company is a billing department, not your financial coach, so look at your balance yourself.",
     ],
-    source: EP35,
   },
   recommended: recommendedLender,
   faqs: [
@@ -315,7 +302,7 @@ export const creditGuide: AcademyGuide = {
   path: "/buyers/credit",
   metaTitle: "What Credit Score Do You Need to Buy a House in Texas?",
   metaDescription:
-    "Credit score requirements to buy a house in Texas by loan type — conventional, FHA, VA and USDA — what else lenders look at, and how to raise your score before you apply.",
+    "Credit score requirements to buy a house in Texas by loan type (conventional, FHA, VA, and USDA): what else lenders look at, and how to raise your score before you apply.",
   h1: "What Credit Score Do I Need to Buy a House in Texas?",
   subheading: "Minimums by loan type, what else lenders look at, and how to get ready",
   breadcrumbs: [
@@ -324,7 +311,7 @@ export const creditGuide: AcademyGuide = {
   ],
   datePublished: DATE,
   shortAnswer: [
-    "It depends on the loan program and the lender. FHA loans allow scores as low as 580 with 3.5% down, or 500 to 579 with 10% down. Most lenders look for about 620 on conventional loans. VA and USDA loans have no official program minimum, so each lender sets its own — often in the 580 to 640 range.",
+    "It depends on the loan program and the lender. FHA loans allow scores as low as 580 with 3.5% down, or 500 to 579 with 10% down. Most lenders look for about 620 on conventional loans. VA and USDA loans have no official program minimum, so each lender sets its own, often in the 580 to 640 range.",
     "A higher score doesn't just get you approved; it gets you a lower rate and cheaper mortgage insurance.",
   ],
   sections: [
@@ -363,7 +350,7 @@ export const creditGuide: AcademyGuide = {
     {
       heading: "Common mistakes during the loan process",
       bullets: [
-        "Opening new credit — a car loan, furniture financing or a new card — before closing.",
+        "Opening new credit (a car loan, furniture financing, or a new card) before closing.",
         "Closing old credit card accounts, which can lower your score.",
         "Moving large sums between accounts or depositing cash you can't document.",
         "Changing jobs without talking to your lender first.",
@@ -384,7 +371,7 @@ export const creditGuide: AcademyGuide = {
     {
       heading: "When to talk to a Realtor",
       paragraphs: [
-        "Talk to a lender and a Realtor before you start touring homes, not after you find one. Knowing which loan you qualify for decides your price range, your down payment and how strong your offer can be — and Natalie can connect you with a lender who'll tell you exactly what to work on.",
+        "Talk to a lender and a Realtor before you start touring homes, not after you find one. Knowing which loan you qualify for decides your price range, your down payment and how strong your offer can be, and Natalie can connect you with a lender who'll tell you exactly what to work on.",
       ],
     },
   ],
@@ -392,15 +379,14 @@ export const creditGuide: AcademyGuide = {
     heading: "Do what your lender asks, quickly",
     paragraphs: [
       "This is where the disconnect is. A lot of people don't qualify not because they weren't pre-qualified in the beginning, but because they don't do what the lenders are asking. They're not giving full document packages.",
-      "Bank statements means page one through six — even page six that just has the FDIC logo on it. Do everything they ask, and do it with a quickness. You might even close quicker.",
+      "Bank statements means page one through six, even page six that just has the FDIC logo on it. Do everything they ask, and do it with a quickness. You might even close quicker.",
     ],
-    source: EP45,
   },
   recommended: recommendedLender,
   faqs: [
     {
       question: "Can I buy a house with a 580 credit score in Texas?",
-      answer: "Often, yes — with an FHA loan and 3.5% down, if you meet the lender's other requirements. VA and some USDA lenders may also work with scores in that range.",
+      answer: "Often, yes, with an FHA loan and 3.5% down, if you meet the lender's other requirements. VA and some USDA lenders may also work with scores in that range.",
     },
     {
       question: "Is 620 still the minimum for a conventional loan?",
@@ -494,7 +480,7 @@ export const financingGuide: AcademyGuide = {
     {
       heading: "How assistance can cover an FHA down payment",
       paragraphs: [
-        "An illustration: on a $300,000 home, 3.5% down is $10,500. The base loan is $289,500, and FHA's 1.75% upfront mortgage insurance brings it to about $294,566. A 5% assistance grant on that loan is about $14,700 — enough to cover the full down payment, with roughly $4,200 left toward closing costs.",
+        "An illustration: on a $300,000 home, 3.5% down is $10,500. The base loan is $289,500, and FHA's 1.75% upfront mortgage insurance brings it to about $294,566. A 5% assistance grant on that loan is about $14,700, enough to cover the full down payment, with roughly $4,200 left toward closing costs.",
       ],
     },
     {
@@ -503,7 +489,7 @@ export const financingGuide: AcademyGuide = {
         "Your credit, pulled from Experian, Equifax and TransUnion.",
         "Pay stubs from the last 30 days.",
         "W-2s and tax returns from the last 2 years.",
-        "Bank statements from the last 2 months — every page.",
+        "Bank statements from the last 2 months: every page.",
         "During the process, keep living where you are, keep paying your rent or mortgage, and don't open or close credit.",
       ],
     },
@@ -600,7 +586,7 @@ export const firstTimeBuyerGuide: AcademyGuide = {
           body: "Get a professional inspection during the option period and negotiate repairs or credits. Your lender orders the appraisal to confirm the home's value.",
         },
         {
-          title: "Close — then file your homestead exemption",
+          title: "Close, then file your homestead exemption",
           body: "Do a final walkthrough, sign at the title company and get your keys. Afterward, file your homestead exemption with your county appraisal district; nobody files it for you. See [closing costs in Texas](/buyers/closing-costs-texas).",
         },
       ],
@@ -629,10 +615,9 @@ export const firstTimeBuyerGuide: AcademyGuide = {
   natalieTake: {
     heading: "A first home with built-in equity",
     paragraphs: [
-      "I had a buyer reach out on TikTok who was moving from Colorado for a new job, with a hiccup on his credit. I went to four or five builders in his price point and found an inventory home in Waller, off the Grand Parkway — already the cheapest three-bed, two-bath in the area. We tied it up under contract and the builder came down another $5,000.",
-      "He's moving in with roughly $50,000 in equity compared with similar homes nearby, and we worked on his financing at the same time. Builders want to keep their crews working, so inventory homes can be a real opportunity — you just have to know who you're working with.",
+      "I had a buyer reach out on TikTok who was moving from Colorado for a new job, with a hiccup on his credit. I went to four or five builders in his price point and found an inventory home in Waller, off the Grand Parkway, already the cheapest three-bed, two-bath in the area. We tied it up under contract and the builder came down another $5,000.",
+      "He's moving in with roughly $50,000 in equity compared with similar homes nearby, and we worked on his financing at the same time. Builders want to keep their crews working, so inventory homes can be a real opportunity. You just have to know who you're working with.",
     ],
-    source: EP45,
   },
   faqs: [
     {

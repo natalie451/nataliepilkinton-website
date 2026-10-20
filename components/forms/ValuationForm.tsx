@@ -17,7 +17,7 @@ export function ValuationForm() {
   if (submitted) {
     return (
       <div className="bg-cream border-l-4 border-gold p-lg rounded-xs">
-        <p className="mb-0">Thanks — Natalie&rsquo;s team will follow up with your home value estimate shortly.</p>
+        <p className="mb-0">Thanks. Natalie&rsquo;s team will follow up with your home value estimate shortly.</p>
       </div>
     );
   }

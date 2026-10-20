@@ -22,10 +22,10 @@ export const homeBuyerChecklist: ChecklistSection[] = [
   {
     title: "Understand Your Loan Options",
     items: [
-      "Conventional — most lenders look for about 620; 3%–5% down; backed by Fannie Mae/Freddie Mac",
-      "FHA — easier to qualify; 580+ with 3.5% down (500–579 with 10% down); insured by the FHA, no income limit",
-      "USDA — no down payment; eligible rural/suburban areas and income limits; lender sets the credit minimum",
-      "VA — for eligible veterans, service members and surviving spouses; no down payment; lender sets the credit minimum (often 580–620)",
+      "Conventional: most lenders look for about 620; 3%–5% down; backed by Fannie Mae/Freddie Mac",
+      "FHA: easier to qualify; 580+ with 3.5% down (500–579 with 10% down); insured by the FHA, no income limit",
+      "USDA: no down payment; eligible rural/suburban areas and income limits; lender sets the credit minimum",
+      "VA: for eligible veterans, service members and surviving spouses; no down payment; lender sets the credit minimum (often 580–620)",
     ],
   },
   {
@@ -33,7 +33,7 @@ export const homeBuyerChecklist: ChecklistSection[] = [
     items: [
       "Keep living at your current residence",
       "Keep paying your rent or mortgage as normal",
-      "Keep using credit normally — don't close accounts",
+      "Keep using credit normally. Don't close accounts",
       "Keep your current job",
       "Stay current on all accounts",
       "Expect and promptly respond to documentation requests",
@@ -43,8 +43,8 @@ export const homeBuyerChecklist: ChecklistSection[] = [
   {
     title: "Budget for These Costs",
     items: [
-      "Escrow / earnest money — typically about 1% of purchase price, minimum around $1,000",
-      "Home inspection — generally $400–$1,000, may include optional WDO, 4-point, and wind mitigation inspections; non-refundable",
+      "Escrow / earnest money: typically about 1% of purchase price, minimum around $1,000",
+      "Home inspection: generally $400–$1,000, may include optional WDO, 4-point, and wind mitigation inspections; non-refundable",
       "Acceptable down payment / closing cost sources: 401(k)/retirement accounts, gift funds from immediate family or friends, liquid stocks, bonds, or cash",
       "Not acceptable: credit cards or personal loans (secured loans are acceptable)",
       "Undocumented cash generally needs to be \"seasoned\" (sitting in your account) for 60 days",
@@ -54,7 +54,7 @@ export const homeBuyerChecklist: ChecklistSection[] = [
     title: "Choose Your Team",
     items: [
       "Work with a full-time Realtor under a buyer-broker agreement",
-      "Bring your own Realtor even when buying new construction — a builder's on-site agent represents the builder, not you",
+      "Bring your own Realtor even when buying new construction. A builder's on-site agent represents the builder, not you",
       "Compare a specialized mortgage lender against a big bank before committing",
     ],
   },
@@ -82,11 +82,11 @@ export const preSaleChecklist: ChecklistSection[] = [
   {
     title: "Prepare Your Home",
     items: [
-      "Declutter and depersonalize — stagers often recommend removing about half your belongings",
+      "Declutter and depersonalize. Stagers often recommend removing about half your belongings",
       "Deep clean the whole home, including deodorizing and steam-cleaning carpets",
-      "Handle minor repairs — leaky faucets, chipped paint, squeaky doors",
+      "Handle minor repairs: leaky faucets, chipped paint, squeaky doors",
       "Confirm major systems work and are leak-free: HVAC, water heater, smoke detectors, and the electrical panel/breakers",
-      "Boost curb appeal — mow the lawn, trim bushes, add fresh mulch or flowers",
+      "Boost curb appeal: mow the lawn, trim bushes, add fresh mulch or flowers",
       "Consider a pre-listing inspection to catch issues before buyers do",
     ],
   },
@@ -95,7 +95,7 @@ export const preSaleChecklist: ChecklistSection[] = [
     items: [
       "Request a comparative market analysis (CMA) from your Realtor",
       "Understand how recent, comparable sales in your area affect your price",
-      "Avoid overpricing — homes that sit too long can lose buyer interest",
+      "Avoid overpricing. Homes that sit too long can lose buyer interest",
       "Discuss pricing strategy for your specific market conditions with your Realtor",
     ],
   },
@@ -111,7 +111,7 @@ export const preSaleChecklist: ChecklistSection[] = [
   {
     title: "During Showings & Negotiations",
     items: [
-      "Keep the home show-ready — clean and staged for last-minute showings",
+      "Keep the home show-ready: clean and staged for last-minute showings",
       "Review every offer with your Realtor before responding",
       "Understand contingencies (inspection, financing, appraisal) in any offer",
       "Negotiate repairs or credits based on inspection findings",
@@ -129,7 +129,7 @@ export const preSaleChecklist: ChecklistSection[] = [
   {
     title: "Why Work With a Realtor",
     items: [
-      "The CMA, professional photography, and listing syndication above are typically handled for you as part of a full-service Realtor's listing package — not extra tasks you take on alone",
+      "The CMA, professional photography, and listing syndication above are typically handled for you as part of a full-service Realtor's listing package, not extra tasks you take on alone",
       "A Realtor reviews and negotiates offers on your behalf, so you're not evaluating contingencies or counteroffers by yourself",
       "A Realtor coordinates showings, repair negotiations, and closing paperwork, keeping the process on track from listing to close",
     ],

@@ -10,8 +10,9 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { sellerJourney } from "@/lib/content/sellers";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Home Seller Academy",
-  description: "Learn how to maximize your sale price and timeline with Natalie Pilkinton's Home Seller Academy.",
+  title: "Sell a Home in Spring, TX",
+  description:
+    "Selling in Spring, TX or Greater Houston? Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/sellers",
 });
 
@@ -34,11 +35,12 @@ const resources = [
 export default function SellersPage() {
   return (
     <AcademyLayout
-      title="Home Seller Academy"
-      subheading="Learn how to maximize your sale price and timeline"
-      ctaTitle="Ready to Sell?"
-      ctaDescription="Get a free home valuation and selling strategy consultation."
-      ctaLabel="Get Your Free Valuation →"
+      title="Sell a Home in Spring, TX"
+      subheading="Pricing, marketing, and a selling plan for homes in Spring and Greater Houston, especially north of I-10 up to Huntsville."
+      ctaTitle="Ready to talk about selling?"
+      ctaDescription="Request a home value conversation, or call and text Natalie to talk through timing and next steps."
+      ctaLabel="What's my home worth?"
+      ctaHref="/sellers/home-value"
     >
       <Section>
         <Container>

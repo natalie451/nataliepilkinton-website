@@ -11,9 +11,10 @@ type LeadMagnetFormProps = {
   resource: string;
   /** Called after a successful submission so the parent can reveal the gated content. */
   onSuccess: () => void;
+  submitLabel?: string;
 };
 
-export function LeadMagnetForm({ resource, onSuccess }: LeadMagnetFormProps) {
+export function LeadMagnetForm({ resource, onSuccess, submitLabel = "Get the Checklist →" }: LeadMagnetFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -59,10 +60,10 @@ export function LeadMagnetForm({ resource, onSuccess }: LeadMagnetFormProps) {
         className="absolute left-[-9999px] w-px h-px opacity-0"
       />
       <Button type="submit" disabled={status === "submitting"}>
-        {status === "submitting" ? "Sending..." : "Get the Checklist →"}
+        {status === "submitting" ? "Sending..." : submitLabel}
       </Button>
       {status === "error" && (
-        <p className="text-sm text-red-700 mb-0">Something went wrong — please try again in a moment.</p>
+        <p className="text-sm text-red-700 mb-0">Something went wrong. Please try again in a moment.</p>
       )}
     </form>
   );

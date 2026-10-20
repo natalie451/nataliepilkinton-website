@@ -48,8 +48,8 @@ export async function MeetupCallout({
         together to talk through what&rsquo;s happening in the Texas market, the deals they&rsquo;re working on and the
         topics that matter right now
         {audience === "investors"
-          ? " — from rentals and multifamily to self-directed IRAs and group investing."
-          : " — a good place to meet investor clients and the vendors who serve them."}{" "}
+          ? ", from rentals and multifamily to self-directed IRAs and group investing."
+          : ", a good place to meet investor clients and the vendors who serve them."}{" "}
         New and experienced members are welcome.
       </p>
 

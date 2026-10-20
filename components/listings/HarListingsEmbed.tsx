@@ -17,7 +17,7 @@ export function HarListingsEmbed() {
       <div className="border border-gray-light rounded-xs overflow-hidden shadow-brand-md bg-white">
         <iframe
           src={siteConfig.harProfileUrl}
-          title="Natalie Pilkinton — Official HAR Listings"
+          title="Natalie Pilkinton, official HAR listings"
           loading="lazy"
           className="w-full h-[85vh] min-h-[600px] border-0"
         />

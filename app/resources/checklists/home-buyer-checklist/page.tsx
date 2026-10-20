@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Home Buyer's Checklist",
   description:
-    "Everything you need before making an offer — pre-approval documents, loan options, closing cost budgeting, and what to do before you close. From Natalie Pilkinton's Home Buyer Masterclass.",
+    "Everything you need before making an offer: pre-approval documents, loan options, closing cost budgeting, and what to do before you close. From Natalie Pilkinton's Home Buyer Masterclass.",
   path: "/resources/checklists/home-buyer-checklist",
 });
 
@@ -29,7 +29,7 @@ export default function HomeBuyerChecklistPage() {
 
       <Hero
         title="Home Buyer's Checklist"
-        subheading="Everything you need to know before making an offer — straight from Natalie's Home Buyer Masterclass."
+        subheading="Everything you need to know before making an offer, straight from Natalie's Home Buyer Masterclass."
         align="left"
       />
 

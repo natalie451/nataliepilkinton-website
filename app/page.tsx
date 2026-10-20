@@ -1,171 +1,168 @@
 import type { Metadata } from "next";
-import { Hero } from "@/components/sections/Hero";
+import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Stats } from "@/components/sections/Stats";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
-import { SearchBar } from "@/components/forms/SearchBar";
-import { LearningPathCard } from "@/components/cards/LearningPathCard";
-import { ResourceCard } from "@/components/cards/ResourceCard";
-import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
-import { TiltCard } from "@/components/motion/TiltCard";
+import { ContactActions } from "@/components/cta/ContactActions";
+import { RealtorVideos } from "@/components/sections/RealtorVideos";
 import { homeStats } from "@/lib/data/stats";
+import { realtorChannelUrl } from "@/lib/data/videos";
+import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Natalie Pilkinton, Houston REALTOR® | Home Buyers, Sellers & Investors | Spring TX",
+  title: "Spring TX REALTOR | Natalie Pilkinton | Buy, Sell, or Invest",
+  absoluteTitle: true,
   description:
-    "Houston REALTOR®, real estate investor and educator Natalie Pilkinton helps buyers, sellers and investors across Spring, The Woodlands and greater Houston. 20+ years of experience.",
+    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/",
 });
 
-/** The four audiences Natalie serves, each linking into its Academy. */
-const audiences = [
+const paths = [
   {
-    icon: "🏠",
-    title: "Home Buyers",
-    description: "First-time, relocation and new construction buyers, and anyone working through financing.",
+    eyebrow: "Buyers",
+    title: "Buy a home",
+    body: "First-time buyers, move-up buyers, and people relocating into Spring and Greater Houston. Financing, offers, and closing, explained before you shop.",
     href: "/buyers",
+    cta: "Start the buyer path",
+    secondary: { href: "/listings", label: "See current listings" },
   },
   {
-    icon: "🔑",
-    title: "Home Sellers",
-    description: "Pricing, marketing, negotiation and a selling strategy built around your timeline.",
+    eyebrow: "Sellers",
+    title: "Sell a home",
+    body: "Pricing, marketing, and a plan built around your timeline. Start with what the home may be worth, then map the steps to list.",
     href: "/sellers",
+    cta: "Start the seller path",
+    secondary: { href: "/sellers/home-value", label: "What's my home worth?" },
   },
   {
-    icon: "📈",
-    title: "Real Estate Investors",
-    description: "Property analysis, cash flow, financing and rental strategy from a Realtor who invests herself.",
+    eyebrow: "Investors",
+    title: "Invest in property",
+    body: "Rentals, financing, and strategy from a REALTOR who invests herself. Useful if you are buying your first rental or reviewing a deal.",
     href: "/investors",
+    cta: "Start the investor path",
+    secondary: { href: "/investors/beginner", label: "How to start investing" },
   },
   {
-    icon: "🚀",
-    title: "Realtors",
-    description: "Business growth, systems, coaching and training for agents ready to scale.",
-    href: "/realtors",
-  },
-];
-
-const marketsServed = ["Spring", "Houston", "The Woodlands", "Tomball", "Conroe", "Cypress", "Magnolia", "Montgomery"];
-
-const featuredResources = [
-  {
-    category: "Guide",
-    title: "Home Buyer's Checklist",
-    description: "Everything you need to know before making an offer.",
-  },
-  {
-    category: "Article",
-    title: "Improve Your Credit Before Buying",
-    description: "Practical guide to raising your credit score.",
-  },
-  {
-    category: "Webinar",
-    title: "Passive Income Strategies",
-    description: "Build passive income through rental properties.",
+    eyebrow: "Agents",
+    title: "Join my team",
+    body: "For licensed agents and people working toward a license. Start with a free commission audit and a conversation about joining Natalie.",
+    href: "/join-my-team",
+    cta: "See how to join",
+    secondary: { href: "/booking", label: "Book a call" },
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <Hero
-        cinematic
-        eyebrow="Master the Art of Real Estate"
-        title="Houston Realtor, Real Estate Investor & Educator"
-        subheading="Helping buyers, sellers and investors make smarter real estate decisions across Houston, Spring, The Woodlands and surrounding Texas markets, with no-fluff strategies from someone who has built wealth doing it."
-      >
-        <Button href="/buyers" size="large">
-          Start Learning
-        </Button>
-        <Button href="/booking" variant="outline-light" size="large">
-          Book Free Strategy Session
-        </Button>
-      </Hero>
+      <section className="bg-navy text-white relative overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-70"
+          style={{
+            background: "radial-gradient(50rem 24rem at 80% -10%, rgba(201,162,39,0.18), transparent 60%)",
+          }}
+        />
+        <Container className="relative py-2xl md:py-3xl">
+          <p className="text-gold text-sm font-semibold uppercase tracking-[0.16em] mb-md">Spring, TX REALTOR</p>
+          <h1 className="text-white text-balance mb-lg max-w-[18ch] text-[clamp(2.15rem,1.2rem+3.2vw,3.75rem)] leading-[1.08]">
+            Buy, sell, or invest with Natalie Pilkinton
+          </h1>
+          <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
+            HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text{" "}
+            <a href={siteConfig.phoneHref} className="text-white font-semibold underline underline-offset-2">
+              {siteConfig.phone}
+            </a>
+            , or book a time that works for you.
+          </p>
+          <ContactActions tone="on-dark" size="large" />
+        </Container>
+      </section>
 
       <Section>
         <Container>
-          <Reveal>
-            <Stats stats={homeStats} />
-          </Reveal>
+          <h2 id="paths" className="mb-sm">
+            Choose your path
+          </h2>
+          <p className="max-w-[42rem] text-gray-dark mb-xl">
+            Buyers, sellers, investors, and agents each have a next step. Pick the one that matches what you are doing right now.
+          </p>
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-lg">
+            {paths.map((path) => (
+              <article
+                key={path.href}
+                className="flex flex-col border border-gray-light border-t-4 border-t-gold rounded-xs p-lg bg-white shadow-brand-sm"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-ink mb-sm">{path.eyebrow}</p>
+                <h3 className="mt-0 mb-sm text-2xl">{path.title}</h3>
+                <p className="text-gray-dark flex-1">{path.body}</p>
+                <div className="flex flex-col items-start gap-sm mt-md">
+                  <Button href={path.href}>{path.cta}</Button>
+                  <Link href={path.secondary.href} className="text-sm font-semibold text-gold-ink underline underline-offset-2">
+                    {path.secondary.label}
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </Container>
       </Section>
 
       <Section tone="light">
-        <Container className="text-center">
-          <Reveal>
-            <SectionTitle align="center">Who I Help</SectionTitle>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <p className="max-w-[42rem] mx-auto text-gray-dark">
-              I&rsquo;m Natalie Pilkinton, a REALTOR® with HomeRock Realty and a real estate investor with 20+ years in
-              the Houston market. Pick where you are and start learning.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <div className="my-2xl">
-              <SearchBar />
-            </div>
-          </Reveal>
-
-          <RevealGroup className="grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-lg text-left">
-            {audiences.map((path) => (
-              <RevealItem key={path.href}>
-                <TiltCard>
-                  <LearningPathCard {...path} />
-                </TiltCard>
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container className="text-center">
-          <Reveal>
-            <SectionTitle align="center">Areas I Serve</SectionTitle>
-            <p className="max-w-[42rem] mx-auto text-gray-dark mb-lg">
-              Based in Spring and working across greater Houston and Montgomery County.
-            </p>
-            <ul className="flex flex-wrap justify-center gap-sm list-none p-0 mb-lg">
-              {marketsServed.map((market) => (
-                <li key={market} className="px-md py-xs rounded-full border border-gray-light text-navy text-sm font-semibold">
-                  {market}
-                </li>
-              ))}
-            </ul>
-            <Button href="/market-updates" variant="secondary">
-              See the latest Houston market update →
+        <Container>
+          <h2>Videos from Natalie</h2>
+          <p className="max-w-[42rem] text-gray-dark mb-xl">
+            Recent videos from her real estate channel: client stories and what is happening around north Houston.
+          </p>
+          <RealtorVideos />
+          <div className="mt-lg">
+            <Button href={realtorChannelUrl} external variant="secondary">
+              Watch on YouTube
             </Button>
-          </Reveal>
+          </div>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Reveal>
-            <SectionTitle>Featured Resources</SectionTitle>
-          </Reveal>
-          <RevealGroup className="grid grid-cols-3 max-md:grid-cols-1 gap-lg">
-            {featuredResources.map((resource) => (
-              <RevealItem key={resource.title}>
-                <TiltCard maxTilt={4}>
-                  <ResourceCard {...resource} />
-                </TiltCard>
-              </RevealItem>
+          <h2>Real estate in Spring and Greater Houston</h2>
+          <p className="max-w-[44rem] text-gray-dark">
+            Natalie is based at {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region}{" "}
+            {siteConfig.address.postalCode}. Spring is home base. She serves {serviceRegion}, including{" "}
+            {formatCityList(serviceAreas.slice(1))}.
+          </p>
+          <ul className="flex flex-wrap gap-sm list-none p-0 mt-lg mb-lg">
+            {serviceAreas.map((market) => (
+              <li key={market} className="px-md py-xs rounded-full border border-gray-light bg-white text-navy text-sm font-semibold">
+                {market}, TX
+              </li>
             ))}
-          </RevealGroup>
+          </ul>
+          <Button href="/market-updates" variant="secondary">
+            Read the latest market update
+          </Button>
         </Container>
       </Section>
 
-      <Reveal>
-        <CTA title="Ready to Master Real Estate?" description="Book a free 30-minute strategy session to discuss your real estate goals.">
-          <Button href="/booking">Book Your FREE Strategy Session</Button>
-        </CTA>
-      </Reveal>
+      <Section tone="light">
+        <Container>
+          <h2 className="text-center">Experience you can ask about</h2>
+          <p className="text-center max-w-[40rem] mx-auto text-gray-dark">
+            These figures are the ones already published on this site. Ask Natalie how they apply to your situation.
+          </p>
+          <Stats stats={homeStats} />
+        </Container>
+      </Section>
+
+      <CTA
+        title="Talk with Natalie about your next move"
+        description="Call or text, send an email, or pick a time. She works with buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville."
+      >
+        <ContactActions tone="on-dark" />
+      </CTA>
     </>
   );
 }

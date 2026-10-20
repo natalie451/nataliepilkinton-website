@@ -4,21 +4,9 @@ import { homeRockMortgage, lenderDisclosure } from "@/lib/content/academy/provid
 /**
  * Investor Academy guides.
  *
- * Natalie's perspective comes from her own teaching on the Sugar, Spice &
- * Spirits podcast (episode 45, "Is 10 Rental Properties Actually Enough to
- * Retire?"). Lending and tax facts were checked against the sources listed on
+ * Lending and tax facts were checked against the sources listed on
  * each guide on Oct 5, 2026 — re-check them when updating.
  */
-
-const EP45 = {
-  label: "Sugar, Spice & Spirits episode 45: Is 10 Rental Properties Actually Enough to Retire?",
-  href: "/podcast/transcripts/ep45-is-10-rental-properties-enough-to-retire",
-};
-
-const EP56 = {
-  label: "Sugar, Spice & Spirits episode 56: Hard Money Lending Explained, with Eddie Gant of Jet Lending",
-  href: "/podcast/transcripts/ep56-hard-money-lending-explained",
-};
 
 const investorBooking = {
   title: "Ready to Run the Numbers on Your First Deal?",
@@ -41,7 +29,7 @@ export const beginnerGuide: AcademyGuide = {
   ],
   datePublished: DATE,
   shortAnswer: [
-    "Start with one rental property whose rent covers the full monthly payment — principal, interest, taxes and insurance (PITI) — with some cash flow left over. In the Houston area, property taxes and insurance are the costs that most often break a deal, so get real numbers for both before you make an offer.",
+    "Start with one rental property whose rent covers the full monthly payment (principal, interest, taxes, and insurance, or PITI) with some cash flow left over. In the Houston area, property taxes and insurance are the costs that most often break a deal, so get real numbers for both before you make an offer.",
     "Most investment loans need 15–25% down, plus reserves for repairs and vacancies. Then add one property at a time instead of trying to scale fast.",
   ],
   sections: [
@@ -60,18 +48,18 @@ export const beginnerGuide: AcademyGuide = {
       ],
     },
     {
-      heading: "Make the rent cover PITI — especially in Texas",
+      heading: "Make the rent cover PITI, especially in Texas",
       paragraphs: [
         "The first test of any rental is whether the rent covers principal, interest, taxes and insurance. Texas has no state income tax, but it makes up for it with high property taxes, and homeowners insurance near the coast has climbed with hurricane and flood risk.",
-        "Watch the escrow. Your lender collects taxes and insurance monthly based on last year's bills. When both go up, the next escrow analysis can raise your payment and ask you to cover the shortage at the same time — a double hit if your margins were thin.",
-        "Whoever brings you the deal — your agent, a wholesaler or a seller — should run rental comps and real tax and insurance figures before you commit. See [how to analyze an investment property](/blog/investing/analyze-investment-properties) for the core metrics.",
+        "Watch the escrow. Your lender collects taxes and insurance monthly based on last year's bills. When both go up, the next escrow analysis can raise your payment and ask you to cover the shortage at the same time, a double hit if your margins were thin.",
+        "Whoever brings you the deal (your agent, a wholesaler, or a seller) should run rental comps and real tax and insurance figures before you commit. See [how to analyze an investment property](/blog/investing/analyze-investment-properties) for the core metrics.",
       ],
     },
     {
       heading: "How much money do you need?",
       paragraphs: [
         "Plan for a down payment, closing costs, any repairs, and reserves. Most investment-property loans, including DSCR loans, typically require 20–25% down, with some programs at 15% for strong credit. Lenders also want cash reserves measured in months of the payment.",
-        "If you find a property at a deep enough discount, creative strategies like [BRRRR](/investors/brrrr) can get much of your cash back out after the rehab — but they need more experience and more cushion.",
+        "If you find a property at a deep enough discount, creative strategies like [BRRRR](/investors/brrrr) can get much of your cash back out after the rehab, but they need more experience and more cushion.",
       ],
     },
     {
@@ -79,7 +67,7 @@ export const beginnerGuide: AcademyGuide = {
       bullets: [
         "Open a separate bank account for each property and run all its rent and repairs through it.",
         "Hold the tenant's security deposit separately; it isn't your money to spend. Texas requires you to refund it, minus itemized deductions, within 30 days after the tenant moves out and gives a forwarding address.",
-        "Decide on your structure — an LLC, or a DBA under an umbrella entity — with your attorney and CPA. You don't need an LLC to buy your first rental.",
+        "Decide on your structure (an LLC, or a DBA under an umbrella entity) with your attorney and CPA. You don't need an LLC to buy your first rental.",
         "Build a vendor list before you need it: a plumber, an electrician, a handyman and an HVAC company who work for investors.",
         "Put everything in writing: leases, contractor bids and change orders. Never pay a contractor in full up front.",
       ],
@@ -103,11 +91,10 @@ export const beginnerGuide: AcademyGuide = {
   natalieTake: {
     heading: "Treat your tenants like customers",
     paragraphs: [
-      "I've had tenants stay in a house 10 and 15 years. When I got one of those houses back it needed a full rehab — but that was 15 years of zero vacancy and 15 years of someone else paying down my loan. I'll take that trade.",
+      "I've had tenants stay in a house 10 and 15 years. When I got one of those houses back it needed a full rehab, but that was 15 years of zero vacancy and 15 years of someone else paying down my loan. I'll take that trade.",
       "If something breaks and it isn't my tenant's fault, I pay for it, because I want them to renew. A vacancy can cost me $2,000 at the end of the year, and charging a good tenant $200 here and $200 there hurts them a lot more than it helps me.",
-      "And if you know you can't have a hard conversation or handle an eviction, hire a property manager — or invest passively with a solid operator instead of owning rentals directly.",
+      "And if you know you can't have a hard conversation or handle an eviction, hire a property manager, or invest passively with a solid operator instead of owning rentals directly.",
     ],
-    source: EP45,
   },
   faqs: [
     {
@@ -160,7 +147,7 @@ export const brrrrGuide: AcademyGuide = {
   metaDescription:
     "How the BRRRR strategy works in Texas: buying below value, rehabbing for a rental, cash-out refinance seasoning rules for conventional and DSCR loans, and the risks.",
   h1: "What Is the BRRRR Strategy in Texas?",
-  subheading: "Buy, Rehab, Rent, Refinance, Repeat — explained stage by stage",
+  subheading: "Buy, Rehab, Rent, Refinance, Repeat, explained stage by stage",
   breadcrumbs: [
     { name: "Investors", path: "/investors" },
     { name: "BRRRR", path: "/investors/brrrr" },
@@ -168,7 +155,7 @@ export const brrrrGuide: AcademyGuide = {
   datePublished: DATE,
   shortAnswer: [
     "BRRRR means Buy, Rehab, Rent, Refinance, Repeat. You buy a property below its after-repair value, fix it up, rent it, then refinance based on the new value to pull most of your cash back out and do it again.",
-    "It only works if you buy at a real discount, keep the rehab on budget and wait out the lender's seasoning period — usually 3 to 12 months depending on the loan.",
+    "It only works if you buy at a real discount, keep the rehab on budget and wait out the lender's seasoning period, usually 3 to 12 months depending on the loan.",
   ],
   sections: [
     {
@@ -176,7 +163,7 @@ export const brrrrGuide: AcademyGuide = {
       steps: [
         {
           title: "Buy below value",
-          body: "The profit is made at purchase. Look for distressed properties — pre-foreclosures, estate sales, county foreclosure auctions, wholesaler deals or homes that need work most buyers won't take on. You often can't see inside until you write an offer.",
+          body: "The profit is made at purchase. Look for distressed properties: pre-foreclosures, estate sales, county foreclosure auctions, wholesaler deals or homes that need work most buyers won't take on. You often can't see inside until you write an offer.",
         },
         {
           title: "Rehab for a rental, not a flip",
@@ -223,7 +210,7 @@ export const brrrrGuide: AcademyGuide = {
     {
       heading: "An illustration of the math",
       paragraphs: [
-        "Hypothetical numbers to show how the pieces fit — not a real deal or a promise of results.",
+        "Hypothetical numbers to show how the pieces fit, not a real deal or a promise of results.",
       ],
       table: {
         headers: ["Item", "Amount"],
@@ -255,7 +242,6 @@ export const brrrrGuide: AcademyGuide = {
       "You can get into properties with very little down today, even with DSCR loans. But you have to be able to absorb the backslide when rents soften or values dip.",
       "I've watched people walk away from houses in a down market when two more years of holding on would have saved them. Make sure you're not over-leveraged, and keep reserves so a bad month doesn't become a foreclosure.",
     ],
-    source: EP45,
   },
   faqs: [
     {
@@ -266,7 +252,7 @@ export const brrrrGuide: AcademyGuide = {
     {
       question: "Can I do BRRRR with no money?",
       answer:
-        "Rarely. You usually need cash or a short-term loan for the purchase and rehab, plus reserves. If you buy at a steep enough discount, the refinance can return most of it — but plan for some money to stay in the deal.",
+        "Rarely. You usually need cash or a short-term loan for the purchase and rehab, plus reserves. If you buy at a steep enough discount, the refinance can return most of it, but plan for some money to stay in the deal.",
     },
     {
       question: "What loan do investors use for the refinance step?",
@@ -332,7 +318,7 @@ export const dscrGuide: AcademyGuide = {
           ["Property types", "Single-family, 2–4 units, condos and townhomes; short-term rentals at some lenders"],
           ["Prepayment penalty", "Common; a longer penalty period can buy a lower rate"],
         ],
-        note: "Requirements as published by DSCR lenders in 2026. Programs differ — compare several lenders.",
+        note: "Requirements as published by DSCR lenders in 2026. Programs differ, so compare several lenders.",
       },
     },
     {
@@ -343,12 +329,12 @@ export const dscrGuide: AcademyGuide = {
       ],
     },
     {
-      heading: "When a DSCR loan fits — and when it doesn't",
+      heading: "When a DSCR loan fits, and when it doesn't",
       bullets: [
         "Fits: self-employed investors, buyers with several rentals already, investors who want to close in an LLC, and BRRRR investors refinancing out of short-term debt.",
         "Fits: buyers whose tax returns show low income because of depreciation and write-offs.",
         "Less ideal: buyers who qualify easily for a conventional loan, which may offer a lower rate and no prepayment penalty.",
-        "Not for: a home you plan to live in — DSCR loans are for investment properties only.",
+        "Not for: a home you plan to live in. DSCR loans are for investment properties only.",
       ],
     },
   ],
@@ -358,7 +344,6 @@ export const dscrGuide: AcademyGuide = {
       "DSCR loans make it possible to get into properties with very minimal down. That's an opportunity, but you have to be able to absorb a backslide in rents.",
       "Run your numbers with today's taxes and insurance, keep your reserves, and make sure the rent covers your PITI with something left over before you count on appreciation.",
     ],
-    source: EP45,
   },
   recommended: {
     heading: "Where Natalie sends investors for DSCR loans",
@@ -419,7 +404,7 @@ export const privateLendingGuide: AcademyGuide = {
   ],
   datePublished: DATE,
   shortAnswer: [
-    "Private lending is when an individual or small company — not a bank — lends money to a real estate investor, secured by the property. Investors use it to buy and rehab properties quickly, then pay it off by selling or refinancing into a long-term loan.",
+    "Private lending is when an individual or small company (not a bank) lends money to a real estate investor, secured by the property. Investors use it to buy and rehab properties quickly, then pay it off by selling or refinancing into a long-term loan.",
     "In Texas the loan is usually documented with a promissory note and a recorded deed of trust. Both sides should use a Texas real estate attorney, because usury, licensing and homestead rules all apply.",
   ],
   sections: [
@@ -446,7 +431,7 @@ export const privateLendingGuide: AcademyGuide = {
       paragraphs: ["For lenders:"],
       bullets: [
         "The borrower defaults or the rehab stalls, and the property is worth less than expected.",
-        "Usury: Texas caps the interest that can be charged, and how the cap is calculated is technical — the Texas Supreme Court addressed it again in 2025.",
+        "Usury: Texas caps the interest that can be charged, and how the cap is calculated is technical. The Texas Supreme Court addressed it again in 2025.",
         "Licensing and consumer rules can apply depending on the borrower and how the property is used.",
         "Texas homestead protections strictly limit loans against a borrower's own home; private loans should be on investment property.",
         "Pooling money from several people into one fund can turn the arrangement into a securities offering.",
@@ -455,7 +440,7 @@ export const privateLendingGuide: AcademyGuide = {
     {
       heading: "Questions to ask before you lend or borrow",
       bullets: [
-        "What is the exit — a sale, or a refinance with a lender who has already reviewed the deal?",
+        "What is the exit: a sale, or a refinance with a lender who has already reviewed the deal?",
         "What is the as-is value and the after-repair value, and who determined them?",
         "What happens if the rehab runs 60 days late or 20% over budget?",
         "Who holds the rehab funds, and what triggers each draw?",
@@ -469,12 +454,11 @@ export const privateLendingGuide: AcademyGuide = {
       "Be very careful who you work with, how you pay them and what you give them access to. Don't trust everybody right away.",
       "Do your diligence. Check that the payment is going to the name you expect, get everything in writing, keep copies of IDs, and put every change on paper.",
     ],
-    source: EP45,
   },
   recommended: {
     heading: "Who Natalie works with on financing",
     intro:
-      "For the long-term loan you refinance into, including DSCR loans, Natalie works with Brian Lupton at HomeRock Mortgage. To hear how short-term hard money works from a Houston lender's side, listen to Natalie's conversation with Eddie Gant of Jet Lending on [podcast episode 56](/podcast/transcripts/ep56-hard-money-lending-explained).",
+      "For the long-term loan you refinance into, including DSCR loans, Natalie works with Brian Lupton at HomeRock Mortgage.",
     providers: [homeRockMortgage],
     disclosure: lenderDisclosure,
   },
@@ -503,7 +487,7 @@ export const privateLendingGuide: AcademyGuide = {
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where short-term money fits in the cycle." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The long-term refinance after private money." },
-    { label: "Podcast: Hard money lending explained", href: EP56.href, description: "Natalie's episode with Eddie Gant of Jet Lending." },
+    { label: "How to start investing", href: "/investors/beginner", description: "What to look for in a first rental." },
     { label: "Investor-friendly vendors", href: "/investors/vendors", description: "Lenders, title and contractors who work with investors." },
   ],
   sources: [

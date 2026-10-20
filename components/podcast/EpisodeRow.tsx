@@ -7,11 +7,8 @@
 
 import type { YouTubeEpisode } from "@/lib/youtube/types";
 import { getYouTubeWatchUrl } from "@/lib/youtube/types";
-import { getTranscriptByEpisodeNumber } from "@/lib/content/podcastTranscripts";
 
 export function EpisodeRow({ episode }: { episode: YouTubeEpisode }) {
-  const transcript = getTranscriptByEpisodeNumber(episode.episodeNumber);
-
   return (
     <li>
       <div className="group flex items-center gap-md p-md bg-white border border-gray-light rounded-xs transition-all duration-200 hover:border-gold hover:bg-cream hover:-translate-y-0.5 hover:shadow-brand-md">
@@ -38,16 +35,6 @@ export function EpisodeRow({ episode }: { episode: YouTubeEpisode }) {
             →
           </span>
         </a>
-
-        {transcript && (
-          <a
-            href={`/podcast/transcripts/${transcript.slug}`}
-            aria-label={`Read the transcript for episode ${episode.episodeNumber}`}
-            className="shrink-0 ml-sm text-xs font-semibold text-gold-ink border border-gold rounded-xs px-sm py-xs hover:bg-gold hover:text-navy transition-colors"
-          >
-            Transcript
-          </a>
-        )}
       </div>
     </li>
   );

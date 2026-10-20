@@ -17,7 +17,7 @@ export const buyerFaq = [
   {
     question: "Why does my credit score matter more than I think?",
     answer:
-      "Your credit score determines more than approval — it determines your options. Most lenders look for about 620 on a conventional loan. FHA loans allow scores as low as 580 with 3.5% down (or 500–579 with 10% down). VA and USDA loans have no official program minimum, so each lender sets its own, and USDA requires no down payment on eligible properties. Knowing which programs you qualify for before you start house hunting can change your whole approach.",
+      "Your credit score determines more than approval. It determines your options. Most lenders look for about 620 on a conventional loan. FHA loans allow scores as low as 580 with 3.5% down (or 500–579 with 10% down). VA and USDA loans have no official program minimum, so each lender sets its own, and USDA requires no down payment on eligible properties. Knowing which programs you qualify for before you start house hunting can change your whole approach.",
   },
   {
     question: "Do I really need to get pre-approved before house hunting?",
@@ -27,7 +27,7 @@ export const buyerFaq = [
   {
     question: "What's the difference between a bank and a mortgage broker or lender?",
     answer:
-      "Big banks typically charge an origination or discount point and only operate 9–5. With thousands of clients, it's easy to feel like just a number, and large banks often have stricter guidelines that may not include down payment assistance options. A specialized mortgage lender can offer more flexibility — worth comparing before you commit.",
+      "Big banks typically charge an origination or discount point and only operate 9–5. With thousands of clients, it's easy to feel like just a number, and large banks often have stricter guidelines that may not include down payment assistance options. A specialized mortgage lender can offer more flexibility, and that is worth comparing before you commit.",
   },
   {
     question: "Should I buy directly from a builder without my own Realtor?",
@@ -37,12 +37,12 @@ export const buyerFaq = [
   {
     question: "Is a home inspection really necessary?",
     answer:
-      "Skipping one is a real risk — you could purchase a home with issues you don't know about, lose negotiating power, risk safety concerns like mold, radon, or termite damage, lose leverage with your insurance, and miss illegal or non-permitted additions. Unless you have a licensed, insured inspector in the family, it's worth leaving to a professional.",
+      "Skipping one is a real risk. You could purchase a home with issues you don't know about, lose negotiating power, risk safety concerns like mold, radon, or termite damage, lose leverage with your insurance, and miss illegal or non-permitted additions. Unless you have a licensed, insured inspector in the family, it's worth leaving to a professional.",
   },
   {
     question: "Does it matter if I use a full-time professional Realtor?",
     answer:
-      "It does. A full-time Realtor helps the process go smoothly, and — with a buyer-broker agreement in place — is working in your best interest, not just to close a deal. They can also advise you on lenders, communities, insurance, surveys, and title companies, since they understand the full transaction from start to finish.",
+      "It does. A full-time Realtor helps the process go smoothly, and, with a buyer-broker agreement in place, is working in your best interest, not just to close a deal. They can also advise you on lenders, communities, insurance, surveys, and title companies, since they understand the full transaction from start to finish.",
   },
 ];
 
@@ -56,7 +56,7 @@ export const buyerModules = [
     icon: "🏦",
     title: "Understanding Your Loan Options",
     summary:
-      "Conventional, FHA, USDA, or VA — which mortgage loan type actually fits your credit score and budget?",
+      "Conventional, FHA, USDA, or VA: which mortgage loan type actually fits your credit score and budget?",
     sections: [
       {
         label: "Conventional Loan",
@@ -72,18 +72,18 @@ export const buyerModules = [
       },
       {
         label: "VA Loan",
-        text: "Guaranteed by the U.S. Department of Veterans Affairs for eligible veterans, active-duty and reserve service members, and surviving spouses. No down payment and no monthly mortgage insurance; a one-time funding fee applies unless waived. No VA minimum credit score — lenders often look for 580–620.",
+        text: "Guaranteed by the U.S. Department of Veterans Affairs for eligible veterans, active-duty and reserve service members, and surviving spouses. No down payment and no monthly mortgage insurance; a one-time funding fee applies unless waived. No VA minimum credit score. Lenders often look for 580–620.",
       },
     ],
   },
   {
     icon: "🏠",
     title: "Texas Down Payment Assistance Programs",
-    summary: "Several Texas down payment assistance programs can cover some — or all — of your down payment.",
+    summary: "Several Texas down payment assistance programs can cover some, or all, of your down payment.",
     sections: [
       {
         label: "Available Programs",
-        text: "Texas buyers may qualify for Home Sweet Texas, Hometown Heroes, County DPA, My First Texas Home, My Choice Texas Home, NHF, the Mortgage Credit Certificate (MCC), and Homes for Texas Heroes — plus county-specific programs such as Harris County DPA and Montgomery County DPA.",
+        text: "Texas buyers may qualify for Home Sweet Texas, Hometown Heroes, County DPA, My First Texas Home, My Choice Texas Home, NHF, the Mortgage Credit Certificate (MCC), and Homes for Texas Heroes, plus county-specific programs such as Harris County DPA and Montgomery County DPA.",
       },
       {
         label: "Home Sweet Texas Program",
@@ -102,7 +102,7 @@ export const buyerModules = [
     sections: [
       {
         label: "Escrow / Earnest Money",
-        text: "Typically about 1% of the purchase price — for example, $3,000 on a $300,000 home — though amounts of $1,000 or more can be acceptable.",
+        text: "Typically about 1% of the purchase price (for example, $3,000 on a $300,000 home), though amounts of $1,000 or more can be acceptable.",
       },
       {
         label: "Home Inspection Costs",

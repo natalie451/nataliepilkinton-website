@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/data/navigation";
+import { formatCityList, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import type { Listing } from "@/lib/listings/types";
 
 /** JSON-LD builders. Render via <script type="application/ld+json"> in each page. */
@@ -49,11 +49,11 @@ export function personSchema() {
     name: siteConfig.name,
     url: `${siteConfig.siteUrl}/about`,
     image: siteConfig.headshotUrl,
-    jobTitle: "REALTOR®, Real Estate Investor & Educator",
-    description: `Houston-area REALTOR®, real estate investor and educator with ${siteConfig.yearsExperience} years of experience helping buyers, sellers and investors in Spring, Houston and The Woodlands.`,
+    jobTitle: "REALTOR®",
+    description: `Spring, TX REALTOR® and real estate investor with ${siteConfig.yearsExperience} years of experience. She serves ${serviceRegion}, including ${formatCityList(siteConfig.areasServed)}.`,
     worksFor: { "@id": schemaIds.brokerage },
     address: postalAddress,
-    telephone: siteConfig.phone,
+    telephone: "+1-832-863-3468",
     email: siteConfig.email,
     knowsAbout: [
       "Residential real estate",
@@ -85,10 +85,27 @@ export function localBusinessSchema() {
     url: siteConfig.siteUrl,
     image: siteConfig.headshotUrl,
     logo: siteConfig.logoUrl,
-    telephone: siteConfig.phone,
+    telephone: "+1-832-863-3468",
     email: siteConfig.email,
     address: postalAddress,
-    areaServed: siteConfig.areasServed.map((city) => ({ "@type": "City", name: `${city}, TX` })),
+    areaServed: [
+      {
+        "@type": "AdministrativeArea",
+        name: "Greater Houston",
+        description: serviceRegion,
+      },
+      ...siteConfig.areasServed.map((city) => ({ "@type": "City", name: `${city}, TX` })),
+    ],
+    description:
+      `Spring, TX real estate agent serving ${serviceRegion}, including ${formatCityList(siteConfig.areasServed)}.`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-832-863-3468",
+      email: siteConfig.email,
+      contactType: "sales",
+      areaServed: "US-TX",
+      availableLanguage: "English",
+    },
     founder: { "@id": schemaIds.person },
     parentOrganization: { "@id": schemaIds.brokerage },
     sameAs,

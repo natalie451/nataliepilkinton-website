@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { footerNav, siteConfig } from "@/lib/data/navigation";
+import { footerNav, formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { SocialIcons } from "@/components/layout/SocialIcons";
 import { Newsletter } from "@/components/forms/Newsletter";
 
@@ -23,10 +23,37 @@ export function Footer() {
                 className="h-8 w-8"
               />
             </Link>
-            <p className="text-cream/80 text-sm max-w-[24rem] mb-lg">
-              Texas Realtor, real estate investor, and educator helping buyers, sellers, investors, and
-              agents build real estate wealth with confidence.
+            <p className="text-cream/80 text-sm max-w-[24rem] mb-md">
+              Spring, TX REALTOR with HomeRock Realty. Serving {serviceRegion}, including{" "}
+              {formatCityList(serviceAreas)}.
             </p>
+            <ul className="list-none space-y-xs mb-lg text-sm">
+              <li>
+                <a href={siteConfig.phoneHref} className="text-cream hover:text-gold">
+                  Call {siteConfig.phone}
+                </a>
+              </li>
+              <li>
+                <a href={siteConfig.smsHref} className="text-cream hover:text-gold">
+                  Text {siteConfig.phone}
+                </a>
+              </li>
+              <li>
+                <a href={siteConfig.emailHref} className="text-cream hover:text-gold">
+                  {siteConfig.email}
+                </a>
+              </li>
+              <li>
+                <Link href="/booking" className="text-cream hover:text-gold">
+                  Book a time
+                </Link>
+              </li>
+              <li>
+                <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="text-cream hover:text-gold">
+                  Leave a Google review
+                </a>
+              </li>
+            </ul>
             <SocialIcons className="flex gap-sm" />
           </div>
 
@@ -67,17 +94,17 @@ export function Footer() {
           <p className="mb-xs">
             <span className="text-cream font-semibold">{siteConfig.name}</span>, REALTOR® · {siteConfig.brand} ·{" "}
             {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode} ·{" "}
-            <a href={siteConfig.phoneHref} className="text-cream/85 hover:text-gold transition-colors">
+            <a href={siteConfig.phoneHref} className="text-cream underline hover:text-gold transition-colors">
               {siteConfig.phone}
             </a>
           </p>
           <p>
             TREC License #{siteConfig.licenseNumber} ·{" "}
-            <a href={siteConfig.brokerage.iabsUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-gold transition-colors">
+            <a href={siteConfig.brokerage.iabsUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-gold transition-colors">
               Information About Brokerage Services
             </a>{" "}
             ·{" "}
-            <a href={siteConfig.brokerage.consumerProtectionUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-gold transition-colors">
+            <a href={siteConfig.brokerage.consumerProtectionUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-gold transition-colors">
               TREC Consumer Protection Notice
             </a>
           </p>

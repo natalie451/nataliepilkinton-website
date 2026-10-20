@@ -7,13 +7,13 @@ export type NavItem = {
   label: string;
   href: string;
   children?: NavChild[];
+  /** When true, the desktop menu does not add an "Overview" link to href. */
+  hideOverview?: boolean;
 };
 
 export const primaryNav: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "About Natalie", href: "/about" },
   {
-    label: "Home Buyers",
+    label: "Buyers",
     href: "/buyers",
     children: [
       { label: "First-Time Buyers", href: "/buyers/first-time-buyers" },
@@ -27,13 +27,13 @@ export const primaryNav: NavItem[] = [
     ],
   },
   {
-    label: "Home Sellers",
+    label: "Sellers",
     href: "/sellers",
     children: [
       { label: "Selling Process", href: "/sellers/process" },
+      { label: "What's My Home Worth", href: "/sellers/home-value" },
       { label: "Pricing", href: "/sellers/pricing" },
       { label: "Marketing", href: "/sellers/marketing" },
-      { label: "Home Value", href: "/sellers/home-value" },
       { label: "Staging", href: "/sellers/staging" },
       { label: "FAQ", href: "/sellers/faq" },
     ],
@@ -47,60 +47,57 @@ export const primaryNav: NavItem[] = [
       { label: "Multifamily", href: "/investors/multifamily" },
       { label: "BRRRR", href: "/investors/brrrr" },
       { label: "Private Lending", href: "/investors/private-lending" },
+      { label: "DSCR Loans", href: "/investors/dscr-loans-texas" },
       { label: "Case Studies", href: "/investors/case-studies" },
     ],
   },
+  { label: "Join My Team", href: "/join-my-team" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
   {
-    label: "Realtors",
-    href: "/realtors",
-    children: [
-      { label: "Join HomeRock Realty", href: "/realtors/join" },
-      { label: "Agent Attraction", href: "/realtors/agent-attraction" },
-      { label: "Coaching", href: "/realtors/coaching" },
-      { label: "Training", href: "/realtors/training" },
-    ],
-  },
-  {
-    label: "Vendors",
-    href: "/vendor-sponsorship",
-  },
-  {
-    label: "Listings",
-    href: "/listings",
-  },
-  {
-    label: "Podcast",
-    href: "/podcast",
-  },
-  {
-    label: "Market Updates",
-    href: "/market-updates",
-  },
-{
-    label: "Blog",
-    href: "/blog",
-  },
-  {
-    label: "Resources",
+    label: "More",
     href: "/resources",
+    hideOverview: true,
     children: [
-      { label: "Free Guides", href: "/resources/guides" },
-      { label: "Calculators", href: "/resources/calculators" },
-      { label: "Downloads", href: "/resources/downloads" },
-      { label: "Checklists", href: "/resources/checklists" },
-      { label: "Templates", href: "/resources/templates" },
+      { label: "Listings", href: "/listings" },
+      { label: "Market Updates", href: "/market-updates" },
+      { label: "Blog", href: "/blog" },
+      { label: "Resources", href: "/resources" },
+      { label: "Realtors", href: "/realtors" },
+      { label: "Vendors", href: "/vendor-sponsorship" },
     ],
   },
 ];
 
-export const bookingCta: NavChild = { label: "Book Strategy Session", href: "/booking" };
+export const bookingCta: NavChild = { label: "Book a Call", href: "/booking" };
+
+/** Spring is home base. She serves all of Greater Houston, with the focus on this corridor. */
+export const serviceRegion = "Greater Houston, especially north of I-10 up to Huntsville";
+
+export const serviceAreas = [
+  "Spring",
+  "Houston",
+  "Conroe",
+  "The Woodlands",
+  "Tomball",
+  "Magnolia",
+  "Huntsville",
+  "Humble",
+  "Klein",
+  "Kingwood",
+] as const;
+
+export function formatCityList(cities: readonly string[]) {
+  if (cities.length < 2) return cities[0] ?? "";
+  return `${cities.slice(0, -1).join(", ")}, and ${cities[cities.length - 1]}`;
+}
 
 export const footerNav = {
   learning: {
     title: "Learning",
     links: [
-      { label: "Home Buyers", href: "/buyers" },
-      { label: "Home Sellers", href: "/sellers" },
+      { label: "Buyers", href: "/buyers" },
+      { label: "Sellers", href: "/sellers" },
       { label: "Investors", href: "/investors" },
       { label: "Realtors", href: "/realtors" },
       { label: "Featured Listings", href: "/listings" },
@@ -110,7 +107,7 @@ export const footerNav = {
     title: "Resources",
     links: [
       { label: "About Natalie", href: "/about" },
-      { label: "Book Strategy Session", href: "/booking" },
+      { label: "Book a time", href: "/booking" },
       { label: "Contact", href: "/contact" },
       { label: "Blog", href: "/blog" },
     ] as NavChild[],
@@ -119,7 +116,7 @@ export const footerNav = {
     title: "Company",
     links: [
       { label: "Why HomeRock", href: "/about" },
-      { label: "Join Our Team", href: "/realtors/join" },
+      { label: "Join My Team", href: "/join-my-team" },
       { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "Terms of Service", href: "/terms-of-service" },
     ] as NavChild[],
@@ -130,7 +127,7 @@ export const footerNav = {
       { label: "Facebook", href: "https://www.facebook.com/natalie.pilkinton.1" },
       { label: "Instagram", href: "https://instagram.com/nataliepilkinton" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/nataliepilkinton1" },
-      { label: "YouTube", href: "https://www.youtube.com/channel/UCuXN_TctvXKZFs2ImP_sCBA" },
+      { label: "YouTube", href: "https://www.youtube.com/@NataliePilkintonRealtor" },
       { label: "HAR.com Profile", href: "https://www.har.com/web/nataliepilkinton" },
     ] as NavChild[],
   },
@@ -148,7 +145,10 @@ export const siteConfig = {
     "https://assets.cdn.filesafe.space/p6coQEMK9WucfxjPnduV/media/6a58be7f524a3ec4c61853f3.png",
   phone: "(832) 863-3468",
   phoneHref: "tel:+18328633468",
+  smsHref: "sms:+18328633468",
   email: "natalie@nataliepilkinton.com",
+  emailHref: "mailto:natalie@nataliepilkinton.com",
+  googleReviewUrl: "https://g.page/r/CTl2UurDdEQLEBM/review",
   /** Natalie's business mailing address — the canonical NAP for the site, schema and profiles. */
   address: {
     line1: "HomeRock Realty",
@@ -184,17 +184,16 @@ export const siteConfig = {
     organizerId: "31586767379",
     url: "https://www.eventbrite.com/o/31586767379",
   },
-  /** Markets Natalie serves, used in schema areaServed. */
-  areasServed: ["Spring", "Houston", "The Woodlands", "Tomball", "Conroe", "Cypress", "Magnolia", "Montgomery"],
-  bookingUrl:
-    "https://calendly.com/nataliepilkinton/30min",
+  /** Markets Natalie serves, used in schema areaServed. Spring is the home market. */
+  areasServed: [...serviceAreas],
+  bookingUrl: "https://calendly.com/nataliepilkinton",
   /** Natalie's official HAR member profile — the real, MLS-backed source for her current listings. */
   harProfileUrl: "https://www.har.com/web/nataliepilkinton",
   social: {
     facebook: "https://www.facebook.com/natalie.pilkinton.1",
     instagram: "https://instagram.com/nataliepilkinton",
     linkedin: "https://www.linkedin.com/in/nataliepilkinton1",
-    youtube: "https://www.youtube.com/channel/UCuXN_TctvXKZFs2ImP_sCBA",
+    youtube: "https://www.youtube.com/@NataliePilkintonRealtor",
   },
   siteUrl: "https://www.nataliepilkinton.com",
 };

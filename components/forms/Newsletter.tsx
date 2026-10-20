@@ -21,7 +21,7 @@ export function Newsletter({ className, onDark = true }: NewsletterProps) {
   if (submitted) {
     return (
       <p className={onDark ? "text-cream mb-0" : "text-gray-dark mb-0"}>
-        Thanks for subscribing — watch your inbox for real estate insights.
+        Thanks for subscribing. Watch your inbox for real estate insights.
       </p>
     );
   }

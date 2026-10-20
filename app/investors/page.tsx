@@ -8,9 +8,9 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { MeetupCallout } from "@/components/content/MeetupCallout";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Houston Real Estate Investor Academy",
+  title: "Real Estate Investing in Spring, TX",
   description:
-    "Learn real estate investing in Houston from Natalie Pilkinton, a Realtor who invests herself: first rentals, BRRRR, DSCR loans, private lending, multifamily and passive investing.",
+    "Invest in Spring, TX and Greater Houston with Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
   path: "/investors",
 });
 
@@ -58,7 +58,7 @@ const learningPath: { step: string; guides: Guide[] }[] = [
       {
         category: "Guide",
         title: "The BRRRR Strategy in Texas",
-        description: "Buy, rehab, rent, refinance and repeat — including refinance seasoning rules.",
+        description: "Buy, rehab, rent, refinance, and repeat, including refinance seasoning rules.",
         href: "/investors/brrrr",
       },
       { category: "Guide", title: "Multifamily Investing", description: "From duplexes to apartment buildings: how they're valued, financed and run.", href: "/investors/multifamily" },
@@ -93,19 +93,19 @@ const learningPath: { step: string; guides: Guide[] }[] = [
 export default function InvestorsPage() {
   return (
     <AcademyLayout
-      title="Investor Academy"
-      subheading="Learn to invest in Houston real estate from a Realtor who invests her own money"
-      ctaTitle="Ready to Start Investing?"
-      ctaDescription="Schedule a consultation to discuss your investment goals."
-      ctaLabel="Book Investor Consultation →"
+      title="Invest in Spring, TX Real Estate"
+      subheading="Rentals, financing, and strategy for Spring and Greater Houston, especially north of I-10 up to Huntsville, from a REALTOR who invests her own money."
+      ctaTitle="Ready to talk through a deal?"
+      ctaDescription="Call or text Natalie, or book a time to review your goals, your budget, and what a deal needs to look like."
+      ctaLabel="Book an investor call"
     >
       <Section>
         <Container className="max-w-[52rem]">
           <p className="text-lg leading-relaxed">
-            The Investor Academy is Natalie Pilkinton&rsquo;s step-by-step guide to building wealth with real estate in
-            Houston. Natalie is a REALTOR® with 20+ years in the Houston market and an investor herself, with
-            experience in rentals, wholesaling and multifamily syndication. Start with your first rental, learn how
-            to finance it, then pick the strategy that fits your goals.
+            Natalie Pilkinton&rsquo;s step-by-step guide to investing in Spring, TX and the surrounding area. She is a
+            REALTOR® with 20+ years in the market and an investor herself, with experience in rentals, wholesaling
+            and multifamily syndication. Start with your first rental, learn how to finance it, then pick the
+            strategy that fits your goals.
           </p>
           <p className="text-gray-dark">
             Real estate makes money six ways: cash flow, loan paydown, appreciation, tax advantages, leverage and

@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!listing) return buildMetadata({ title: "Listing Not Found", description: "", path: "/listings" });
 
   return buildMetadata({
-    title: `${listing.address.street}, ${listing.address.city} — ${formatPrice(listing.price)}`,
+    title: `${listing.address.street}, ${listing.address.city} | ${formatPrice(listing.price)}`,
     description: listing.shortDescription,
     path: `/listings/${listing.slug}`,
     image: listing.images[0]?.url,

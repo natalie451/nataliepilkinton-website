@@ -167,6 +167,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  body {
+    /* Clears the fixed call / text / book bar, including the iOS home indicator. */
+    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --spacing-lg: 1.5rem;

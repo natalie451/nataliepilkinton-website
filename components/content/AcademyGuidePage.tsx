@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
+import { ContactActions } from "@/components/cta/ContactActions";
 import { siteConfig } from "@/lib/data/navigation";
 import { articleSchema, faqSchema, jsonLdScriptProps } from "@/lib/seo/schema";
 import type { AcademyGuide } from "@/lib/content/academy/types";
@@ -266,7 +267,10 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       </Section>
 
       <CTA title={guide.cta.title} description={guide.cta.description}>
-        <Button href="/booking">{guide.cta.label}</Button>
+        <Button href="/booking" variant="gold">
+          {guide.cta.label}
+        </Button>
+        <ContactActions tone="on-dark" showBook={false} />
       </CTA>
     </>
   );
