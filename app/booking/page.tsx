@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import { CalendlyInline } from "@/components/booking/CalendlyInline";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -37,39 +37,21 @@ export default function BookingPage() {
 
       <Section>
         <Container>
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3xl">
-            <div>
-              <h2>What to Expect</h2>
-              <Callout title="Your Strategy Session Includes:">
-                <ul className="ml-lg list-disc">
-                  {expectations.map((item) => (
-                    <li key={item} className="mb-md">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </Callout>
-            </div>
-
-            <div>
-              <h2>Schedule your call</h2>
-              <div className="bg-white border border-gray-light rounded-xs overflow-hidden">
-                <div
-                  className="calendly-inline-widget"
-                  data-url={siteConfig.bookingUrl}
-                  style={{ minWidth: "320px", height: "720px" }}
-                />
-                <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
-                <p className="text-center text-gray-dark text-sm px-lg pb-lg mb-0">
-                  If the calendar does not load,{" "}
-                  <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-gold-ink underline underline-offset-2">
-                    open Calendly in a new tab
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
+          <div className="max-w-[40rem] mb-2xl">
+            <h2>What to Expect</h2>
+            <Callout title="Your Strategy Session Includes:">
+              <ul className="ml-lg list-disc">
+                {expectations.map((item) => (
+                  <li key={item} className="mb-md">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Callout>
           </div>
+
+          <h2>Schedule my call</h2>
+          <CalendlyInline />
         </Container>
       </Section>
 

@@ -186,6 +186,21 @@
   }
 }
 
+/* Calendly reads the widget height and fills it with the date picker.
+   Tall on small screens, where the month stacks above the times.
+   Shorter once the page is wide enough for Calendly's side-by-side layout. */
+.calendly-booking-frame {
+  width: 100%;
+  min-width: 320px;
+  height: 1100px !important;
+}
+
+@media (min-width: 1024px) {
+  .calendly-booking-frame {
+    height: 760px !important;
+  }
+}
+
 @media (max-width: 480px) {
   :root {
     --spacing-md: 1rem;
