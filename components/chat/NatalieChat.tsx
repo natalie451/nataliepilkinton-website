@@ -78,12 +78,12 @@ export function NatalieChat() {
   }
 
   return (
-    <div className="fixed z-[1050] right-3 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] md:right-6 md:bottom-6">
+    <div className="fixed z-[1050] right-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] md:right-6 md:bottom-6">
       {open && (
         <section
           role="dialog"
           aria-label="Chat with Natalie"
-          className="mb-sm flex w-[min(24rem,calc(100vw-1.5rem))] max-h-[min(34rem,calc(100dvh-8.5rem-env(safe-area-inset-bottom)))] flex-col overflow-hidden rounded-xs border border-gray-light bg-white shadow-brand-lg"
+          className="mb-sm flex w-[min(24rem,calc(100vw-1.5rem))] max-h-[min(32rem,calc(100dvh-9.5rem-env(safe-area-inset-bottom)))] flex-col overflow-hidden rounded-xs border border-gray-light bg-white shadow-brand-lg"
         >
           <header className="bg-navy text-cream px-md py-sm flex items-start justify-between gap-sm">
             <div>
