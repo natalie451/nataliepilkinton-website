@@ -20,7 +20,11 @@ export function GatedChecklist({ resource, sections }: GatedChecklistProps) {
           Enter your name and email and we&rsquo;ll unlock the full checklist below, send you a copy, and add
           you to Natalie&rsquo;s newsletter.
         </p>
-        <LeadMagnetForm resource={resource} onSuccess={() => setUnlocked(true)} />
+        <LeadMagnetForm
+          resource={resource}
+          interest={resource.includes("buyer") ? "buyer" : resource.includes("presale") ? "seller" : undefined}
+          onSuccess={() => setUnlocked(true)}
+        />
       </div>
     );
   }

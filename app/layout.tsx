@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileContactBar } from "@/components/cta/MobileContactBar";
+import { NatalieChat } from "@/components/chat/NatalieChat";
 import { siteConfig } from "@/lib/data/navigation";
 import { jsonLdScriptProps, siteGraphSchema } from "@/lib/seo/schema";
 
@@ -74,6 +75,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <MobileContactBar />
+        <NatalieChat />
       </body>
     </html>
   );
