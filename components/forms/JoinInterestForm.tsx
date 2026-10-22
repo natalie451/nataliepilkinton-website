@@ -16,6 +16,6 @@ export function JoinInterestForm() {
   }
 
   return (
-    <LeadMagnetForm resource="join-my-team" submitLabel="Send my interest" onSuccess={() => setSent(true)} />
+    <LeadMagnetForm resource="join-my-team" interest="agent" submitLabel="Send my interest" onSuccess={() => setSent(true)} />
   );
 }

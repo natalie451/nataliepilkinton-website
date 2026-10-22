@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { captureLead } from "@/lib/leads/capture";
 
+export const maxDuration = 30;
+
 type LeadMagnetPayload = {
   name?: unknown;
   email?: unknown;
@@ -8,6 +10,8 @@ type LeadMagnetPayload = {
   phone?: unknown;
   interest?: unknown;
   honeypot?: unknown;
+  note?: unknown;
+  address?: unknown;
 };
 
 export async function POST(request: Request) {
@@ -24,6 +28,8 @@ export async function POST(request: Request) {
     phone: typeof body.phone === "string" ? body.phone : undefined,
     interest: typeof body.interest === "string" ? body.interest : undefined,
     honeypot: typeof body.honeypot === "string" ? body.honeypot : "",
+    note: typeof body.note === "string" ? body.note : undefined,
+    address: typeof body.address === "string" ? body.address : undefined,
   });
 
   if (!result.ok) {

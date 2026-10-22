@@ -5,6 +5,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { Button } from "@/components/ui/Button";
 import { LEAD_INTERESTS, type LeadInterest } from "@/lib/leads/interests";
+import { submitLead } from "@/lib/leads/submit";
 import { siteConfig } from "@/lib/data/navigation";
 
 const transport = new DefaultChatTransport({ api: "/api/chat" });
@@ -56,32 +57,22 @@ export function NatalieChat() {
     setLeadMessage("");
     const form = new FormData(formElement);
 
-    try {
-      const response = await fetch("/api/lead-magnet", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.get("name"),
-          email: form.get("email"),
-          phone: form.get("phone"),
-          interest: form.get("interest"),
-          resource: "chat-assistant",
-          honeypot: form.get("company"),
-        }),
-      });
-      const body = (await response.json().catch(() => null)) as { message?: string } | null;
-      if (!response.ok) {
-        setLeadStatus("error");
-        setLeadMessage(body?.message || "Something went wrong. Please try again.");
-        return;
-      }
-      setLeadStatus("sent");
-      setLeadMessage("Natalie has your info. You can also book a time or call her.");
-      formElement.reset();
-    } catch {
+    const result = await submitLead({
+      name: String(form.get("name") || ""),
+      email: String(form.get("email") || ""),
+      phone: String(form.get("phone") || ""),
+      interest: String(form.get("interest") || ""),
+      resource: "chat-assistant",
+      honeypot: String(form.get("company") || ""),
+    });
+    if (!result.ok) {
       setLeadStatus("error");
-      setLeadMessage("Something went wrong. Please try again.");
+      setLeadMessage(result.message);
+      return;
     }
+    setLeadStatus("sent");
+    setLeadMessage("Natalie has your info. You can also book a time or call her.");
+    formElement.reset();
   }
 
   return (
