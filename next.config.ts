@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
     return [
       // The page used to live under this folder name while nav, sitemap and canonical all pointed at /agent-attraction.
       { source: "/realtors/agent-resources", destination: "/realtors/agent-attraction", permanent: true },
-      { source: "/podcast", destination: "/", permanent: true },
-      { source: "/podcast/transcripts/:slug", destination: "/", permanent: true },
     ];
   },
     outputFileTracingIncludes: { "/api/blog/**": ["./public/blog-content/**/*"], },

@@ -52,6 +52,7 @@ export const primaryNav: NavItem[] = [
     ],
   },
   { label: "Join My Team", href: "/join-my-team" },
+  { label: "Podcast", href: "/podcast" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   {
@@ -107,6 +108,7 @@ export const footerNav = {
     title: "Resources",
     links: [
       { label: "About Natalie", href: "/about" },
+      { label: "Podcast", href: "/podcast" },
       { label: "Book a time", href: "/booking" },
       { label: "Contact", href: "/contact" },
       { label: "Blog", href: "/blog" },

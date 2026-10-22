@@ -7,6 +7,7 @@ import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { RealtorVideos } from "@/components/sections/RealtorVideos";
+import { PodcastHomeBand } from "@/components/podcast/PodcastHomeBand";
 import { homeStats } from "@/lib/data/stats";
 import { realtorChannelUrl } from "@/lib/data/videos";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
@@ -110,6 +111,8 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      <PodcastHomeBand />
 
       <Section tone="light">
         <Container>

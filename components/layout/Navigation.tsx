@@ -25,7 +25,7 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
     <ul
       id="primary-navigation"
       className={cn(
-        "hidden lg:flex gap-lg list-none items-center",
+        "hidden lg:flex gap-sm xl:gap-md list-none items-center",
         mobileOpen &&
           "max-lg:flex max-lg:flex-col max-lg:fixed max-lg:top-[4.25rem] max-lg:left-0 max-lg:right-0 max-lg:bg-white max-lg:border-b max-lg:border-gray-light max-lg:p-lg max-lg:pb-28 max-lg:gap-xs max-lg:z-[999] max-lg:shadow-brand-md max-lg:max-h-[calc(100vh-4.25rem)] max-lg:overflow-y-auto max-lg:animate-[fade-in_0.15s_ease-out]",
       )}

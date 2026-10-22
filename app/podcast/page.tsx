@@ -1,126 +1,151 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { Hero } from "@/components/sections/Hero";
-import { Section } from "@/components/ui/Section";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
-import { VideoCard } from "@/components/cards/VideoCard";
-import { WebinarCard } from "@/components/cards/WebinarCard";
-import { PodcastFeed } from "@/components/content/PodcastFeed";
-import { EpisodeList } from "@/components/podcast/EpisodeList";
-import { EpisodeListSkeleton } from "@/components/podcast/EpisodeListSkeleton";
+import { Section } from "@/components/ui/Section";
+import { PodcastYoutubeActions } from "@/components/podcast/PodcastYoutubeActions";
+import { podcastEpisodes, podcastShow, youtubeWatchUrl } from "@/lib/data/podcast";
+import { podcastTranscripts } from "@/lib/content/podcastTranscripts";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Watch and Listen",
-  description: "Videos and webinars from Natalie Pilkinton.",
+  title: "Sugar Spice and Spirits Podcast",
+  description:
+    "Sugar Spice and Spirits, hosted by Natalie Pilkinton, Mindy Price, and Kelly Williams. Watch and subscribe on YouTube.",
   path: "/podcast",
-  noindex: true,
 });
 
-const videoCourses = [
-  { category: "Video Series", title: "First-Time Home Buyer Masterclass", description: "A complete video series walking through the entire home buying process, from pre-approval to closing." },
-  { category: "Video Series", title: "Real Estate Investment Fundamentals", description: "Learn the core strategies and tactics used by successful real estate investors." },
-  { category: "Video Series", title: "Realtor Productivity Blueprint", description: "Systems and tools to scale your real estate business and increase your income." },
-];
+const showUrl = `${siteConfig.siteUrl}/podcast`;
 
-const webinars = [
-  {
-    status: "Upcoming",
-    title: "Houston Real Estate Market Update",
-    description: "Join us for an exclusive look at current market trends, pricing, and opportunities in the Houston area.",
-    schedule: "Next: Every 2nd Wednesday @ 6 PM CT",
-    cta: { label: "Register Now", href: "/booking" },
-  },
-  {
-    status: "Upcoming",
-    title: "Investment Strategy Q&A Session",
-    description: "Ask your real estate investment questions directly to Natalie in this interactive live session.",
-    schedule: "Next: Every 4th Thursday @ 7 PM CT",
-    cta: { label: "Register Now", href: "/booking" },
-  },
-];
-
-const recentlyReleased = [
-  { category: "New Video", title: "5 Mistakes First-Time Buyers Make", description: "The most common costly mistakes I see first-time home buyers make, and how to avoid them." },
-  { category: "New Podcast", title: "Episode 151: Market Predictions 2025", description: "Industry experts share their predictions for the real estate market in the coming year." },
-  { category: "New Webinar", title: "Investment Property Analysis Deep Dive", description: "Learn the exact formulas and metrics I use to evaluate investment properties." },
-];
-
-const playlistId = process.env.YOUTUBE_PLAYLIST_ID;
-
-const podcastSeriesSchema = {
+const podcastSchema = {
   "@context": "https://schema.org",
-  "@type": "VideoGallery",
-  name: "Videos from Natalie Pilkinton",
-  url: `${siteConfig.siteUrl}/podcast`,
-  ...(playlistId && {
-    webFeed: `https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`,
-  }),
-  author: { "@type": "Person", name: siteConfig.name },
+  "@graph": [
+    {
+      "@type": "PodcastSeries",
+      name: podcastShow.name,
+      url: showUrl,
+      description:
+        "Sugar Spice and Spirits is hosted by Natalie Pilkinton, Mindy Price, and Kelly Williams. New episodes are published on YouTube.",
+      webFeed: podcastShow.rssUrl,
+      author: { "@type": "Person", name: siteConfig.name, url: siteConfig.siteUrl },
+      sameAs: [podcastShow.channelUrl, podcastShow.spotifyUrl, podcastShow.appleUrl],
+    },
+    ...podcastEpisodes.map((episode) => ({
+      "@type": "VideoObject",
+      name: episode.title,
+      description: `${podcastShow.name} episode published on YouTube on ${episode.publishedLabel}.`,
+      thumbnailUrl: `https://i.ytimg.com/vi/${episode.id}/hqdefault.jpg`,
+      uploadDate: episode.uploadDate,
+      embedUrl: `https://www.youtube.com/embed/${episode.id}`,
+      url: youtubeWatchUrl(episode.id),
+      publisher: {
+        "@type": "Organization",
+        name: podcastShow.name,
+        url: podcastShow.channelUrl,
+      },
+    })),
+  ],
 };
+
+const transcripts = [...podcastTranscripts].sort((a, b) => b.episodeNumber - a.episodeNumber);
 
 export default function PodcastPage() {
   return (
     <>
-      <script {...jsonLdScriptProps(podcastSeriesSchema)} />
+      <script {...jsonLdScriptProps(podcastSchema)} />
 
-      <Hero title="Watch & Listen" subheading="Videos, Webinars & Podcasts to Level Up Your Real Estate Knowledge" align="left" />
+      <section className="bg-[#3c1424] text-[#f7f1ea]">
+        <Container className="py-2xl md:py-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#e7c4b0] mb-sm">Podcast</p>
+          <h1 className="text-[#f7f1ea] mb-md max-w-[16ch]">Sugar Spice and Spirits</h1>
+          <p className="max-w-[40rem] text-[#f3e6dc] text-lg mb-lg">
+            Hosted by Natalie Pilkinton, Mindy Price, and Kelly Williams. Conversations on business, life, and real estate.
+            Watch the show on YouTube.
+          </p>
+          <PodcastYoutubeActions />
+          <p className="mt-md mb-0 text-sm text-[#f3e6dc]">
+            Also on{" "}
+            <a href={podcastShow.spotifyUrl} className="text-[#f7f1ea] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+              Spotify
+            </a>{" "}
+            and{" "}
+            <a href={podcastShow.appleUrl} className="text-[#f7f1ea] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+              Apple Podcasts
+            </a>
+            .
+          </p>
+        </Container>
+      </section>
 
       <Section>
         <Container>
-          <h2>Video Courses</h2>
-          <div className="grid grid-cols-3 max-md:grid-cols-1 gap-lg">
-            {videoCourses.map((video) => (
-              <VideoCard key={video.title} {...video} />
+          <h2>Latest episodes</h2>
+          <p className="max-w-[42rem] text-gray-dark mb-xl">
+            Newest uploads from the Sugar Spice and Spirits YouTube channel. Open an episode to watch it on YouTube.
+          </p>
+          <ul className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-lg list-none p-0">
+            {podcastEpisodes.map((episode) => (
+              <li key={episode.id}>
+                <a
+                  href={youtubeWatchUrl(episode.id)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-full flex-col overflow-hidden rounded-xs border border-[#ead9cf] bg-white shadow-brand-sm hover:border-[#7a2942]"
+                >
+                  <span className="relative block aspect-video bg-[#3c1424]">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`https://i.ytimg.com/vi/${episode.id}/hqdefault.jpg`}
+                      alt=""
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  </span>
+                  <span className="flex flex-1 flex-col p-md">
+                    <time dateTime={episode.uploadDate} className="text-xs font-semibold uppercase tracking-[0.08em] text-[#7a2942]">
+                      {episode.publishedLabel}
+                    </time>
+                    <span className="mt-xs text-base font-semibold text-navy group-hover:text-[#7a2942]">{episode.title}</span>
+                    <span className="mt-auto pt-md text-sm font-semibold text-[#7a2942]">Watch on YouTube</span>
+                  </span>
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </Section>
 
-      <Section tone="light">
-        <Container>
-          <h2>Live Webinars</h2>
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-lg">
-            {webinars.map((webinar) => (
-              <WebinarCard key={webinar.title} {...webinar} />
-            ))}
-          </div>
+      <section className="bg-[#3c1424] text-[#f7f1ea]">
+        <Container className="py-2xl">
+          <h2 className="text-[#f7f1ea]">Watch the show on YouTube</h2>
+          <p className="max-w-[40rem] text-[#f3e6dc] mb-lg">
+            New episodes of Sugar Spice and Spirits are posted on the YouTube channel. Subscribe there so you do not miss one.
+          </p>
+          <PodcastYoutubeActions />
         </Container>
-      </Section>
+      </section>
 
       <Section>
         <Container>
-          <h2>Videos</h2>
-          <Suspense fallback={<div className="bg-cream p-lg rounded-sm mb-lg animate-pulse h-[280px] md:h-[400px]" aria-hidden="true" />}>
-            <PodcastFeed />
-          </Suspense>
-
-          <h3 className="mb-lg border-b-2 border-gold pb-md">All Episodes</h3>
-          <Suspense fallback={<EpisodeListSkeleton />}>
-            <EpisodeList />
-          </Suspense>
-
-        </Container>
-      </Section>
-
-      <Section tone="light">
-        <Container>
-          <h2>Recently Released</h2>
-          <div className="grid grid-cols-3 max-md:grid-cols-1 gap-lg">
-            {recentlyReleased.map((item) => (
-              <VideoCard key={item.title} {...item} />
+          <h2>Episode transcripts</h2>
+          <p className="max-w-[42rem] text-gray-dark">
+            Written transcripts for episodes we have on file. The video for each episode is on YouTube.
+          </p>
+          <ul className="list-none p-0 mt-lg divide-y divide-gray-light border-y border-gray-light">
+            {transcripts.map((transcript) => (
+              <li key={transcript.slug}>
+                <Link
+                  href={`/podcast/transcripts/${transcript.slug}`}
+                  className="flex flex-col gap-xs py-md text-navy hover:text-[#7a2942] sm:flex-row sm:items-baseline sm:gap-md"
+                >
+                  <span className="shrink-0 text-sm font-semibold text-[#7a2942]">Episode {transcript.episodeNumber}</span>
+                  <span className="font-semibold">{transcript.title}</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </Container>
       </Section>
-
-      <CTA title="Ready to Take Action?" description="Book a personalized strategy session to discuss your real estate goals.">
-        <Button href="/booking">Schedule Your Session Today →</Button>
-      </CTA>
     </>
   );
 }

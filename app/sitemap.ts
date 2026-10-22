@@ -4,6 +4,7 @@ import { blogCategories } from "@/lib/content/blog";
 import { getAllBlogFilePosts } from "@/lib/content/blogFiles";
 import { marketUpdates } from "@/lib/content/market-updates";
 import { getListingSlugs } from "@/lib/listings";
+import { podcastTranscripts } from "@/lib/content/podcastTranscripts";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
 
 const staticPaths = [
@@ -47,6 +48,7 @@ const staticPaths = [
   "/vendor-sponsorship",
 
   "/join-my-team",
+  "/podcast",
   "/realtors",
   "/realtors/join",
   "/realtors/agent-attraction",
@@ -92,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: parseDate(update.date),
     })),
     ...getListingSlugs().map((slug) => ({ path: `/listings/${slug}` })),
+    ...podcastTranscripts.map((transcript) => ({ path: `/podcast/transcripts/${transcript.slug}` })),
   ];
 
   return entries
