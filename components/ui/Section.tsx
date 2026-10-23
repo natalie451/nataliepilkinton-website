@@ -14,10 +14,13 @@ type SectionProps = {
   children: ReactNode;
   tone?: Tone;
   className?: string;
+  id?: string;
 };
 
-export function Section({ children, tone = "default", className }: SectionProps) {
+export function Section({ children, tone = "default", className, id }: SectionProps) {
   return (
-    <section className={cn("py-3xl", toneClasses[tone], className)}>{children}</section>
+    <section id={id} className={cn("py-3xl", toneClasses[tone], className)}>
+      {children}
+    </section>
   );
 }

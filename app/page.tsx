@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/Button";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { RealtorVideos } from "@/components/sections/RealtorVideos";
 import { PodcastHomeBand } from "@/components/podcast/PodcastHomeBand";
+import { TestimonialGrid } from "@/components/sections/Testimonial";
+import { bookingTestimonials } from "@/lib/data/testimonials";
 import { homeStats } from "@/lib/data/stats";
 import { realtorChannelUrl } from "@/lib/data/videos";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
@@ -112,9 +114,22 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <PodcastHomeBand />
+      <Section id="google-reviews" tone="light">
+        <Container>
+          <h2 className="text-center">Google reviews</h2>
+          <p className="text-center max-w-[40rem] mx-auto text-gray-dark mb-lg">
+            These reviews are shown as written on Natalie&rsquo;s Google Business Profile.
+          </p>
+          <div className="flex justify-center mb-xl">
+            <Button href={siteConfig.googleReviewUrl} external>
+              Leave a Google review
+            </Button>
+          </div>
+          <TestimonialGrid items={bookingTestimonials} onWhite />
+        </Container>
+      </Section>
 
-      <Section tone="light">
+      <Section>
         <Container>
           <h2>Videos from Natalie</h2>
           <p className="max-w-[42rem] text-gray-dark mb-xl">
@@ -128,6 +143,8 @@ export default function HomePage() {
           </div>
         </Container>
       </Section>
+
+      <PodcastHomeBand />
 
       <Section>
         <Container>
@@ -164,7 +181,7 @@ export default function HomePage() {
         title="Talk with Natalie about your next move"
         description="Call or text, send an email, or pick a time. She works with buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville."
       >
-        <ContactActions tone="on-dark" />
+        <ContactActions tone="on-dark" layout="equal" />
       </CTA>
     </>
   );

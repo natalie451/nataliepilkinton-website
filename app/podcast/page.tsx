@@ -55,22 +55,22 @@ export default function PodcastPage() {
     <>
       <script {...jsonLdScriptProps(podcastSchema)} />
 
-      <section className="bg-[#3c1424] text-[#f7f1ea]">
+      <section className="bg-[#f5eedc] text-navy">
         <Container className="py-2xl md:py-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#e7c4b0] mb-sm">Podcast</p>
-          <h1 className="text-[#f7f1ea] mb-md max-w-[16ch]">Sugar Spice and Spirits</h1>
-          <p className="max-w-[40rem] text-[#f3e6dc] text-lg mb-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">Podcast</p>
+          <h1 className="text-navy mb-md max-w-[16ch]">Sugar Spice and Spirits</h1>
+          <p className="max-w-[40rem] text-navy text-lg mb-lg">
             Hosted by Natalie Pilkinton, Mindy Price, and Kelly Williams. Conversations on business, life, and real estate.
             Watch the show on YouTube.
           </p>
-          <PodcastYoutubeActions />
-          <p className="mt-md mb-0 text-sm text-[#f3e6dc]">
+          <PodcastYoutubeActions subscribeVariant="outline" />
+          <p className="mt-md mb-0 text-sm text-navy">
             Also on{" "}
-            <a href={podcastShow.spotifyUrl} className="text-[#f7f1ea] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+            <a href={podcastShow.spotifyUrl} className="font-semibold text-navy underline underline-offset-2" target="_blank" rel="noopener noreferrer">
               Spotify
             </a>{" "}
             and{" "}
-            <a href={podcastShow.appleUrl} className="text-[#f7f1ea] underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+            <a href={podcastShow.appleUrl} className="font-semibold text-navy underline underline-offset-2" target="_blank" rel="noopener noreferrer">
               Apple Podcasts
             </a>
             .
