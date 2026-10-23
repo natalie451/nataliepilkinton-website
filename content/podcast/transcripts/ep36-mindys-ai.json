@@ -1,0 +1,490 @@
+[
+{
+"speaker": "Mindy Price",
+"text": "So I've got a quick question for you. Have you ever opened chat GPT and stared at that cursor that's just sitting there blinking and have you felt personally judged? I know I have, but before we get into that, you are listening to or watching the Sugar, Spice and Spirits podcast. I am one of your hosts, Mindy Price, along with my beautiful co-hosts, Kelly and Natalie. Thanks so much for jumping on with me today. And clearly, we're going to be talking about for our main dish, AI. I think it's a very relevant topic that's not going anywhere. But we always do what we call our sip of the day. So I want to get into the sip of the day. But even before that, I want, before we talk about judgment, let's talk about subscribing. If you haven't already, if you would please like and subscribe on your favorite podcast channel. If by the way, you were just listening to us, did you know you can actually see this chaos actually happening because we also have the video podcast. Some of you might be watching going, yeah, we know that's what we're doing. But we have a number of you that tune in and listen and we appreciate it. But if you ever want to see this come to life, you can like and subscribe also on YouTube and you can send us drink suggestions. show topics, you can spill the tea at sugarspiceandspirits.com. If you want to learn more about my speaking and coaching or Natalie's real estate or Kelly's non-medical home care services, you can also let us know when you're in the spill the tea section. We'd love to learn more about you and hear what you're interested in because what do do ladies? We have fun while we do this. And we also, as I said, have a sip of the day that I will go ahead and introduce. So this one we all are having from Texas Giant. This is a Cask Strength Straight Rye Whiskey. And it's a special one. It's actually from Holloway. It was a gift. They chose this private barrel selection for 2025. So let's give it a try."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Hold the bottle up so we can see it. OK, yeah."
+},
+{
+"speaker": "Mindy Price",
+"text": "Okay, let's see what we think. Ready? Cheers ladies!"
+},
+{
+"speaker": "Kelly Williams",
+"text": "It's."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Cheers. Kelly premature drinkers went straight for the drink again. She didn't cheers, nothing. After you drink."
+},
+{
+"speaker": "Kelly Williams",
+"text": "I did cheers. I did cheers. just..."
+},
+{
+"speaker": "Mindy Price",
+"text": "Y'all, that's really nice. Like, I could even see it on a really cool day or just after work and just sitting out on the patio. I like it. What do think?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "See you. I like it. I see it mixed into a really cool bourbon cream sauce to put over bread pudding."
+},
+{
+"speaker": "Mindy Price",
+"text": "I like the way you think. one day instead of the sip of the day, we have the dessert of the day, but it's spiked with the bread pudding topping or whatever it's called, the sauce."
+},
+{
+"speaker": "Kelly Williams",
+"text": "It was very smooth. It was very smooth. Yum. Yes."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "exactly who I'd bring. I'm gonna give a shameless hug to my friend Sean Kelly. He's got Drunken Bakery and he does beverage infused cakes like Bundt cakes, Mardi Gras cakes, carrot cakes. Like he is the bomb diggity. Drunken Bakery."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Hmm. Drunken Bakery. Okay, yes. And where is he located?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "He's located on the north side. However, I'm sure he delivers. He's got his stuff figured out."
+},
+{
+"speaker": "Kelly Williams",
+"text": "well, road trip. It's okay. Road trip's"
+},
+{
+"speaker": "Mindy Price",
+"text": "We love road trips. We're going on a road trip very soon. Those are always fun. All right, so let's dive into the main dish. What we're gonna talk about today, and it is, it's AI. By the end of this episode, I'm really hoping that there's some practical takeaways that you ladies will be able to walk away with as well as our audience. Some ways you can use AI this week. I wanna give you some prompts, and I want you to feel better about staying relevant, but not losing your voice. And I don't want to do one of those fear monger things where it's like if you don't learn AI, you're going to be erased. Well, that's not going to happen. But I think it's really important that we do focus on where we're at with AI. I've been having a lot of business conversations and I've seen people speaking on stage as well as a gentleman I had a conversation with that he said, Mindy, I was so appalled. There was a guy that was on stage and he said that if you think AI is taking your job, it's not taking your job. You're not being replaced by AI. But here's what they're not saying. People are quitting. They're leaving jobs for different reasons. and some companies aren't replacing those jobs. Why? Because they're finding more efficiencies through AI. And so that doesn't mean that you have to be a techie expert in AI, but you do want to have some literacy. You do want to get more and more familiar with it because it's truly not going away. And so I hope some of the lessons that we talk about today very simply. are going to help you become more productive in what you do every day. So ladies, I'm super curious. What's your honest relationship with AI right now? Are you curious? Are you using it? Are you avoiding it?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "Every day, I use it every day. Every day. In one form or fashion. yeah. I'm probably not using it to the best efficiency because I know there's a lot of different things you can do for a prompt so it can give you the appropriate response that you're looking for. I haven't, I'm kind of flying by the seat of my pants so I haven't really learned a lot about how to use it to my best advantage. But every day, every day I use it in some form."
+},
+{
+"speaker": "Mindy Price",
+"text": "Do you remember when we first started talking about it, you and I, and I was like, my gosh, I'm using it. You're like, no, not me. I don't get it. And you may in some ways use it even more than I do, depending on whatever the situation is. But before I go there with some hesitations, Natalie, what about you?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "I use multiple AIs. It's not just one AI. So people hear AI and they think it's just like one thing. It's like a grocery store or like a store. You can go to many, many different stores and each of them provide different services or do different things. So I would say I'm kind of an AI junkie. I use a lot of it because I'm a business owner, entrepreneur and have a lot that I need to do in startup mode and setting up the systems and everything. So I use it. I use it a lot. don't know if you want me to go into how I use it, but I use it a lot."
+},
+{
+"speaker": "Mindy Price",
+"text": "So I'm gonna share, I think I've got four or five that I'm gonna share. And one of those you actually introduced me to. I'm very thankful for it. And here's what's crazy, Natalie, you and I use it for completely different reasons. Kelly, you shared something with me a while back that you were using yours for that we'll actually get into. So stay tuned, y'all. We've got some good stuff coming up. But I kind of set myself up in a, I knew where y'all were gonna go. I know that. you're using AI, how much you use it, I don't work with you every day so I don't know how much you are using it, but I know there's still a number of people that they have concerns for it. You one of the things they say is, I don't want to sound fake or robotic. I don't trust it with privacy. I'm not techie. You what does this mean for my job and for my future? And these are all truly reasonable fears, but you shouldn't be afraid of AI because There's so many things that it can't do, but there's a lot that it can do for you. And so I'm hoping today as we go through this, if you are one of those folks that's just like, I don't know, do I really need to embrace it? Depending on where you are, maybe not, but I would even say if my mother was still around, my father, my grandparents, I would literally want to sit with them and say, these are things you can do. Now, just like in bowling, you know how you put those bumpers up for some people?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "you"
+},
+{
+"speaker": "Mindy Price",
+"text": "would put bumpers up. would go into the controls and I would make sure there's certain things that were turned off. Natalie, you were gonna say something."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "I put the bumpers up when I bolt."
+},
+{
+"speaker": "Kelly Williams",
+"text": "You're just putting the bumpers up. Yeah. It's whole new concept of parental controls. It's us controlling the parents instead of the parents controlling the kids. Yeah. Put it on,"
+},
+{
+"speaker": "Mindy Price",
+"text": "You gotta put the bumpers up. Yes, it is. And you want to be"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "parampa"
+},
+{
+"speaker": "Mindy Price",
+"text": "very careful about the information you feed it. Now feeding it information is something that it's going to, it's going to help it get to know you better so it can give you better outputs. But you know, what it's doing, it's replacing inefficiencies. It's helping you. It's replacing when you have hesitation and also it can help you with outdated workflows. So lot of the stuff we're going to talk about in the very beginning is how you can use it for business. towards the end of this, we'll talk about a few ways that you can actually use it for just streamlining your life and helping you. So if you're somebody who wants to think more clearly, you wanna communicate well, you wanna make good decisions, who doesn't wanna make good decisions? I hope you wanna make good decisions. But I want you to be able to adapt without losing who you are. And so you don't, and I wanna say this so that you fully understand it."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Well..."
+},
+{
+"speaker": "Mindy Price",
+"text": "You don't have to know everything about AI. When I decided to go down this journey and learn as much as I could to help myself as a solopreneur, even before that, to help companies that I was running, I knew that I didn't want to be afraid of it. I knew that I wanted to use it as a tool that would make me go faster, again, with those boundaries that are put up. I thought at one point in time I had to be super techie. Well, my reality check on how techie I was y'all, I about had a meltdown when I was helping my son with something for Instagram. I was like, I know Facebook. I don't know Instagram. And I don't want to tell on myself that this wasn't too long ago. And it was my first moment because I always thought I was up to date and I learned fast and I can help others. I know this is about AI, so here's my tangent, but I'm telling y'all, okay? Let's, we'll just do a little tangent together. He was trying to get me to post something for one of his companies, and I could not figure out how to get the link to work in the story. I know it's really easy now, but there was a different setting that was off, and..."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Cool, Tange."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Pangea tacks."
+},
+{
+"speaker": "Mindy Price",
+"text": "That was the first time that I felt like I'm that old person. I'm that person that doesn't understand how to do this. I kind of lost my stuff. Like I literally had a, almost started crying. I was just like, I cannot do this. I've never wanted to feel like I'm in that position. And it was at that point in time that I decided I was going to learn as much as I could about Instagram or as much as I needed to at that point."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Is that when you started, when you you needed like hormone replacement and you're like, I'm hormonal. That's what it is. I'm not old, I'm hormonal. I'm kidding. I have to throw that in there."
+},
+{
+"speaker": "Kelly Williams",
+"text": "you"
+},
+{
+"speaker": "Mindy Price",
+"text": "No girl, I was facing the reality that I was a very late adopter on that. That's so funny. No, that came later, Natalie. Thanks. But it was at that point in time that I was like, I need to understand this AI thing. And I don't need to be technical about it. don't, my goal is not to write code, but my goal is to use it in a way. And it also became a tutor for me on."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Bye."
+},
+{
+"speaker": "Mindy Price",
+"text": "Instagram, on TikTok, on YouTube, on threads, on Pinterest. And it was something that for me was one of those moments where it's like, take a deep breath. If you invest the time, you'll be fine. And what I'm even asking you to do today is not invest a ton of time, but just at a very easy level, understand that there are tools out there that you can learn about. And so I just shared a story about feeling inefficient and feeling less than and not being up to date ladies. I'm curious when you first started interacting with AI because I know you use it all the time, but did it feel scary for you or was it motivating or was it a mixture of both?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "excited for it because AI is like Google but nicer for me. I would get very frustrated when I would ask Google a question. Hey Google, here are some documents and websites for you to go review. Like no, I'm in the middle of I need your guidance. Can you not help me? No. Okay great. So for me I was excited to jump in. Of course the Christian in me, the skeptic, the discernment, that part is like"
+},
+{
+"speaker": "Mindy Price",
+"text": "The conspiracy theorist."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Because that conspiracy just check just wait six months later. I'll be true, you know But the the whole thought process behind it it was concerning in that sense, but it's also Trusting that no matter what God's in control. So, okay, that's that's the big picture but for me I Was not as fearful I enjoy it I like it. Chatty and I have a great relationship, which you and I have the same one, named Chatty. So we have a good relationship with our, I'm talking for you now, Mindy. I have a good relationship with AI and I've embraced other AIs and the benefits that they have, so I like it."
+},
+{
+"speaker": "Mindy Price",
+"text": "So Kelly, before you go, I wanna give credit where credit is due because I didn't have a name for mine and I was listening to Jenna Kutcher and she called hers Chatty and I was like, my gosh, that's perfect. So I started talking to y'all about Chatty and I just kept calling it Chatty and Chatty. So I didn't originally come up with the name. I wanna give all credit to Jenna."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Thanks Jenna."
+},
+{
+"speaker": "Mindy Price",
+"text": "But I'm thankful for the name because it's fun, it's chatty, it's light, it's easy, even though I yell at mine. think Kelly yells at hers more than I yell at mine."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yes, yeah, I do. I get really frustrated with mine. And for the longest time I thought mine, I kept referring it to as him. You know, he's so, he's so. And then one day after my surgery and my hands didn't work very well and I can't type very well, so I started doing the audio and recording. And when it talked back to me, it was a woman. And I was like, gosh darn it. I was called."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "He misgendered your chatty. No wonder why y'all had a bad relationship. Now maybe you'll be in a better relationship."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yeah, then you got two women up there fighting. Yeah, so it explains why I got so mad at her all the time. anyway, but you know, Nellie, you use multiple platforms of AI and I'm not the AI virgin, but I am strictly chatty. I have not tried a lot of the co-pilots to all of those. just so, I think maybe it's because I think she knows me. And when you get to where you have multiple, you know, multiple conversations. It's funny when you switch to a different chat. I think the other day I was chatting about something and I went to new chat and it said, well, Kelly, because you like blah, blah, blah. And I was like, how'd you know that? And I thought, well, obviously in my other 9,000 conversations I had with you, we discussed that. So I think there's a comfort level, even though you can't humanize it, but sometimes you do. But yeah, I like her now. She still irritates me, but I like her."
+},
+{
+"speaker": "Mindy Price",
+"text": "So Kelly because you have gotten really familiar I think you'll like some of the tools that we'll bring up today that I Natalie's using some of them to You being a little bit older than us. There's almost a 10-year difference. I'm curious to know before you jumped in on chatty and Using AI did you have fear or hesitation or because we were using it? You're like, I'm just I'm gonna do it. I I don't know how you how you felt about it"
+},
+{
+"speaker": "Kelly Williams",
+"text": "fearful at all. Anything to make my life easier and simpler is I'm all for it because and I think where and I probably shouldn't be like this because I know what you have taught me Mindy is to be a little more cognizant of what information you put out there because Mindy is like no I'm not gonna give you what I had for dinner last night because you may use it against me tomorrow and it's like okay really but I I'm a little less worried about that kind of stuff and I probably should be because I recently had something come across, there was a data breach and I've had to replace my credit card twice because of this and that so maybe I learned my lesson at some point. But I was all about getting in there, getting it done and moving on with my life and it making me more efficient. And with my advanced degree, I still feel like I have lot of shortcomings when it comes to being able to communicate. effectively and that is where it's really kind of come in and helped me. So I want something to where it can save me time, make me have less effort and I can get on with the fun stuff in my life. So that's right."
+},
+{
+"speaker": "Mindy Price",
+"text": "Yeah, and a lot of what we'll talk about today has to do with just those efficiencies. There's so many ways and so much we can dig into and so many tools, even Chatty. Chat GPT has come along and come around and this new version and what you can do with uploading spreadsheets. Again, be careful with sensitive financial data and putting different names and never put your social security number. And there's a lot of things that you want to make sure you're not doing and don't have it in my opinion in training mode. So it's using your data to train, but one of the things that you mentioned, and Natalie, I know you're also using it for, is that clarity. It's to be more efficient. And so there's three things that I think just very simply at the surface for anybody can use and think of it, and you can ask yourself, do I need clarity in this moment? More clarification. Is it a draft that I need? Is it a decision that I need to make? And so when I think of clarity, I'm thinking of organizing those thoughts, summarizing something, having a plan. Your AI, whether you're using GROK, whether you're using Gemini, whether you're using Copilot, whether you're using ChatGBT, and some of the other ones that we'll talk about, can help you with that. Drafting. Sometimes you're sitting there and you have so many thoughts and you want to draft an email or a text, it can help you with that. You want outlines or scripts. I will have all these thoughts in my mind whenever I want to write a session because I'm customizing something or I want to take a current session that I have and I need to... update it and tailor it for whoever the client is, whatever the industry is. I can go in there and I can get my outlines and my drafts to get started and then I can go in and use some research tools that we're going to talk about here in a minute that I can use to enhance that. And then sometimes decisions. You know what? Ladies, how many times have you struggled with a decision and you're just like, I just wish it could be easier. I'm not saying use it for your final decision, but you can use it for comparing options, pros and cons, and next steps. So it truly can be a safe"
+},
+{
+"speaker": "Kelly Williams",
+"text": "It gives you options that you don't even realize are out there. I'm sorry, I totally interrupted you and I apologize. It gives you options that you sometimes don't even realize that are out there. Because it goes off the algorithm, you're like, wow, I didn't think about that. So it definitely is helpful in decision making. You're like, I didn't think about that. That's great. So yeah."
+},
+{
+"speaker": "Mindy Price",
+"text": "Yes, your goal isn't to copy and paste. Your goal is to put your flair on it. What do I always call it? Put your Kellyism, put your Natalieism. Like here's ideas. So before AI and chat GPT, we would sit in rooms and I'd be like, Hey, here's a great idea. would tell my teams before. And when we work together, I'm like, here's the message you want to get across. This is what I want everybody to know. Now what I want you to do is I want you to go put your version of it out there. It needs to be you. You're still the editor. You're still the filter. you're still the human and by having this it's going to give you that speed but you're giving it that wisdom. So you're not being replaced but these are things that you need to be able to do so you can be more efficient and I know there's a lot of pride out there where it's like I want it to be genuinely my own but if it takes you two hours to do something where if you used an AI and it could give you ideas in five minutes, you just gave yourself an hour and 55 minutes back. Now you spend that hour in on fine tuning it and tweaking it and making your own. And now you still have 55 minutes left, right? Does that make sense?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "No, it does. I think for those people that think that it's not their own, it's not reading your mind. It's not like if you say something and all of a sudden on Facebook or on your phone, all these things start popping up. You're like, I didn't ask for that. You feed it the information that you want and it gives back to you. options, ideas, like for instance, you know, with all of us running our own business, there's times when we have to do legal work and everything. And so not too long ago, I needed to reach out and draft a formal letter. We had some changes at the corporate level with my company and I had to draft a formal letter to our attorney. And I wrote that thing a thousand times and I thought, you know what, it just didn't flow. and it didn't sound as professional as I wanted it to. So I just, I copied my letter and pasted it to ChatGPT and I said, please refine this. Please make it look more professional. Please shorten it because it was too wordy. And it, first time out I was like, that was fabulous. So had I gone there in the first place, I would have been, like you said, two hours ahead of time because it just made it so efficient. All I had to do was say, Here's the topic, here's what I needed to say, it's to an attorney, here's the address, and basically I plugged in all the information, address, salutations, everything, it spit it out, I downloaded it, moved it over, boom, it was done. So it definitely, it got my point across and it was still me, but it just was worded more eloquently and that's what is huge for me."
+},
+{
+"speaker": "Mindy Price",
+"text": "So that goes into a nap. I know you want to say something, but it's a great practical tool that I have and it's for emails. So you just talked about a really fast win and how much time you could have saved yourself, Kelly. so emails, messages, text, also anything where there's a lot of emotions or overthinking. None of us are over thinkers. No. So here's a prompt."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yeah."
+},
+{
+"speaker": "Mindy Price",
+"text": "that you can use. You'll get to pull this from the transcript. But so the prompt that I have here is rewrite this message to be clear, warm and confident. Keep my voice, make it 30 % shorter. Give me two options, friendly and firm. And then you paste your message in that you already created. And so you can change that prompt. So that communication is just pretty much in general with an email that you want to pass on to your team, to a coworker, to a supplier partner, to a vendor, to whoever you're working with. Yours I could see because that was to an attorney, letting them know what it is for and you want to make it shorter, you want to refine it to make it flow, but the end point that the attorney needs to understand is, and then you paste your message in there and then it comes back to you. It's so much cleaner. It allows you to go in and go, it was very, it was like eloquent, you know, it was so well laid out. And then you go in and you update it. So that is the perfect example. Nat, are you using it for text messages or using it for emails in this way?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Yes, yes, yes, yes, yes. I use it. have, you know, drip campaigns set up for my real estate, text messages for my real estate for leads that come in. They don't even realize that they're a lead now. They're like, I clicked something. How did I get here? So that's the basic way that I use it. But then I use it for my business, for setting up my classes, for refining, for just anything and everything."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yes."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "I use it lot and I know there's some environmental concerns and challenges, but like health issues. When something comes up and I have something like a pain or something's going on with somebody, like you can very easily put it in. And they're saying that even in third world countries, the AI is saving so many lives because they're able to very quickly diagnose what's going on. You can upload blood work. You can do so many different things and it can help in your elements. Now I know that one thing, and I don't know if you're going to touch on this, but settings and chat GPT. So that's something people don't really talk about for the settings in your AI. What does that look like? What are you sharing? What are you giving out? So you just kind of want to do a little more research in that before you go. you know, setting up a weekly plan, travel arrangements, like a meal plan, meal prep, grocery store, so many different things that you can use AI for."
+},
+{
+"speaker": "Mindy Price",
+"text": "And we're actually gonna talk about some of those here in a minute. So as we're just thinking about on the professional side of what you can use it for. So this one is just a little bit professional, but also personal when you have tough conversations or you wanna set up boundaries. And so the thing to think about this with AI, AI can't be your courage. It can help you have more courage because of the information that it feeds you and you can be more confident with it, but it can't go into that boardroom and it can't give the personality and be the leader, but it can really help you in those difficult conversations, crucial conversations you'll often hear them called And so a prompt that you can use in whichever if you're using chat GPT if you're using grok if you're using Gemini if you're using you know There's so many of them whatever your AI is and so here's a prompt that you can use Help me prepare a 10-minute conversation with person or role about the issue. I want to be direct and kind give me one a simple opening line two three bullet points to cover three two questions to ask and four a calm closing. So this works for feedback for work and personal conversations that you may have been avoiding or they're coming up and it helps you start to frame those out. And I literally have used this for those difficult conversations. Now, Natalie, this ties back to what you were saying about those guard rails, the bumpers that we talked about earlier in bowling and in your settings. So I mentioned just in passing that you can have your AI set up and chat GPT in particular where it's in learning mode. So all the information that you're putting in is going into this mass pool of data and then they're using it for learning. Or if you're a paid subscription, because I don't think you can do this on the non-paid, all of us here have paid subscriptions, you can say, I want this private. don't want to be part of the learning. So everything is within your chat GPT. However, I will say this 100%. I would not put any personal information in there that you wouldn't already find on the internet. I wouldn't put your social security number. I wouldn't put banking numbers. I wouldn't put maiden names. All of the things that you might. keep you up at night or give you anxiety, I wouldn't put that information in there. If you don't want to put a client that you're working with in there, you can say client A. Instead of person's name, you could put their role or you could give them a nickname. So you can put those boundaries, you can put those boundaries up and I think it's really important that you do that because you don't know where this information is going. And then Natalie, you also said about how the... there's so much that goes into powering this big AI and it is a big environmental concern. And so not using it constantly for everything that you could figure out on your own, just being concerned about the environment is something that you do want to think about and using it in batches. I don't know enough about the backend of that to speak to it. Although I know it is something that a lot of folks are worried about the amount of. power and what it does to the environment. It's really a big deal. So, Kelly, I didn't know if you had anything to add on that before we move on to the next AI."
+},
+{
+"speaker": "Kelly Williams",
+"text": "No, was the topic we were talking about was how we can use it for our personal stuff. And so I was it was branching off the professional. Yeah."
+},
+{
+"speaker": "Mindy Price",
+"text": "Okay, so another tool, so that was chat GPT or Gemini Grok OpenAI Copilot that you can use for some of those prompts that we just talked about. Another tool that's out there, I don't know if either of you use Otter for recording meetings, so it helps with that little thing called memory loss that some of us have. I think everybody, unless you've got that picture, what is it, the auditory and the the photographic memories, I don't have that. We've all worked with somebody that had that and it's just an unfair advantage."
+},
+{
+"speaker": "Kelly Williams",
+"text": "My photographic memory is that Polaroid one step, remember? Yeah, it spits out and then it's gone. Yeah, no, I don't. I wish I did, but I do not."
+},
+{
+"speaker": "Mindy Price",
+"text": "Yeah. I know. If you think you're going to remember everything, you're not. I can remember when I was younger and I started with a company that I was with for almost 11 years, in the very beginning, I felt so sharp and I was so on it. I was like, I'm going to remember all this stuff. And this was before we had an amazing CRM and I took really good notes in my notebook. But then some things I'm like, I'll remember that. And then six months later and my client base had grown so much, I didn't remember all of those details."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Mm-hmm."
+},
+{
+"speaker": "Mindy Price",
+"text": "and the things that I didn't write down that I thought I would remember, that was super frustrating for me. So there's a tool called Otter, O-T-T-E-R, that you can use. Now I personally do my meetings over Zoom, so I use Zoom's AI for summarizing my meetings, but Otter is something that even in an in-person meeting that you can use. You can have the app on your phone. you want to ask permission and let everybody know you're recording the conversation in the meeting so that you don't miss anything. But it's really a great tool. It can summarize decisions that were made, action items and who owns those different action items, deadlines and open questions. And what I really think of it as any AI tool that I'm using that's giving me notes at the end of a meeting, it is just taking that mental load and it's it. it gives me a break. just say, okay, I did take my own notes. I'm old school. I'll still write down notes, but then I go back and I compare. And especially when I'm doing my executive coaching, those notes that I send to my clients afterwards with their to-dos in mind are so much more impactful because AI is picking up on things that I'm not. And then I picked up on things that it didn't. And then it's something where it's training my brain. you didn't hear that. You need to listen for this. And so having that extra partner in crime, if you would. Now don't commit a crime, let people know you're recording them, from whatever state you're listening into. From some states, you only have to have one party that knows you. Other states, everybody needs to be aware. Just be a good human. Let somebody know you're recording them. But it's definitely a tool that you can use. Do you too use AI with your meetings at all?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "be like I just got the subscription for the Otter I think is the one that the new brokerage that I signed up with home rock reality that they have so I will be"
+},
+{
+"speaker": "Mindy Price",
+"text": "Yeah. Kelly."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yep, I use it with one of our meetings with our attorney that day. let's face it, he did the best he could to speak non-attorney on our level, but I confused him just as much talking more about the medical stuff. So he and I were two different conversations going on and AI was able to summarize and bring it together to where we both were like, that's what that meeting was about. So yeah, so we did that through, I think it was Zoom. I think it was through the Zoom. But as for the Otter know, I did not know, again, learn something off the podcast. Yeah, and again, that's just not the type of setup my company has. However, I will typically go to, know, I live in a different state than where my company is. And so I typically drive to get there. But knowing, now that I've got this particular setup, then I can see it being a lot more beneficial to really make sure I don't miss anything or they don't miss anything when we have our corporate meetings and our weekly meetings and just quarterly meetings for sure face to face. But sometimes that's not always feasible. So knowing you've got a backup like that is great. So Otter it is."
+},
+{
+"speaker": "Mindy Price",
+"text": "There's so many, yeah, there's so many tools that you can use. I've got two more that I wanna share. I'm really excited about the last one, but this one, I just started embracing more. I have used Canva for a while now, but. I tried some of the AI tools that it had in beta and I wasn't a super fan, but now I'm seeing how much further it has come along. And so there's a lot of different things that you can do in Canva. You know, with a lot of the speaking that I do, if there's a point that I want people talking about in the hallway later on, I'll take a quote and then I can go in there and I could say, you know, I'll just use a simple example that I have. Clarity is a leadership skill. truly is. Clarity is a leadership skill. And so you can go into Canva and you can say, three quote graphic concepts with a warm modern style. Give it the text that I just said, clarity is a leadership skill, and then use neutral colors with one accent, leave space for a logo. And it will literally create this for you. And then you can go in and you can update it. You might say, Mindy, I've got a. marketing department, a graphics department that does that for me. Well good for you. I don't. So using it in this way. You can also now go in there if you've got a presentation coming up and you can feed it text and you can give it context on what you're wanting that presentation to be about and then it will create your first five slides for you. found one that I want to use yet, but what I have found is it will pull some information and present it in a way. And then that inspires me and I'll go in and I'll fix the slides and the graphics the way that I want them. But Canva is a really neat tool. Natalie, I know you use Canva. Have you used any of the AI that comes with it?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "No, Canva and I don't like each other. For some reason, I'm not a Canva girl. So I think it's kind of like an interior designer, right? So I'm a big picture kind of person and I like the bigger picture. I can do the schemes, I can do the paint colors, I can do the roof, the landscaping. When we start getting into the details, that's when I'm like, okay, I'm out. I feel like Canva is that way. It's my nemesis. I know you can whip stuff out and it looks beautiful, clean and polished. Me, I'm still cursing it. like Kelly does Chatty. So I'm not there. But I also know that it's tied in. I have it tied into my chat GPT in chat. Chatty will tell me stuff to put over and I still don't understand that aspect, that connect, because I haven't taken the time to tell Chatty to tell me exactly how to do it. So that's where I'm at with that. I can't bend it short. So."
+},
+{
+"speaker": "Kelly Williams",
+"text": "So you know."
+},
+{
+"speaker": "Mindy Price",
+"text": "And you can actually, here's a prompt real quick. You can actually go to chat GPT or whatever you choose and you can say, I need this. Give me the best prompt. So I have this outcome and it will give you an incredible prompt that you can then tweak and use for anything. Like that's the biggest lesson today. Ask it for what kind of prompt it needs and then work with it and you will be shocked at the outcome. Kelly, what were you gonna say?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "no, I was gonna, I'm totally on board with Natalie when it comes to Canva because you you and I have had the conversation Mindy about Canva and me, I was trying to do something. I was trying to put a brochure together for my company and everything and I, literally I promise you, I hate to say this, I'm like, I don't need to figure that out, I can just call Mindy. Because I'm like, I don't have time for this. I can prompt it till I'm blue in the face and."
+},
+{
+"speaker": "Mindy Price",
+"text": "you"
+},
+{
+"speaker": "Kelly Williams",
+"text": "I am more of a, I like to get in there and in the old school and figure it out. I I will never forget when I first went into management and they said, you need to put a PowerPoint together. And I said, what? I said, you do realize I'm in the medical field. I don't know. And because we had a department for that. So my brain just does not think that way. Now it's getting there. And I'm learning about the prompts. And so I can get to where, I mean, I'm just about to launch our new revamped website for my company. We changed the colors, we changed everything, it's a lot more appealing. But when I tell you, when I see those commercials on Facebook that says, or those infomercials that say, AI is gonna change the world, people are developing their website in 20 minutes, I'm like, No way in hell. It took me 20 months, you know, but it's because I don't know how to appropriately use it. So I am all ears to how to use that kind of stuff. yeah, that's, and as long as I've got you, then I don't need to know. I'm kidding. I'm kidding. I do want to know. Cause you're very busy."
+},
+{
+"speaker": "Mindy Price",
+"text": "you And I want to help and teach too. And it's stuff that I love, you know, learning something new and the creative side of my brain I absolutely love as well. But because that side of my brain, I'll also say the creative side, that will put me in a rabbit hole. Earlier, Natalie, in the very beginning of the episode, you talked about going into Google and not wanting to go through all the documents and everything. I always think about that as the Google rabbit hole or the, you know, web search rabbit hole and AI can save you so much time. Research all that this this one right here, and I'm using the free version everything that we've told you about today Has a free version of it and I use this tool called perplexity and perplexity is like research taking you away from that Google rabbit hole and I really really like it if there's a story if there is something that I want to hit home and I'm meeting with a particular client and they're not getting a point or I know this will make it very relatable or if I'm on a stage and for a different industry I'll go in and I use perplexity for a lot of different research and so here's a prompt that you could give to perplexity give me seven practical ways non-technical professionals use AI weekly Y'all try that. You can do it for free. I think you get two or three free per day on perplexity. Give me seven practical ways non-technical professionals use AI weekly. Include sources and one privacy caution for each. Now that's just a prompt that I have as an example for you. You could ask for multiple privacy cautions and it's going to give it to you, but just keeping it super simple. It's a source for you. And I absolutely love perplexity."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "When you say privacy, whatever you're saying, yes."
+},
+{
+"speaker": "Mindy Price",
+"text": "Privacy concerns, so like going into chat GPT and saying turn off learning mode, I want this to stay private. So would be anything that that particular AI source, if they can find the information, data breaches, security measures that aren't as strong as some others. Make sense? Okay, so I have to tell y'all a story."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Okay."
+},
+{
+"speaker": "Mindy Price",
+"text": "This is probably why I'm so giddy about perplexity because I have the social proof of what happened for me. I was in the middle of writing a big session for the banking industry and I needed some, I needed a story because it had been so long since I had dealt with my securities licenses and that side of my brain and it get y'all. I was using Co-Pilot at the time. Any of your AIs can do what they call hallucinate. They've gotten a lot better, but they will make stuff up. And Copilot happened to be the one that I was using and I still love Copilot for a lot of different things. It gave me the best example, the best story ever. And I was like, this hits on all the points. Gut check, y'all. was like, this is too good to be true. This can't be a real company. sure enough, I went and looked it up. I went to perplexity, fake company. I was like, you've got to be kidding me. So then I'm having a conversation. Like you can treat your AI like a person. I'm having a conversation. It was like, you just made that up. And it was like, yeah, but it went really well. I thought you would like it. No, don't give me that. So"
+},
+{
+"speaker": "Kelly Williams",
+"text": "Bye."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "you"
+},
+{
+"speaker": "Kelly Williams",
+"text": "You"
+},
+{
+"speaker": "Mindy Price",
+"text": "Check check the facts AI is not your truth source You do have to go and you have to make sure especially in business You want to make sure that you're not relying on it? Too much because there's so many questions that you can ask it about every day and we're about to jump into that But make sure you're looking and your trust but verify"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Yeah,"
+},
+{
+"speaker": "Kelly Williams",
+"text": "West."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "I have a contract I uploaded and then we talked about this. have a contract I uploaded because I was going somewhere and I just wanted to have it looked at because it was not the normal standard form. So I uploaded the contract and AI said all this stuff and I'm like, this is all concerning. So I didn't respond to the client. I didn't say anything. I said, me a chance to review it. So I'm sitting there reading AI and reading the contract and I'm like, these are not the same. Did we read the same contract? Because what you're saying"
+},
+{
+"speaker": "Kelly Williams",
+"text": "And there is a disclaimer."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "which are true valid concerns are not in this contract. So it was kind of interesting just how that whole thing played out in the sense you can use it as a tool, but it is not an end all be all, trust but verify."
+},
+{
+"speaker": "Mindy Price",
+"text": "Listen, AI will lie to you politely and confidently."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "Yeah."
+},
+{
+"speaker": "Kelly Williams",
+"text": "will convince you that they're telling you the 100 % A number one truth."
+},
+{
+"speaker": "Mindy Price",
+"text": "Absolutely. So trust but verify and you can call it out and say do not hallucinate. Make sure you do this. You can tell it things that you like. Again, feed it information about yourself so that it gets to know you. That's a whole nother thing. But I do have one bonus tool that I want to share before we get into ways that you can use AI in real life. And this is the one that Natalie introduced me to and it's called Sintra S-I-N-T-R-A dot A-I. Sintra is, it's got 12 assistants that you can use and it's really affordable. I don't think they have a free plan, maybe they do. Natalie and I use Sintra completely differently. And what I did for mine is because I have such a great relationship with my chatty, I let it know, was like, cause we were comparing different AI tools and there's this one that I'm looking at. using for my business but it's about a thousand dollars so I was like are there things that I can learn first and I can help my clients with first before I go ahead and spend this thousand dollars a month because that's it's a time commitment and when I looked up Sintra it told me the reason that I could and because it was so affordable I got it on a special I think I'm paying less than twenty dollars a month and these twenty dollars a month subscriptions do of course add up but there you can feed it information so I went in to chatty And I was like, okay, it's asking these questions based off what you know about me, help me feed it in a way that it's gonna get to know me very quickly and I'm gonna skip all the BS. And so it gave me that information. And instead of one or two line sentences that probably most people would give, it feeds it into this brain AI. And this is not a commercial for it, it's just a cool tool that I'm in the middle of using. And so I gave it this information and it can do social media for you. It could do copywriting for you. You've got like an executive assistant that you can work with. You can use it for, you know, different summaries and next steps and follow ups. And just you can ask yourself, what is it that I'm repeating every week? And it's something that is helpful with that. and it is a tool outside of some of the ones that we said. So I thought, hey, and we're not getting an affiliate link yet. We probably should look into that. We should, let's go. You ought to say you heard it from us. But Natalie, so how are you using Sentra or are you even using it anymore?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "We should. Let's share that. Let's go. use it. I was up till four o'clock in the morning using it last night, or this morning. I still use it. I just use it for different things. So it's very much a learning AI. They want you to put as much information in about the business. So like I use the social media manager. I uploaded a ton of pictures. I do have an assistant. She's just not always able because she helps me with some other things. the social media. isn't always there, I used, she's the social media manager. I just dumped a ton of pictures in, said what I wanted, what I liked, what I wanted her to focus on, because at first she was going a different route, I dialed her back in, I'm like, no, no, no, no, let's go this way. I built my website off of it, so I did use it for my website. I didn't even realize when you were talking about it, I pulled it up and I'm like, looking, I'm like, website. because they did an update on their website builder on the assistant comment, the website builder, and they're like, yeah, already live. And I'm like, that is my website. That came from them. So I don't even remember half the stuff I do, but I use it for a lot. So the social media, the class writing, copywriting, email. I will say Paxton, my son, my seven-year-old is using Chatty."
+},
+{
+"speaker": "Mindy Price",
+"text": "Gary."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "for book writing. So he's writing a book and he's putting it in and then he's illustrating the pictures and he's doing all that through AI. So now what he has been telling his sister this past week is he is going to be a book writer like Dogman, like the author of Dogman. And I think his last name is Pilkey, so it's pretty funny. So I said, Paxton, well, right now I don't think AI writers are really looked at very favorably. Now maybe down the road you might be. You know, he's 10, so who knows how the market will be when he gets there. But yeah."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Who knows?"
+},
+{
+"speaker": "Mindy Price",
+"text": "You said seven and I'm sitting here going wait. I thought he was just nine. Am I going crazy? He's 10"
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yeah, you said it was seven first."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "he's 10. Did I say seven? Check the tape, check the tape. I want it rewound, let's go."
+},
+{
+"speaker": "Mindy Price",
+"text": "Okay, but... see? You... I mean, you do."
+},
+{
+"speaker": "Kelly Williams",
+"text": "I'm frustrated."
+},
+{
+"speaker": "Mindy Price",
+"text": "Natalie's going so fast all the time. And again, not a commercial for that. There's just, there's so many different AIs that are out there. And I tried to do a lot of research on the different ones that I'm using. And that is one that I really like. I use it for different ways. And it helped me. I was doing a speaker reel and I needed to get something updated and I compared it to Chatty and it was more humanized. And it felt like it actually gave me. Language that was easier to relate to and then I could go in and tweak it So, you know you just figure out what works for you There's a lot of tools if you want to do like Kelly and you stick with just one and it's comfortable and it gives you what you need That's fine again those guard rails be careful what you're putting in there and then ask it whichever one you're most familiar with and you're using literally ask it what can I use you more for what are others using you for what are prompts that I could give you if my goal is this and then seeing what the outputs are from that and it will it truly can be a game changer and I think this is a great time for us to move into real life and what you can do in real life and Natalie you wanted to say something?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "The one thing I want to say about Sintra AI, and this is not a commercial, we're not paid, whatever, I don't care, I really like it. If you're not sure where to start, you're an entrepreneur or solopreneur, you are overwhelmed, you're not sure. I mean, you are getting a lot of assistance and you don't even know where to begin. There's the Brain AI questions right off the bat where it's learning you, but then they will pop up with ideas and tell you what to do or give you thoughts based on your goals and what you're putting in the Brain AI. So even if you don't know where to go, or how to start, it helps you and walks you through that process. And it's in your inbox. It doesn't bother you. So if you don't go to it for a week, it's not like an annoying kid, mom, mom, mom, mom, mom, mom. It's just there. So when you are ready to reengage, it's there. Like, hey, buddy has an idea. Cassie has an idea. Dexter has an idea. And they all have their different roles. So that's a very entry level, easy, but very impactful AI. that's, OK, sorry, going to life experiences."
+},
+{
+"speaker": "Mindy Price",
+"text": "No, I think that's great. And Natalie, you're so fast at doing stuff. I think you should go on and see if there's an affiliate link. You should create one so we can come back and we can talk about it because our friends love us so much. They would want to support us. And then if you have questions about it, we can help you. So all right, let's talk about how we can use AI in our personal lives. And you two both mentioned it in different ways. You can literally use it for dinner."
+},
+{
+"speaker": "Kelly Williams",
+"text": "you"
+},
+{
+"speaker": "Mindy Price",
+"text": "and grocery lists. Like 100%. It can reduce friction at home. I don't know about y'all. But there are times I'm sitting in my home office and I'm working and Travis is upstairs and he's had a long day and neither one of us know what we want to make and then we get frustrated with each other. Well, I thought you were cooking tonight. Well, I thought you were cooking tonight and I thought you went to the grocery store. And when I started incorporating AI into meal planning and my grocery list and what aisle do I pick? the stuff from if I'm not going to order it and have it delivered or have it delivered car side, it has really, really helped. again, I'm that person that's going to, I'm going to listen to an audio book if I'm learning and then I'm going to read that because I like the paper. I love going to the grocery store. I love getting out because if I'm not speaking in front of people or with my clients, I'm working from home. And so that interaction that I have, I love just taking my little list. I have even learned to coupon or just look at the, I haven't done this yet and I'm sure there's a way to do it now that I think about it. I'll go into my app, so Kroger, I typically shop from around here and I'll look and I'll see what's on special, what do we need, I'll see what we have and then I'll make my list but then I feed it in and I'm like, hey, what's the quickest way to get this? Now I pretty much know my grocery store like the back of my hand but before I was using it for that. and then just quick 30 minute meals you can put in. Do you have any dietary restrictions or is there, you know, is it two people, is it four people? And Kelly, you were the one that I actually, I think you were the one that got me started on using chatty for recipes, maybe. Yeah."
+},
+{
+"speaker": "Kelly Williams",
+"text": "I use for recipes all the time because I am not a creative cook and I'm like, I've got these ingredients and I've got this much time and go. And that's what I'll do. And you've got air fryers, you've got pressure cookers, you've got this, you've got that. And I am not a good, I mean, I can cook good. My issue is when I open up the cadmium and I go, oh my God, I don't know what to cook. So that's when I like. just tell me what to cook and I can do it. But then it also can give you some pointers and some guidelines. I just, I've got, like you, so many other things going on and I want to eat healthy and I can spend hours at the grocery store, but I would much rather just go in, get it done and come out because otherwise I will, yeah, I'm not very efficient when it comes to that or educated."
+},
+{
+"speaker": "Mindy Price",
+"text": "gosh and you talk about time saver yes money saver yes because if you stick to your list so I went ahead and I did a prompt and so the prompt that you could put in your AI plan five dinners for two adults or however many adults you have 30 minute max cook times budget-friendly include leftovers for lunch create a grocery list grouped by aisle so this is a prompt that you can use you mentioned air fryer"
+},
+{
+"speaker": "Kelly Williams",
+"text": "Yeah. Yes."
+},
+{
+"speaker": "Mindy Price",
+"text": "Crock-pot, know different if there's a way you want to cook you could put that in and you can easily prompt your AI and it will spit that information out Now I will say caution Because I have put in ingredients that I have and I'm like help me make a meal nine times out of ten Home run. I have made one of the best agent Asian slow cook pork roast with an Asian slaw that came from ChatGPT, my mouth is watering. And then, I don't remember what it was, and I even questioned, was like, does that really go together? I was like, well, it's never let me down. So it was terrible. Like there was this one ingredient I knew better, but I was like, just trust the process. Still check it. Still check your AI if there's a recipe, put the ingredients in, Google it."
+},
+{
+"speaker": "Kelly Williams",
+"text": "Hahaha."
+},
+{
+"speaker": "Mindy Price",
+"text": "or ask it, you sure this goes? And it's like, no, that was hallucination. mine will tell me funny stuff whenever I call it out. But you could definitely use it for that. Another thing that you can use it for on the personal side is workout planning. So your prompt could be create a four-day workout plan, 30 minutes per workout, home or gym options. You could put what you want there. If you're a beginner to intermediate or if you're advanced, and then, focus on consistency not perfection. I don't know why it said that there but with this prompt you might say I want to go to the gym this many days a week. I want to work from home this workout from home this many days a week. This is the equipment that I have. I'm focused more on stretching and Pilate and yoga type activity. I want to build muscle. All of these things you can feed it into your plan and it can it will your your AI and it will actually give you workout plan. I know a lot people that are actually doing this. I recently canceled my Peloton subscription because I wasn't going to the gym and I was wasting money and I had a little bit of anxiety because I am that person. I would love to go to the gym and throw it on. I would you know hit the the the not Peloton, it wasn't the actual Peloton bike but the spin room. I'd go to the spin room then I'd go and I would do my workouts and I would follow it. It was like a personal trainer right there."
+},
+{
+"speaker": "Kelly Williams",
+"text": "It's on tape."
+},
+{
+"speaker": "Mindy Price",
+"text": "So I thought, well, am I really gonna be able to do this? And then I realized I can put all of this information into my AI and it can give me a plan and it's right there. I pull it up on my phone and I do it. So have you two used it anyway?"
+},
+{
+"speaker": "Kelly Williams",
+"text": "And it's very detailed. It's very detailed and it will ask, what's your height? What's your weight? Are you beginner? Are you intermediate? Do you have any injuries? And you're like, my gosh. yeah, it's very, very detailed, very in tune to what your needs are. Yeah, it's amazing. It's amazing."
+},
+{
+"speaker": "Mindy Price",
+"text": "Yeah, so I mean there's a lot of, I've got so many different ideas on how you can use it personally, but I'd love to know if there's ways we haven't talked about, because earlier we started to go into the personal, was like, well let's keep it on this side and then come over. What other ways are you all using AI?"
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "traveling like we're traveling."
+},
+{
+"speaker": "Kelly Williams",
+"text": "So I'll tell you, traveling, yes, that's what I was gonna say. I've got one big trip on my bucket list and I have no idea where to start. It's Bora Bora, but I know that's so expensive, expensive. So I said, hmm, okay, Chatty give me the best time to go, lowest crowds, the best price for this much money and this many people, blah, blah. And I mean, and I was on there for over an hour and it finally spit me out this, here's where you go. And it gave me from, you know, from the basic to the high end. And it said, if you want to stay in a hut over the water for just a few days, go this. So it gave me like a 10 day itinerary. It included the best time of the year to go. It included, you know, potential airfare, how much to budget for. he's, and he, she said, basically take this to your travel agent. and this is where you can start. And I would have not known any idea where to start. And it just took a lot of that away. I thought of what I wanted to do, what types of excursions there were, all sorts of things. it really, it was huge. It took so much anxiety off of me just being able to do that. Now, of course, it's gonna cost a ton of money and I hadn't gone to the travel agent yet. But, you know, at least I know what I need to do."
+},
+{
+"speaker": "Mindy Price",
+"text": "So Natalie, y'all have both traveled with me and you know I love to see the sites and find places and one of my favorite places is La Mujeres as we've talked about it on the podcast before. You've each gone with me and you know there's places we have to go, right? We're going here, we're going here, we're going here. Natalie was like, my gosh, that was a lot."
+},
+{
+"speaker": "Kelly Williams",
+"text": "You've been there. You've been there during the podcast before."
+},
+{
+"speaker": "Mindy Price",
+"text": "but you got to see a lot and it's a tiny little island. If you think about how, I'm like, my gosh, is that gonna take me out of my non-paid job when I get to be your free tour guide when we go places? No, it's just gonna enhance what we actually do and what we get to see because there's places I don't know about it. But in all seriousness, you probably have travel agents and other people going, wait, this is getting me outside of a job. But if you think, I think I just heard you say this because I'm actually looking at a trip to Bora Bora and the Fijian Islands on a shallow bottom boat so can see a lot of them for my anniversary. And I still wanna work with a travel agent human that if something goes wrong when I'm overseas or one of my reservations or anything like that, I have them to call on. And it goes back to that human factor. There are ways that... where you might think your job is being replaced by AI. So I challenge you to find what makes it human. What can AI not replace that you can then put that as your business? Maybe your business isn't as big, but then you niche it down and all of a sudden you're charging more money for that peace of mind with fewer clients and you end up making more money. So I just thought about that, but I think that's something that Don't be afraid of it. Natalie, you were gonna say something about."
+},
+{
+"speaker": "Natalie Pilkinton",
+"text": "My client just went to Turkey and he's sending me videos of him and his beautiful wife and I'm like this looks like AI they're standing in the snow Horses are running past them and they're in the middle of this field and I'm like what like where what? And if if Paxton would have been with me to been like AI because he can spot those videos up But I emailed him back. I'm like what in the world? I was like that looks so surreal and fake. It looks AI he said I know, I said, how did y'all plan this? He said, we just used AI. And then we took it to the travel agent and they said, thank you for planning the trip for us. And then they actually implemented it, but they used a special AI that took into account people's personal experiences and things that more local experiences, that type of thing. So he had a fabulous trip. So yeah, AI hands down, just travel, anything like that. I really use, I use social media, not social media, I use AI every single day. AI answers faster than my friends and it doesn't judge me, so I ask everything. Kelly Williams (1:00:01) Ha! Mindy Price (1:00:03) are you saying, Natalie? Natalie Pilkinton (1:00:05) I'm just saying. Got another one for you. Using AI for the first time feels like getting a new gym membership. Full of hope and zero consistency. Kelly Williams (1:00:08) That's all. Just saying. Yeah. Mindy Price (1:00:21) Well, you know, with that, I think it's a great way to close it out. And I just want to say, AI is not a trend that's going away. You're going to have to embrace it, but you can use it in so many ways that's going to help you. You're going to be more efficient. And if you start feeling like you're falling behind, reach out to me. you start feeling, there's so many folks that you can reach out to. And it has made my life a lot easier and my skepticism. Kelly Williams (1:00:30) Mm-hmm. Mindy Price (1:00:51) isn't as high as it was. If you listen back to what Kelly said earlier, I'm not even gonna tell you what I had for dinner. You'll use it against me. But in all seriousness, it is, I'm thankful for it. I am afraid of it getting out of hand and what can happen. And I think there's gonna be some parameters that start to be put around it. But I don't know. I don't know where it's gonna go. But I think we all need to learn how to use it and ask better questions and not be afraid to ask those questions. just don't. Kelly Williams (1:00:57) Thank Mindy Price (1:01:18) copy and paste. Don't copy and paste whatever it is telling you because then you lose the humanity, you lose who you are. And Nat, I know you want to say something, but this just came across. You raised your hand. And I had a vision of all three of us and others sitting in a boardroom and how we would just spitfire ideas and we would have collaboration and conversations. And I've actually sat in a boardroom and I can tell you who in that room. is relying way too much on AI and they're having to go to their phones for answers and it's inauthentic, that's not who you want to be. You still want to be human. You still want to have the ideas come from you. You just use AI as a tool. before we wrap up, is there anything that you want to say? Kelly Williams (1:02:06) I think like you said, do what you're comfortable with. Just know that there are so many other options out there. You may be super, super good. I've learned several other options that I may look into just to give me some ideas on how I can expand my own personal and professional repertoire using AI. So I'm not gonna cheat on Chatty, but I am going to branch out just a little bit. So yeah. Mindy Price (1:02:30) All right, Nat, anything you want to say before? Natalie Pilkinton (1:02:34) Nah, I just say start. Like you gotta start somewhere. Start with chat GPT, it's easier. Start with your Gemini that's on your Google search. Just start and have fun and embrace it and go from there. as Mindy said, get the information, trust but verify. Double check everything. Don't take it as written in gold or that it's a gold standard there if that even is such a thing these days. But just make sure that you're double checking. everything that you do and have fun with it. mean Christmas ideas like gift ideas. You just never know what you'll need to ask it. It's it's makes you feel more productive if anything just because you're asking it questions and you're learning so much more. But one thing I do want to say that we didn't talk and I know we got to go because this has been a longer episode but it's full of information. We've utilized it on the podcast because we've never podcast before so figuring this out and stumbling along our way and learning and talking to other people and going to podcast movement and doing things like that. Like even just analyzing YouTube data, like everybody, all about the data, it's all about the numbers. But you don't even know sometimes what you're looking at. So if you're ever in a situation and you don't even know. how to process the information that's given to you. Maybe it's in a work situation, maybe it's in a personal situation. You can upload that information and say, what is this supposed to mean to me? Am I rolling capacity? And how am I supposed to process this? What information should I take from it? What information is important? What should I throw out? Like there's so many things and we've been doing that with YouTube and it's just sometimes you get that epiphany. Like you have that random thought like. Are we even doing that for a reason? Does that even add value or is that just because somebody else was doing it and we thought it was good? And then when we start looking at the numbers and the information, it's like, I think it's actually hurting us. And then asking Chatty, like Chatty watched me all the way through the whole process to set up doing a Facebook, YouTube live that looped and streamed and all that. And then I'm sitting here watching our numbers of our episodes and I'm like, maybe that's not the best thing. Went back to Chatty and Chatty's like, yeah, it's probably not the best thing. But I didn't ask Chatty that. Kelly Williams (1:04:33) Mm-hmm. Natalie Pilkinton (1:04:37) you only get what you pour into it out. And after we started having a conversation about the YouTube lives versus actual subscriptions, which subscribe, we need you, we love you, we support you, we want your support, please help us. And share with your friends and tell everybody you know, scream it from the rooftop, write the billboard at Times Square. I'm not picky on how you share. So if you subscribe, that's what we're looking for. We're looking for the subscriptions and the views. We're looking to grow. Watching the live, we were just having views, but we weren't having conversions and it was taking away from our podcast. So it's like, okay, let's dial it back. it's always revisit things too. And don't be afraid to ask it questions and prompt. What would you ask yourself if you were me? Like what's the best way to drill down and get that information further? So, and like Kelly said, it gives you prompts and other ideas, but how would you utilize this? What if you were me? Save this as a template, I'm gonna come back and utilize this. This is gonna be a reoccuring task so that it's not reinventing the will every time where you're having to retrain it. So that's my last sense. That's my takeaway on the Sugar Spice and Spirits podcast. Kelly Williams (1:05:42) Thank Mindy Price (1:05:42) Well, thank goodness, because I don't want her giving away the farm. This is some of the stuff that I teach too. So there's that. But in all seriousness, I hope that this was a very layman's high level things that you can take away. And some of you might be going, high level, what are you talking about? I was writing notes the whole time. But there's so much you can do with AI. Don't be afraid of it. You want to embrace it, but you want to be careful with it. And if you do have questions, if you have topic ideas, if you have drink suggestions, please go to sugarspiceandspirits.com to put your information in And here's what I will say to all of you. Don't be afraid of AI, embrace it, toast to it, and cheers to you."
+}
+]

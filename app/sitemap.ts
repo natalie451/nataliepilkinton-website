@@ -4,7 +4,7 @@ import { blogCategories } from "@/lib/content/blog";
 import { getAllBlogFilePosts } from "@/lib/content/blogFiles";
 import { marketUpdates } from "@/lib/content/market-updates";
 import { getListingSlugs } from "@/lib/listings";
-import { podcastTranscripts } from "@/lib/content/podcastTranscripts";
+import { getPodcastEpisodeIndex } from "@/lib/content/podcastEpisodes";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
 
 const staticPaths = [
@@ -94,7 +94,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: parseDate(update.date),
     })),
     ...getListingSlugs().map((slug) => ({ path: `/listings/${slug}` })),
-    ...podcastTranscripts.map((transcript) => ({ path: `/podcast/transcripts/${transcript.slug}` })),
+    ...getPodcastEpisodeIndex().map((episode) => ({
+      path: `/podcast/${episode.slug}`,
+      lastModified: parseDate(episode.published ?? undefined),
+    })),
   ];
 
   return entries
