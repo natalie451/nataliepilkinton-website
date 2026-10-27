@@ -143,7 +143,7 @@ export default function AboutPage() {
                 about real estate wealth building.
               </p>
               <p>
-                Today, I&rsquo;m passionate about making real estate education accessible to everyone&mdash;whether
+                Today, I&rsquo;m passionate about making real estate education accessible to everyone, whether
                 you&rsquo;re a first-time buyer, investor, or agent looking to scale your business.
               </p>
             </div>

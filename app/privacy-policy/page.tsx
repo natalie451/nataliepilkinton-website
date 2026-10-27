@@ -35,22 +35,22 @@ export default function PrivacyPolicyPage() {
           <p>When you visit {siteConfig.siteUrl.replace("https://", "")} or interact with our forms, we may collect:</p>
           <ul className="ml-lg list-disc mb-lg">
             <li className="mb-md">
-              <strong>Information you provide directly</strong> &mdash; such as your name, email address, phone
+              <strong>Information you provide directly</strong>, such as your name, email address, phone
               number, and message content when you submit a contact form, request a home valuation, or book a
               strategy session.
             </li>
             <li className="mb-md">
-              <strong>Booking information</strong> &mdash; when you schedule a session through our Calendly booking
+              <strong>Booking information</strong>, when you schedule a session through our Calendly booking
               link, that scheduling data is collected and processed by Calendly under their own privacy
               policy, not ours.
             </li>
             <li className="mb-md">
-              <strong>Automatically collected information</strong> &mdash; such as IP address, browser type,
+              <strong>Automatically collected information</strong>, such as IP address, browser type,
               device information, and pages visited, typically gathered through standard web server logs and any
               analytics tools we use.
             </li>
             <li className="mb-md">
-              <strong>Cookies and similar technologies</strong> &mdash; used to remember preferences and
+              <strong>Cookies and similar technologies</strong>, used to remember preferences and
               understand site usage. You can disable cookies in your browser settings, though some site features
               may not function properly as a result.
             </li>
