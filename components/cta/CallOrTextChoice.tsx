@@ -11,12 +11,14 @@ type CallOrTextChoiceProps = {
   variant: "bar" | "panel" | "primary" | "secondary" | "on-blue";
   size?: "small" | "base" | "large";
   className?: string;
+  /** Applied to the button only. className still styles the wrapper and, when this is omitted, the button. */
+  buttonClassName?: string;
 };
 
 const choiceLink =
   "block whitespace-nowrap rounded-xs px-sm py-2 text-sm font-semibold text-blue hover:bg-white";
 
-export function CallOrTextChoice({ variant, size = "base", className }: CallOrTextChoiceProps) {
+export function CallOrTextChoice({ variant, size = "base", className, buttonClassName }: CallOrTextChoiceProps) {
   const [open, setOpen] = useState(false);
   const [placed, setPlaced] = useState(false);
   const [box, setBox] = useState<{ left: number; top?: number; bottom?: number }>({ left: 12, bottom: 80 });
@@ -92,7 +94,7 @@ export function CallOrTextChoice({ variant, size = "base", className }: CallOrTe
         aria-haspopup="menu"
         aria-controls={menuId}
         onClick={() => setOpen((value) => !value)}
-        className={cn(buttonClass, className)}
+        className={cn(buttonClass, buttonClassName ?? className)}
       >
         Call or text
       </button>
