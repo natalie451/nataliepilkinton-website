@@ -10,8 +10,8 @@ type ContactActionsProps = {
   showEmail?: boolean;
   showBook?: boolean;
   showReview?: boolean;
-  /** Equal tiles so Call or text, Book a time, and Email share one shape. */
-  layout?: "inline" | "equal";
+  /** Equal tiles share one shape. Hero keeps three equal buttons on one desktop row. */
+  layout?: "inline" | "equal" | "hero";
   className?: string;
 };
 
@@ -29,7 +29,11 @@ export function ContactActions({
   const callVariant = onBlue ? "on-blue" : "primary";
   const secondary = onBlue ? "on-blue" : "secondary";
   const equal = layout === "equal";
+  const hero = layout === "hero";
   const stretch = equal ? "h-[6.25rem] w-full px-sm" : "max-sm:w-full";
+  // Tight horizontal padding so "Email Natalie" stays on one line inside the hero column.
+  const heroButton =
+    "w-full min-w-0 px-3 text-base leading-tight min-h-14 lg:px-1.5 lg:text-sm lg:min-h-12 lg:whitespace-nowrap";
   const actionCount = 1 + Number(showBook) + Number(showEmail) + Number(showReview);
   const columns =
     actionCount >= 4
@@ -43,23 +47,32 @@ export function ContactActions({
   return (
     <div
       className={cn(
-        equal ? cn("grid w-full items-stretch gap-sm", columns) : "flex flex-wrap items-center gap-sm",
+        hero
+          ? "grid w-full grid-cols-1 items-stretch gap-sm lg:grid-cols-3"
+          : equal
+            ? cn("grid w-full items-stretch gap-sm", columns)
+            : "flex flex-wrap items-center gap-sm",
         className,
       )}
     >
-      <CallOrTextChoice variant={callVariant} size={size} className={stretch} />
+      <CallOrTextChoice
+        variant={callVariant}
+        size={size}
+        className={hero ? "min-w-0 w-full" : stretch}
+        buttonClassName={hero ? heroButton : undefined}
+      />
       {showBook && (
-        <Button href="/booking" variant={secondary} size={size} className={stretch}>
+        <Button href="/booking" variant={secondary} size={size} className={hero ? heroButton : stretch}>
           Book a time
         </Button>
       )}
       {showEmail && (
-        <Button href={siteConfig.emailHref} variant={secondary} size={size} className={stretch}>
+        <Button href={siteConfig.emailHref} variant={secondary} size={size} className={hero ? heroButton : stretch}>
           Email Natalie
         </Button>
       )}
       {showReview && (
-        <Button href={siteConfig.googleReviewUrl} external variant={secondary} size={size} className={stretch}>
+        <Button href={siteConfig.googleReviewUrl} external variant={secondary} size={size} className={hero ? heroButton : stretch}>
           Leave a Google review
         </Button>
       )}
