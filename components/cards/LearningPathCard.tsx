@@ -11,7 +11,7 @@ export function LearningPathCard({ icon, title, description, href }: LearningPat
   return (
     <Link
       href={href}
-      className="bg-gradient-to-br from-blue to-[#163fa8] text-white p-xl rounded-xs flex flex-col justify-between min-h-[240px] select-none transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-lg max-md:min-h-[220px] max-md:p-lg"
+      className="bg-gradient-to-br from-blue to-blue-hover text-white p-xl rounded-xs flex flex-col justify-between min-h-[240px] select-none transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-lg max-md:min-h-[220px] max-md:p-lg"
     >
       <div>
         <div className="text-3xl mb-md w-[60px] h-[60px] bg-blue/10 border-2 border-blue rounded-xs flex items-center justify-center">

@@ -3,27 +3,27 @@
 /* ========== DESIGN TOKENS ========== */
 /* Change colors here. Components use these tokens instead of one-off hex values. */
 :root {
-  /* Warm paper. Same cream as the podcast band. */
-  --cream: #f5eedc;
+  /* Soft warm paper. Lighter than the earlier podcast cream so it stays quiet next to white. */
+  --cream: #faf6ec;
   --white: #ffffff;
   /* Near-black for headings and UI text. */
   --ink: #141414;
-  /* Kept as a text color name. It is near-black, not a second brand blue. */
+  /* Kept as a text color name. It is near-black, not the brand navy. */
   --navy: #141414;
-  /* Rich cobalt. White text is 7.2:1. Cream text is 6.2:1. */
-  --blue: #1a4fbf;
-  /* Lighter cobalt for hover. White text is 5.5:1. */
-  --blue-hover: #2b62d4;
-  /* Soft tint for hover fills and quiet panels. Blue text on this is 6.2:1. */
-  --blue-soft: #e7eefb;
-  --gray-light: #e6dcc8;
+  /* Original site navy from before the restyle. White text is 17.4:1. Cream text is 16.1:1. */
+  --blue: #0a1a33;
+  /* Slightly lighter navy for hover. White text is 12.7:1. */
+  --blue-hover: #1a3358;
+  /* Pale navy tint for hover fills and quiet panels. Navy text on this is 14.9:1. */
+  --blue-soft: #e8eef5;
+  --gray-light: #e4d9c8;
   --gray-medium: #c9bfb0;
-  /* Body copy. 10.6:1 on cream, 12.3:1 on white. */
+  /* Body copy. 11.4:1 on cream, 12.3:1 on white. */
   --gray-dark: #3a342c;
 
-  --shadow-sm: 0 1px 2px rgba(20, 20, 20, 0.06);
-  --shadow-md: 0 8px 20px rgba(26, 79, 191, 0.12);
-  --shadow-lg: 0 16px 36px rgba(20, 20, 20, 0.12);
+  --shadow-sm: 0 1px 2px rgba(10, 26, 51, 0.06);
+  --shadow-md: 0 8px 20px rgba(10, 26, 51, 0.08);
+  --shadow-lg: 0 16px 36px rgba(10, 26, 51, 0.12);
 }
 
 @theme inline {

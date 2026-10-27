@@ -91,7 +91,7 @@ export default async function PodcastEpisodePage({ params }: { params: Promise<P
         ]}
       />
 
-      <section className="bg-cream text-navy">
+      <section className="bg-cream text-navy border-b border-gray-light">
         <Container className="py-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">
             Sugar Spice and Spirits

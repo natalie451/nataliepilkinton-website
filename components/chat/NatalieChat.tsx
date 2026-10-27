@@ -95,7 +95,7 @@ export function NatalieChat() {
         <section
           role="dialog"
           aria-label="Chat with Natalie"
-          className="mb-sm flex h-[min(32rem,calc(100dvh-5.5rem-4.75rem-env(safe-area-inset-bottom)))] w-[min(24rem,calc(100vw-1.5rem))] flex-col overflow-hidden rounded-xs border border-gray-light bg-white shadow-brand-lg md:h-[min(36rem,calc(100dvh-7.5rem))]"
+          className="mb-sm flex h-[min(32rem,calc(100dvh-5.5rem-4.75rem-env(safe-area-inset-bottom)))] w-[min(24rem,calc(100vw-1.5rem))] flex-col overflow-hidden rounded-xs border border-gray-light bg-cream shadow-brand-lg md:h-[min(36rem,calc(100dvh-7.5rem))]"
         >
           <header className="shrink-0 bg-blue text-cream px-md py-sm flex items-start justify-between gap-sm">
             <div>

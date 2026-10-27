@@ -17,7 +17,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/listings/${listing.slug}`}
-      className="group h-full flex flex-col bg-white border border-gray-light rounded-xs overflow-hidden transition-all duration-200 ease-out hover:shadow-brand-lg hover:border-blue hover:-translate-y-0.5"
+      className="group h-full flex flex-col bg-white border border-gray-light rounded-xs overflow-hidden shadow-brand-sm transition-all duration-200 ease-out hover:shadow-brand-lg hover:border-blue hover:-translate-y-0.5"
     >
       <div className="relative aspect-[4/3] bg-gray-light overflow-hidden">
         {hero && (

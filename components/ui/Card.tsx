@@ -14,7 +14,7 @@ export function Card({ children, featured, className }: CardProps) {
   return (
     <div
       className={cn(
-        "h-full flex flex-col bg-white border border-gray-light rounded-xs p-lg",
+        "h-full flex flex-col bg-white border border-gray-light rounded-xs p-lg shadow-brand-sm",
         "transition-all duration-200 ease-out",
         "hover:shadow-brand-lg hover:border-blue hover:-translate-y-0.5",
         featured && "border-l-4 border-l-blue pl-[calc(var(--spacing-lg)-4px)]",

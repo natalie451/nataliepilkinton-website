@@ -48,7 +48,7 @@ export default function RealtorsPage() {
           <h2>Business Growth Framework</h2>
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-lg">
             {framework.map((item) => (
-              <div key={item.title} className="bg-gradient-to-br from-blue to-[#163fa8] text-white p-lg rounded-xs">
+              <div key={item.title} className="bg-gradient-to-br from-blue to-blue-hover text-cream p-lg rounded-xs">
                 <div className="text-3xl mb-md w-[60px] h-[60px] bg-blue/10 border-2 border-blue rounded-xs flex items-center justify-center">
                   {item.icon}
                 </div>

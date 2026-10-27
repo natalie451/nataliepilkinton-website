@@ -51,7 +51,7 @@ export default function PodcastPage() {
     <>
       <script {...jsonLdScriptProps(podcastSchema)} />
 
-      <section className="bg-cream text-navy">
+      <section className="bg-cream text-navy border-b border-gray-light">
         <Container className="py-2xl md:py-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">Podcast</p>
           <h1 className="text-navy mb-md max-w-[16ch]">Sugar Spice and Spirits</h1>

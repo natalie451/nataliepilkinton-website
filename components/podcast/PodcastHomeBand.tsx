@@ -6,7 +6,7 @@ import { podcastShow } from "@/lib/data/podcast";
 /** Homepage band for the show. Visually separate from the real estate video grid. */
 export function PodcastHomeBand() {
   return (
-    <section className="bg-cream text-navy">
+    <section className="bg-cream text-navy border-y border-gray-light">
       <Container className="py-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">Podcast</p>
         <h2 className="text-navy mb-sm max-w-[20ch]">Sugar Spice and Spirits</h2>
