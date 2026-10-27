@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -13,6 +14,7 @@ import { bookingTestimonials } from "@/lib/data/testimonials";
 import { homeStats } from "@/lib/data/stats";
 import { realtorChannelUrl } from "@/lib/data/videos";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
+import { heroHomeImage } from "@/lib/data/heroHome";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -69,15 +71,33 @@ export default function HomePage() {
             background: "radial-gradient(50rem 24rem at 80% -10%, rgba(255,255,255,0.16), transparent 60%)",
           }}
         />
-        <Container className="relative py-2xl md:py-3xl">
-          <p className="text-cream text-sm font-semibold uppercase tracking-[0.16em] mb-md">Spring, TX REALTOR</p>
-          <h1 className="text-cream text-balance mb-lg max-w-[18ch] text-[clamp(2.15rem,1.2rem+3.2vw,3.75rem)] leading-[1.08]">
-            Buy, sell, or invest with Natalie Pilkinton
-          </h1>
-          <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
-            HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text {siteConfig.phone}, or book a time that works for you.
-          </p>
-          <ContactActions tone="on-dark" size="large" />
+        <Container className="relative py-xl lg:py-3xl">
+          <div className="grid items-center gap-xl lg:grid-cols-2 lg:gap-2xl">
+            <div>
+              <p className="text-cream text-sm font-semibold uppercase tracking-[0.16em] mb-md">Spring, TX REALTOR</p>
+              <h1 className="text-cream text-balance mb-lg max-w-[18ch] text-[clamp(2.15rem,1.2rem+3.2vw,3.75rem)] leading-[1.08]">
+                Buy, sell, or invest with Natalie Pilkinton
+              </h1>
+              <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
+                HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text {siteConfig.phone}, or book a time that works for you.
+              </p>
+              <ContactActions tone="on-dark" size="large" />
+            </div>
+            <div
+              className="relative w-full overflow-hidden rounded-[12px] shadow-[0_18px_40px_rgba(0,0,0,0.35)] ring-1 ring-white/15"
+              style={{ aspectRatio: `${heroHomeImage.width} / ${heroHomeImage.height}` }}
+            >
+              <Image
+                src={heroHomeImage.src}
+                alt={heroHomeImage.alt}
+                fill
+                preload
+                quality={75}
+                sizes="(min-width: 1024px) 38rem, calc(100vw - 4rem)"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 
