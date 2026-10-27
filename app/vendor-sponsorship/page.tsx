@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -122,6 +123,9 @@ export default function VendorSponsorshipPage() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <div className="mx-auto max-w-7xl px-4 pt-8">
+        <BreadcrumbBar items={[{ name: "Vendor sponsorship", path: "/vendor-sponsorship" }]} />
+      </div>
       <section className="bg-blue-900 px-4 py-16 text-white sm:py-20">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">

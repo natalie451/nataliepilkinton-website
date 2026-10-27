@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -14,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
 export default function TermsOfServicePage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Terms of Service", path: "/terms-of-service" }]} />
       <Hero title="Terms of Service" align="left" />
       <Section>
         <Container className="max-w-[48rem]">

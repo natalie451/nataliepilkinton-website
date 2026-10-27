@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -25,6 +26,7 @@ const socialLinks = [
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Contact", path: "/contact" }]} />
       <Hero
         title="Contact Natalie"
         subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Based in Spring, serving ${serviceRegion}, including ${formatCityList(serviceAreas)}.`}

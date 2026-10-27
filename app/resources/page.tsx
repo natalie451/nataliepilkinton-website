@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -23,6 +24,7 @@ const categories = [
 export default function ResourcesPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Resources", path: "/resources" }]} />
       <Hero title="Resources" subheading="Free guides, calculators, downloads, checklists, and templates" align="left" />
 
       <Section>

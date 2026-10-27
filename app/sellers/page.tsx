@@ -35,6 +35,7 @@ const resources = [
 export default function SellersPage() {
   return (
     <AcademyLayout
+      breadcrumbs={[{ name: "Home Sellers", path: "/sellers" }]}
       title="Sell a Home in Spring, TX"
       subheading="Pricing, marketing, and a selling plan for homes in Spring and Greater Houston, especially north of I-10 up to Huntsville."
       ctaTitle="Ready to talk about selling?"

@@ -3,6 +3,8 @@ import { Hero } from "@/components/sections/Hero";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { type Crumb } from "@/components/layout/Breadcrumbs";
 
 type AcademyLayoutProps = {
   title: string;
@@ -12,6 +14,7 @@ type AcademyLayoutProps = {
   ctaDescription: string;
   ctaLabel: string;
   ctaHref?: string;
+  breadcrumbs?: Crumb[];
 };
 
 /**
@@ -26,9 +29,11 @@ export function AcademyLayout({
   ctaDescription,
   ctaLabel,
   ctaHref = "/booking",
+  breadcrumbs,
 }: AcademyLayoutProps) {
   return (
     <>
+      {breadcrumbs && <BreadcrumbBar items={breadcrumbs} />}
       <Hero title={title} subheading={subheading} align="left">
         <ContactActions tone="on-dark" />
       </Hero>

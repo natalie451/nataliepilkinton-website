@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { SearchBar } from "@/components/forms/SearchBar";
@@ -23,6 +24,7 @@ export default async function BlogPage() {
 
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Blog", path: "/blog" }]} />
       <div className="w-full py-2xl flex items-center justify-center relative overflow-hidden" style={{ backgroundColor: "#0a1a33" }}>
         <Container>
           <div className="text-left max-w-[48rem]">

@@ -65,6 +65,7 @@ export const primaryNav: NavItem[] = [
       { label: "Blog", href: "/blog" },
       { label: "Resources", href: "/resources" },
       { label: "Realtors", href: "/realtors" },
+      { label: "Referral agent", href: "/referral-agent" },
       { label: "Vendors", href: "/vendor-sponsorship" },
     ],
   },
@@ -108,6 +109,7 @@ export const footerNav = {
     title: "Resources",
     links: [
       { label: "About Natalie", href: "/about" },
+      { label: "Referral agent", href: "/referral-agent" },
       { label: "Podcast", href: "/podcast" },
       { label: "Book a time", href: "/booking" },
       { label: "Contact", href: "/contact" },

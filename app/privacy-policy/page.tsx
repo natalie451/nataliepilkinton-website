@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -17,6 +18,7 @@ const EFFECTIVE_DATE = "July 28, 2026";
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Privacy Policy", path: "/privacy-policy" }]} />
       <Hero title="Privacy Policy" subheading={`Effective ${EFFECTIVE_DATE}`} align="left" />
 
       <Section>

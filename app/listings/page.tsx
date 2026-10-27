@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -16,6 +17,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ListingsPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Listings", path: "/listings" }]} />
       <Hero
         title="Homes for sale around Spring, TX"
         subheading="Natalie's current listings, straight from her official HAR profile, so the details stay current."

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { PodcastYoutubeActions } from "@/components/podcast/PodcastYoutubeActions";
@@ -50,6 +51,7 @@ export default function PodcastPage() {
   return (
     <>
       <script {...jsonLdScriptProps(podcastSchema)} />
+      <BreadcrumbBar items={[{ name: "Podcast", path: "/podcast" }]} />
 
       <section className="bg-[#f5eedc] text-navy">
         <Container className="py-2xl md:py-3xl">

@@ -48,6 +48,7 @@ const staticPaths = [
   "/vendor-sponsorship",
 
   "/join-my-team",
+  "/referral-agent",
   "/podcast",
   "/realtors",
   "/realtors/join",

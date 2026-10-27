@@ -1,4 +1,5 @@
 import { formatCityList, serviceRegion, siteConfig } from "@/lib/data/navigation";
+import { podcastShow } from "@/lib/data/podcast";
 import type { Listing } from "@/lib/listings/types";
 
 /** JSON-LD builders. Render via <script type="application/ld+json"> in each page. */
@@ -25,12 +26,25 @@ export const schemaIds = {
 };
 
 const sameAs = [
-  siteConfig.harProfileUrl,
+  siteConfig.social.facebook,
   siteConfig.social.linkedin,
   siteConfig.social.youtube,
-  siteConfig.social.facebook,
+  podcastShow.channelUrl,
+  siteConfig.googleReviewUrl,
   siteConfig.social.instagram,
+  siteConfig.harProfileUrl,
 ];
+
+const cityArea = (city: string) => ({
+  "@type": "City",
+  name: city,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: city,
+    addressRegion: "TX",
+    addressCountry: "US",
+  },
+});
 
 const postalAddress = {
   "@type": "PostalAddress",
@@ -58,11 +72,13 @@ export function personSchema() {
     knowsAbout: [
       "Residential real estate",
       "First-time home buyers",
+      "Relocation buyers",
       "New construction homes",
       "Home selling",
       "Real estate investing",
       "Multifamily investing",
       "Passive real estate investing",
+      "Agent referrals",
       "Real estate education",
       "Realtor coaching",
     ],
@@ -79,7 +95,7 @@ export function personSchema() {
 /** Natalie's real estate practice (the local-business entity). */
 export function localBusinessSchema() {
   return {
-    "@type": "RealEstateAgent",
+    "@type": ["RealEstateAgent", "LocalBusiness"],
     "@id": schemaIds.agent,
     name: siteConfig.name,
     url: siteConfig.siteUrl,
@@ -88,13 +104,18 @@ export function localBusinessSchema() {
     telephone: "+1-832-863-3468",
     email: siteConfig.email,
     address: postalAddress,
+    identifier: {
+      "@type": "PropertyValue",
+      name: "Texas Real Estate Commission sales agent license",
+      value: siteConfig.licenseNumber,
+    },
     areaServed: [
       {
         "@type": "AdministrativeArea",
         name: "Greater Houston",
         description: serviceRegion,
       },
-      ...siteConfig.areasServed.map((city) => ({ "@type": "City", name: `${city}, TX` })),
+      ...siteConfig.areasServed.map((city) => cityArea(city)),
     ],
     description:
       `Spring, TX real estate agent serving ${serviceRegion}, including ${formatCityList(siteConfig.areasServed)}.`,
@@ -107,7 +128,9 @@ export function localBusinessSchema() {
       availableLanguage: "English",
     },
     founder: { "@id": schemaIds.person },
-    parentOrganization: { "@id": schemaIds.brokerage },
+    worksFor: { "@id": schemaIds.brokerage, name: siteConfig.brokerage.name },
+    parentOrganization: { "@id": schemaIds.brokerage, name: siteConfig.brokerage.name },
+    memberOf: { "@id": schemaIds.brokerage, name: siteConfig.brokerage.name },
     sameAs,
   };
 }
@@ -136,7 +159,10 @@ export function websiteSchema() {
     "@id": schemaIds.website,
     name: `${siteConfig.name} | ${siteConfig.brand}`,
     url: siteConfig.siteUrl,
+    inLanguage: "en-US",
+    description: `${siteConfig.name} is a Spring, TX REALTOR with ${siteConfig.brand}. She serves ${serviceRegion}.`,
     publisher: { "@id": schemaIds.person },
+    about: { "@id": schemaIds.agent },
   };
 }
 

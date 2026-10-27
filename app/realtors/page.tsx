@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Card, CardTitle, CardCategory, CardDescription } from "@/components/ui/Card";
 import { ComingSoonButton } from "@/components/ui/ComingSoonButton";
 import { buildMetadata } from "@/lib/seo/metadata";
+import Link from "next/link";
 import { MeetupCallout } from "@/components/content/MeetupCallout";
 
 export const metadata: Metadata = buildMetadata({
@@ -37,6 +38,7 @@ const toolsAndResources = [
 export default function RealtorsPage() {
   return (
     <AcademyLayout
+      breadcrumbs={[{ name: "Realtors", path: "/realtors" }]}
       title="Realtor Growth Academy"
       subheading="Scale your real estate business with proven systems"
       ctaTitle="Scale Your Real Estate Business"
@@ -45,6 +47,13 @@ export default function RealtorsPage() {
     >
       <Section>
         <Container>
+          <p className="max-w-[48rem] text-gray-dark mb-lg">
+            Need Natalie to represent a client in Spring or Greater Houston? Use the{" "}
+            <Link href="/referral-agent" className="font-semibold text-navy underline underline-offset-2">
+              referral agent page
+            </Link>
+            . Joining the team is a separate path.
+          </p>
           <h2>Business Growth Framework</h2>
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-lg">
             {framework.map((item) => (

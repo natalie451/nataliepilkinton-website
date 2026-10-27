@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -30,6 +31,7 @@ export const metadata: Metadata = buildMetadata({
 export default function WebinarPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Home buyer webinar", path: "/webinar" }]} />
       <Hero
         eyebrow="Free Live Webinar · Houston Home Buyers · Every 2nd & 4th Tuesday"
         title="Could You Buy a Home With Less Cash Than You Think?"

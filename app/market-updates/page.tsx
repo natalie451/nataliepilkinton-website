@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -18,6 +19,7 @@ export const metadata: Metadata = buildMetadata({
 export default function MarketUpdatesPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Market Updates", path: "/market-updates" }]} />
       <Hero title="Market Updates" subheading="Periodic snapshots of the Texas real estate market" align="left" />
 
       <Section>

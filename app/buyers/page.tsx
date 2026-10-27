@@ -27,6 +27,7 @@ const guides = [
   { title: "Loan Options & Down Payment Assistance", description: "Compare loans and Texas assistance programs.", href: "/buyers/financing" },
   { title: "Closing Costs in Texas", description: "What you'll pay, who pays the title policy, how to lower it.", href: "/buyers/closing-costs-texas" },
   { title: "Buying New Construction", description: "Builders, incentives and why you need your own Realtor.", href: "/buyers/new-construction" },
+  { title: "Relocating Here", description: "Moving into Spring or Greater Houston.", href: "/buyers/relocation" },
 ];
 
 const resources = [
@@ -51,6 +52,7 @@ const resources = [
 export default function BuyersPage() {
   return (
     <AcademyLayout
+      breadcrumbs={[{ name: "Home Buyers", path: "/buyers" }]}
       title="Buy a Home in Spring, TX"
       subheading="Financing, offers, and closing for buyers in Spring and Greater Houston, especially north of I-10 up to Huntsville."
       ctaTitle="Ready to talk about buying?"
