@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { Button } from "@/components/ui/Button";
 import { LEAD_INTERESTS, type LeadInterest } from "@/lib/leads/interests";
 import { submitLead } from "@/lib/leads/submit";
@@ -19,7 +20,10 @@ const interestLabels: Record<LeadInterest, string> = {
 };
 
 const inputClasses =
-  "w-full px-3 py-2 border border-gray-light rounded-xs text-sm font-sans bg-white text-navy focus:outline-none focus:border-gold";
+  "w-full px-3 py-2 border border-gray-light rounded-xs text-sm font-sans bg-white text-navy focus:outline-none focus:border-navy";
+
+const creamControl =
+  "inline-flex items-center rounded-full border border-navy bg-[#f5eedc] px-sm py-1 text-sm font-semibold text-navy shadow-brand-sm hover:bg-white hover:text-navy";
 
 function messageText(message: UIMessage) {
   return message.parts
@@ -190,16 +194,11 @@ export function NatalieChat() {
             )}
           </form>
 
-          <div className="shrink-0 px-sm pb-sm flex flex-wrap gap-sm text-sm">
-            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-gold-ink underline underline-offset-2">
+          <div className="shrink-0 px-sm pb-sm flex flex-wrap items-center gap-sm text-sm">
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className={creamControl}>
               Book a time
             </a>
-            <a href={siteConfig.phoneHref} className="font-semibold text-gold-ink underline underline-offset-2">
-              Call
-            </a>
-            <a href={siteConfig.smsHref} className="font-semibold text-gold-ink underline underline-offset-2">
-              Text
-            </a>
+            <CallOrTextChoice variant="panel" />
           </div>
 
           <form id="natalie-lead-form" onSubmit={onLeadSubmit} className="shrink-0 border-t border-gray-light px-sm py-xs">
@@ -231,7 +230,7 @@ export function NatalieChat() {
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="ml-auto flex items-center gap-xs rounded-full bg-gold text-navy px-md py-sm text-sm font-semibold shadow-brand-md ring-2 ring-cream hover:bg-white"
+        className="ml-auto flex items-center gap-xs rounded-full border-2 border-navy bg-[#f5eedc] px-md py-sm text-sm font-semibold text-navy shadow-brand-md hover:bg-white"
       >
         {open ? "Close chat" : "Ask Natalie"}
       </button>
