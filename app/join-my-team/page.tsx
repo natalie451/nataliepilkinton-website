@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { CTA } from "@/components/sections/CTA";
+import Link from "next/link";
 import { Callout } from "@/components/ui/Callout";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { JoinInterestForm } from "@/components/forms/JoinInterestForm";
@@ -90,7 +91,14 @@ export default function JoinMyTeamPage() {
             </div>
           </dl>
           <Callout title="List Natalie Pilkinton as your referral">
-            <p className="mb-0">When you join, list Natalie Pilkinton as your referral.</p>
+            <p className="mb-0">
+              When you join, list Natalie Pilkinton as your referral. If you only need her to represent a client in this
+              market, use the{" "}
+              <Link href="/referral-agent" className="font-semibold text-navy underline underline-offset-2">
+                referral agent page
+              </Link>
+              .
+            </p>
           </Callout>
         </Container>
       </Section>

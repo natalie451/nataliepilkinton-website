@@ -14,8 +14,14 @@ type PageMetadataInput = {
 };
 
 /** Builds consistent per-page <title>/description/OG/Twitter metadata. */
+function canonicalPath(path: string) {
+  const withLead = path.startsWith("/") ? path : `/${path}`;
+  if (withLead.length > 1 && withLead.endsWith("/")) return withLead.slice(0, -1);
+  return withLead;
+}
+
 export function buildMetadata({ title, description, path, image, noindex = false, absoluteTitle = false }: PageMetadataInput): Metadata {
-  const url = `${siteConfig.siteUrl}${path}`;
+  const url = `${siteConfig.siteUrl}${canonicalPath(path)}`;
   const hidden = noindex || isPlaceholderPath(path);
   const ogImage = image ?? siteConfig.headshotUrl;
 

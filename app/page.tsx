@@ -56,7 +56,7 @@ const paths = [
     body: "For licensed agents and people working toward a license. Start with a free commission audit and a conversation about joining Natalie.",
     href: "/join-my-team",
     cta: "See how to join",
-    secondary: { href: "/booking", label: "Book a call" },
+    secondary: { href: "/referral-agent", label: "Refer a client" },
   },
 ];
 

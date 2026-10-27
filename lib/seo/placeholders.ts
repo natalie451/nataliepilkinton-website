@@ -4,11 +4,11 @@
  * real content ships.
  */
 export const placeholderPaths = [
-  "/buyers/relocation",
   "/sellers/pricing",
   "/sellers/marketing",
   "/sellers/staging",
   "/investors/case-studies",
+  "/terms-of-service",
 ] as const;
 
 export function isPlaceholderPath(path: string): boolean {

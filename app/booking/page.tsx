@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { CalendlyInline } from "@/components/booking/CalendlyInline";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
@@ -28,6 +29,7 @@ const expectations = [
 export default function BookingPage() {
   return (
     <>
+      <BreadcrumbBar items={[{ name: "Book a time", path: "/booking" }]} />
       <Hero
         title="Book a time with Natalie"
         subheading="Pick a time on her calendar. If you would rather talk now, call or text."

@@ -55,6 +55,12 @@ const nextConfig: NextConfig = {
       "ep59-best-childhood",
     ];
     return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "nataliepilkinton.com" }],
+        destination: "https://www.nataliepilkinton.com/:path*",
+        permanent: true,
+      },
       // The page used to live under this folder name while nav, sitemap and canonical all pointed at /agent-attraction.
       { source: "/realtors/agent-resources", destination: "/realtors/agent-attraction", permanent: true },
       ...transcriptRedirects.map((item) => ({

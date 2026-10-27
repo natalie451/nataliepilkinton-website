@@ -93,6 +93,7 @@ const learningPath: { step: string; guides: Guide[] }[] = [
 export default function InvestorsPage() {
   return (
     <AcademyLayout
+      breadcrumbs={[{ name: "Investors", path: "/investors" }]}
       title="Invest in Spring, TX Real Estate"
       subheading="Rentals, financing, and strategy for Spring and Greater Houston, especially north of I-10 up to Huntsville, from a REALTOR who invests her own money."
       ctaTitle="Ready to talk through a deal?"

@@ -15,6 +15,13 @@ export default function TemplatesPage() {
       title="Templates"
       subheading="Templates and scripts to run a consistent, scalable business"
       breadcrumbs={[{ name: "Resources", path: "/resources" }, { name: "Templates", path: "/resources/templates" }]}
+      intro="Email scripts, business-plan worksheets, and listing-presentation files are not published as downloads yet. These published pages are the current resources for agents and clients."
+      links={[
+        { href: "/resources/checklists/home-buyer-checklist", label: "Home buyer checklist" },
+        { href: "/resources/checklists/pre-sale-checklist", label: "Pre-sale home checklist" },
+        { href: "/join-my-team", label: "Join Natalie's team" },
+        { href: "/referral-agent", label: "Refer a client to Natalie" },
+      ]}
       items={templates}
     />
   );

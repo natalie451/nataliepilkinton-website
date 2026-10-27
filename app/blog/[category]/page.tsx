@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -38,6 +39,12 @@ export default async function CategoryPage({
 
   return (
     <>
+      <BreadcrumbBar
+        items={[
+          { name: "Blog", path: "/blog" },
+          { name: categoryLabels[category as BlogCategory] || "Articles", path: `/blog/${category}` },
+        ]}
+      />
       <Hero
         title={categoryLabels[category as BlogCategory] || "Articles"}
         subheading={`Explore our ${categoryLabels[category as BlogCategory]?.toLowerCase()} guides and resources`}
