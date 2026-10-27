@@ -51,7 +51,7 @@ export default function PodcastPage() {
     <>
       <script {...jsonLdScriptProps(podcastSchema)} />
 
-      <section className="bg-[#f5eedc] text-navy">
+      <section className="bg-cream text-navy border-b border-gray-light">
         <Container className="py-2xl md:py-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">Podcast</p>
           <h1 className="text-navy mb-md max-w-[16ch]">Sugar Spice and Spirits</h1>
@@ -87,10 +87,10 @@ export default function PodcastPage() {
                 <li key={episode.slug}>
                   <Link
                     href={`/podcast/${episode.slug}`}
-                    className="group flex flex-col gap-md py-md text-navy hover:text-[#7a2942] sm:flex-row sm:items-start"
+                    className="group flex flex-col gap-md py-md text-navy hover:text-blue sm:flex-row sm:items-start"
                   >
                     {episode.youtubeId ? (
-                      <span className="relative block aspect-video w-full shrink-0 overflow-hidden rounded-xs bg-[#3c1424] sm:w-40">
+                      <span className="relative block aspect-video w-full shrink-0 overflow-hidden rounded-xs bg-blue sm:w-40">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={`https://i.ytimg.com/vi/${episode.youtubeId}/hqdefault.jpg`}
@@ -99,15 +99,15 @@ export default function PodcastPage() {
                         />
                       </span>
                     ) : (
-                      <span className="hidden sm:flex aspect-video w-40 shrink-0 items-center justify-center rounded-xs bg-[#f5eedc] text-xs font-semibold uppercase tracking-[0.08em] text-navy">
+                      <span className="hidden sm:flex aspect-video w-40 shrink-0 items-center justify-center rounded-xs bg-cream text-xs font-semibold uppercase tracking-[0.08em] text-navy">
                         Transcript
                       </span>
                     )}
                     <span className="flex min-w-0 flex-col">
-                      <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[#7a2942]">
+                      <span className="text-xs font-semibold uppercase tracking-[0.08em] text-blue">
                         {[label, episode.publishedLabel].filter(Boolean).join(" · ")}
                       </span>
-                      <span className="mt-xs text-lg font-semibold group-hover:text-[#7a2942]">{episode.title}</span>
+                      <span className="mt-xs text-lg font-semibold group-hover:text-blue">{episode.title}</span>
                       <span className="mt-xs text-sm leading-relaxed text-gray-dark">{episode.summary}</span>
                     </span>
                   </Link>
@@ -118,13 +118,13 @@ export default function PodcastPage() {
         </Container>
       </Section>
 
-      <section className="bg-[#3c1424] text-[#f7f1ea]">
+      <section className="bg-blue text-cream">
         <Container className="py-2xl">
-          <h2 className="text-[#f7f1ea]">Watch the show on YouTube</h2>
-          <p className="max-w-[40rem] text-[#f3e6dc] mb-lg">
+          <h2 className="text-cream">Watch the show on YouTube</h2>
+          <p className="max-w-[40rem] text-cream mb-lg">
             New episodes of Sugar Spice and Spirits are posted on the YouTube channel. Subscribe there so you do not miss one.
           </p>
-          <PodcastYoutubeActions />
+          <PodcastYoutubeActions watchVariant="on-blue" subscribeVariant="on-blue" />
         </Container>
       </section>
     </>

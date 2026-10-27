@@ -8,11 +8,11 @@ type VideoPlaceholderProps = {
  */
 export function VideoPlaceholder({ label }: VideoPlaceholderProps) {
   return (
-    <div className="relative aspect-video w-full bg-navy rounded-xs overflow-hidden flex items-center justify-center border border-gray-light">
+    <div className="relative aspect-video w-full bg-blue rounded-xs overflow-hidden flex items-center justify-center border border-gray-light">
       <div className="text-center px-lg">
         <div
           aria-hidden
-          className="mx-auto mb-md w-16 h-16 rounded-full bg-gold/15 border-2 border-gold flex items-center justify-center text-2xl text-gold"
+          className="mx-auto mb-md w-16 h-16 rounded-full bg-blue/15 border-2 border-blue flex items-center justify-center text-2xl text-blue"
         >
           ▶
         </div>

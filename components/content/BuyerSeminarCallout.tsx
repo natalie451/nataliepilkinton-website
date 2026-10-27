@@ -18,7 +18,7 @@ export async function BuyerSeminarCallout({ withSchema = false }: { withSchema?:
     : "";
 
   return (
-    <aside className="bg-cream border border-gold/40 rounded-xs p-xl my-2xl">
+    <aside className="bg-cream border border-blue/40 rounded-xs p-xl my-2xl">
       {next && withSchema && (
         <script
           {...jsonLdScriptProps({
@@ -54,7 +54,7 @@ export async function BuyerSeminarCallout({ withSchema = false }: { withSchema?:
         />
       )}
 
-      <p className="text-gold-ink text-xs font-semibold uppercase tracking-[0.18em] mb-sm">Free home buyer seminar</p>
+      <p className="text-blue text-xs font-semibold uppercase tracking-[0.18em] mb-sm">Free home buyer seminar</p>
       <h2 className="mt-0 mb-sm">Learn the buying process in person</h2>
       <p className="mb-md">
         Natalie hosts free, in-person home buyer seminars around the Houston area covering credit, getting
@@ -62,7 +62,7 @@ export async function BuyerSeminarCallout({ withSchema = false }: { withSchema?:
       </p>
 
       {next && (
-        <div className="bg-white border-l-4 border-gold rounded-xs p-md mb-md">
+        <div className="bg-white border-l-4 border-blue rounded-xs p-md mb-md">
           <p className="text-xs uppercase tracking-[0.1em] text-gray-dark font-semibold mb-xs">
             Next seminar{next.isFree ? " · Free" : ""}
           </p>
@@ -78,7 +78,7 @@ export async function BuyerSeminarCallout({ withSchema = false }: { withSchema?:
         href={next?.url ?? siteConfig.eventbrite.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block px-lg py-sm rounded-xs bg-navy text-white font-semibold hover:bg-gold hover:text-navy transition-colors"
+        className="inline-block px-lg py-sm rounded-xs bg-blue text-white font-semibold hover:bg-blue-hover hover:text-white transition-colors"
       >
         {next ? "Reserve your free spot on Eventbrite →" : "See upcoming seminars on Eventbrite →"}
       </a>

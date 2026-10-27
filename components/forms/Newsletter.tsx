@@ -60,8 +60,8 @@ export function Newsletter({ className, onDark = true }: NewsletterProps) {
           autoComplete="email"
           className={
             onDark
-              ? "flex-1 min-w-0 w-full max-sm:w-full px-md py-sm rounded-xs bg-white/10 border border-white/25 text-white placeholder:text-cream/60 text-sm focus:outline-none focus:border-gold"
-              : "flex-1 min-w-0 w-full max-sm:w-full px-md py-sm rounded-xs border border-gray-light text-sm focus:outline-none focus:border-gold"
+              ? "flex-1 min-w-0 w-full max-sm:w-full px-md py-sm rounded-xs bg-white/10 border border-white/25 text-white placeholder:text-cream/60 text-sm focus:outline-none focus:border-blue"
+              : "flex-1 min-w-0 w-full max-sm:w-full px-md py-sm rounded-xs border border-gray-light text-sm focus:outline-none focus:border-blue"
           }
         />
         <Button type="submit" size="small" variant={onDark ? "outline-light" : "primary"} className="max-sm:w-full" disabled={status === "submitting"}>
@@ -77,7 +77,7 @@ export function Newsletter({ className, onDark = true }: NewsletterProps) {
         className="absolute left-[-9999px] w-px h-px opacity-0"
       />
       {status === "error" && (
-        <p className={onDark ? "text-sm text-gold mb-0 mt-sm" : "text-sm text-red-700 mb-0 mt-sm"}>
+        <p className={onDark ? "text-sm text-cream mb-0 mt-sm" : "text-sm text-red-700 mb-0 mt-sm"}>
           Something went wrong. Please try again in a moment.
         </p>
       )}

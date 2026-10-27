@@ -8,10 +8,10 @@ import { ListingGallery } from "@/components/listings/ListingGallery";
 import { MortgageCalculatorPlaceholder } from "@/components/listings/MortgageCalculatorPlaceholder";
 
 const statusClasses: Record<Listing["status"], string> = {
-  Active: "bg-gold text-navy",
+  Active: "bg-blue text-white",
   Pending: "bg-gray-medium text-navy",
-  Sold: "bg-navy text-white",
-  "Coming Soon": "bg-cream text-navy border border-gold",
+  Sold: "bg-blue text-white",
+  "Coming Soon": "bg-cream text-navy border border-blue",
 };
 
 /**

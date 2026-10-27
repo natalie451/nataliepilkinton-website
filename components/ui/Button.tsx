@@ -2,27 +2,24 @@ import Link from "next/link";
 import { type ButtonHTMLAttributes, type AnchorHTMLAttributes } from "react";
 import { cn } from "@/lib/utils/cn";
 
-type Variant = "primary" | "secondary" | "outline" | "outline-light" | "gold";
+type Variant = "primary" | "secondary" | "outline" | "outline-light" | "on-blue";
 type Size = "small" | "base" | "large";
 
-const variantClasses: Record<Variant, string> = {
-  primary: "bg-navy text-white hover:bg-gold hover:text-navy shadow-brand-sm hover:shadow-brand-md",
-  secondary: "bg-cream text-navy border border-navy hover:bg-navy hover:text-white",
-  outline: "bg-transparent text-navy border-2 border-navy hover:bg-navy hover:text-white",
-  "outline-light": "bg-transparent text-white border-2 border-white hover:bg-white hover:text-navy",
-  gold: "bg-gold text-navy hover:bg-white hover:text-navy shadow-brand-sm",
+export const buttonVariantClasses: Record<Variant, string> = {
+  primary: "bg-blue text-white border-2 border-blue hover:bg-blue-hover hover:border-blue-hover shadow-brand-sm hover:shadow-brand-md",
+  secondary: "bg-white text-blue border-2 border-blue hover:bg-blue-soft",
+  outline: "bg-white text-blue border-2 border-blue hover:bg-blue-soft",
+  "outline-light": "bg-cream text-blue border-2 border-cream hover:bg-white hover:border-white shadow-brand-sm",
+  "on-blue": "bg-cream text-blue border-2 border-cream hover:bg-white hover:border-white shadow-brand-sm",
 };
 
-const sizeClasses: Record<Size, string> = {
-  small: "px-md py-sm text-sm",
-  base: "px-lg py-md text-base",
-  large: "px-xl py-md text-lg",
+export const buttonSizeClasses: Record<Size, string> = {
+  small: "px-md py-sm text-sm min-h-11",
+  base: "px-lg py-md text-base min-h-12",
+  large: "px-xl py-md text-lg min-h-14",
 };
 
-// Every button in the site shares this base: same radius, same easing, same
-// hover lift, same focus ring — so primary/secondary/outline all *feel* like
-// one family instead of three ad-hoc styles.
-const baseClasses =
+export const buttonBaseClasses =
   "inline-flex items-center justify-center gap-xs rounded-xs font-semibold tracking-[0.01em] text-center " +
   "transition-all duration-200 ease-out cursor-pointer " +
   "hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]";
@@ -48,7 +45,7 @@ export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 export function Button(props: ButtonProps) {
   const { variant = "primary", size = "base", className } = props;
-  const classes = cn(baseClasses, variantClasses[variant], sizeClasses[size], className);
+  const classes = cn(buttonBaseClasses, buttonVariantClasses[variant], buttonSizeClasses[size], className);
 
   if ("href" in props && props.href) {
     const { href, external, children, variant: _variant, size: _size, className: _className, ...rest } = props;

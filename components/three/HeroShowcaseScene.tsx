@@ -17,7 +17,7 @@ function GoldRing() {
     <Float speed={1.4} rotationIntensity={0.3} floatIntensity={0.8}>
       <mesh ref={ref}>
         <torusGeometry args={[1.3, 0.045, 32, 128]} />
-        <meshStandardMaterial color="#c9a227" metalness={0.85} roughness={0.25} emissive="#c9a227" emissiveIntensity={0.12} />
+        <meshStandardMaterial color="#0a1a33" metalness={0.85} roughness={0.25} emissive="#1a3358" emissiveIntensity={0.12} />
       </mesh>
     </Float>
   );
@@ -34,7 +34,7 @@ function NavyCore() {
     <Float speed={1.1} rotationIntensity={0.2} floatIntensity={1.1}>
       <mesh ref={ref}>
         <icosahedronGeometry args={[0.72, 1]} />
-        <meshStandardMaterial color="#132a52" metalness={0.4} roughness={0.35} emissive="#0a1a33" emissiveIntensity={0.4} />
+        <meshStandardMaterial color="#1a3358" metalness={0.4} roughness={0.35} emissive="#0a1a33" emissiveIntensity={0.4} />
       </mesh>
     </Float>
   );
@@ -45,16 +45,15 @@ function SmallSatellite({ position }: { position: [number, number, number] }) {
     <Float speed={1.8} rotationIntensity={0.4} floatIntensity={1.6}>
       <mesh position={position}>
         <sphereGeometry args={[0.09, 24, 24]} />
-        <meshStandardMaterial color="#c9a227" metalness={0.6} roughness={0.3} emissive="#c9a227" emissiveIntensity={0.3} />
+        <meshStandardMaterial color="#1a3358" metalness={0.6} roughness={0.3} emissive="#0a1a33" emissiveIntensity={0.3} />
       </mesh>
     </Float>
   );
 }
 
 /**
- * The abstract navy/gold composition rendered inside HeroShowcase's Canvas.
- * Kept deliberately low-poly and light-weight (a handful of primitives, one
- * environment preset) — this is decorative depth, not a product visualization.
+ * Decorative blue shapes rendered inside HeroShowcase's Canvas.
+ * Kept low-poly: a handful of primitives and one environment preset.
  */
 export function HeroShowcaseScene() {
   return (
@@ -64,8 +63,8 @@ export function HeroShowcaseScene() {
       gl={{ antialias: true, alpha: true }}
     >
       <ambientLight intensity={0.6} />
-      <directionalLight position={[3, 4, 5]} intensity={1.2} color="#f5f3f0" />
-      <directionalLight position={[-3, -2, -2]} intensity={0.3} color="#c9a227" />
+      <directionalLight position={[3, 4, 5]} intensity={1.2} color="#faf6ec" />
+      <directionalLight position={[-3, -2, -2]} intensity={0.3} color="#1a3358" />
       {/* Offset right-of-center so the composition sits beside the headline, not behind it. */}
       <group position={[1.35, 0.15, 0]}>
         <NavyCore />

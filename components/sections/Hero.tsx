@@ -38,13 +38,11 @@ export function Hero({ title, subheading, eyebrow, children, align = "centered",
 
   return (
     <Section tone="hero" className="relative overflow-hidden">
-      {/* Subtle radial glow for depth — navy/gold only, no new brand colors. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-60"
+        className="pointer-events-none absolute inset-0 opacity-70"
         style={{
-          background:
-            "radial-gradient(60rem 30rem at 50% -10%, rgba(201,162,39,0.16), transparent 60%)",
+          background: "radial-gradient(60rem 30rem at 50% -10%, rgba(255,255,255,0.18), transparent 60%)",
         }}
       />
 
@@ -58,13 +56,13 @@ export function Hero({ title, subheading, eyebrow, children, align = "centered",
             duration={5}
           />
           <FloatingElement
-            className="hidden md:block absolute bottom-[22%] left-[14%] w-10 h-10 rounded-xs rotate-12 bg-gold/10 backdrop-blur-md border border-gold/25"
+            className="hidden md:block absolute bottom-[22%] left-[14%] w-10 h-10 rounded-xs rotate-12 bg-white/10 backdrop-blur-md border border-white/25"
             distance={10}
             duration={4.5}
             delay={0.6}
           />
           <FloatingElement
-            className="hidden lg:block absolute top-[30%] right-[10%] w-8 h-8 rounded-full bg-gold/10 backdrop-blur-md border border-gold/20"
+            className="hidden lg:block absolute top-[30%] right-[10%] w-8 h-8 rounded-full bg-cream/20 backdrop-blur-md border border-cream/40"
             distance={12}
             duration={6}
             delay={1.1}
@@ -80,7 +78,7 @@ export function Hero({ title, subheading, eyebrow, children, align = "centered",
           className={cn(align === "centered" && "max-w-4xl mx-auto text-center py-xl")}
         >
           {eyebrow && (
-            <motion.p variants={item} className="text-gold text-sm font-semibold uppercase tracking-[0.18em] mb-md">
+            <motion.p variants={item} className="text-cream text-sm font-semibold uppercase tracking-[0.18em] mb-md">
               {eyebrow}
             </motion.p>
           )}
