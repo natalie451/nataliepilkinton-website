@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { Callout } from "@/components/ui/Callout";
 import { ContactActions } from "@/components/cta/ContactActions";
@@ -57,7 +56,7 @@ export default function JoinMyTeamPage() {
           <h2>What Natalie has confirmed</h2>
           <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-lg">
             {facts.map((fact) => (
-              <article key={fact.label} className="border border-gray-light border-t-4 border-t-gold rounded-xs p-lg bg-white">
+              <article key={fact.label} className="border border-gray-light border-t-4 border-t-blue rounded-xs p-lg bg-white">
                 <h3 className="text-xl mt-0 mb-sm">{fact.label}</h3>
                 <p className="text-gray-dark mb-0">{fact.detail}</p>
               </article>
@@ -118,10 +117,7 @@ export default function JoinMyTeamPage() {
         title="Talk with Natalie about joining"
         description="Call or text, email, or book a free commission audit or a meeting with Cory."
       >
-        <ContactActions tone="on-dark" />
-        <Button href={siteConfig.bookingUrl} external variant="gold">
-          Book a free commission audit or a meeting with Cory
-        </Button>
+        <ContactActions tone="on-dark" layout="equal" />
       </CTA>
     </>
   );

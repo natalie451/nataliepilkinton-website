@@ -111,7 +111,7 @@ export default function InvestorsPage() {
           <p className="text-gray-dark">
             Real estate makes money six ways: cash flow, loan paydown, appreciation, tax advantages, leverage and
             access to your equity.{" "}
-            <Link href="/investors/beginner" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+            <Link href="/investors/beginner" className="text-blue underline underline-offset-2 hover:text-navy">
               Here&rsquo;s how each one works
             </Link>
             .
@@ -131,7 +131,7 @@ export default function InvestorsPage() {
                       <CardCategory>{guide.category}</CardCategory>
                       <CardTitle>{guide.title}</CardTitle>
                       <CardDescription>{guide.description}</CardDescription>
-                      <span className="text-sm font-semibold text-gold-ink">Read →</span>
+                      <span className="text-sm font-semibold text-blue">Read →</span>
                     </Card>
                   </Link>
                 ) : (
@@ -152,7 +152,7 @@ export default function InvestorsPage() {
           <MeetupCallout withSchema />
           <p className="text-gray-dark">
             Between meetups, Natalie&rsquo;s monthly{" "}
-            <Link href="/market-updates" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+            <Link href="/market-updates" className="text-blue underline underline-offset-2 hover:text-navy">
               Houston market update
             </Link>{" "}
             covers what the numbers mean for investors.

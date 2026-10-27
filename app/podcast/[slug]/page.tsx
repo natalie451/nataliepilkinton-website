@@ -91,7 +91,7 @@ export default async function PodcastEpisodePage({ params }: { params: Promise<P
         ]}
       />
 
-      <section className="bg-[#f5eedc] text-navy">
+      <section className="bg-cream text-navy border-b border-gray-light">
         <Container className="py-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-navy mb-sm">
             Sugar Spice and Spirits
@@ -101,7 +101,7 @@ export default async function PodcastEpisodePage({ params }: { params: Promise<P
           <h1 className="text-navy mb-lg max-w-[22ch]">{episode.title}</h1>
 
           {episode.youtubeId ? (
-            <div className="relative mb-lg aspect-video w-full max-w-[48rem] overflow-hidden rounded-xs bg-[#3c1424]">
+            <div className="relative mb-lg aspect-video w-full max-w-[48rem] overflow-hidden rounded-xs bg-blue">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src={`https://www.youtube-nocookie.com/embed/${episode.youtubeId}`}
@@ -119,7 +119,7 @@ export default async function PodcastEpisodePage({ params }: { params: Promise<P
           )}
 
           <div className="flex flex-wrap gap-sm">
-            <Button href={podcastShow.subscribeUrl} external variant="gold">
+            <Button href={podcastShow.subscribeUrl} external variant="primary">
               Subscribe on YouTube
             </Button>
             {videoUrl ? (

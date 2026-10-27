@@ -65,7 +65,7 @@ export function CalendlyInline() {
           href={siteConfig.bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gold-ink underline underline-offset-2"
+          className="text-blue underline underline-offset-2"
         >
           open Calendly in a new tab
         </a>

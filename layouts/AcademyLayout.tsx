@@ -39,7 +39,7 @@ export function AcademyLayout({
       </Hero>
       {children}
       <CTA title={ctaTitle} description={ctaDescription}>
-        <Button href={ctaHref} variant="gold">
+        <Button href={ctaHref} variant="on-blue">
           {ctaLabel}
         </Button>
         <ContactActions tone="on-dark" showBook={ctaHref === "/booking" ? false : true} />

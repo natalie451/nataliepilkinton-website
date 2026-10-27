@@ -10,7 +10,7 @@ export function ComingSoonButton() {
       type="button"
       disabled
       aria-disabled="true"
-      className="px-md py-sm min-h-11 text-sm font-semibold border border-navy text-navy rounded-xs opacity-60 cursor-not-allowed"
+      className="px-md py-sm min-h-11 text-sm font-semibold border-2 border-blue bg-white text-blue rounded-xs cursor-not-allowed"
     >
       Coming Soon
     </button>

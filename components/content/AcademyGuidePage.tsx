@@ -26,11 +26,11 @@ function Rich({ text }: { text: string }) {
     if (index > last) parts.push(text.slice(last, index));
     parts.push(
       href.startsWith("/") ? (
-        <Link key={index} href={href} className="text-gold-ink underline underline-offset-2 hover:text-navy">
+        <Link key={index} href={href} className="text-blue underline underline-offset-2 hover:text-navy">
           {label}
         </Link>
       ) : (
-        <a key={index} href={href} target="_blank" rel="noopener noreferrer" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+        <a key={index} href={href} target="_blank" rel="noopener noreferrer" className="text-blue underline underline-offset-2 hover:text-navy">
           {label}
         </a>
       ),
@@ -87,7 +87,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
             </Link>
             <p className="text-sm text-gray-dark m-0">
               By{" "}
-              <Link href="/about" className="font-semibold text-navy hover:text-gold-ink">
+              <Link href="/about" className="font-semibold text-navy hover:text-blue">
                 Natalie Pilkinton
               </Link>
               , REALTOR® &amp; Real Estate Investor · Updated <time dateTime={updated}>{formatDate(updated)}</time>
@@ -95,8 +95,8 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
           </div>
 
           {/* Short answer first, for readers and answer engines */}
-          <div className="bg-cream border-l-4 border-gold rounded-xs p-lg mb-2xl">
-            <h2 className="text-lg uppercase tracking-[0.08em] text-gold-ink mt-0 mb-sm">Short answer</h2>
+          <div className="bg-cream border-l-4 border-blue rounded-xs p-lg mb-2xl">
+            <h2 className="text-lg uppercase tracking-[0.08em] text-blue mt-0 mb-sm">Short answer</h2>
             {guide.shortAnswer.map((paragraph, i) => (
               <p key={i} className="text-lg leading-relaxed text-navy mb-sm last:mb-0">
                 <Rich text={paragraph} />
@@ -140,7 +140,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
                     <thead>
                       <tr>
                         {section.table.headers.map((header) => (
-                          <th key={header} className="text-left font-semibold text-navy border-b-2 border-gold py-sm pr-md">
+                          <th key={header} className="text-left font-semibold text-navy border-b-2 border-blue py-sm pr-md">
                             {header}
                           </th>
                         ))}
@@ -165,8 +165,8 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
           ))}
 
           {guide.natalieTake && (
-            <aside className="bg-navy text-cream rounded-xs p-xl mb-2xl">
-              <p className="text-gold text-xs font-semibold uppercase tracking-[0.18em] mb-sm">From Natalie</p>
+            <aside className="bg-blue text-cream rounded-xs p-xl mb-2xl">
+              <p className="text-cream text-xs font-semibold uppercase tracking-[0.18em] mb-sm">From Natalie</p>
               <h2 className="text-white mt-0">{guide.natalieTake.heading}</h2>
               {guide.natalieTake.paragraphs.map((paragraph, i) => (
                 <p key={i} className="text-cream/90">
@@ -176,7 +176,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
               {guide.natalieTake.source && (
                 <p className="text-sm text-cream/70 mb-0">
                   Adapted from{" "}
-                  <Link href={guide.natalieTake.source.href} className="underline hover:text-gold">
+                  <Link href={guide.natalieTake.source.href} className="underline hover:text-white">
                     {guide.natalieTake.source.label}
                   </Link>
                 </p>
@@ -192,8 +192,8 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
               </p>
               <ul className="grid grid-cols-2 max-md:grid-cols-1 gap-lg list-none p-0">
                 {guide.recommended.providers.map((provider) => (
-                  <li key={provider.company} className="border border-gray-light border-l-4 border-l-gold rounded-xs p-lg">
-                    <p className="text-xs uppercase tracking-[0.1em] text-gold-ink font-semibold mb-xs">{provider.role}</p>
+                  <li key={provider.company} className="border border-gray-light border-l-4 border-l-blue rounded-xs p-lg">
+                    <p className="text-xs uppercase tracking-[0.1em] text-blue font-semibold mb-xs">{provider.role}</p>
                     <h3 className="text-xl mt-0 mb-xs">{provider.company}</h3>
                     <p className="text-sm font-semibold text-navy mb-sm">{provider.person}</p>
                     <p className="text-sm text-gray-dark">
@@ -201,7 +201,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
                     </p>
                     <p className="text-sm mb-0">
                       {provider.website && (
-                        <a href={provider.website} target="_blank" rel="noopener noreferrer" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+                        <a href={provider.website} target="_blank" rel="noopener noreferrer" className="text-blue underline underline-offset-2 hover:text-navy">
                           {provider.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
                         </a>
                       )}
@@ -235,7 +235,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
             <ul className="grid grid-cols-2 max-md:grid-cols-1 gap-md list-none p-0">
               {guide.related.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="block h-full border border-gray-light rounded-xs p-md hover:border-gold transition-colors">
+                  <Link href={item.href} className="block h-full border border-gray-light rounded-xs p-md hover:border-blue transition-colors">
                     <span className="block font-semibold text-navy mb-xs">{item.label} →</span>
                     <span className="block text-sm text-gray-dark">{item.description}</span>
                   </Link>
@@ -253,7 +253,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
                   <ul className="list-disc pl-xl space-y-xs">
                     {guide.sources.map((source) => (
                       <li key={source.url}>
-                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gold-ink">
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue">
                           {source.label}
                         </a>
                       </li>
@@ -267,7 +267,7 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       </Section>
 
       <CTA title={guide.cta.title} description={guide.cta.description}>
-        <Button href="/booking" variant="gold">
+        <Button href="/booking" variant="primary">
           {guide.cta.label}
         </Button>
         <ContactActions tone="on-dark" showBook={false} />

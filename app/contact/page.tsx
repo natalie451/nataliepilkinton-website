@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -53,12 +54,7 @@ export default function ContactPage() {
 
               <div className="mb-2xl">
                 <h4 className="mb-md text-lg">Phone and text</h4>
-                <p className="mb-sm">
-                  <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
-                </p>
-                <p className="mb-0">
-                  <a href={siteConfig.smsHref}>Text {siteConfig.phone}</a>
-                </p>
+                <CallOrTextChoice variant="primary" size="small" />
               </div>
 
               <div className="mb-2xl">

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { submitLead } from "@/lib/leads/submit";
 
 const inputClasses =
-  "w-full p-md border border-gray-light rounded-xs text-base font-sans focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,162,39,0.1)]";
+  "w-full p-md border border-gray-light rounded-xs text-base font-sans focus:outline-none focus:border-blue focus:shadow-[0_0_0_3px_rgba(26,79,191,0.1)]";
 
 type LeadMagnetFormProps = {
   /** Identifies which gated resource this submission is for (e.g. "buyer-checklist"). */

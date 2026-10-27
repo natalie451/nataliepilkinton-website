@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
+import { Button } from "@/components/ui/Button";
 import { primaryNav, type NavItem } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils/cn";
 
@@ -47,7 +49,7 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
                   aria-expanded={open}
                   className={cn(
                     "flex w-full items-center justify-between gap-xs text-sm font-medium py-md lg:py-2 transition-colors cursor-pointer bg-transparent border-0",
-                    active ? "text-navy font-semibold" : "text-navy/90 hover:text-gold-ink",
+                    active ? "text-navy font-semibold" : "text-navy/90 hover:text-blue",
                   )}
                   onClick={() => onToggleSubmenu(item.href)}
                 >
@@ -78,7 +80,7 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
                     <li>
                       <Link
                         href={item.href}
-                        className="block px-md py-sm text-sm text-navy hover:text-gold-ink hover:bg-cream transition-colors font-semibold border-b border-gray-light mb-xs"
+                        className="block px-md py-sm text-sm text-navy hover:text-blue hover:bg-cream transition-colors font-semibold border-b border-gray-light mb-xs"
                         onClick={onNavigate}
                       >
                         {item.label} overview
@@ -93,8 +95,8 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
                         className={cn(
                           "block px-md py-sm text-sm transition-colors",
                           pathname === child.href
-                            ? "text-gold-ink font-semibold bg-cream"
-                            : "text-navy hover:text-gold-ink hover:bg-cream",
+                            ? "text-blue font-semibold bg-cream"
+                            : "text-navy hover:text-blue hover:bg-cream",
                         )}
                         onClick={onNavigate}
                       >
@@ -110,8 +112,8 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "block text-sm font-medium py-md lg:py-2 transition-colors relative",
-                  "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-gold-ink after:transition-[width] after:duration-200",
-                  active ? "text-navy font-semibold after:w-full" : "text-navy/90 hover:text-gold-ink after:w-0 hover:after:w-full",
+                  "after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-blue after:transition-[width] after:duration-200",
+                  active ? "text-navy font-semibold after:w-full" : "text-navy/90 hover:text-blue after:w-0 hover:after:w-full",
                 )}
                 onClick={onNavigate}
               >
@@ -121,6 +123,12 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
           </li>
         );
       })}
+      <li className="lg:hidden w-full pt-md flex flex-col gap-sm">
+        <CallOrTextChoice variant="primary" size="small" className="w-full" />
+        <Button href="/booking" variant="secondary" size="small" className="w-full" onClick={onNavigate}>
+          Book a time
+        </Button>
+      </li>
     </ul>
   );
 }

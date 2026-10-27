@@ -73,7 +73,7 @@ export default function WebinarPage() {
           </p>
           <VideoPlaceholder label="Cash-to-Close Story" />
           <p className="text-center text-2xl font-serif text-navy mt-xl mb-0">
-            Could your cash needed be <span className="text-gold-ink">less than $3,500*</span>
+            Could your cash needed be <span className="text-blue">less than $3,500*</span>
           </p>
           <p className="text-center text-xs text-gray-dark mt-sm mb-0">
             *Illustrative example only. Actual cash-to-close varies by buyer qualifications, loan program, property,
@@ -132,13 +132,13 @@ export default function WebinarPage() {
           <h2 className="text-center">What Past Attendees Say</h2>
           <div className="flex flex-col gap-lg">
             {webinarTestimonials.map((item) => (
-              <div key={item.name} className="bg-white border border-gray-light border-l-4 border-l-gold rounded-xs p-lg">
-                <div className="text-gold mb-sm" aria-hidden>
+              <div key={item.name} className="bg-white border border-gray-light border-l-4 border-l-blue rounded-xs p-lg">
+                <div className="text-blue mb-sm" aria-hidden>
                   ★★★★★
                 </div>
                 <p className="text-base italic leading-relaxed text-ink mb-md">&ldquo;{item.quote}&rdquo;</p>
                 <div className="flex items-center gap-sm">
-                  <span className="w-9 h-9 rounded-full bg-navy text-white text-xs font-semibold flex items-center justify-center shrink-0">
+                  <span className="w-9 h-9 rounded-full bg-blue text-white text-xs font-semibold flex items-center justify-center shrink-0">
                     {item.initials}
                   </span>
                   <div>

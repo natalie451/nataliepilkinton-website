@@ -80,6 +80,9 @@ const nextConfig: NextConfig = {
     "/podcast/**": ["./content/podcast/**/*"],
   },
   images: {
+    // AVIF when the browser accepts it, WebP otherwise. The hero photo is
+    // the usual LCP image, so the smaller format matters on first paint.
+    formats: ["image/avif", "image/webp"],
     // Enables real Next/Image optimization (resize + AVIF/WebP) for the
     // legacy site's CDN-hosted logo/headshot instead of serving them raw.
     remotePatterns: [

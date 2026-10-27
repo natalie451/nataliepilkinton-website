@@ -25,7 +25,7 @@ export default function VendorSponsorshipPage() {
         "Optional special offer",
       ],
       button: "Get Listed",
-      buttonClass: "bg-blue-600 hover:bg-blue-700",
+      buttonClass: "bg-blue text-white hover:bg-blue-hover",
     },
     {
       name: "Annual Listed Vendor",
@@ -42,7 +42,7 @@ export default function VendorSponsorshipPage() {
       button: "Save with Annual",
       badge: "BEST VALUE",
       featured: true,
-      buttonClass: "bg-blue-600 hover:bg-blue-700",
+      buttonClass: "bg-blue text-white hover:bg-blue-hover",
     },
     {
       name: "Event Sponsor",
@@ -60,7 +60,7 @@ export default function VendorSponsorshipPage() {
       ],
       button: "Sponsor an Event",
       badge: "Limited 2/event",
-      buttonClass: "bg-blue-600 hover:bg-blue-700",
+      buttonClass: "bg-blue text-white hover:bg-blue-hover",
     },
     {
       name: "Premier Category Sponsor",
@@ -82,7 +82,7 @@ export default function VendorSponsorshipPage() {
       badge: "RECOMMENDED - EXCLUSIVE",
       featured: true,
       premier: true,
-      buttonClass: "bg-yellow-500 text-blue-900 hover:bg-yellow-600",
+      buttonClass: "bg-cream text-blue hover:bg-white",
     },
   ];
 
@@ -126,21 +126,21 @@ export default function VendorSponsorshipPage() {
       <div className="mx-auto max-w-7xl px-4 pt-8">
         <BreadcrumbBar items={[{ name: "Vendor sponsorship", path: "/vendor-sponsorship" }]} />
       </div>
-      <section className="bg-blue-900 px-4 py-16 text-white sm:py-20">
+      <section className="bg-blue px-4 py-16 text-cream sm:py-20">
         <div className="mx-auto max-w-7xl">
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Partner With Our Investor Network
           </h1>
-          <p className="mt-4 max-w-5xl text-base text-blue-100 sm:text-xl lg:text-2xl">
+          <p className="mt-4 max-w-5xl text-base text-cream sm:text-xl lg:text-2xl">
             Connect with active real estate investors and professionals
           </p>
         </div>
       </section>
 
       <main>
-        <section className="bg-gray-50 px-4 py-12 sm:py-14 md:py-20">
+        <section className="bg-cream px-4 py-12 sm:py-14 md:py-20">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-ink">
               Sponsorship Packages
             </h2>
             <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-6 md:grid-cols-2">
@@ -149,7 +149,7 @@ export default function VendorSponsorshipPage() {
                   key={sponsorshipPackage.name}
                   className={`relative flex h-full flex-col rounded-2xl bg-white p-5 sm:p-6 md:p-8 shadow-sm ${
                     sponsorshipPackage.premier
-                      ? "bg-yellow-50 ring-2 ring-yellow-500"
+                      ? "bg-blue-soft ring-2 ring-blue"
                       : sponsorshipPackage.featured
                         ? "ring-2 ring-blue-500"
                         : ""
@@ -159,14 +159,14 @@ export default function VendorSponsorshipPage() {
                     <span
                       className={`absolute right-4 sm:right-6 top-5 sm:top-6 rounded-full px-2 sm:px-3 py-1 text-xs font-bold tracking-wide ${
                         sponsorshipPackage.premier
-                          ? "bg-yellow-500 text-blue-900"
-                          : "bg-blue-600 text-white"
+                          ? "bg-cream text-blue"
+                          : "bg-blue text-white"
                       }`}
                     >
                       {sponsorshipPackage.badge}
                     </span>
                   )}
-                  <h3 className="pr-16 sm:pr-20 text-lg sm:text-xl md:text-2xl font-bold text-blue-900">
+                  <h3 className="pr-16 sm:pr-20 text-lg sm:text-xl md:text-2xl font-bold text-ink">
                     {sponsorshipPackage.name}
                   </h3>
                   <p className="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold text-gray-900">
@@ -179,7 +179,7 @@ export default function VendorSponsorshipPage() {
                     {sponsorshipPackage.benefits.map((benefit) => (
                       <li key={benefit} className="flex gap-2 sm:gap-3 text-xs sm:text-sm text-gray-700">
                         <span
-                          className="font-bold text-blue-600 flex-shrink-0"
+                          className="font-bold text-blue flex-shrink-0"
                           aria-hidden="true"
                         >
                           ✓
@@ -190,7 +190,7 @@ export default function VendorSponsorshipPage() {
                   </ul>
                   <a
                     href="#apply"
-                    className={`mt-6 sm:mt-8 w-full inline-flex items-center justify-center rounded-lg px-4 sm:px-5 py-2.5 sm:py-3 font-semibold text-white transition-colors ${sponsorshipPackage.buttonClass}`}
+                    className={`mt-6 sm:mt-8 w-full inline-flex items-center justify-center rounded-lg px-4 sm:px-5 py-2.5 sm:py-3 font-semibold transition-colors ${sponsorshipPackage.buttonClass}`}
                   >
                     {sponsorshipPackage.button}
                   </a>
@@ -202,16 +202,16 @@ export default function VendorSponsorshipPage() {
 
         <section className="px-4 py-12 sm:py-14 md:py-20">
           <div className="mx-auto max-w-6xl">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900">
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-ink">
               How It Works
             </h2>
             <div className="mt-8 sm:mt-10 grid gap-4 sm:gap-6 lg:gap-8 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
               {steps.map((step, index) => (
                 <div key={step} className="text-center">
-                  <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue-600 text-sm sm:text-lg font-bold text-white">
+                  <div className="mx-auto flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-blue text-sm sm:text-lg font-bold text-white">
                     {index + 1}
                   </div>
-                  <h3 className="mt-2 sm:mt-4 text-xs sm:text-sm font-bold text-blue-900">{step}</h3>
+                  <h3 className="mt-2 sm:mt-4 text-xs sm:text-sm font-bold text-ink">{step}</h3>
                 </div>
               ))}
             </div>
@@ -219,8 +219,8 @@ export default function VendorSponsorshipPage() {
         </section>
 
         <section className="px-4 pb-12 sm:pb-14 md:pb-20">
-          <div className="mx-auto max-w-6xl border-l-4 border-blue-600 bg-blue-50 p-5 sm:p-6 md:p-8">
-            <h2 className="text-xl sm:text-2xl font-bold text-blue-900">
+          <div className="mx-auto max-w-6xl border-l-4 border-blue bg-blue-soft p-5 sm:p-6 md:p-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-ink">
               Category Exclusivity
             </h2>
             <p className="mt-2 sm:mt-3 text-sm sm:text-base text-gray-700">
@@ -231,9 +231,9 @@ export default function VendorSponsorshipPage() {
           </div>
         </section>
 
-        <section className="bg-gray-50 px-4 py-12 sm:py-14 md:py-20">
+        <section className="bg-cream px-4 py-12 sm:py-14 md:py-20">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900">
+            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold text-ink">
               Frequently Asked Questions
             </h2>
             <div className="mt-8 sm:mt-10 space-y-3 sm:space-y-4">
@@ -242,7 +242,7 @@ export default function VendorSponsorshipPage() {
                   key={faq.question}
                   className="rounded-lg border border-gray-200 bg-white p-4 sm:p-5"
                 >
-                  <summary className="cursor-pointer text-sm sm:text-base font-semibold text-blue-900">
+                  <summary className="cursor-pointer text-sm sm:text-base font-semibold text-ink">
                     {faq.question}
                   </summary>
                   <p className="mt-2 sm:mt-3 text-sm sm:text-base text-gray-600">{faq.answer}</p>
@@ -254,7 +254,7 @@ export default function VendorSponsorshipPage() {
 
         <section
           id="apply"
-          className="bg-blue-900 px-4 py-12 sm:py-16 md:py-20 text-center text-white"
+          className="bg-blue px-4 py-12 sm:py-16 md:py-20 text-center text-cream"
         >
           <div className="mx-auto max-w-4xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
@@ -264,7 +264,7 @@ export default function VendorSponsorshipPage() {
               href="https://investsponsorship.nataliepilkinton.com/home--vendor--sponsorship-opportunities"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 sm:mt-8 inline-flex rounded-lg bg-yellow-500 px-5 sm:px-6 py-2.5 sm:py-3 font-bold text-blue-900 transition-colors hover:bg-yellow-400"
+              className="mt-6 sm:mt-8 inline-flex rounded-lg bg-cream px-5 sm:px-6 py-2.5 sm:py-3 font-bold text-blue transition-colors hover:bg-white"
             >
               Apply for Sponsorship
             </a>
@@ -273,7 +273,7 @@ export default function VendorSponsorshipPage() {
       </main>
 
       <footer className="px-4 py-10 sm:py-12 text-center">
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-900">
+        <h2 className="text-xl sm:text-2xl font-bold text-ink">
           Questions? Let&apos;s Talk!
         </h2>
         <p className="mt-3 sm:mt-4 text-sm sm:text-base font-semibold">Natalie Pilkinton</p>
@@ -296,7 +296,7 @@ export default function VendorSponsorshipPage() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 sm:gap-8">
             <div className="flex-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-ink mb-3 sm:mb-4">
                 Need Trusted Vendors?
               </h2>
               <p className="text-base sm:text-lg text-gray-700">
@@ -306,7 +306,7 @@ export default function VendorSponsorshipPage() {
             <div className="flex-shrink-0 w-full sm:w-auto">
               <a
                 href="/investors/vendors"
-                className="block sm:inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors transform hover:scale-105"
+                className="block sm:inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-center bg-blue hover:bg-blue-hover text-white font-semibold rounded-lg transition-colors"
               >
                 View Vendor Directory →
               </a>

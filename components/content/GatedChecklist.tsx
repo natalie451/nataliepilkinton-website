@@ -31,14 +31,14 @@ export function GatedChecklist({ resource, sections }: GatedChecklistProps) {
 
   return (
     <div className="flex flex-col gap-xl">
-      <div className="bg-cream border-l-4 border-gold p-lg rounded-xs">
+      <div className="bg-cream border-l-4 border-blue p-lg rounded-xs">
         <p className="mb-0">You&rsquo;re in! A copy of this checklist is on its way to your inbox.</p>
       </div>
 
       {sections.map((section) => (
         <div key={section.title}>
           <h3 className="mb-md">{section.title}</h3>
-          <ul className="flex flex-col gap-sm pl-lg list-disc marker:text-gold">
+          <ul className="flex flex-col gap-sm pl-lg list-disc marker:text-blue">
             {section.items.map((item) => (
               <li key={item} className="text-base leading-relaxed text-gray-dark">
                 {item}

@@ -69,7 +69,7 @@ export default function BookingPage() {
               href={siteConfig.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold-ink font-semibold underline underline-offset-2"
+              className="text-blue font-semibold underline underline-offset-2"
             >
               Read my Google reviews
             </a>

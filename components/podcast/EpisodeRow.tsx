@@ -11,7 +11,7 @@ import { getYouTubeWatchUrl } from "@/lib/youtube/types";
 export function EpisodeRow({ episode }: { episode: YouTubeEpisode }) {
   return (
     <li>
-      <div className="group flex items-center gap-md p-md bg-white border border-gray-light rounded-xs transition-all duration-200 hover:border-gold hover:bg-cream hover:-translate-y-0.5 hover:shadow-brand-md">
+      <div className="group flex items-center gap-md p-md bg-white border border-gray-light rounded-xs transition-all duration-200 hover:border-blue hover:bg-cream hover:-translate-y-0.5 hover:shadow-brand-md">
         <a
           href={getYouTubeWatchUrl(episode.videoId)}
           target="_blank"
@@ -21,16 +21,16 @@ export function EpisodeRow({ episode }: { episode: YouTubeEpisode }) {
         >
           <span
             aria-hidden
-            className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-gold text-navy font-serif font-semibold text-sm"
+            className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue text-white font-serif font-semibold text-sm"
           >
             {episode.episodeNumber}
           </span>
-          <span className="min-w-0 flex-1 text-sm font-semibold text-navy group-hover:text-gold-ink transition-colors line-clamp-2">
+          <span className="min-w-0 flex-1 text-sm font-semibold text-navy group-hover:text-blue transition-colors line-clamp-2">
             {episode.title}
           </span>
           <span
             aria-hidden
-            className="shrink-0 text-gray-dark group-hover:text-gold-ink transition-all duration-200 group-hover:translate-x-1"
+            className="shrink-0 text-gray-dark group-hover:text-blue transition-all duration-200 group-hover:translate-x-1"
           >
             →
           </span>

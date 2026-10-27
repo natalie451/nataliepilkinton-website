@@ -40,7 +40,7 @@ export default function JoinPage() {
             <strong className="text-navy">{commissionStructure.split}</strong> with a{" "}
             <strong className="text-navy">{commissionStructure.cap}</strong>.
           </p>
-          <ul className="flex flex-col gap-sm pl-lg list-disc marker:text-gold mb-md">
+          <ul className="flex flex-col gap-sm pl-lg list-disc marker:text-blue mb-md">
             {commissionStructure.fees.map((fee) => (
               <li key={fee} className="text-base leading-relaxed text-gray-dark">
                 {fee}

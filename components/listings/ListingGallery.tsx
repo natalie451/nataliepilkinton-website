@@ -36,7 +36,7 @@ export function ListingGallery({ images }: { images: ListingImage[] }) {
               onClick={() => setActiveIndex(index)}
               className={cn(
                 "relative shrink-0 w-24 h-16 rounded-xs overflow-hidden border-2 transition-colors",
-                index === activeIndex ? "border-gold" : "border-transparent hover:border-gray-medium",
+                index === activeIndex ? "border-blue" : "border-transparent hover:border-gray-medium",
               )}
             >
               <Image src={image.url} alt="" fill sizes="96px" className="object-cover" />

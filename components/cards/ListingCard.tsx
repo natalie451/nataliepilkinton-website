@@ -5,10 +5,10 @@ import { PropertyFacts } from "@/components/listings/PropertyFacts";
 import { formatPrice } from "@/lib/utils/formatPrice";
 
 const statusClasses: Record<Listing["status"], string> = {
-  Active: "bg-gold text-navy",
+  Active: "bg-blue text-white",
   Pending: "bg-gray-medium text-navy",
-  Sold: "bg-navy text-white",
-  "Coming Soon": "bg-cream text-navy border border-gold",
+  Sold: "bg-blue text-white",
+  "Coming Soon": "bg-cream text-navy border border-blue",
 };
 
 export function ListingCard({ listing }: { listing: Listing }) {
@@ -17,7 +17,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/listings/${listing.slug}`}
-      className="group h-full flex flex-col bg-white border border-gray-light rounded-xs overflow-hidden transition-all duration-200 ease-out hover:shadow-brand-lg hover:border-gold hover:-translate-y-0.5"
+      className="group h-full flex flex-col bg-white border border-gray-light rounded-xs overflow-hidden shadow-brand-sm transition-all duration-200 ease-out hover:shadow-brand-lg hover:border-blue hover:-translate-y-0.5"
     >
       <div className="relative aspect-[4/3] bg-gray-light overflow-hidden">
         {hero && (
@@ -51,7 +51,7 @@ export function ListingCard({ listing }: { listing: Listing }) {
 
         <p className="text-sm leading-relaxed text-gray-dark mb-md flex-1">{listing.shortDescription}</p>
 
-        <span className="inline-flex items-center gap-xs text-sm font-semibold text-navy group-hover:text-gold-ink transition-colors">
+        <span className="inline-flex items-center gap-xs text-sm font-semibold text-navy group-hover:text-blue transition-colors">
           View Details
           <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">
             →

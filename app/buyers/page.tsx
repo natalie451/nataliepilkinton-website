@@ -73,7 +73,7 @@ export default function BuyersPage() {
                   <CardCategory>Guide</CardCategory>
                   <CardTitle>{guide.title}</CardTitle>
                   <CardDescription>{guide.description}</CardDescription>
-                  <span className="text-sm font-semibold text-gold-ink">Read →</span>
+                  <span className="text-sm font-semibold text-blue">Read →</span>
                 </Card>
               </Link>
             ))}
@@ -91,7 +91,7 @@ export default function BuyersPage() {
       <Section>
         <Container className="max-w-[48rem]">
           <h2>Questions Buyers Ask Most</h2>
-          <p className="text-sm text-gold-ink font-semibold uppercase tracking-[0.06em] mb-lg">
+          <p className="text-sm text-blue font-semibold uppercase tracking-[0.06em] mb-lg">
             Straight from Natalie&rsquo;s Home Buyer Masterclass
           </p>
           <FAQ items={buyerFaq} />

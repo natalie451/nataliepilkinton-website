@@ -9,7 +9,7 @@ export function Timeline({ steps }: { steps: TimelineStep[] }) {
       {steps.map((step, index) => (
         <div key={step.title} className="flex gap-lg mb-xl last:mb-0">
           <div className="relative shrink-0">
-            <div className="min-w-10 w-10 h-10 rounded-full bg-gold flex items-center justify-center text-navy font-semibold">
+            <div className="min-w-10 w-10 h-10 rounded-full bg-blue flex items-center justify-center text-white font-semibold">
               {index + 1}
             </div>
             {index < steps.length - 1 && (

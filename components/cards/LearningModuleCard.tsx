@@ -29,7 +29,7 @@ export function LearningModuleCard({ icon, title, summary, sections }: LearningM
   const panelId = useId();
 
   return (
-    <div className="bg-white border border-gray-light rounded-xs transition-all duration-200 hover:border-gold hover:shadow-brand-md">
+    <div className="bg-white border border-gray-light rounded-xs transition-all duration-200 hover:border-blue hover:shadow-brand-md">
       <button
         type="button"
         aria-expanded={open}

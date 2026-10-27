@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 /* ========== DESIGN TOKENS ========== */
-/* Ported 1:1 from the legacy site's :root custom properties. */
+/* Change colors here. Components use these tokens instead of one-off hex values. */
 :root {
-  --navy: #0a1a33;
-  --cream: #f5f3f0;
+  /* Soft warm paper. Lighter than the earlier podcast cream so it stays quiet next to white. */
+  --cream: #faf6ec;
   --white: #ffffff;
-  --ink: #1a1a1a;
-  --gold: #c9a227;
-  /**
-   * A deeper shade of the brand gold, reserved for gold TEXT/icons sitting on
-   * light backgrounds. Brand gold (#c9a227) only contrasts ~2.4:1 against
-   * white/cream — well under WCAG AA's 4.5:1 for text — but reads fine as a
-   * background, border, or on navy. This token is the same hue, darkened
-   * until it clears AA (~5:1), so small gold labels stay legible without
-   * changing the brand color itself.
-   */
-  --gold-ink: #8a6b1f;
-  --gray-light: #f0ebe7;
-  --gray-medium: #c4bfb9;
-  --gray-dark: #5a5450;
+  /* Near-black for headings and UI text. */
+  --ink: #141414;
+  /* Kept as a text color name. It is near-black, not the brand navy. */
+  --navy: #141414;
+  /* Original site navy from before the restyle. White text is 17.4:1. Cream text is 16.1:1. */
+  --blue: #0a1a33;
+  /* Slightly lighter navy for hover. White text is 12.7:1. */
+  --blue-hover: #1a3358;
+  /* Pale navy tint for hover fills and quiet panels. Navy text on this is 14.9:1. */
+  --blue-soft: #e8eef5;
+  --gray-light: #e4d9c8;
+  --gray-medium: #c9bfb0;
+  /* Body copy. 11.4:1 on cream, 12.3:1 on white. */
+  --gray-dark: #3a342c;
 
-  --shadow-sm: 0 1px 2px rgba(10, 26, 51, 0.05);
-  --shadow-md: 0 4px 6px rgba(10, 26, 51, 0.1);
-  --shadow-lg: 0 10px 15px rgba(10, 26, 51, 0.1);
+  --shadow-sm: 0 1px 2px rgba(10, 26, 51, 0.06);
+  --shadow-md: 0 8px 20px rgba(10, 26, 51, 0.08);
+  --shadow-lg: 0 16px 36px rgba(10, 26, 51, 0.12);
 }
 
 @theme inline {
@@ -34,8 +34,9 @@
   --color-cream: var(--cream);
   --color-white: var(--white);
   --color-ink: var(--ink);
-  --color-gold: var(--gold);
-  --color-gold-ink: var(--gold-ink);
+  --color-blue: var(--blue);
+  --color-blue-hover: var(--blue-hover);
+  --color-blue-soft: var(--blue-soft);
   --color-gray-light: var(--gray-light);
   --color-gray-medium: var(--gray-medium);
   --color-gray-dark: var(--gray-dark);
@@ -80,7 +81,7 @@
     font-size: var(--text-base);
     line-height: 1.5;
     color: var(--ink);
-    background-color: var(--white);
+    background-color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -89,7 +90,7 @@
     font-family: var(--font-serif);
     font-weight: 600;
     line-height: 1.25;
-    color: var(--navy);
+    color: var(--ink);
     /* Distributes words evenly across lines instead of leaving a lone
        orphan word on the last line — applied sitewide, not per-heading. */
     text-wrap: balance;
@@ -110,15 +111,15 @@
     text-wrap: pretty;
   }
 
-  a { color: var(--navy); text-decoration: none; transition: color 0.2s ease; }
-  a:hover { color: var(--gold-ink); }
+  a { color: var(--blue); text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: var(--blue-hover); }
 
   img { max-width: 100%; height: auto; display: block; }
 
   /* Consistent, visible keyboard focus ring on every interactive element.
      Mouse/touch users never see it (:focus-visible), keyboard users always do. */
   :focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--blue);
     outline-offset: 2px;
     border-radius: 1px;
   }
@@ -153,7 +154,7 @@
     left: 1rem;
     top: -3rem;
     z-index: 2000;
-    background: var(--navy);
+    background: var(--blue);
     color: var(--white);
     padding: 0.75rem 1.25rem;
     border-radius: var(--radius-xs);

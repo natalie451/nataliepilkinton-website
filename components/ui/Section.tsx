@@ -5,9 +5,9 @@ type Tone = "default" | "light" | "accent" | "hero";
 
 const toneClasses: Record<Tone, string> = {
   default: "",
-  light: "bg-cream",
-  accent: "bg-navy text-white [&_h2]:text-white [&_h3]:text-white",
-  hero: "bg-navy text-white pt-[calc(var(--spacing-3xl)*1.5)] pb-[calc(var(--spacing-3xl)*1.5)] [&_h1]:text-white [&_h2]:text-cream",
+  light: "bg-white",
+  accent: "bg-blue text-cream [&_h2]:text-cream [&_h3]:text-cream [&_p]:text-cream",
+  hero: "bg-blue text-cream pt-[calc(var(--spacing-3xl)*1.5)] pb-[calc(var(--spacing-3xl)*1.5)] [&_h1]:text-cream [&_h2]:text-cream [&_p]:text-cream",
 };
 
 type SectionProps = {

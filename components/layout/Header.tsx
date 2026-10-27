@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { MobileMenuToggle } from "@/components/layout/MobileMenuToggle";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { Button } from "@/components/ui/Button";
 import { bookingCta, siteConfig } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils/cn";
@@ -79,15 +80,12 @@ export function Header() {
         />
 
         <div className="flex items-center gap-sm shrink-0">
-          <a
-            href={siteConfig.phoneHref}
-            className="hidden lg:inline text-sm font-semibold text-navy whitespace-nowrap hover:text-gold-ink"
-          >
-            {siteConfig.phone}
-          </a>
-          <Button href={bookingCta.href} size="small" className="whitespace-nowrap max-sm:hidden" onClick={closeAll}>
-            {bookingCta.label}
-          </Button>
+          <div className="hidden md:flex items-center gap-sm">
+            <CallOrTextChoice variant="primary" size="small" />
+            <Button href={bookingCta.href} variant="secondary" size="small" className="whitespace-nowrap" onClick={closeAll}>
+              {bookingCta.label}
+            </Button>
+          </div>
           <MobileMenuToggle active={mobileOpen} onClick={() => setMobileOpen((open) => !open)} />
         </div>
       </nav>
