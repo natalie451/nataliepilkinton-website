@@ -10,7 +10,7 @@ export type ResourceCardProps = {
 };
 
 const ctaClassName =
-  "inline-block px-md py-sm text-sm font-semibold border border-navy text-navy rounded-xs hover:bg-navy hover:text-white transition-colors";
+  "inline-block px-md py-sm text-sm font-semibold border border-blue text-navy rounded-xs hover:bg-blue hover:text-white transition-colors";
 
 export function ResourceCard({ category, title, description, featured = true, cta }: ResourceCardProps) {
   return (

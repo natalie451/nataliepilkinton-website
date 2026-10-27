@@ -46,22 +46,13 @@ export default async function MarketUpdatePage({ params }: { params: Promise<{ s
         ]}
       />
 
-      <div
-        className="w-full py-xl flex items-center justify-center relative overflow-hidden"
-        style={{
-          background: `linear-gradient(135deg, #0a1a33 0%, #0e6bc7 50%, #0e6bc7 100%)`,
-          minHeight: "24rem",
-        }}
-      >
+      <div className="w-full py-xl flex items-center justify-center relative overflow-hidden bg-blue min-h-[24rem]">
         <Container>
           <div className="relative z-10 text-center text-white">
-            <span
-              className="inline-block mb-md px-md py-sm rounded-full text-sm font-semibold"
-              style={{ backgroundColor: "#c9a227" }}
-            >
+            <span className="inline-block mb-md px-md py-sm rounded-full text-sm font-semibold bg-cream text-blue">
               Market Update
             </span>
-            <h1 className="text-balance text-[clamp(2rem,1rem+4vw,3.5rem)] font-bold leading-[1.1]">
+            <h1 className="text-balance text-cream text-[clamp(2rem,1rem+4vw,3.5rem)] font-bold leading-[1.1]">
               {update.title}
             </h1>
           </div>
@@ -101,7 +92,7 @@ export default async function MarketUpdatePage({ params }: { params: Promise<{ s
                         return (
                           <div key={sectionIdx}>
                             {section.heading && (
-                              <h3 className="text-2xl font-bold mt-2xl mb-md" style={{ color: "#0a1a33" }}>
+                              <h3 className="text-2xl font-bold mt-2xl mb-md text-blue">
                                 {section.heading}
                               </h3>
                             )}
@@ -122,8 +113,7 @@ export default async function MarketUpdatePage({ params }: { params: Promise<{ s
               <div className="pt-2xl border-t border-gray-200">
                 <Link
                   href="/market-updates"
-                  className="inline-flex items-center gap-sm font-semibold transition-colors hover:underline"
-                  style={{ color: "#0e6bc7" }}
+                  className="inline-flex items-center gap-sm font-semibold text-blue transition-colors hover:underline"
                 >
                   ← Back to Market Updates
                 </Link>
@@ -131,28 +121,21 @@ export default async function MarketUpdatePage({ params }: { params: Promise<{ s
             </div>
 
             <div className="lg:col-span-1">
-              <div
-                className="rounded-lg p-lg mb-2xl text-white sticky top-lg"
-                style={{ backgroundColor: "#0a1a33" }}
-              >
+              <div className="rounded-lg p-lg mb-2xl text-cream sticky top-lg bg-blue">
                 <div className="flex flex-col items-center text-center">
-                  <div
-                    className="w-24 h-24 rounded-full mb-md flex items-center justify-center text-4xl font-bold"
-                    style={{ backgroundColor: "#c9a227" }}
-                  >
+                  <div className="w-24 h-24 rounded-full mb-md flex items-center justify-center text-4xl font-bold bg-cream text-blue">
                     NP
                   </div>
-                  <h3 className="text-lg font-bold mb-sm">Natalie Pilkinton</h3>
-                  <p className="text-sm text-gray-300 mb-md font-semibold">REALTOR®</p>
-                  <p className="text-xs text-gray-400 mb-lg leading-relaxed">
+                  <h3 className="text-lg font-bold mb-sm text-cream">Natalie Pilkinton</h3>
+                  <p className="text-sm text-cream mb-md font-semibold">REALTOR®</p>
+                  <p className="text-xs text-cream mb-lg leading-relaxed">
                     Helping buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville.
                   </p>
                   <Link
-                    href="https://calendly.com/nataliepilkinton"
-                    className="w-full px-lg py-sm rounded font-semibold transition-colors text-center"
-                    style={{ backgroundColor: "#c9a227", color: "#0a1a33" }}
+                    href="/booking"
+                    className="w-full px-lg py-sm rounded font-semibold text-center bg-cream text-blue"
                   >
-                    Book a Call
+                    Book a time
                   </Link>
                 </div>
               </div>

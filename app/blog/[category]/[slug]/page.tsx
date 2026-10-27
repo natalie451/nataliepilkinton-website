@@ -79,16 +79,13 @@ export default async function ArticlePage({ params }: { params: Params }) {
         ]}
       />
 
-      <div
-        className="w-full py-xl flex items-center justify-center relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #0a1a33 0%, #0e6bc7 50%, #0e6bc7 100%)", minHeight: "24rem" }}
-      >
+      <div className="w-full py-xl flex items-center justify-center relative overflow-hidden bg-blue min-h-[24rem]">
         <Container>
           <div className="relative z-10 text-center text-white">
-            <span className="inline-block mb-md px-md py-sm rounded-full text-sm font-semibold" style={{ backgroundColor: "#c9a227" }}>
+            <span className="inline-block mb-md px-md py-sm rounded-full text-sm font-semibold bg-cream text-blue">
               {label}
             </span>
-            <h1 className="text-balance text-[clamp(2rem,1rem+4vw,3.5rem)] font-bold leading-[1.1]">{post.title}</h1>
+            <h1 className="text-balance text-cream text-[clamp(2rem,1rem+4vw,3.5rem)] font-bold leading-[1.1]">{post.title}</h1>
             <p className="mt-md text-sm text-white/85">
               By{" "}
               <Link href="/about" className="font-semibold underline underline-offset-2">
@@ -118,29 +115,29 @@ export default async function ArticlePage({ params }: { params: Params }) {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-3xl">
             <div className="lg:col-span-3">
-              <div className="flex gap-lg text-sm text-gray-600 mb-2xl pb-lg border-b border-gray-200">
+              <div className="flex gap-lg text-sm text-gray-dark mb-2xl pb-lg border-b border-gray-light">
                 {published && <time dateTime={post.date}>{published}</time>}
                 <span>{post.readTime} min read</span>
               </div>
 
               <article className="mb-3xl">
                 {post.excerpt && (
-                  <p className="text-xl text-gray-700 leading-relaxed font-semibold mb-2xl italic border-l-4 border-blue pl-lg">
+                  <p className="text-xl text-ink leading-relaxed font-semibold mb-2xl italic border-l-4 border-blue pl-lg">
                     {post.excerpt}
                   </p>
                 )}
                 <MarkdownBody markdown={bodyToMarkdown(post.body)} />
               </article>
 
-              <div className="pt-2xl border-t border-gray-200">
-                <Link href={`/blog/${post.category}`} className="inline-flex items-center gap-sm font-semibold hover:underline" style={{ color: "#0e6bc7" }}>
+              <div className="pt-2xl border-t border-gray-light">
+                <Link href={`/blog/${post.category}`} className="inline-flex items-center gap-sm font-semibold text-blue hover:underline">
                   ← Back to {label}
                 </Link>
               </div>
             </div>
 
             <aside className="lg:col-span-1">
-              <div className="rounded-lg p-lg mb-2xl text-white sticky top-lg" style={{ backgroundColor: "#0a1a33" }}>
+              <div className="rounded-lg p-lg mb-2xl text-cream sticky top-lg bg-blue">
                 <div className="flex flex-col items-center text-center">
                   <Link href="/about" className="mb-md">
                     <Image
@@ -151,19 +148,18 @@ export default async function ArticlePage({ params }: { params: Params }) {
                       className="w-24 h-24 rounded-full object-cover"
                     />
                   </Link>
-                  <h3 className="text-lg font-bold mb-xs">
+                  <h3 className="text-lg font-bold mb-xs text-cream">
                     <Link href="/about" className="hover:underline">
                       Natalie Pilkinton
                     </Link>
                   </h3>
-                  <p className="text-sm text-gray-300 mb-md font-semibold">REALTOR® · Investor · Educator</p>
-                  <p className="text-xs text-gray-400 mb-lg leading-relaxed">
+                  <p className="text-sm text-cream mb-md font-semibold">REALTOR® · Investor · Educator</p>
+                  <p className="text-xs text-cream mb-lg leading-relaxed">
                     20+ years helping buyers, sellers and investors from Spring across Greater Houston, especially north of I-10 up to Huntsville, with {siteConfig.brand}.
                   </p>
                   <Link
                     href="/booking"
-                    className="w-full px-lg py-sm rounded font-semibold transition-colors text-center"
-                    style={{ backgroundColor: "#c9a227", color: "#0a1a33" }}
+                    className="w-full px-lg py-sm rounded font-semibold text-center bg-cream text-blue"
                   >
                     Book a Call
                   </Link>

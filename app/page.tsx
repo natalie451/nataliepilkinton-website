@@ -61,25 +61,21 @@ const paths = [
 export default function HomePage() {
   return (
     <>
-      <section className="bg-navy text-white relative overflow-hidden">
+      <section className="bg-blue text-white relative overflow-hidden">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-70"
           style={{
-            background: "radial-gradient(50rem 24rem at 80% -10%, rgba(201,162,39,0.18), transparent 60%)",
+            background: "radial-gradient(50rem 24rem at 80% -10%, rgba(255,255,255,0.16), transparent 60%)",
           }}
         />
         <Container className="relative py-2xl md:py-3xl">
-          <p className="text-gold text-sm font-semibold uppercase tracking-[0.16em] mb-md">Spring, TX REALTOR</p>
-          <h1 className="text-white text-balance mb-lg max-w-[18ch] text-[clamp(2.15rem,1.2rem+3.2vw,3.75rem)] leading-[1.08]">
+          <p className="text-cream text-sm font-semibold uppercase tracking-[0.16em] mb-md">Spring, TX REALTOR</p>
+          <h1 className="text-cream text-balance mb-lg max-w-[18ch] text-[clamp(2.15rem,1.2rem+3.2vw,3.75rem)] leading-[1.08]">
             Buy, sell, or invest with Natalie Pilkinton
           </h1>
           <p className="text-cream text-lg max-w-[40rem] mb-xl leading-relaxed">
-            HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text{" "}
-            <a href={siteConfig.phoneHref} className="text-white font-semibold underline underline-offset-2">
-              {siteConfig.phone}
-            </a>
-            , or book a time that works for you.
+            HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text {siteConfig.phone}, or book a time that works for you.
           </p>
           <ContactActions tone="on-dark" size="large" />
         </Container>
@@ -97,14 +93,14 @@ export default function HomePage() {
             {paths.map((path) => (
               <article
                 key={path.href}
-                className="flex flex-col border border-gray-light border-t-4 border-t-gold rounded-xs p-lg bg-white shadow-brand-sm"
+                className="flex flex-col border border-gray-light border-t-4 border-t-blue rounded-xs p-lg bg-white shadow-brand-sm"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-ink mb-sm">{path.eyebrow}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue mb-sm">{path.eyebrow}</p>
                 <h3 className="mt-0 mb-sm text-2xl">{path.title}</h3>
                 <p className="text-gray-dark flex-1">{path.body}</p>
                 <div className="flex flex-col items-start gap-sm mt-md">
                   <Button href={path.href}>{path.cta}</Button>
-                  <Link href={path.secondary.href} className="text-sm font-semibold text-gold-ink underline underline-offset-2">
+                  <Link href={path.secondary.href} className="text-sm font-semibold text-blue underline underline-offset-2">
                     {path.secondary.label}
                   </Link>
                 </div>
@@ -129,7 +125,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <Section>
+      <Section tone="light">
         <Container>
           <h2>Videos from Natalie</h2>
           <p className="max-w-[42rem] text-gray-dark mb-xl">
@@ -146,7 +142,7 @@ export default function HomePage() {
 
       <PodcastHomeBand />
 
-      <Section>
+      <Section tone="light">
         <Container>
           <h2>Real estate in Spring and Greater Houston</h2>
           <p className="max-w-[44rem] text-gray-dark">

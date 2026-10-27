@@ -19,7 +19,7 @@ export async function MeetupCallout({
   const next = await getNextMeetup();
 
   return (
-    <aside className="bg-cream border border-gold/40 rounded-xs p-xl my-2xl">
+    <aside className="bg-cream border border-blue/40 rounded-xs p-xl my-2xl">
       {next && withSchema && (
         <script
           {...jsonLdScriptProps({
@@ -41,7 +41,7 @@ export async function MeetupCallout({
         />
       )}
 
-      <p className="text-gold-ink text-xs font-semibold uppercase tracking-[0.18em] mb-sm">Monthly meetup · Spring / The Woodlands</p>
+      <p className="text-blue text-xs font-semibold uppercase tracking-[0.18em] mb-sm">Monthly meetup · Spring / The Woodlands</p>
       <h2 className="mt-0 mb-sm">Meet Houston-area investors and Realtors in person</h2>
       <p className="mb-md">
         Natalie hosts <strong>{siteConfig.meetup.name}</strong>, a monthly meetup where investors and Realtors get
@@ -54,7 +54,7 @@ export async function MeetupCallout({
       </p>
 
       {next && (
-        <div className="bg-white border-l-4 border-gold rounded-xs p-md mb-md">
+        <div className="bg-white border-l-4 border-blue rounded-xs p-md mb-md">
           <p className="text-xs uppercase tracking-[0.1em] text-gray-dark font-semibold mb-xs">Next meetup</p>
           <p className="text-lg font-semibold text-navy mb-xs">{next.title}</p>
           <p className="text-sm text-gray-dark mb-0">
@@ -68,7 +68,7 @@ export async function MeetupCallout({
         href={next?.url ?? siteConfig.meetup.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block px-lg py-sm rounded-xs bg-navy text-white font-semibold hover:bg-gold hover:text-navy transition-colors"
+        className="inline-block px-lg py-sm rounded-xs bg-blue text-white font-semibold hover:bg-blue-hover hover:text-white transition-colors"
       >
         {next ? "RSVP on Meetup.com →" : "See upcoming meetups on Meetup.com →"}
       </a>

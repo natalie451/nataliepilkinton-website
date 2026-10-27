@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { CTA } from "@/components/sections/CTA";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
@@ -178,7 +179,7 @@ export default function AboutPage() {
               <div key={audience.href}>
                 <h3>{audience.title}</h3>
                 <p className="text-gray-dark">{audience.body}</p>
-                <Link href={audience.href} className="font-semibold text-gold-ink underline underline-offset-2 hover:text-navy">
+                <Link href={audience.href} className="font-semibold text-blue underline underline-offset-2 hover:text-navy">
                   {audience.link} →
                 </Link>
               </div>
@@ -195,18 +196,18 @@ export default function AboutPage() {
               <ul className="space-y-sm">
                 <li>
                   Teaches the Home Buyer Masterclass and a{" "}
-                  <Link href="/webinar" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+                  <Link href="/webinar" className="text-blue underline underline-offset-2 hover:text-navy">
                     free home buyer webinar
                   </Link>
                   .
                 </li>
                 <li>
                   Organizes{" "}
-                  <a href={siteConfig.meetup.url} target="_blank" rel="noopener noreferrer" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+                  <a href={siteConfig.meetup.url} target="_blank" rel="noopener noreferrer" className="text-blue underline underline-offset-2 hover:text-navy">
                     {siteConfig.meetup.name}
                   </a>
                   , a monthly meetup in Spring/The Woodlands where investors and Realtors discuss the Texas market, with a network of{" "}
-                  <Link href="/investors/vendors" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+                  <Link href="/investors/vendors" className="text-blue underline underline-offset-2 hover:text-navy">
                     investor-friendly vendors
                   </Link>
                   .
@@ -214,7 +215,7 @@ export default function AboutPage() {
                 <li>Volunteers with the Houston Livestock Show &amp; Rodeo Speakers Committee.</li>
                 <li>
                   Publishes a monthly{" "}
-                  <Link href="/market-updates" className="text-gold-ink underline underline-offset-2 hover:text-navy">
+                  <Link href="/market-updates" className="text-blue underline underline-offset-2 hover:text-navy">
                     Houston market update
                   </Link>{" "}
                   explaining what the numbers mean for buyers, sellers and investors.
@@ -253,9 +254,7 @@ export default function AboutPage() {
             </dd>
             <dt className="font-semibold text-navy">Phone</dt>
             <dd className="m-0">
-              <a href={siteConfig.phoneHref} className="text-gold-ink underline underline-offset-2 hover:text-navy">
-                {siteConfig.phone}
-              </a>
+              <CallOrTextChoice variant="primary" size="small" />
             </dd>
             <dt className="font-semibold text-navy">Profiles</dt>
             <dd className="m-0 flex flex-wrap gap-sm">
@@ -283,11 +282,8 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      <CTA title="Let's connect" description="Call, text, or book a time to talk through buying, selling, or investing.">
-        <Button href="/booking" variant="gold">
-          Book a time
-        </Button>
-        <ContactActions tone="on-dark" showBook={false} />
+      <CTA title="Let's connect" description="Call or text, or book a time to talk through buying, selling, or investing.">
+        <ContactActions tone="on-dark" layout="equal" />
       </CTA>
     </>
   );

@@ -36,7 +36,7 @@ export function EpisodeListView({ episodes }: { episodes: YouTubeEpisode[] }) {
             aria-expanded={expanded}
             aria-controls={listId}
             onClick={() => setExpanded((current) => !current)}
-            className="px-lg py-md text-sm font-semibold border border-navy text-navy rounded-xs hover:bg-navy hover:text-white transition-colors"
+            className="px-lg py-md text-sm font-semibold border border-blue text-navy rounded-xs hover:bg-blue hover:text-white transition-colors"
           >
             {expanded ? "Show Fewer Episodes" : `Show All ${episodes.length} Episodes (+${hiddenCount})`}
           </button>

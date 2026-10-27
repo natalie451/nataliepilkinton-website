@@ -9,7 +9,7 @@ export function JoinInterestForm() {
 
   if (sent) {
     return (
-      <div className="bg-cream border-l-4 border-gold p-lg rounded-xs">
+      <div className="bg-cream border-l-4 border-blue p-lg rounded-xs">
         <p className="mb-0">Thanks. Natalie will follow up about joining the team.</p>
       </div>
     );

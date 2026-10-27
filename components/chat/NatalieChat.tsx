@@ -20,10 +20,10 @@ const interestLabels: Record<LeadInterest, string> = {
 };
 
 const inputClasses =
-  "w-full px-3 py-2 border border-gray-light rounded-xs text-sm font-sans bg-white text-navy focus:outline-none focus:border-navy";
+  "w-full px-3 py-2 border border-gray-light rounded-xs text-sm font-sans bg-white text-navy focus:outline-none focus:border-blue";
 
 const creamControl =
-  "inline-flex items-center rounded-full border border-navy bg-[#f5eedc] px-sm py-1 text-sm font-semibold text-navy shadow-brand-sm hover:bg-white hover:text-navy";
+  "inline-flex items-center rounded-full border border-blue bg-cream px-sm py-1 text-sm font-semibold text-navy shadow-brand-sm hover:bg-white hover:text-navy";
 
 function messageText(message: UIMessage) {
   return message.parts
@@ -97,7 +97,7 @@ export function NatalieChat() {
           aria-label="Chat with Natalie"
           className="mb-sm flex h-[min(32rem,calc(100dvh-5.5rem-4.75rem-env(safe-area-inset-bottom)))] w-[min(24rem,calc(100vw-1.5rem))] flex-col overflow-hidden rounded-xs border border-gray-light bg-white shadow-brand-lg md:h-[min(36rem,calc(100dvh-7.5rem))]"
         >
-          <header className="shrink-0 bg-navy text-cream px-md py-sm flex items-start justify-between gap-sm">
+          <header className="shrink-0 bg-blue text-cream px-md py-sm flex items-start justify-between gap-sm">
             <div>
               <p className="text-sm font-semibold text-cream mb-0">Chat with Natalie</p>
               <p className="text-xs text-cream/80 mb-0">Spring, TX REALTOR, HomeRock Realty</p>
@@ -128,7 +128,7 @@ export function NatalieChat() {
                   key={message.id}
                   className={
                     mine
-                      ? "text-sm text-white bg-navy rounded-xs px-sm py-xs ml-lg mb-0"
+                      ? "text-sm text-white bg-blue rounded-xs px-sm py-xs ml-lg mb-0"
                       : "text-sm text-navy bg-white border border-gray-light rounded-xs px-sm py-xs mr-lg mb-0"
                   }
                 >
@@ -230,7 +230,7 @@ export function NatalieChat() {
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="ml-auto flex items-center gap-xs rounded-full border-2 border-navy bg-[#f5eedc] px-md py-sm text-sm font-semibold text-navy shadow-brand-md hover:bg-white"
+        className="ml-auto flex items-center gap-xs rounded-full border-2 border-blue bg-cream px-md py-sm text-sm font-semibold text-navy shadow-brand-md hover:bg-white"
       >
         {open ? "Close chat" : "Ask Natalie"}
       </button>

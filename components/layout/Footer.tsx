@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { footerNav, formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { SocialIcons } from "@/components/layout/SocialIcons";
 import { Newsletter } from "@/components/forms/Newsletter";
@@ -9,7 +11,7 @@ const columns = [footerNav.learning, footerNav.resources, footerNav.company, foo
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-cream mt-3xl">
+    <footer className="bg-blue text-cream mt-3xl">
       <Container>
         {/* Brand + newsletter band */}
         <div className="grid grid-cols-[1.4fr_1fr] max-lg:grid-cols-1 gap-2xl py-2xl border-b border-white/10">
@@ -27,29 +29,20 @@ export function Footer() {
               Spring, TX REALTOR with HomeRock Realty. Serving {serviceRegion}, including{" "}
               {formatCityList(serviceAreas)}.
             </p>
+            <div className="flex flex-wrap items-center gap-sm mb-md">
+              <CallOrTextChoice variant="on-blue" size="small" />
+              <Button href="/booking" variant="on-blue" size="small">
+                Book a time
+              </Button>
+            </div>
             <ul className="list-none space-y-xs mb-lg text-sm">
               <li>
-                <a href={siteConfig.phoneHref} className="text-cream hover:text-gold">
-                  Call {siteConfig.phone}
-                </a>
-              </li>
-              <li>
-                <a href={siteConfig.smsHref} className="text-cream hover:text-gold">
-                  Text {siteConfig.phone}
-                </a>
-              </li>
-              <li>
-                <a href={siteConfig.emailHref} className="text-cream hover:text-gold">
+                <a href={siteConfig.emailHref} className="text-cream hover:text-white">
                   {siteConfig.email}
                 </a>
               </li>
               <li>
-                <Link href="/booking" className="text-cream hover:text-gold">
-                  Book a time
-                </Link>
-              </li>
-              <li>
-                <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="text-cream hover:text-gold">
+                <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="text-cream hover:text-white">
                   Leave a Google review
                 </a>
               </li>
@@ -76,7 +69,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-cream/85 text-sm hover:text-gold transition-colors"
+                      className="text-cream/85 text-sm hover:text-white transition-colors"
                       target={link.href.startsWith("http") ? "_blank" : undefined}
                       rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     >
@@ -94,17 +87,17 @@ export function Footer() {
           <p className="mb-xs">
             <span className="text-cream font-semibold">{siteConfig.name}</span>, REALTOR® · {siteConfig.brand} ·{" "}
             {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode} ·{" "}
-            <a href={siteConfig.phoneHref} className="text-cream underline hover:text-gold transition-colors">
+            <a href={siteConfig.phoneHref} className="text-cream underline hover:text-white transition-colors">
               {siteConfig.phone}
             </a>
           </p>
           <p>
             TREC License #{siteConfig.licenseNumber} ·{" "}
-            <a href={siteConfig.brokerage.iabsUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-gold transition-colors">
+            <a href={siteConfig.brokerage.iabsUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-white transition-colors">
               Information About Brokerage Services
             </a>{" "}
             ·{" "}
-            <a href={siteConfig.brokerage.consumerProtectionUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-gold transition-colors">
+            <a href={siteConfig.brokerage.consumerProtectionUrl} target="_blank" rel="noopener noreferrer" className="text-cream underline hover:text-white transition-colors">
               TREC Consumer Protection Notice
             </a>
           </p>
@@ -113,10 +106,10 @@ export function Footer() {
         <div className="pt-lg pb-lg flex justify-between items-center text-sm text-cream/70 max-md:flex-col max-md:gap-md max-md:text-center">
           <div>&copy; {new Date().getFullYear()} Natalie Pilkinton | HomeRock Realty. All rights reserved.</div>
           <div className="flex gap-lg">
-            <Link href="/privacy-policy" className="text-cream/70 hover:text-gold transition-colors">
+            <Link href="/privacy-policy" className="text-cream/70 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="text-cream/70 hover:text-gold transition-colors">
+            <Link href="/terms-of-service" className="text-cream/70 hover:text-white transition-colors">
               Terms of Service
             </Link>
           </div>

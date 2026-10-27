@@ -57,7 +57,7 @@ export default function VendorDirectoryPage() {
       vendor: "Natalie Pilkinton",
       contact: "Natalie Pilkinton",
       website: "natalie.homerockrealty.com",
-      color: "from-yellow-500 to-yellow-600",
+      color: "from-blue to-blue-hover",
     },
   ];
 
@@ -119,7 +119,7 @@ export default function VendorDirectoryPage() {
                     ) : (
                       <button
                         disabled
-                        className="w-full px-6 py-3 bg-gray-200 text-gray-500 font-semibold rounded-lg cursor-not-allowed opacity-60"
+                        className="w-full px-6 py-3 bg-white text-ink border-2 border-blue font-semibold rounded-lg cursor-not-allowed"
                       >
                         Contact for Info
                       </button>
@@ -169,7 +169,7 @@ export default function VendorDirectoryPage() {
               </div>
               <a
                 href="/vendor-sponsorship"
-                className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-blue-900 font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
+                className="inline-block w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue hover:bg-blue-hover text-white font-semibold rounded-lg transition-colors shadow-brand-md"
               >
                 Explore Vendor Sponsorship Options →
               </a>

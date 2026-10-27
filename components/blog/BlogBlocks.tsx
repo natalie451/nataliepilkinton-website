@@ -27,7 +27,7 @@ export function StatsGrid({ items }: { items: StatsBlock["items"] }) {
           key={stat.label}
           className="bg-cream border border-gray-light rounded-xs p-md text-center"
         >
-          <div className="text-xs uppercase tracking-[0.08em] text-gold-ink font-semibold mb-xs">
+          <div className="text-xs uppercase tracking-[0.08em] text-blue font-semibold mb-xs">
             {stat.label}
           </div>
           <div className="font-serif text-2xl text-navy font-bold leading-tight">
@@ -46,7 +46,7 @@ export function StatsGrid({ items }: { items: StatsBlock["items"] }) {
 
 export function Pullquote({ quote }: { quote: PullquoteBlock["quote"] }) {
   return (
-    <blockquote className="bg-cream border-l-4 border-gold rounded-xs px-lg py-md my-xl font-serif italic text-xl text-navy leading-relaxed">
+    <blockquote className="bg-cream border-l-4 border-blue rounded-xs px-lg py-md my-xl font-serif italic text-xl text-navy leading-relaxed">
       {quote}
     </blockquote>
   );
@@ -54,7 +54,7 @@ export function Pullquote({ quote }: { quote: PullquoteBlock["quote"] }) {
 
 const statusStyles: Record<NonNullable<NeighborhoodsBlock["items"][number]["status"]>, string> = {
   growing: "bg-emerald-50 text-emerald-800",
-  stable: "bg-gold/10 text-gold-ink",
+  stable: "bg-blue/10 text-blue",
   cooling: "bg-red-50 text-red-800",
 };
 
@@ -89,13 +89,13 @@ export function BuyerSellerCompare({ columns }: { columns: CompareBlock["columns
             key={col.heading}
             className={cn(
               "rounded-xs p-lg",
-              dark ? "bg-navy text-cream" : "bg-cream border border-gray-light text-ink",
+              dark ? "bg-blue text-cream" : "bg-cream border border-gray-light text-ink",
             )}
           >
             <h4
               className={cn(
                 "text-xs uppercase tracking-[0.08em] font-semibold mb-md",
-                dark ? "text-gold" : "text-gold-ink",
+                dark ? "text-cream" : "text-blue",
               )}
             >
               {col.heading}
@@ -114,8 +114,8 @@ export function BuyerSellerCompare({ columns }: { columns: CompareBlock["columns
 
 export function Takeaways({ heading, items }: { heading?: TakeawaysBlock["heading"]; items: TakeawaysBlock["items"] }) {
   return (
-    <div className="bg-navy rounded-xs p-lg my-xl">
-      <h3 className="text-xs uppercase tracking-[0.08em] text-gold font-semibold mb-md">
+    <div className="bg-blue rounded-xs p-lg my-xl">
+      <h3 className="text-xs uppercase tracking-[0.08em] text-cream font-semibold mb-md">
         {heading ?? "Key Takeaways"}
       </h3>
       <ul className="space-y-sm text-sm text-cream leading-relaxed list-disc pl-lg">
