@@ -15,9 +15,11 @@ export type PodcastEpisodeMeta = {
   title: string;
   summary: string;
   youtubeId: string | null;
-  /** YYYY-MM-DD from the matched YouTube video. */
+  /** Publish time from the matched YouTube video. Date only, or a full ISO timestamp. */
   published: string | null;
   publishedLabel: string | null;
+  /** ISO 8601 duration, such as PT45M33S, when YouTube reports a length. */
+  duration?: string | null;
   sortKey: number;
 };
 

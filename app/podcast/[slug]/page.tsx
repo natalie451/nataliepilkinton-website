@@ -76,6 +76,7 @@ export default async function PodcastEpisodePage({ params }: { params: Promise<P
       contentUrl: videoUrl,
       url: pageUrl,
       ...(episode.published ? { uploadDate: episode.published } : {}),
+      ...(episode.duration ? { duration: episode.duration } : {}),
     };
     graph.push(video);
     episodeSchema.associatedMedia = video;

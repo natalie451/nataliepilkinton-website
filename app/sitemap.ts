@@ -74,7 +74,9 @@ const staticPaths = [
 /** "August 5, 2026" → Date, or undefined when the text isn't a date. */
 function parseDate(value?: string): Date | undefined {
   if (!value) return undefined;
-  const ms = Date.parse(value.length > 10 ? `${value} 12:00 UTC` : `${value}T12:00:00Z`);
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/.test(value);
+  const isoInstant = /^\d{4}-\d{2}-\d{2}T/.test(value);
+  const ms = Date.parse(isoDate ? `${value}T12:00:00Z` : isoInstant ? value : `${value} 12:00 UTC`);
   return Number.isNaN(ms) ? undefined : new Date(ms);
 }
 
