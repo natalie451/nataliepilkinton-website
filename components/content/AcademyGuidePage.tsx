@@ -76,7 +76,19 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       <script {...jsonLdScriptProps(faqSchema(guide.faqs.map((faq) => ({ question: faq.question, answer: plain(faq.answer) }))))} />
 
       <BreadcrumbBar items={guide.breadcrumbs} />
-      <Hero title={guide.h1} subheading={guide.subheading} align="left" />
+      <Hero title={guide.h1} subheading={guide.subheading} align="left">
+        {guide.cta.bookHref && (
+          <ContactActions
+            tone="on-dark"
+            size="large"
+            showEmail={false}
+            bookHref={guide.cta.bookHref}
+            bookLabel="Book a call"
+            className="max-sm:flex-nowrap"
+            buttonClassName="max-sm:min-h-11 max-sm:w-auto max-sm:flex-1 max-sm:px-sm max-sm:py-2 max-sm:text-sm"
+          />
+        )}
+      </Hero>
 
       <Section>
         <Container className="max-w-[52rem]">
@@ -103,6 +115,41 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
               </p>
             ))}
           </div>
+
+          {guide.sponsor && (
+            <aside id="jet-lending" className="mb-2xl rounded-xs border border-blue/30 bg-cream p-lg shadow-brand-sm">
+              <div className="flex flex-wrap items-center gap-sm mb-md">
+                <p className="m-0 text-xs font-semibold uppercase tracking-[0.14em] text-blue">Investor Friendly Vendor</p>
+                <span className="rounded-xs border border-blue bg-white px-sm py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue">
+                  Sponsored
+                </span>
+              </div>
+              <div className="flex flex-col gap-lg sm:flex-row sm:items-center">
+                <Image
+                  src={guide.sponsor.logoSrc}
+                  alt={`${guide.sponsor.name} logo`}
+                  width={guide.sponsor.logoWidth}
+                  height={guide.sponsor.logoHeight}
+                  className="h-24 w-auto shrink-0 rounded-xs bg-white object-contain"
+                />
+                <div>
+                  <h2 className="mt-0 mb-xs text-2xl">{guide.sponsor.name}</h2>
+                  <p className="mb-sm text-navy">
+                    {guide.sponsor.category}, {guide.sponsor.area}.
+                  </p>
+                  <p className="mb-md text-gray-dark">Member offer: {guide.sponsor.offer}</p>
+                  <p className="mb-0 flex flex-wrap gap-md text-sm font-semibold">
+                    <a href={guide.sponsor.website} target="_blank" rel="sponsored noopener" className="text-blue underline underline-offset-2">
+                      jetlending.com
+                    </a>
+                    <a href={guide.sponsor.phoneHref} className="text-blue underline underline-offset-2">
+                      {guide.sponsor.phone}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </aside>
+          )}
 
           {guide.sections.map((section) => (
             <section key={section.heading} className="mb-2xl">
@@ -215,7 +262,11 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
             </section>
           )}
 
-          {guide.showMeetup && <MeetupCallout />}
+          {guide.showMeetup && (
+            <div id="investor-meetup">
+              <MeetupCallout />
+            </div>
+          )}
           {guide.showSeminar && <BuyerSeminarCallout />}
 
           <section className="mb-2xl">
@@ -267,10 +318,24 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       </Section>
 
       <CTA title={guide.cta.title} description={guide.cta.description}>
-        <Button href="/booking" variant="primary">
-          {guide.cta.label}
-        </Button>
-        <ContactActions tone="on-dark" showBook={false} />
+        {guide.cta.bookHref ? (
+          <ContactActions
+            tone="on-dark"
+            size="large"
+            showEmail={false}
+            bookHref={guide.cta.bookHref}
+            bookLabel="Book a call"
+            className="max-sm:flex-nowrap"
+            buttonClassName="max-sm:min-h-11 max-sm:w-auto max-sm:flex-1 max-sm:px-sm max-sm:py-2 max-sm:text-sm"
+          />
+        ) : (
+          <>
+            <Button href="/booking" variant="primary">
+              {guide.cta.label}
+            </Button>
+            <ContactActions tone="on-dark" showBook={false} />
+          </>
+        )}
       </CTA>
     </>
   );

@@ -126,6 +126,7 @@ export const multifamilyGuide: AcademyGuide = {
   ],
   related: [
     { label: "Passive investing", href: "/investors/passive", description: "Investing alongside an operator." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lenders and partners who want to fund real estate deals." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "How lenders measure income against debt." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
     { label: "How to start investing", href: "/investors/beginner", description: "The fundamentals before your first deal." },
@@ -198,7 +199,7 @@ export const passiveGuide: AcademyGuide = {
       bullets: [
         "Real estate investment trusts (REITs), which trade like stocks and can be sold quickly.",
         "Private real estate funds that hold several properties.",
-        "Private lending secured by real estate. See [private lending](/investors/private-lending).",
+        "Lenders and partners who want to fund real estate deals. See [private lending and partnerships](/investors/private-lending).",
         "Owning rentals with a property manager handling the day-to-day. That is less passive, but you keep control. See [how to start investing](/investors/beginner).",
         "Investing retirement money through a self-directed IRA, which must follow strict IRS rules. Work with a custodian and CPA.",
       ],
@@ -246,7 +247,7 @@ export const passiveGuide: AcademyGuide = {
   ],
   related: [
     { label: "Multifamily investing", href: "/investors/multifamily", description: "How apartment deals are valued and run." },
-    { label: "Private lending", href: "/investors/private-lending", description: "Another way to invest without managing property." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lenders and partners who want to fund real estate deals." },
     { label: "How to start investing", href: "/investors/beginner", description: "Owning rentals directly, before a syndication." },
   ],
   sources: [
