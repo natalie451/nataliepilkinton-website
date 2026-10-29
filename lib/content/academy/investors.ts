@@ -477,6 +477,18 @@ export const privateLendingGuide: AcademyGuide = {
   ],
   disclaimer:
     "This page is not an offer to lend, borrow, or invest, and it is not an offer of securities or a guarantee of any result. Terms are discussed one on one. This is not legal, tax, or financial advice.",
+  sponsor: {
+    name: "Jet Lending",
+    category: "Hard Money Lending",
+    area: "serving Texas",
+    offer: "free consultation and free appraisal in the Houston metro area.",
+    website: "https://jetlending.com",
+    phone: "(281) 872-7800",
+    phoneHref: "tel:+12818727800",
+    logoSrc: "/images/jet-lending.jpg",
+    logoWidth: 400,
+    logoHeight: 344,
+  },
   showMeetup: true,
   cta: {
     title: "Talk with Natalie about lending or partnering",

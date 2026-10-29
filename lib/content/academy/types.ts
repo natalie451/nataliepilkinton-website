@@ -54,6 +54,19 @@ export type AcademyGuide = {
   sources?: { label: string; url: string }[];
   /** Shown above sources; for lending, tax and legal topics. */
   disclaimer?: string;
+  /** Investor-friendly vendor card. Facts only. Never labeled Premier. */
+  sponsor?: {
+    name: string;
+    category: string;
+    area: string;
+    offer: string;
+    website: string;
+    phone: string;
+    phoneHref: string;
+    logoSrc: string;
+    logoWidth: number;
+    logoHeight: number;
+  };
   /** Show the monthly investor meetup callout before the FAQs. */
   showMeetup?: boolean;
   /** Show the next home buyer seminar (Eventbrite) before the FAQs. */

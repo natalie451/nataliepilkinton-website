@@ -116,6 +116,41 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
             ))}
           </div>
 
+          {guide.sponsor && (
+            <aside id="jet-lending" className="mb-2xl rounded-xs border border-blue/30 bg-cream p-lg shadow-brand-sm">
+              <div className="flex flex-wrap items-center gap-sm mb-md">
+                <p className="m-0 text-xs font-semibold uppercase tracking-[0.14em] text-blue">Investor Friendly Vendor</p>
+                <span className="rounded-xs border border-blue bg-white px-sm py-1 text-xs font-semibold uppercase tracking-[0.08em] text-blue">
+                  Sponsored
+                </span>
+              </div>
+              <div className="flex flex-col gap-lg sm:flex-row sm:items-center">
+                <Image
+                  src={guide.sponsor.logoSrc}
+                  alt={`${guide.sponsor.name} logo`}
+                  width={guide.sponsor.logoWidth}
+                  height={guide.sponsor.logoHeight}
+                  className="h-24 w-auto shrink-0 rounded-xs bg-white object-contain"
+                />
+                <div>
+                  <h2 className="mt-0 mb-xs text-2xl">{guide.sponsor.name}</h2>
+                  <p className="mb-sm text-navy">
+                    {guide.sponsor.category}, {guide.sponsor.area}.
+                  </p>
+                  <p className="mb-md text-gray-dark">Member offer: {guide.sponsor.offer}</p>
+                  <p className="mb-0 flex flex-wrap gap-md text-sm font-semibold">
+                    <a href={guide.sponsor.website} target="_blank" rel="sponsored noopener" className="text-blue underline underline-offset-2">
+                      jetlending.com
+                    </a>
+                    <a href={guide.sponsor.phoneHref} className="text-blue underline underline-offset-2">
+                      {guide.sponsor.phone}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </aside>
+          )}
+
           {guide.sections.map((section) => (
             <section key={section.heading} className="mb-2xl">
               <h2>{section.heading}</h2>
