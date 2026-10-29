@@ -125,7 +125,7 @@ export const beginnerGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Buy, rehab, rent, refinance and repeat." },
-    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lenders and partners who want to fund real estate deals." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "Qualify on the property's rent, not your W-2." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
     { label: "Houston market update", href: "/market-updates", description: "What this month's numbers mean for investors." },
@@ -268,7 +268,7 @@ export const brrrrGuide: AcademyGuide = {
   ],
   related: [
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The loan most BRRRR investors refinance into." },
-    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lenders and partners who want to fund real estate deals." },
     { label: "How to start investing", href: "/investors/beginner", description: "The fundamentals before your first deal." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
   ],
@@ -378,7 +378,7 @@ export const dscrGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where DSCR refinances fit in the cycle." },
-    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lenders and partners who want to fund real estate deals." },
     { label: "How to start investing", href: "/investors/beginner", description: "How much you need for your first rental." },
     { label: "Houston property taxes", href: "/blog/market-news/houston-property-taxes", description: "Why taxes drive the payment." },
     { label: "Financing options for buyers", href: "/buyers/financing", description: "Loan programs if you'll live in the home." },
@@ -397,10 +397,9 @@ export const privateLendingGuide: AcademyGuide = {
   path: "/investors/private-lending",
   metaTitle: "Private Lending and Partnerships in Houston and Spring",
   metaDescription:
-    "Natalie Pilkinton is looking for private lenders and deal partners on her Houston and Spring investment properties. Terms are discussed one on one. Not an offer or a guarantee.",
+    "Private lenders and partners who want to fund real estate deals in Houston and Spring. Terms are discussed one on one. Not an offer or a guarantee.",
   h1: "Private Lending and Partnership Opportunities in Houston and Spring, TX",
-  subheading:
-    "Natalie is looking for private lenders who want to lend on her deals, and for partners who want to co-invest with her.",
+  subheading: "For lenders and partners who want to fund real estate deals in Spring and Greater Houston.",
   dateModified: "2026-10-29",
   breadcrumbs: [
     { name: "Investors", path: "/investors" },
@@ -408,27 +407,27 @@ export const privateLendingGuide: AcademyGuide = {
   ],
   datePublished: DATE,
   shortAnswer: [
-    "Natalie Pilkinton buys and invests in property in Spring, Houston, and Greater Houston. She is looking for private money lenders who want to lend to her on her deals, and for partners who want to co-invest or joint venture with her.",
-    "She does not offer loans, and she does not lend money to other people. Any rate, split, timeline, or other terms are discussed one on one about a specific property. Nothing on this page is a term sheet, a promised return, a guarantee, or an offer of securities.",
+    "This page is for private lenders and partners who want to fund real estate deals in Houston, Spring, and Greater Houston.",
+    "Natalie does not offer loans, and she does not lend money to other people. Any rate, split, timeline, or other terms are discussed one on one about a specific property. Nothing on this page is a term sheet, a promised return, a guarantee, or an offer of securities.",
   ],
   sections: [
     {
-      heading: "Who this page is for",
+      heading: "Fund Deals",
       bullets: [
-        "Private lenders who want to fund one of Natalie's investment properties.",
-        "Partners who want to co-invest or joint venture with her on a deal.",
-        "People who already invest, and people who want to look at a real Houston or Spring property with her before they decide.",
+        "Private lenders who want to fund real estate deals.",
+        "Partners who want to co-invest or joint venture on a real estate deal.",
+        "People who already invest, and people who want to talk through a Houston or Spring property before they decide.",
       ],
     },
     {
       heading: "What lenders and partners can expect",
       paragraphs: [
-        "A first conversation is about a specific property, not a published rate or return. Natalie will describe the property, how she plans to buy it, and whether the role you are discussing is a loan to her or a partnership.",
+        "A first conversation is about a specific property, not a published rate or return. You can ask whether the role being discussed is a loan or a partnership.",
       ],
       bullets: [
         "Terms are discussed one on one. They are not listed on this page.",
         "If you move forward, the paperwork is written for that deal. Have your own attorney review it before you send money.",
-        "You can ask how you would be paid, or how you would share in the deal. She will not promise a result.",
+        "You can ask how you would be paid, or how you would share in the deal. No result is promised.",
         "Real estate deals can lose money. A conversation is not a guarantee.",
       ],
     },
@@ -445,12 +444,12 @@ export const privateLendingGuide: AcademyGuide = {
     {
       question: "Does Natalie offer loans or lend money?",
       answer:
-        "No. She does not offer loans and she does not lend money to other people. She is looking for private lenders who want to lend to her on her deals, and for partners who want to co-invest or joint venture with her.",
+        "No. She does not offer loans and she does not lend money to other people. This page is for private lenders and partners who want to fund real estate deals.",
     },
     {
-      question: "What deals is she looking for lenders or partners on?",
+      question: "What deals can lenders and partners talk about?",
       answer:
-        "Her own investment properties in Houston, Spring, and Greater Houston. She will describe the property when you talk. This page does not list a current deal, a price, or a return.",
+        "Real estate deals in Houston, Spring, and Greater Houston. The property is described in the conversation. This page does not list a current deal, a price, or a return.",
     },
     {
       question: "What rate, return, or split should I expect?",
@@ -458,9 +457,9 @@ export const privateLendingGuide: AcademyGuide = {
         "None is published here. Those terms are discussed one on one and depend on the property. That conversation is not a guarantee, and it is not an offer of securities.",
     },
     {
-      question: "How is a partnership different from a loan to Natalie?",
+      question: "How is a partnership different from a loan?",
       answer:
-        "A loan is money you lend to her, usually repaid under documents written for that deal. A partnership or joint venture means investing alongside her. Which one fits is discussed per property. Have your own attorney review anything before you send money.",
+        "A loan is money you lend on a deal, usually repaid under documents written for that property. A partnership or joint venture means investing alongside others on a deal. Which one fits is discussed per property. Have your own attorney review anything before you send money.",
     },
     {
       question: "How do I talk with her about lending or partnering?",
@@ -493,7 +492,7 @@ export const privateLendingGuide: AcademyGuide = {
   cta: {
     title: "Talk with Natalie about lending or partnering",
     description:
-      "Call or text, or book a call, if you want to lend on one of her deals or co-invest with her. Terms are discussed one on one. This is not an offer of securities or a guarantee.",
+      "Call or text, or book a call, if you want to fund a real estate deal or partner on one. Terms are discussed one on one. This is not an offer of securities or a guarantee.",
     label: "Book a call",
     bookHref: "https://calendly.com/nataliepilkinton",
   },

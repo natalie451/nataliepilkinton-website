@@ -47,7 +47,7 @@ const learningPath: { step: string; guides: Guide[] }[] = [
       {
         category: "Guide",
         title: "Private Lending",
-        description: "Natalie is looking for private lenders and deal partners, plus her investor meetup.",
+        description: "For lenders and partners who want to fund real estate deals, plus the investor meetup.",
         href: "/investors/private-lending",
       },
     ],
