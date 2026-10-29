@@ -76,7 +76,19 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       <script {...jsonLdScriptProps(faqSchema(guide.faqs.map((faq) => ({ question: faq.question, answer: plain(faq.answer) }))))} />
 
       <BreadcrumbBar items={guide.breadcrumbs} />
-      <Hero title={guide.h1} subheading={guide.subheading} align="left" />
+      <Hero title={guide.h1} subheading={guide.subheading} align="left">
+        {guide.cta.bookHref && (
+          <ContactActions
+            tone="on-dark"
+            size="large"
+            showEmail={false}
+            bookHref={guide.cta.bookHref}
+            bookLabel="Book a call"
+            className="max-sm:flex-nowrap"
+            buttonClassName="max-sm:min-h-11 max-sm:w-auto max-sm:flex-1 max-sm:px-sm max-sm:py-2 max-sm:text-sm"
+          />
+        )}
+      </Hero>
 
       <Section>
         <Container className="max-w-[52rem]">
@@ -215,7 +227,11 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
             </section>
           )}
 
-          {guide.showMeetup && <MeetupCallout />}
+          {guide.showMeetup && (
+            <div id="investor-meetup">
+              <MeetupCallout />
+            </div>
+          )}
           {guide.showSeminar && <BuyerSeminarCallout />}
 
           <section className="mb-2xl">
@@ -267,10 +283,24 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
       </Section>
 
       <CTA title={guide.cta.title} description={guide.cta.description}>
-        <Button href="/booking" variant="primary">
-          {guide.cta.label}
-        </Button>
-        <ContactActions tone="on-dark" showBook={false} />
+        {guide.cta.bookHref ? (
+          <ContactActions
+            tone="on-dark"
+            size="large"
+            showEmail={false}
+            bookHref={guide.cta.bookHref}
+            bookLabel="Book a call"
+            className="max-sm:flex-nowrap"
+            buttonClassName="max-sm:min-h-11 max-sm:w-auto max-sm:flex-1 max-sm:px-sm max-sm:py-2 max-sm:text-sm"
+          />
+        ) : (
+          <>
+            <Button href="/booking" variant="primary">
+              {guide.cta.label}
+            </Button>
+            <ContactActions tone="on-dark" showBook={false} />
+          </>
+        )}
       </CTA>
     </>
   );

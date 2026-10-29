@@ -126,6 +126,7 @@ export const multifamilyGuide: AcademyGuide = {
   ],
   related: [
     { label: "Passive investing", href: "/investors/passive", description: "Investing alongside an operator." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Non-bank money secured by investment property." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "How lenders measure income against debt." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
     { label: "How to start investing", href: "/investors/beginner", description: "The fundamentals before your first deal." },

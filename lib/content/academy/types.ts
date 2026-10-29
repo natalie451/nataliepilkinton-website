@@ -58,5 +58,11 @@ export type AcademyGuide = {
   showMeetup?: boolean;
   /** Show the next home buyer seminar (Eventbrite) before the FAQs. */
   showSeminar?: boolean;
-  cta: { title: string; description: string; label: string };
+  cta: {
+    title: string;
+    description: string;
+    label: string;
+    /** When set, the closing band uses Call or text plus Book a call on this URL. */
+    bookHref?: string;
+  };
 };

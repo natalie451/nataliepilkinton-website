@@ -14,6 +14,10 @@ type ContactActionsProps = {
   layout?: "inline" | "equal" | "hero";
   /** Defaults to the on-site booking page. Pass the Calendly URL when the button should open that calendar. */
   bookHref?: string;
+  /** Visible label on the booking button. */
+  bookLabel?: string;
+  /** Extra classes on each action button. */
+  buttonClassName?: string;
   className?: string;
 };
 
@@ -26,6 +30,8 @@ export function ContactActions({
   showReview = false,
   layout = "inline",
   bookHref = "/booking",
+  bookLabel = "Book a time",
+  buttonClassName,
   className,
 }: ContactActionsProps) {
   const onBlue = tone === "on-dark";
@@ -61,8 +67,8 @@ export function ContactActions({
       <CallOrTextChoice
         variant={callVariant}
         size={size}
-        className={hero ? "min-w-0 w-full" : stretch}
-        buttonClassName={hero ? heroButton : undefined}
+        className={hero ? "min-w-0 w-full" : cn(stretch, buttonClassName)}
+        buttonClassName={hero ? heroButton : buttonClassName ? cn(stretch, buttonClassName) : undefined}
       />
       {showBook && (
         <Button
@@ -70,9 +76,9 @@ export function ContactActions({
           external={bookHref.startsWith("http")}
           variant={secondary}
           size={size}
-          className={hero ? heroButton : stretch}
+          className={cn(hero ? heroButton : stretch, buttonClassName)}
         >
-          Book a time
+          {bookLabel}
         </Button>
       )}
       {showEmail && (

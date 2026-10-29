@@ -125,6 +125,7 @@ export const beginnerGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Buy, rehab, rent, refinance and repeat." },
+    { label: "Private lending", href: "/investors/private-lending", description: "How private money funds a purchase or rehab." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "Qualify on the property's rent, not your W-2." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
     { label: "Houston market update", href: "/market-updates", description: "What this month's numbers mean for investors." },
@@ -377,6 +378,7 @@ export const dscrGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where DSCR refinances fit in the cycle." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Short-term money before a long-term refinance." },
     { label: "How to start investing", href: "/investors/beginner", description: "How much you need for your first rental." },
     { label: "Houston property taxes", href: "/blog/market-news/houston-property-taxes", description: "Why taxes drive the payment." },
     { label: "Financing options for buyers", href: "/buyers/financing", description: "Loan programs if you'll live in the home." },
@@ -393,19 +395,21 @@ export const dscrGuide: AcademyGuide = {
 
 export const privateLendingGuide: AcademyGuide = {
   path: "/investors/private-lending",
-  metaTitle: "Private Lending for Real Estate Investors in Texas",
+  metaTitle: "Private Lending in Houston and Spring, TX",
   metaDescription:
-    "How private money loans work for Texas real estate investors: what they fund, how they're documented, the risks for lenders and borrowers, and questions to ask first.",
-  h1: "How Does Private Lending Work in Real Estate?",
-  subheading: "What borrowers and private lenders should understand before money changes hands",
+    "Private lending in Houston and Spring: what private money funds, how Texas loans are documented, and what to ask. Not an offer to lend.",
+  h1: "Private Lending in Houston and Spring, TX",
+  subheading:
+    "How private money is used on investment property in Spring and Greater Houston, and what to ask before you lend or borrow.",
+  dateModified: "2026-10-29",
   breadcrumbs: [
     { name: "Investors", path: "/investors" },
     { name: "Private Lending", path: "/investors/private-lending" },
   ],
   datePublished: DATE,
   shortAnswer: [
-    "Private lending is when an individual or small company (not a bank) lends money to a real estate investor, secured by the property. Investors use it to buy and rehab properties quickly, then pay it off by selling or refinancing into a long-term loan.",
-    "In Texas the loan is usually documented with a promissory note and a recorded deed of trust. Both sides should use a Texas real estate attorney, because usury, licensing and homestead rules all apply.",
+    "Private lending is when an individual or small company, not a bank, lends money to a real estate investor, usually secured by the property. In Houston, Spring, and the rest of Greater Houston, investors use it to buy and rehab property faster than a bank closing, then pay it off by selling or refinancing.",
+    "In Texas the loan is usually documented with a promissory note and a recorded deed of trust. Both sides should use a Texas real estate attorney, because usury, licensing, and homestead rules can apply. This page is education only. It is not an offer to lend, borrow, or invest, and it is not legal or financial advice.",
   ],
   sections: [
     {
@@ -481,7 +485,12 @@ export const privateLendingGuide: AcademyGuide = {
     {
       question: "Does Natalie offer private lending?",
       answer:
-        "No. For long-term and DSCR financing, Natalie works with Brian Lupton at HomeRock Mortgage. This page is education only and isn't an offer to lend or invest. To talk through a specific deal, [book a strategy session](/booking).",
+        "No. Natalie does not lend private money. For long-term and DSCR financing, she works with Brian Lupton at HomeRock Mortgage. This page is education only and is not an offer to lend or invest. Call or text (832) 863-3468, or [book a call](https://calendly.com/nataliepilkinton), if you want to talk about a property.",
+    },
+    {
+      question: "Where can Houston and Spring investors meet in person?",
+      answer:
+        "Natalie hosts the monthly Spring/Woodlands Passive & Active Real Estate Investing meetup for investors and Realtors. The group page on Meetup.com is where you see the next date, time, and place, and where you RSVP. This site does not publish a standing weekday or a fixed venue.",
     },
   ],
   related: [
@@ -489,6 +498,7 @@ export const privateLendingGuide: AcademyGuide = {
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The long-term refinance after private money." },
     { label: "How to start investing", href: "/investors/beginner", description: "What to look for in a first rental." },
     { label: "Investor-friendly vendors", href: "/investors/vendors", description: "Lenders, title and contractors who work with investors." },
+    { label: "All investor guides", href: "/investors", description: "Start here for Spring and Greater Houston investing." },
   ],
   sources: [
     { label: "HomeRock Mortgage: Loan officers", url: "https://www.homerockmortgage.com/loan-officer" },
@@ -496,8 +506,15 @@ export const privateLendingGuide: AcademyGuide = {
     { label: "Supreme Court of Texas: American Pearl Group v. National Payment Systems, No. 24-0759 (May 23, 2025)", url: "https://www.txcourts.gov/media/1460588/240759.pdf" },
   ],
   disclaimer:
-    "This guide is general education, not legal or financial advice, and not an offer to lend, borrow or invest. Private loans in Texas involve usury, licensing, homestead and securities rules; work with a Texas real estate attorney.",
-  cta: investorBooking,
+    "This guide is general education, not legal or financial advice, and not an offer to lend, borrow, or invest. Private loans in Texas involve usury, licensing, homestead, and securities rules. Work with a Texas real estate attorney before money changes hands.",
+  showMeetup: true,
+  cta: {
+    title: "Talk with Natalie about a property",
+    description:
+      "Call or text, or book a call, if you have a question about a property in Spring or Greater Houston. This is a conversation, not lending, legal, or investment advice.",
+    label: "Book a call",
+    bookHref: "https://calendly.com/nataliepilkinton",
+  },
 };
 
 export const investorGuides = [beginnerGuide, brrrrGuide, dscrGuide, privateLendingGuide];

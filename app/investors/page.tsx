@@ -47,7 +47,7 @@ const learningPath: { step: string; guides: Guide[] }[] = [
       {
         category: "Guide",
         title: "Private Lending",
-        description: "How private money funds purchases and rehabs, and the risks on both sides.",
+        description: "How private money funds purchases and rehabs, and where to find Natalie's investor meetup.",
         href: "/investors/private-lending",
       },
     ],
@@ -150,6 +150,13 @@ export default function InvestorsPage() {
       <Section>
         <Container className="max-w-[52rem]">
           <MeetupCallout withSchema />
+          <p className="text-gray-dark">
+            The same meetup is covered on the{" "}
+            <Link href="/investors/private-lending#investor-meetup" className="text-blue underline underline-offset-2 hover:text-navy">
+              private lending page
+            </Link>
+            , with the group name and the Meetup.com link.
+          </p>
           <p className="text-gray-dark">
             Between meetups, Natalie&rsquo;s monthly{" "}
             <Link href="/market-updates" className="text-blue underline underline-offset-2 hover:text-navy">
