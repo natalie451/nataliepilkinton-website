@@ -47,7 +47,7 @@ const learningPath: { step: string; guides: Guide[] }[] = [
       {
         category: "Guide",
         title: "Private Lending",
-        description: "How private money funds purchases and rehabs, and where to find Natalie's investor meetup.",
+        description: "Natalie is looking for private lenders and deal partners, plus her investor meetup.",
         href: "/investors/private-lending",
       },
     ],

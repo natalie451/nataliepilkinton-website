@@ -125,7 +125,7 @@ export const beginnerGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Buy, rehab, rent, refinance and repeat." },
-    { label: "Private lending", href: "/investors/private-lending", description: "How private money funds a purchase or rehab." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "Qualify on the property's rent, not your W-2." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
     { label: "Houston market update", href: "/market-updates", description: "What this month's numbers mean for investors." },
@@ -268,7 +268,7 @@ export const brrrrGuide: AcademyGuide = {
   ],
   related: [
     { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The loan most BRRRR investors refinance into." },
-    { label: "Private lending", href: "/investors/private-lending", description: "How private money funds purchases and rehabs." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
     { label: "How to start investing", href: "/investors/beginner", description: "The fundamentals before your first deal." },
     { label: "How to analyze an investment property", href: "/blog/investing/analyze-investment-properties", description: "Cap rate, cash-on-cash and DSCR." },
   ],
@@ -378,7 +378,7 @@ export const dscrGuide: AcademyGuide = {
   ],
   related: [
     { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where DSCR refinances fit in the cycle." },
-    { label: "Private lending", href: "/investors/private-lending", description: "Short-term money before a long-term refinance." },
+    { label: "Private lending", href: "/investors/private-lending", description: "Lend on one of Natalie's deals, or partner with her." },
     { label: "How to start investing", href: "/investors/beginner", description: "How much you need for your first rental." },
     { label: "Houston property taxes", href: "/blog/market-news/houston-property-taxes", description: "Why taxes drive the payment." },
     { label: "Financing options for buyers", href: "/buyers/financing", description: "Loan programs if you'll live in the home." },
@@ -395,12 +395,12 @@ export const dscrGuide: AcademyGuide = {
 
 export const privateLendingGuide: AcademyGuide = {
   path: "/investors/private-lending",
-  metaTitle: "Private Lending in Houston and Spring, TX",
+  metaTitle: "Private Lending and Partnerships in Houston and Spring",
   metaDescription:
-    "Private lending in Houston and Spring: what private money funds, how Texas loans are documented, and what to ask. Not an offer to lend.",
-  h1: "Private Lending in Houston and Spring, TX",
+    "Natalie Pilkinton is looking for private lenders and deal partners on her Houston and Spring investment properties. Terms are discussed one on one. Not an offer or a guarantee.",
+  h1: "Private Lending and Partnership Opportunities in Houston and Spring, TX",
   subheading:
-    "How private money is used on investment property in Spring and Greater Houston, and what to ask before you lend or borrow.",
+    "Natalie is looking for private lenders who want to lend on her deals, and for partners who want to co-invest with her.",
   dateModified: "2026-10-29",
   breadcrumbs: [
     { name: "Investors", path: "/investors" },
@@ -408,110 +408,80 @@ export const privateLendingGuide: AcademyGuide = {
   ],
   datePublished: DATE,
   shortAnswer: [
-    "Private lending is when an individual or small company, not a bank, lends money to a real estate investor, usually secured by the property. In Houston, Spring, and the rest of Greater Houston, investors use it to buy and rehab property faster than a bank closing, then pay it off by selling or refinancing.",
-    "In Texas the loan is usually documented with a promissory note and a recorded deed of trust. Both sides should use a Texas real estate attorney, because usury, licensing, and homestead rules can apply. This page is education only. It is not an offer to lend, borrow, or invest, and it is not legal or financial advice.",
+    "Natalie Pilkinton buys and invests in property in Spring, Houston, and Greater Houston. She is looking for private money lenders who want to lend to her on her deals, and for partners who want to co-invest or joint venture with her.",
+    "She does not offer loans, and she does not lend money to other people. Any rate, split, timeline, or other terms are discussed one on one about a specific property. Nothing on this page is a term sheet, a promised return, a guarantee, or an offer of securities.",
   ],
   sections: [
     {
-      heading: "What private money is used for",
+      heading: "Who this page is for",
       bullets: [
-        "Buying a distressed property fast, often for cash, before a bank would close.",
-        "Funding the rehab on a flip or a [BRRRR](/investors/brrrr) project.",
-        "Bridging the gap until the property is seasoned for a long-term refinance, such as a [DSCR loan](/investors/dscr-loans-texas).",
+        "Private lenders who want to fund one of Natalie's investment properties.",
+        "Partners who want to co-invest or joint venture with her on a deal.",
+        "People who already invest, and people who want to look at a real Houston or Spring property with her before they decide.",
       ],
     },
     {
-      heading: "How a private loan is usually documented",
+      heading: "What lenders and partners can expect",
+      paragraphs: [
+        "A first conversation is about a specific property, not a published rate or return. Natalie will describe the property, how she plans to buy it, and whether the role you are discussing is a loan to her or a partnership.",
+      ],
       bullets: [
-        "A promissory note setting out the amount, rate, term, payments and default terms.",
-        "A deed of trust recorded in the county, giving the lender a lien on the property.",
-        "A lender's title insurance policy confirming the lien position, usually first lien.",
-        "Hazard insurance naming the lender, and a clear draw schedule if rehab funds are held back.",
-        "A loan amount sized to a conservative share of the property's value, so there's a cushion if the borrower can't finish.",
+        "Terms are discussed one on one. They are not listed on this page.",
+        "If you move forward, the paperwork is written for that deal. Have your own attorney review it before you send money.",
+        "You can ask how you would be paid, or how you would share in the deal. She will not promise a result.",
+        "Real estate deals can lose money. A conversation is not a guarantee.",
       ],
     },
     {
-      heading: "Risks to understand",
-      paragraphs: ["For lenders:"],
+      heading: "What this page is not",
       bullets: [
-        "The borrower defaults or the rehab stalls, and the property is worth less than expected.",
-        "Usury: Texas caps the interest that can be charged, and how the cap is calculated is technical. The Texas Supreme Court addressed it again in 2025.",
-        "Licensing and consumer rules can apply depending on the borrower and how the property is used.",
-        "Texas homestead protections strictly limit loans against a borrower's own home; private loans should be on investment property.",
-        "Pooling money from several people into one fund can turn the arrangement into a securities offering.",
-      ],
-    },
-    {
-      heading: "Questions to ask before you lend or borrow",
-      bullets: [
-        "What is the exit: a sale, or a refinance with a lender who has already reviewed the deal?",
-        "What is the as-is value and the after-repair value, and who determined them?",
-        "What happens if the rehab runs 60 days late or 20% over budget?",
-        "Who holds the rehab funds, and what triggers each draw?",
-        "Has a Texas real estate attorney drafted the note and deed of trust?",
+        "Not an offer to lend money to you, and not a loan program.",
+        "Not a securities offering, a fund, or a solicitation to buy a security.",
+        "Not legal, tax, or financial advice. Talk with your own attorney and tax advisor before you commit money.",
       ],
     },
   ],
-  natalieTake: {
-    heading: "Trust, but verify",
-    paragraphs: [
-      "Be very careful who you work with, how you pay them and what you give them access to. Don't trust everybody right away.",
-      "Do your diligence. Check that the payment is going to the name you expect, get everything in writing, keep copies of IDs, and put every change on paper.",
-    ],
-  },
-  recommended: {
-    heading: "Who Natalie works with on financing",
-    intro:
-      "For the long-term loan you refinance into, including DSCR loans, Natalie works with Brian Lupton at HomeRock Mortgage.",
-    providers: [homeRockMortgage],
-    disclosure: lenderDisclosure,
-  },
   faqs: [
     {
-      question: "What's the difference between private money and hard money?",
+      question: "Does Natalie offer loans or lend money?",
       answer:
-        "Both are non-bank loans secured by real estate. \"Hard money\" usually means a company that lends to investors as a business, with set rates and points. \"Private money\" often means an individual lender, with terms negotiated deal by deal.",
+        "No. She does not offer loans and she does not lend money to other people. She is looking for private lenders who want to lend to her on her deals, and for partners who want to co-invest or joint venture with her.",
     },
     {
-      question: "Is private lending legal in Texas?",
+      question: "What deals is she looking for lenders or partners on?",
       answer:
-        "Yes, but it's regulated. Texas usury law caps interest, and licensing and homestead rules can apply. Have a Texas real estate attorney draft and review the loan documents.",
+        "Her own investment properties in Houston, Spring, and Greater Houston. She will describe the property when you talk. This page does not list a current deal, a price, or a return.",
     },
     {
-      question: "How do private lenders protect themselves?",
+      question: "What rate, return, or split should I expect?",
       answer:
-        "With a recorded deed of trust in first-lien position, a lender's title policy, insurance naming the lender, a conservative loan-to-value and rehab funds released in draws as work is completed.",
+        "None is published here. Those terms are discussed one on one and depend on the property. That conversation is not a guarantee, and it is not an offer of securities.",
     },
     {
-      question: "Does Natalie offer private lending?",
+      question: "How is a partnership different from a loan to Natalie?",
       answer:
-        "No. Natalie does not lend private money. For long-term and DSCR financing, she works with Brian Lupton at HomeRock Mortgage. This page is education only and is not an offer to lend or invest. Call or text (832) 863-3468, or [book a call](https://calendly.com/nataliepilkinton), if you want to talk about a property.",
+        "A loan is money you lend to her, usually repaid under documents written for that deal. A partnership or joint venture means investing alongside her. Which one fits is discussed per property. Have your own attorney review anything before you send money.",
     },
     {
-      question: "Where can Houston and Spring investors meet in person?",
+      question: "How do I talk with her about lending or partnering?",
       answer:
-        "Natalie hosts the monthly Spring/Woodlands Passive & Active Real Estate Investing meetup for investors and Realtors. The group page on Meetup.com is where you see the next date, time, and place, and where you RSVP. This site does not publish a standing weekday or a fixed venue.",
+        "Call or text (832) 863-3468, or [book a call](https://calendly.com/nataliepilkinton). You can also meet other investors at her monthly meetup. The next date, time, and place are on Meetup.com.",
     },
   ],
   related: [
-    { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "Where short-term money fits in the cycle." },
-    { label: "DSCR loans in Texas", href: "/investors/dscr-loans-texas", description: "The long-term refinance after private money." },
-    { label: "How to start investing", href: "/investors/beginner", description: "What to look for in a first rental." },
-    { label: "Investor-friendly vendors", href: "/investors/vendors", description: "Lenders, title and contractors who work with investors." },
-    { label: "All investor guides", href: "/investors", description: "Start here for Spring and Greater Houston investing." },
-  ],
-  sources: [
-    { label: "HomeRock Mortgage: Loan officers", url: "https://www.homerockmortgage.com/loan-officer" },
-    { label: "Barsalou Law: Hard money loans in Texas", url: "https://www.barsalou-law.com/what-is-a-hard-money-loan-in-texas-understanding-private-real-estate-financing-high-interest-rates-and-the-law" },
-    { label: "Supreme Court of Texas: American Pearl Group v. National Payment Systems, No. 24-0759 (May 23, 2025)", url: "https://www.txcourts.gov/media/1460588/240759.pdf" },
+    { label: "How to start investing", href: "/investors/beginner", description: "Background on buying rentals in Houston." },
+    { label: "BRRRR strategy in Texas", href: "/investors/brrrr", description: "How buy, rehab, rent, and refinance can work." },
+    { label: "Multifamily investing", href: "/investors/multifamily", description: "How larger residential deals are looked at." },
+    { label: "Passive investing", href: "/investors/passive", description: "How people invest alongside an operator." },
+    { label: "All investor guides", href: "/investors", description: "The rest of Natalie's investor pages." },
   ],
   disclaimer:
-    "This guide is general education, not legal or financial advice, and not an offer to lend, borrow, or invest. Private loans in Texas involve usury, licensing, homestead, and securities rules. Work with a Texas real estate attorney before money changes hands.",
+    "This page is not an offer to lend, borrow, or invest, and it is not an offer of securities or a guarantee of any result. Terms are discussed one on one. This is not legal, tax, or financial advice.",
   showMeetup: true,
   cta: {
-    title: "Talk with Natalie about a property",
+    title: "Talk with Natalie about lending or partnering",
     description:
-      "Call or text, or book a call, if you have a question about a property in Spring or Greater Houston. This is a conversation, not lending, legal, or investment advice.",
+      "Call or text, or book a call, if you want to lend on one of her deals or co-invest with her. Terms are discussed one on one. This is not an offer of securities or a guarantee.",
     label: "Book a call",
     bookHref: "https://calendly.com/nataliepilkinton",
   },
