@@ -32,7 +32,7 @@ export default function ContactPage() {
         title="Contact Natalie"
         subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Based in Spring, serving ${serviceRegion}, including ${formatCityList(serviceAreas)}.`}
       >
-        <ContactActions tone="on-dark" showReview />
+        <ContactActions tone="on-dark" showReview bookHref={siteConfig.bookingUrl} />
       </Hero>
 
       <Section>
@@ -67,7 +67,9 @@ export default function ContactPage() {
               <div className="mb-2xl">
                 <h4 className="mb-md text-lg">Book a time</h4>
                 <p className="mb-sm">Pick a time on Natalie&rsquo;s calendar.</p>
-                <Button href="/booking">Book a time</Button>
+                <Button href={siteConfig.bookingUrl} external>
+                  Book a time
+                </Button>
               </div>
 
               <div>

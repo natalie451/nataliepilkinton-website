@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { Button } from "@/components/ui/Button";
-import { primaryNav, type NavItem } from "@/lib/data/navigation";
+import { primaryNav, siteConfig, type NavItem } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils/cn";
 
 type NavigationProps = {
@@ -32,6 +32,18 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
           "max-lg:flex max-lg:flex-col max-lg:fixed max-lg:top-[4.25rem] max-lg:left-0 max-lg:right-0 max-lg:bg-white max-lg:border-b max-lg:border-gray-light max-lg:p-lg max-lg:pb-28 max-lg:gap-xs max-lg:z-[999] max-lg:shadow-brand-md max-lg:max-h-[calc(100vh-4.25rem)] max-lg:overflow-y-auto max-lg:animate-[fade-in_0.15s_ease-out]",
       )}
     >
+      <li className="lg:hidden w-full pb-sm">
+        <Button
+          href={siteConfig.bookingUrl}
+          external
+          variant="primary"
+          size="small"
+          className="w-full"
+          onClick={onNavigate}
+        >
+          Book a call
+        </Button>
+      </li>
       {primaryNav.map((item: NavItem) => {
         const active = isActive(pathname, item);
         const open = openSubmenu === item.href;
@@ -123,11 +135,8 @@ export function Navigation({ mobileOpen, openSubmenu, onToggleSubmenu, onNavigat
           </li>
         );
       })}
-      <li className="lg:hidden w-full pt-md flex flex-col gap-sm">
+      <li className="lg:hidden w-full pt-md">
         <CallOrTextChoice variant="primary" size="small" className="w-full" />
-        <Button href="/booking" variant="secondary" size="small" className="w-full" onClick={onNavigate}>
-          Book a time
-        </Button>
       </li>
     </ul>
   );

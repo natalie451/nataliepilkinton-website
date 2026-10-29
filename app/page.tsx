@@ -81,7 +81,13 @@ export default function HomePage() {
               <p className="text-cream text-lg max-w-[40rem] mb-md lg:mb-xl leading-relaxed">
                 HomeRock Realty. Based in Spring, serving {serviceRegion}. Call or text {siteConfig.phone}, or book a time that works for you.
               </p>
-              <ContactActions tone="on-dark" size="large" layout="hero" className="max-lg:pt-2xl" />
+              <ContactActions
+                tone="on-dark"
+                size="large"
+                layout="hero"
+                className="max-lg:pt-2xl"
+                bookHref={siteConfig.bookingUrl}
+              />
             </div>
             <div
               className="order-1 lg:order-2 relative w-full overflow-hidden rounded-[12px] shadow-[0_18px_40px_rgba(0,0,0,0.35)] ring-1 ring-white/15 aspect-[var(--hero-aspect)]"
