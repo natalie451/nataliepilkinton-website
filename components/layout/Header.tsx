@@ -7,7 +7,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import { MobileMenuToggle } from "@/components/layout/MobileMenuToggle";
 import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { Button } from "@/components/ui/Button";
-import { bookingCta, siteConfig } from "@/lib/data/navigation";
+import { siteConfig } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils/cn";
 
 export function Header() {
@@ -79,13 +79,19 @@ export function Header() {
           onNavigate={closeAll}
         />
 
-        <div className="flex items-center gap-sm shrink-0">
-          <div className="hidden md:flex items-center gap-sm">
+        <div className="flex items-center gap-xs sm:gap-sm shrink-0">
+          <div className="hidden md:flex items-center">
             <CallOrTextChoice variant="primary" size="small" />
-            <Button href={bookingCta.href} variant="secondary" size="small" className="whitespace-nowrap" onClick={closeAll}>
-              {bookingCta.label}
-            </Button>
           </div>
+          <Button
+            href={siteConfig.bookingUrl}
+            external
+            variant="primary"
+            size="small"
+            className="whitespace-nowrap max-sm:px-sm"
+          >
+            Book a call
+          </Button>
           <MobileMenuToggle active={mobileOpen} onClick={() => setMobileOpen((open) => !open)} />
         </div>
       </nav>

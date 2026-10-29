@@ -12,6 +12,8 @@ type ContactActionsProps = {
   showReview?: boolean;
   /** Equal tiles share one shape. Hero keeps three equal buttons on one desktop row. */
   layout?: "inline" | "equal" | "hero";
+  /** Defaults to the on-site booking page. Pass the Calendly URL when the button should open that calendar. */
+  bookHref?: string;
   className?: string;
 };
 
@@ -23,6 +25,7 @@ export function ContactActions({
   showBook = true,
   showReview = false,
   layout = "inline",
+  bookHref = "/booking",
   className,
 }: ContactActionsProps) {
   const onBlue = tone === "on-dark";
@@ -62,7 +65,13 @@ export function ContactActions({
         buttonClassName={hero ? heroButton : undefined}
       />
       {showBook && (
-        <Button href="/booking" variant={secondary} size={size} className={hero ? heroButton : stretch}>
+        <Button
+          href={bookHref}
+          external={bookHref.startsWith("http")}
+          variant={secondary}
+          size={size}
+          className={hero ? heroButton : stretch}
+        >
           Book a time
         </Button>
       )}
