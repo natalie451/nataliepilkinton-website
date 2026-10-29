@@ -46,6 +46,11 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.png',
   },
+  verification: {
+    other: {
+      "msvalidate.01": "0915688D2D85405725EAAD7EAD59C357",
+    },
+  },
 };
 
 export const viewport: Viewport = {
