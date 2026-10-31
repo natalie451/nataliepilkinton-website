@@ -39,7 +39,7 @@ export function ListingGallery({ images }: { images: ListingImage[] }) {
                 index === activeIndex ? "border-blue" : "border-transparent hover:border-gray-medium",
               )}
             >
-              <Image src={image.url} alt="" fill sizes="96px" className="object-cover" />
+              <Image src={image.url} alt={image.alt || `Property photo ${index + 1}`} fill sizes="96px" className="object-cover" />
             </button>
           ))}
         </div>

@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Spring TX REALTOR | Natalie Pilkinton | Buy, Sell, or Invest",
   absoluteTitle: true,
   description:
-    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton. She serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
+    "Buy, sell, or invest in Spring, TX with REALTOR Natalie Pilkinton, HomeRock Realty. She serves Greater Houston north of I-10. Call or text (832) 863-3468.",
   path: "/",
 });
 
