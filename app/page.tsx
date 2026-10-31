@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Stats } from "@/components/sections/Stats";
-import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { EndCta } from "@/components/cta/EndCta";
 import { RealtorVideos } from "@/components/sections/RealtorVideos";
 import { PodcastHomeBand } from "@/components/podcast/PodcastHomeBand";
 import { TestimonialGrid } from "@/components/sections/Testimonial";
@@ -199,12 +199,7 @@ export default function HomePage() {
         </Container>
       </Section>
 
-      <CTA
-        title="Talk with Natalie about your next move"
-        description="Call or text, send an email, or pick a time. She works with buyers, sellers, and investors across Greater Houston, especially north of I-10 up to Huntsville."
-      >
-        <ContactActions tone="on-dark" layout="equal" />
-      </CTA>
+      <EndCta audience="general" />
     </>
   );
 }

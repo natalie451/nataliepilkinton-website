@@ -3,8 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
+import { EndCta } from "@/components/cta/EndCta";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { BuyerSeminarCallout } from "@/components/content/BuyerSeminarCallout";
 import { buyerFaq } from "@/lib/content/buyers";
@@ -43,12 +42,7 @@ export default function NewConstructionPage() {
         </Container>
       </Section>
 
-      <CTA
-        title="Touring a Model Home Soon?"
-        description="Bring your own representation before you sign anything. Book a free consultation with Natalie's team first."
-      >
-        <Button href="/booking">Schedule a Consultation →</Button>
-      </CTA>
+      <EndCta audience="buyer" />
     </>
   );
 }

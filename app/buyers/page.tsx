@@ -55,9 +55,7 @@ export default function BuyersPage() {
       breadcrumbs={[{ name: "Home Buyers", path: "/buyers" }]}
       title="Buy a Home in Spring, TX"
       subheading="Financing, offers, and closing for buyers in Spring and Greater Houston, especially north of I-10 up to Huntsville."
-      ctaTitle="Ready to talk about buying?"
-      ctaDescription="Call or text Natalie, or book a time to go through your price range, loan options, and next steps."
-      ctaLabel="Book a buyer call"
+      audience="buyer"
     >
       <Section>
         <Container>

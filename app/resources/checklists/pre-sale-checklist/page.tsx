@@ -3,8 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
+import { EndCta } from "@/components/cta/EndCta";
 import { GatedChecklist } from "@/components/content/GatedChecklist";
 import { preSaleChecklist } from "@/lib/content/checklist";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -39,9 +38,7 @@ export default function PreSaleChecklistPage() {
         </Container>
       </Section>
 
-      <CTA title="Ready to Sell?" description="Get a free home valuation and selling strategy consultation.">
-        <Button href="/booking">Get Your Free Valuation →</Button>
-      </CTA>
+      <EndCta audience="seller" />
     </>
   );
 }

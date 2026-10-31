@@ -41,9 +41,7 @@ export default function RealtorsPage() {
       breadcrumbs={[{ name: "Realtors", path: "/realtors" }]}
       title="Realtor Growth Academy"
       subheading="Scale your real estate business with proven systems"
-      ctaTitle="Scale Your Real Estate Business"
-      ctaDescription="Get personalized coaching and strategies to grow your real estate career."
-      ctaLabel="Book Your Strategy Session →"
+      audience="join"
     >
       <Section>
         <Container>

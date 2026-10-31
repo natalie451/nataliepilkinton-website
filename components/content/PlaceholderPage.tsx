@@ -6,6 +6,7 @@ import { type Crumb } from "@/components/layout/Breadcrumbs";
 import { PlaceholderNotice } from "@/components/ui/PlaceholderNotice";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
+import { EndCta, type EndCtaAudience } from "@/components/cta/EndCta";
 
 type PlaceholderPageProps = {
   title: string;
@@ -15,6 +16,7 @@ type PlaceholderPageProps = {
   ctaDescription: string;
   ctaLabel: string;
   ctaHref?: string;
+  audience?: EndCtaAudience;
 };
 
 /**
@@ -30,6 +32,7 @@ export function PlaceholderPage({
   ctaDescription,
   ctaLabel,
   ctaHref = "/booking",
+  audience,
 }: PlaceholderPageProps) {
   return (
     <>
@@ -43,9 +46,13 @@ export function PlaceholderPage({
         </Container>
       </Section>
 
-      <CTA title={ctaTitle} description={ctaDescription}>
-        <Button href={ctaHref}>{ctaLabel}</Button>
-      </CTA>
+      {audience ? (
+        <EndCta audience={audience} />
+      ) : (
+        <CTA title={ctaTitle} description={ctaDescription}>
+          <Button href={ctaHref}>{ctaLabel}</Button>
+        </CTA>
+      )}
     </>
   );
 }

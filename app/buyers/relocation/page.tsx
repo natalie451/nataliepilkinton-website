@@ -5,8 +5,8 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { FAQ } from "@/components/sections/FAQ";
-import { CTA } from "@/components/sections/CTA";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { EndCta } from "@/components/cta/EndCta";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -90,9 +90,7 @@ export default function RelocationPage() {
         </Container>
       </Section>
 
-      <CTA title="Tell Natalie you are moving" description={`Call or text ${siteConfig.phone}, or book a time.`}>
-        <ContactActions tone="on-dark" />
-      </CTA>
+      <EndCta audience="buyer" />
     </>
   );
 }

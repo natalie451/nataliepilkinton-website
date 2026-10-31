@@ -3,10 +3,10 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { CTA } from "@/components/sections/CTA";
 import Link from "next/link";
 import { Callout } from "@/components/ui/Callout";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { EndCta } from "@/components/cta/EndCta";
 import { JoinInterestForm } from "@/components/forms/JoinInterestForm";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/data/navigation";
@@ -103,7 +103,7 @@ export default function JoinMyTeamPage() {
         </Container>
       </Section>
 
-      <Section>
+      <Section id="join-interest">
         <Container className="max-w-[40rem]">
           <h2>Tell Natalie you are interested</h2>
           <p className="text-gray-dark">
@@ -113,12 +113,7 @@ export default function JoinMyTeamPage() {
         </Container>
       </Section>
 
-      <CTA
-        title="Talk with Natalie about joining"
-        description="Call or text, email, or book a free commission audit or a meeting with Cory."
-      >
-        <ContactActions tone="on-dark" layout="equal" />
-      </CTA>
+      <EndCta audience="join" />
     </>
   );
 }
