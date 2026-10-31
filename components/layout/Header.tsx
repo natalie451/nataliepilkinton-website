@@ -60,7 +60,7 @@ export function Header() {
         <Link href="/" onClick={closeAll} className="shrink-0 inline-flex items-center gap-sm py-1" aria-label="Natalie Pilkinton home">
           <Image
             src={siteConfig.logoUrl}
-            alt=""
+            alt={siteConfig.logoAlt}
             width={160}
             height={160}
             className="h-10 w-10 max-md:h-8 max-md:w-8"

@@ -96,7 +96,7 @@ export default function PodcastPage() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={`https://i.ytimg.com/vi/${episode.youtubeId}/hqdefault.jpg`}
-                          alt=""
+                          alt={`Video thumbnail: ${episode.title}`}
                           className="absolute inset-0 h-full w-full object-cover"
                         />
                       </span>

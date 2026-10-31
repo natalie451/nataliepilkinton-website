@@ -28,7 +28,7 @@ function VideoCard({ id, title }: { id: string; title: string }) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
-              alt=""
+              alt={`Video thumbnail: ${title}`}
               loading="lazy"
               className="h-full w-full object-cover"
             />

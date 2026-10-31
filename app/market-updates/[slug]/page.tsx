@@ -25,7 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const update = marketUpdates.find((item) => item.slug === slug);
-  if (!update) return buildMetadata({ title: "Market Update Not Found", description: "", path: "/market-updates" });
+  if (!update) return buildMetadata({ title: "Market Update Not Found", description: "This market update could not be found.", path: "/market-updates" });
   return buildMetadata({ title: update.title, description: update.summary, path: `/market-updates/${update.slug}` });
 }
 

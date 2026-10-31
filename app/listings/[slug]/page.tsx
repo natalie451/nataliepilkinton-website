@@ -18,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const listing = getListingBySlug(slug);
-  if (!listing) return buildMetadata({ title: "Listing Not Found", description: "", path: "/listings" });
+  if (!listing) return buildMetadata({ title: "Listing Not Found", description: "This listing could not be found.", path: "/listings" });
 
   return buildMetadata({
     title: `${listing.address.street}, ${listing.address.city} | ${formatPrice(listing.price)}`,
