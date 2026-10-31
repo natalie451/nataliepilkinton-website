@@ -19,7 +19,8 @@ export default function SellerPricingPage() {
       ]}
       ctaTitle="Ready to Sell?"
       ctaDescription="Get a free home valuation and selling strategy consultation."
-      ctaLabel="Get Your Free Valuation →"
+      ctaLabel="Get your home value"
+      audience="seller"
     />
   );
 }

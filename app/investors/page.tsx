@@ -96,9 +96,7 @@ export default function InvestorsPage() {
       breadcrumbs={[{ name: "Investors", path: "/investors" }]}
       title="Invest in Spring, TX Real Estate"
       subheading="Rentals, financing, and strategy for Spring and Greater Houston, especially north of I-10 up to Huntsville, from a REALTOR who invests her own money."
-      ctaTitle="Ready to talk through a deal?"
-      ctaDescription="Call or text Natalie, or book a time to review your goals, your budget, and what a deal needs to look like."
-      ctaLabel="Book an investor call"
+      audience="investor"
     >
       <Section>
         <Container className="max-w-[52rem]">

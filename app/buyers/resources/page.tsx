@@ -4,8 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { ResourceCard } from "@/components/cards/ResourceCard";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
+import { EndCta } from "@/components/cta/EndCta";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -50,9 +49,7 @@ export default function BuyerResourcesPage() {
         </Container>
       </Section>
 
-      <CTA title="Ready to Start Your Buying Journey?" description="Book a free consultation to discuss your home buying goals.">
-        <Button href="/booking">Schedule a Consultation →</Button>
-      </CTA>
+      <EndCta audience="buyer" />
     </>
   );
 }

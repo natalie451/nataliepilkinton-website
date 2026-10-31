@@ -3,9 +3,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { PlaceholderNotice } from "@/components/ui/PlaceholderNotice";
-import { ContactActions } from "@/components/cta/ContactActions";
 import { ValuationForm } from "@/components/forms/ValuationForm";
+import { siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -22,21 +21,29 @@ export default function HomeValuePage() {
 
       <Hero
         title="What's my Spring, TX home worth?"
-        subheading="Request a home value conversation. No obligation, and you can also call or text."
+        subheading="Send your address and timeline. Natalie will follow up with a free market analysis."
         align="left"
-      >
-        <ContactActions tone="on-dark" />
-      </Hero>
+      />
 
       <Section>
         <Container className="grid grid-cols-2 max-md:grid-cols-1 gap-3xl">
           <div>
-            <h2>Request Your Estimate</h2>
+            <h2 id="value-form">What&rsquo;s my home worth?</h2>
+            <p className="text-gray-dark">Natalie will follow up with a free market analysis. This form does not produce an instant price.</p>
             <ValuationForm />
           </div>
           <div>
-            <h2>How Valuation Works</h2>
-            <PlaceholderNotice note="Explainer copy for the CMA/valuation methodology is pending." />
+            <h2>Prefer to talk?</h2>
+            <p className="text-gray-dark">
+              <a href={siteConfig.phoneHref} className="font-semibold text-blue underline underline-offset-2">
+                Call
+              </a>{" "}
+              or{" "}
+              <a href={siteConfig.smsHref} className="font-semibold text-blue underline underline-offset-2">
+                text
+              </a>{" "}
+              {siteConfig.phone}.
+            </p>
           </div>
         </Container>
       </Section>

@@ -31,7 +31,7 @@ export const primaryNav: NavItem[] = [
     href: "/sellers",
     children: [
       { label: "Selling Process", href: "/sellers/process" },
-      { label: "What's My Home Worth", href: "/sellers/home-value" },
+      { label: "What's my home worth?", href: "/sellers/home-value" },
       { label: "Pricing", href: "/sellers/pricing" },
       { label: "Marketing", href: "/sellers/marketing" },
       { label: "Staging", href: "/sellers/staging" },

@@ -19,7 +19,8 @@ export default function CaseStudiesPage() {
       ]}
       ctaTitle="Ready to Start Investing?"
       ctaDescription="Schedule a consultation to discuss your investment goals."
-      ctaLabel="Book Investor Consultation →"
+      ctaLabel="Book a call"
+      audience="investor"
     />
   );
 }

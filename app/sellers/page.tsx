@@ -30,6 +30,12 @@ const resources = [
     cta: { label: "Get the Checklist →", href: "/resources/checklists/pre-sale-checklist" },
   },
   { category: "Worksheet", title: "Comparative Market Analysis", description: "Analyze comparable homes to determine your home's value" },
+  {
+    category: "Request",
+    title: "What's my home worth?",
+    description: "Send your address and timeline. Natalie will follow up with a free market analysis.",
+    cta: { label: "Get your home value", href: "/sellers/home-value" },
+  },
 ];
 
 export default function SellersPage() {
@@ -38,10 +44,7 @@ export default function SellersPage() {
       breadcrumbs={[{ name: "Home Sellers", path: "/sellers" }]}
       title="Sell a Home in Spring, TX"
       subheading="Pricing, marketing, and a selling plan for homes in Spring and Greater Houston, especially north of I-10 up to Huntsville."
-      ctaTitle="Ready to talk about selling?"
-      ctaDescription="Request a home value conversation, or call and text Natalie to talk through timing and next steps."
-      ctaLabel="What's my home worth?"
-      ctaHref="/sellers/home-value"
+      audience="seller"
     >
       <Section>
         <Container>

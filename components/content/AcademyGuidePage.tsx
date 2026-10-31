@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { CTA } from "@/components/sections/CTA";
 import { Button } from "@/components/ui/Button";
+import { EndCta, type EndCtaAudience } from "@/components/cta/EndCta";
 import { ContactActions } from "@/components/cta/ContactActions";
 import { siteConfig } from "@/lib/data/navigation";
 import { articleSchema, faqSchema, jsonLdScriptProps } from "@/lib/seo/schema";
@@ -43,6 +44,13 @@ function Rich({ text }: { text: string }) {
 
 /** Plain text for JSON-LD: link labels kept, URLs dropped. */
 const plain = (text: string) => text.replace(LINK, "$1");
+
+function audienceForGuide(path: string): EndCtaAudience | null {
+  if (path.startsWith("/buyers")) return "buyer";
+  if (path.startsWith("/sellers")) return "seller";
+  if (path.startsWith("/investors")) return "investor";
+  return null;
+}
 
 function formatDate(iso: string) {
   return new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-US", {
@@ -317,26 +325,16 @@ export function AcademyGuidePage({ guide }: { guide: AcademyGuide }) {
         </Container>
       </Section>
 
-      <CTA title={guide.cta.title} description={guide.cta.description}>
-        {guide.cta.bookHref ? (
-          <ContactActions
-            tone="on-dark"
-            size="large"
-            showEmail={false}
-            bookHref={guide.cta.bookHref}
-            bookLabel="Book a call"
-            className="max-sm:flex-nowrap"
-            buttonClassName="max-sm:min-h-11 max-sm:w-auto max-sm:flex-1 max-sm:px-sm max-sm:py-2 max-sm:text-sm"
-          />
-        ) : (
-          <>
-            <Button href="/booking" variant="primary">
-              {guide.cta.label}
-            </Button>
-            <ContactActions tone="on-dark" showBook={false} />
-          </>
-        )}
-      </CTA>
+      {audienceForGuide(guide.path) ? (
+        <EndCta audience={audienceForGuide(guide.path) as EndCtaAudience} />
+      ) : (
+        <CTA title={guide.cta.title} description={guide.cta.description}>
+          <Button href="/booking" variant="primary">
+            {guide.cta.label}
+          </Button>
+          <ContactActions tone="on-dark" showBook={false} />
+        </CTA>
+      )}
     </>
   );
 }

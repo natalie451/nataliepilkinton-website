@@ -3,8 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
+import { EndCta } from "@/components/cta/EndCta";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { dualLicensing } from "@/lib/content/realtors";
 
@@ -31,9 +30,7 @@ export default function AgentAttractionPage() {
           <p className="text-base leading-relaxed text-gray-dark mb-md">{dualLicensing.description}</p>
         </Container>
       </Section>
-      <CTA title="Scale Your Real Estate Business" description="Get personalized coaching and strategies to grow your real estate career.">
-        <Button href="/booking">Book Your Strategy Session →</Button>
-      </CTA>
+      <EndCta audience="join" />
     </>
   );
 }

@@ -4,8 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { Timeline } from "@/components/sections/Timeline";
-import { CTA } from "@/components/sections/CTA";
-import { Button } from "@/components/ui/Button";
+import { EndCta } from "@/components/cta/EndCta";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { buyerJourney } from "@/lib/content/buyers";
 
@@ -28,9 +27,7 @@ export default function BuyerProcessPage() {
         </Container>
       </Section>
 
-      <CTA title="Ready to Start Your Buying Journey?" description="Book a free consultation to discuss your home buying goals.">
-        <Button href="/booking">Schedule a Consultation →</Button>
-      </CTA>
+      <EndCta audience="buyer" />
     </>
   );
 }
