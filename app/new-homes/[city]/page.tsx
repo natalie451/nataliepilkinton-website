@@ -82,13 +82,24 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
       />
       {coverPhoto && coverGallery ? (
         <section className="relative isolate flex min-h-[70vh] items-end overflow-hidden bg-blue text-cream">
-          <Image src={coverPhoto.src} alt={coverPhoto.alt} fill priority sizes="100vw" className="object-cover" />
+          <Image
+            src={coverPhoto.src}
+            alt={coverPhoto.alt}
+            fill
+            priority
+            sizes="100vw"
+            className={coverPhoto.height > coverPhoto.width ? "object-cover" : "object-cover max-md:object-[center_72%]"}
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a33] via-[#0a1a33]/75 to-[#0a1a33]/20" />
-          <Container className="relative z-10 py-3xl">
+          <Container className="relative z-10 py-3xl max-md:pb-36">
             <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">{city.name}, TX</p>
             <h1 className="mb-sm max-w-[16ch] text-cream">New homes in {city.name}</h1>
             <p className="mb-md max-w-[40rem] text-lg text-cream">{city.headline}</p>
-            <PhotoCredit name={coverGallery.creditName} url={coverGallery.creditUrl} tone="on-dark" />
+            <PhotoCredit
+              name={coverPhoto.creditName ?? coverGallery.creditName}
+              url={coverPhoto.creditName ? undefined : coverGallery.creditUrl}
+              tone="on-dark"
+            />
           </Container>
         </section>
       ) : (

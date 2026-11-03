@@ -15,7 +15,7 @@ import { BuildersInCommunity } from "@/components/new-homes/BuilderPromotions";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
-import { amenityChips, getCommunityGallery, publishedPriceLabel } from "@/lib/data/newHomePhotos";
+import { amenityChips, getCommunityGallery, publishedPriceLabel, type CommunityPhoto } from "@/lib/data/newHomePhotos";
 import {
   communitiesForCity,
   getNewHomeCity,
@@ -112,10 +112,10 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className={heroPhoto.height > heroPhoto.width ? "object-cover" : "object-cover max-md:object-[center_72%]"}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a33] via-[#0a1a33]/75 to-[#0a1a33]/25" />
-          <Container className="relative z-10 py-3xl">
+          <Container className="relative z-10 py-3xl max-md:pb-36">
             <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">{city.name}, TX</p>
             <h1 className="mb-sm max-w-[16ch] text-cream">{community.name}</h1>
             <p className="mb-md max-w-[40rem] text-lg text-cream">{community.developer}. {community.address}</p>
@@ -133,7 +133,11 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
               <Button href="#tour" variant="on-blue">Tour {community.name} with Natalie</Button>
               <Button href={siteConfig.bookingUrl} external variant="on-blue">Book on Calendly</Button>
             </div>
-            <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} tone="on-dark" />
+            <PhotoCredit
+              name={heroPhoto.creditName ?? gallery.creditName}
+              url={heroPhoto.creditName ? undefined : gallery.creditUrl}
+              tone="on-dark"
+            />
           </Container>
         </section>
       ) : (
@@ -150,32 +154,33 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           <Container>
             <h2>Around {community.name}</h2>
             <p className="max-w-[42rem] text-gray-dark">
-              Photographs from the community website are credited to that site. Any photo marked Natalie Pilkinton was taken by her.
+              {galleryPhotos.some((photo) => !photo.creditName)
+                ? "Photographs from the community website are credited to that site. Any photo marked Natalie Pilkinton was taken by her."
+                : "Photographs by Natalie Pilkinton."}
             </p>
-            <div className="grid grid-cols-3 gap-sm max-lg:grid-cols-2 max-sm:grid-cols-1">
-              {galleryPhotos.map((photo) => (
-                <figure key={photo.src} className="m-0 overflow-hidden rounded-xs bg-cream">
-                  <div className="relative aspect-[4/3]">
-                    <Image
-                      src={photo.src}
-                      alt={photo.alt}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <figcaption className="px-sm py-xs text-sm text-navy">
-                    <span className="block">{photo.alt}</span>
-                    {photo.creditName ? <span className="mt-xs block text-xs text-gray-dark">Photo: {photo.creditName}</span> : null}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
+            <CommunityPhotoGrid photos={galleryPhotos} />
             <div className="mt-md flex flex-col gap-xs">
-              <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} />
+              {galleryPhotos.some((photo) => !photo.creditName) ? (
+                <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} />
+              ) : null}
               {galleryPhotos.some((photo) => photo.creditName === "Natalie Pilkinton") ? (
                 <PhotoCredit name="Natalie Pilkinton" />
               ) : null}
+            </div>
+          </Container>
+        </Section>
+      )}
+
+      {gallery?.interiorPhotos && gallery.interiorPhotos.length > 0 && (
+        <Section>
+          <Container>
+            <h2>Inside {community.name} homes</h2>
+            <p className="max-w-[42rem] text-gray-dark">
+              Model homes photographed by Natalie Pilkinton.
+            </p>
+            <CommunityPhotoGrid photos={gallery.interiorPhotos} />
+            <div className="mt-md">
+              <PhotoCredit name="Natalie Pilkinton" />
             </div>
           </Container>
         </Section>
@@ -302,5 +307,29 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
       <div className="h-28" aria-hidden />
       <TourWithNatalieBar label={`Tour ${community.name} with Natalie`} />
     </>
+  );
+}
+
+function CommunityPhotoGrid({ photos }: { photos: CommunityPhoto[] }) {
+  return (
+    <div className="grid grid-cols-3 gap-sm max-lg:grid-cols-2 max-sm:grid-cols-1">
+      {photos.map((photo) => (
+        <figure key={photo.src} className="m-0 overflow-hidden rounded-xs bg-cream">
+          <div className="relative w-full" style={{ aspectRatio: `${photo.width} / ${photo.height}` }}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="px-sm py-xs text-sm text-navy">
+            <span className="block">{photo.alt}</span>
+            {photo.creditName ? <span className="mt-xs block text-xs text-gray-dark">Photo: {photo.creditName}</span> : null}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }

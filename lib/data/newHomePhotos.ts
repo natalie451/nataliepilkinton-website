@@ -15,6 +15,8 @@ export type CommunityGallery = {
   creditUrl: string;
   /** First photo is the hero. The rest are the amenity gallery. */
   photos: CommunityPhoto[];
+  /** Model-home interiors, shown in their own gallery after the amenity shots. */
+  interiorPhotos?: CommunityPhoto[];
 };
 
 export const communityGalleries: Record<string, CommunityGallery> = {
@@ -331,41 +333,80 @@ function imageSize(file: string) {
     }
   }
   if (buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WEBP") {
-    if (buf.toString("ascii", 12, 16) === "VP8X") {
+    const chunk = buf.toString("ascii", 12, 16);
+    if (chunk === "VP8X") {
       return { width: 1 + buf.readUIntLE(24, 3), height: 1 + buf.readUIntLE(27, 3) };
+    }
+    if (chunk === "VP8 " && buf.length >= 30) {
+      return { width: buf.readUInt16LE(26) & 0x3fff, height: buf.readUInt16LE(28) & 0x3fff };
+    }
+    if (chunk === "VP8L" && buf.length >= 25) {
+      const bits = buf.readUInt32LE(21);
+      return { width: (bits & 0x3fff) + 1, height: ((bits >> 14) & 0x3fff) + 1 };
     }
   }
   return { width: 1600, height: 1067 };
 }
 
-/** Photos Natalie adds at public/images/new-homes/elyson/. Absent until she commits them. */
+const natalieElysonAlts = [
+  "Resort-style pool with shaded lounge seating at Elyson's amenity center, Katy TX",
+  "Covered poolside patio with dining tables overlooking the Elyson pool",
+  "Splash pad and lawn with colorful Adirondack chairs and homes behind",
+  "Lakeside Landing pavilion with stone fireplace overlooking the lake",
+  "Lake and walking trail with new homes along the shoreline",
+  "Two-story light-brick new home with modern black windows",
+  "Open living room with fireplace and wall of shuttered windows",
+  "Kitchen with blue-gray cabinetry, wood range hood and marble island",
+  "Two-island kitchen with white quartz counters and blue cabinets",
+  "Chef's kitchen with oak cabinetry, wine storage and black-marble waterfall island",
+  "Formal dining room with soaring ceiling, chandelier and built-in bar",
+  "Primary bedroom with sitting area and tall shuttered windows",
+  "Primary bath with freestanding tub and glass tile shower",
+  "Spa bath with marble-look tile, freestanding tub and walk-in shower",
+  "Laundry room with built-in desk, open shelving and patterned tile floor",
+];
+
+/** Natalie's Elyson photos in public/images/new-homes/elyson/, files 01 through 15. */
 function natalieElysonPhotos(): CommunityPhoto[] {
   const dir = path.join(process.cwd(), "public/images/new-homes/elyson");
   if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((file) => /\.(jpe?g|png|webp|avif)$/i.test(file))
-    .sort()
-    .map((file) => {
-      const size = imageSize(path.join(dir, file));
-      const label = file.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ");
-      return {
-        src: `/images/new-homes/elyson/${file}`,
-        alt: `Elyson, photographed by Natalie Pilkinton (${label})`,
-        width: size.width,
-        height: size.height,
-        creditName: "Natalie Pilkinton",
-      };
+  const photos: CommunityPhoto[] = [];
+  for (let index = 0; index < natalieElysonAlts.length; index += 1) {
+    const file = `elyson-natalie-${String(index + 1).padStart(2, "0")}.webp`;
+    const full = path.join(dir, file);
+    if (!fs.existsSync(full)) continue;
+    const size = imageSize(full);
+    photos.push({
+      src: `/images/new-homes/elyson/${file}`,
+      alt: natalieElysonAlts[index],
+      width: size.width,
+      height: size.height,
+      creditName: "Natalie Pilkinton",
     });
+  }
+  return photos;
 }
 
 export function getCommunityGallery(slug: string) {
   const gallery = communityGalleries[slug];
   if (!gallery) return undefined;
   if (slug !== "elyson") return gallery;
-  const extra = natalieElysonPhotos();
-  if (extra.length === 0) return gallery;
-  return { ...gallery, photos: [...gallery.photos, ...extra] };
+  const natalie = natalieElysonPhotos();
+  if (natalie.length === 0) return gallery;
+  const amenities = natalie.filter((photo) => {
+    const match = photo.src.match(/elyson-natalie-(\d+)\./);
+    return match ? Number(match[1]) <= 5 : false;
+  });
+  const interiors = natalie.filter((photo) => {
+    const match = photo.src.match(/elyson-natalie-(\d+)\./);
+    return match ? Number(match[1]) >= 6 : false;
+  });
+  const complete = amenities.length === 5 && interiors.length === 10;
+  return {
+    ...gallery,
+    photos: complete ? amenities : [...amenities, ...gallery.photos],
+    interiorPhotos: interiors,
+  };
 }
 
 /** Pulls the first "from the $X" phrase a developer actually published. */
