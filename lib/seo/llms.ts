@@ -28,6 +28,12 @@ const pages: { path: string; title: string; summary: string }[] = [
     summary: "For buyers moving into Natalie's service area.",
   },
   {
+    path: "/new-homes",
+    title: "New homes",
+    summary:
+      "New construction in Conroe, Montgomery, Willis, Spring, Cypress, Waller, Porter, Splendora, and New Caney.",
+  },
+  {
     path: "/sellers",
     title: "Sellers",
     summary: "Selling a home in Spring, TX and Greater Houston.",

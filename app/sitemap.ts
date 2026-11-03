@@ -6,6 +6,7 @@ import { marketUpdates } from "@/lib/content/market-updates";
 import { getListingSlugs } from "@/lib/listings";
 import { getPodcastEpisodeIndex } from "@/lib/content/podcastEpisodes";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
+import { newHomePaths } from "@/lib/data/newHomes";
 
 const staticPaths = [
   "/",
@@ -69,6 +70,7 @@ const staticPaths = [
 
   "/blog",
   "/listings",
+  ...newHomePaths(),
 ];
 
 /** "August 5, 2026" → Date, or undefined when the text isn't a date. */

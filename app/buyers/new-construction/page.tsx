@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
 import { EndCta } from "@/components/cta/EndCta";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -33,6 +34,17 @@ export default function NewConstructionPage() {
         <Container className="max-w-[48rem]">
           <h2>{newConstructionFaq.question}</h2>
           <p className="text-base leading-relaxed text-gray-dark mb-md">{newConstructionFaq.answer}</p>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container className="max-w-[48rem]">
+          <h2>New homes by city</h2>
+          <p className="text-gray-dark">
+            If you already know the community, start with the city page. Each one links to builder facts Natalie sourced
+            from the developer sites, plus a way to tour with her before you register at the model.
+          </p>
+          <Button href="/new-homes">Browse new homes</Button>
         </Container>
       </Section>
 
