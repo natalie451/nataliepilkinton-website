@@ -27,6 +27,7 @@ const guides = [
   { title: "Loan Options & Down Payment Assistance", description: "Compare loans and Texas assistance programs.", href: "/buyers/financing" },
   { title: "Closing Costs in Texas", description: "What you'll pay, who pays the title policy, how to lower it.", href: "/buyers/closing-costs-texas" },
   { title: "Buying New Construction", description: "Builders, incentives and why you need your own Realtor.", href: "/buyers/new-construction" },
+  { title: "New Homes by City", description: "Conroe, Cypress, Spring, Porter, and six more north Houston cities.", href: "/new-homes" },
   { title: "Relocating Here", description: "Moving into Spring or Greater Houston.", href: "/buyers/relocation" },
 ];
 

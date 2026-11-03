@@ -25,7 +25,15 @@ export const metadata: Metadata = buildMetadata({
   path: "/",
 });
 
-const paths = [
+const paths: {
+  eyebrow: string;
+  title: string;
+  body: string;
+  href: string;
+  cta: string;
+  secondary: { href: string; label: string };
+  extra?: { href: string; label: string };
+}[] = [
   {
     eyebrow: "Buyers",
     title: "Buy a home",
@@ -33,6 +41,7 @@ const paths = [
     href: "/buyers",
     cta: "Start the buyer path",
     secondary: { href: "/listings", label: "See current listings" },
+    extra: { href: "/new-homes", label: "New homes by city" },
   },
   {
     eyebrow: "Sellers",
@@ -129,6 +138,11 @@ export default function HomePage() {
                   <Link href={path.secondary.href} className="text-sm font-semibold text-blue underline underline-offset-2">
                     {path.secondary.label}
                   </Link>
+                  {path.extra && (
+                    <Link href={path.extra.href} className="text-sm font-semibold text-blue underline underline-offset-2">
+                      {path.extra.label}
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

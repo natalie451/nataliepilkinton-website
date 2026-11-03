@@ -6,6 +6,7 @@ import { marketUpdates } from "@/lib/content/market-updates";
 import { getListingSlugs } from "@/lib/listings";
 import { getPodcastEpisodeIndex } from "@/lib/content/podcastEpisodes";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
+import { newHomePaths, newHomesContentDate } from "@/lib/data/newHomes";
 
 const staticPaths = [
   "/",
@@ -85,8 +86,11 @@ type Entry = { path: string; lastModified?: Date };
 export default function sitemap(): MetadataRoute.Sitemap {
   // lastModified is only set where a real content date exists; a build timestamp
   // on every URL tells search engines nothing and gets ignored.
-  const entries: Entry[] = [
+  const newHomesUpdated = parseDate(newHomesContentDate);
+
+const entries: Entry[] = [
     ...staticPaths.map((path) => ({ path })),
+    ...newHomePaths().map((path) => ({ path, lastModified: newHomesUpdated })),
     ...blogCategories.map((category) => ({ path: `/blog/${category}` })),
     ...getAllBlogFilePosts().map((post) => ({
       path: `/blog/${post.category}/${post.slug}`,

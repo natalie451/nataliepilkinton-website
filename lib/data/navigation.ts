@@ -20,6 +20,7 @@ export const primaryNav: NavItem[] = [
       { label: "Credit", href: "/buyers/credit" },
       { label: "Financing", href: "/buyers/financing" },
       { label: "New Construction", href: "/buyers/new-construction" },
+      { label: "New Homes by City", href: "/new-homes" },
       { label: "Relocation", href: "/buyers/relocation" },
       { label: "Home Buying Process", href: "/buyers/process" },
       { label: "FAQ", href: "/buyers/faq" },
@@ -109,6 +110,7 @@ export const footerNav = {
     title: "Resources",
     links: [
       { label: "About Natalie", href: "/about" },
+      { label: "New homes", href: "/new-homes" },
       { label: "Referral agent", href: "/referral-agent" },
       { label: "Podcast", href: "/podcast" },
       { label: "Book a time", href: "/booking" },
