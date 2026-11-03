@@ -91,7 +91,15 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
             <PhotoCredit name={coverGallery.creditName} url={coverGallery.creditUrl} tone="on-dark" />
           </Container>
         </section>
-      ) : null}
+      ) : (
+        <section className="bg-blue py-3xl text-cream">
+          <Container>
+            <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">{city.name}, TX</p>
+            <h1 className="mb-sm text-cream">New homes in {city.name}</h1>
+            <p className="mb-0 max-w-[40rem] text-lg text-cream">{city.headline}</p>
+          </Container>
+        </section>
+      )}
 
       <Section>
         <Container>

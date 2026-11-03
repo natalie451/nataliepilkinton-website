@@ -110,6 +110,7 @@ export const footerNav = {
     title: "Resources",
     links: [
       { label: "About Natalie", href: "/about" },
+      { label: "New homes", href: "/new-homes" },
       { label: "Referral agent", href: "/referral-agent" },
       { label: "Podcast", href: "/podcast" },
       { label: "Book a time", href: "/booking" },

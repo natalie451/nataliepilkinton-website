@@ -1702,6 +1702,9 @@ export function communitiesForCity(citySlug: string) {
   return { primary, linked };
 }
 
+/** Content date for sitemap lastmod. Not a build clock. */
+export const newHomesContentDate = "2026-11-03";
+
 export function newHomePaths() {
   return [
     "/new-homes",

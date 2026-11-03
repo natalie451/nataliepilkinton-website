@@ -16,7 +16,7 @@ import { communitiesForCity, newHomeCities, newHomeCommunities } from "@/lib/dat
 export const metadata: Metadata = buildMetadata({
   title: "New Homes in North Houston",
   description:
-    "New construction in Conroe, Montgomery, Willis, Spring, Cypress, Waller, Porter, Splendora, and New Caney. Tour with Natalie before you register at a model.",
+    "New homes north of I-10: Conroe, Tomball, Katy, Cypress, Humble, Crosby, and Dayton. Tour with Natalie before the builder registers you.",
   path: "/new-homes",
   image: "/new-homes/bridgeland/hero.webp",
 });

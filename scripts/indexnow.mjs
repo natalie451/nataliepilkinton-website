@@ -5,7 +5,14 @@
  * Usage:
  *   node scripts/indexnow.mjs
  *   node scripts/indexnow.mjs --dry-run
+ *   node scripts/indexnow.mjs --new-homes
  *   node scripts/indexnow.mjs https://www.nataliepilkinton.com/sitemap.xml
+ *
+ * Post-deploy step for the new-homes pages (production only, after the
+ * deploy that includes them is live):
+ *   npm run indexnow:new-homes
+ * That reads the live sitemap and submits every
+ * https://www.nataliepilkinton.com/new-homes URL to IndexNow (Bing).
  *
  * The key file must already be public at
  * https://www.nataliepilkinton.com/97184bebc95ddc29510a442749936c6b.txt
@@ -16,6 +23,7 @@ const KEY = "97184bebc95ddc29510a442749936c6b";
 const HOST = "www.nataliepilkinton.com";
 const keyLocation = `https://${HOST}/${KEY}.txt`;
 const dryRun = process.argv.includes("--dry-run");
+const newHomesOnly = process.argv.includes("--new-homes");
 const sitemapUrl =
   process.argv.find((arg) => arg.startsWith("http")) || `https://${HOST}/sitemap.xml`;
 
@@ -28,7 +36,10 @@ const xml = await sitemap.text();
 const urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
 const urls = urlList.filter((url) => {
   try {
-    return new URL(url).host === HOST;
+    const parsed = new URL(url);
+    if (parsed.host !== HOST) return false;
+    if (newHomesOnly && !parsed.pathname.startsWith("/new-homes")) return false;
+    return true;
   } catch {
     return false;
   }

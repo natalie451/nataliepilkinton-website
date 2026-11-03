@@ -1,8 +1,13 @@
+import fs from "fs";
+import path from "path";
+
 export type CommunityPhoto = {
   src: string;
   alt: string;
   width: number;
   height: number;
+  /** Overrides the gallery credit when the photo is not from the community site. */
+  creditName?: string;
 };
 
 export type CommunityGallery = {
@@ -308,8 +313,59 @@ export const communityGalleries: Record<string, CommunityGallery> = {
   },
 };
 
+function imageSize(file: string) {
+  const buf = fs.readFileSync(file);
+  if (buf[0] === 0x89 && buf.toString("ascii", 1, 4) === "PNG") {
+    return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+  }
+  if (buf[0] === 0xff && buf[1] === 0xd8) {
+    let offset = 2;
+    while (offset + 9 < buf.length) {
+      if (buf[offset] !== 0xff) break;
+      const marker = buf[offset + 1];
+      const length = buf.readUInt16BE(offset + 2);
+      if (marker >= 0xc0 && marker <= 0xc2) {
+        return { height: buf.readUInt16BE(offset + 5), width: buf.readUInt16BE(offset + 7) };
+      }
+      offset += 2 + length;
+    }
+  }
+  if (buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WEBP") {
+    if (buf.toString("ascii", 12, 16) === "VP8X") {
+      return { width: 1 + buf.readUIntLE(24, 3), height: 1 + buf.readUIntLE(27, 3) };
+    }
+  }
+  return { width: 1600, height: 1067 };
+}
+
+/** Photos Natalie adds at public/images/new-homes/elyson/. Absent until she commits them. */
+function natalieElysonPhotos(): CommunityPhoto[] {
+  const dir = path.join(process.cwd(), "public/images/new-homes/elyson");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((file) => /\.(jpe?g|png|webp|avif)$/i.test(file))
+    .sort()
+    .map((file) => {
+      const size = imageSize(path.join(dir, file));
+      const label = file.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ");
+      return {
+        src: `/images/new-homes/elyson/${file}`,
+        alt: `Elyson, photographed by Natalie Pilkinton (${label})`,
+        width: size.width,
+        height: size.height,
+        creditName: "Natalie Pilkinton",
+      };
+    });
+}
+
 export function getCommunityGallery(slug: string) {
-  return communityGalleries[slug];
+  const gallery = communityGalleries[slug];
+  if (!gallery) return undefined;
+  if (slug !== "elyson") return gallery;
+  const extra = natalieElysonPhotos();
+  if (extra.length === 0) return gallery;
+  return { ...gallery, photos: [...gallery.photos, ...extra] };
 }
 
 /** Pulls the first "from the $X" phrase a developer actually published. */

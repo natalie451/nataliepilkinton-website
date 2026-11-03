@@ -150,7 +150,7 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           <Container>
             <h2>Around {community.name}</h2>
             <p className="max-w-[42rem] text-gray-dark">
-              These are photographs from the community website. They show the places the developer chose to publish, and they can be replaced when that site updates.
+              Photographs from the community website are credited to that site. Any photo marked Natalie Pilkinton was taken by her.
             </p>
             <div className="grid grid-cols-3 gap-sm max-lg:grid-cols-2 max-sm:grid-cols-1">
               {galleryPhotos.map((photo) => (
@@ -164,12 +164,18 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
                       className="object-cover"
                     />
                   </div>
-                  <figcaption className="px-sm py-xs text-sm text-navy">{photo.alt}</figcaption>
+                  <figcaption className="px-sm py-xs text-sm text-navy">
+                    <span className="block">{photo.alt}</span>
+                    {photo.creditName ? <span className="mt-xs block text-xs text-gray-dark">Photo: {photo.creditName}</span> : null}
+                  </figcaption>
                 </figure>
               ))}
             </div>
-            <div className="mt-md">
+            <div className="mt-md flex flex-col gap-xs">
               <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} />
+              {galleryPhotos.some((photo) => photo.creditName === "Natalie Pilkinton") ? (
+                <PhotoCredit name="Natalie Pilkinton" />
+              ) : null}
             </div>
           </Container>
         </Section>

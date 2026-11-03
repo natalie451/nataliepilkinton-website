@@ -1,5 +1,6 @@
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { podcastShow } from "@/lib/data/podcast";
+import { newHomeCities, newHomeCommunities } from "@/lib/data/newHomes";
 
 const pages: { path: string; title: string; summary: string }[] = [
   {
@@ -106,6 +107,22 @@ function whoBlock() {
   ].join("\n");
 }
 
+function newHomesLines() {
+  const cityName = (slug: string) => newHomeCities.find((city) => city.slug === slug)?.name ?? slug;
+  return [
+    `${siteConfig.siteUrl}/new-homes`,
+    "Hub for new construction north of I-10 in Greater Houston.",
+    ...newHomeCities.map(
+      (city) =>
+        `${siteConfig.siteUrl}/new-homes/${city.slug}\nNew homes in ${city.name}, TX. ${city.headline}`,
+    ),
+    ...newHomeCommunities.map(
+      (community) =>
+        `${siteConfig.siteUrl}/new-homes/${community.citySlug}/${community.slug}\n${community.name} new homes in ${cityName(community.citySlug)}, TX. ${community.developer}.`,
+    ),
+  ];
+}
+
 export function llmsTxt() {
   const lines = [
     `# ${siteConfig.name}`,
@@ -128,6 +145,9 @@ export function llmsTxt() {
     "",
     "## Key pages",
     ...pages.map((page) => `- [${page.title}](${siteConfig.siteUrl}${page.path}): ${page.summary}`),
+    "",
+    "## New homes",
+    ...newHomesLines(),
     "",
     "## Profiles",
     `- Facebook: ${siteConfig.social.facebook}`,
