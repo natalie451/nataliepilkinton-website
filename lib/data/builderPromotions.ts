@@ -326,3 +326,20 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
 export function promosForCommunity(slug: string) {
   return builderPromotions[slug] ?? [];
 }
+
+function namesMatch(builderName: string, promoBuilder: string) {
+  const a = builderName.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const b = promoBuilder.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  if (!a || !b) return false;
+  return a.includes(b) || b.includes(a);
+}
+
+export function promosForBuilder(communitySlug: string, builderName: string) {
+  return promosForCommunity(communitySlug).filter((promo) => namesMatch(builderName, promo.builder));
+}
+
+/** Offers whose builder name does not match a card, such as a developer incentive. */
+export function unmatchedPromos(communitySlug: string, builderNames: string[]) {
+  const matched = new Set(builderNames.flatMap((name) => promosForBuilder(communitySlug, name)));
+  return promosForCommunity(communitySlug).filter((promo) => !matched.has(promo));
+}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { incentivesAvailable } from "@/components/new-homes/BuilderPromotions";
 import { getCommunityGallery, publishedPriceLabel } from "@/lib/data/newHomePhotos";
 import type { NewHomeCommunity } from "@/lib/data/newHomes";
 
@@ -27,6 +28,11 @@ export function CommunityPhotoCard({ community }: { community: NewHomeCommunity 
           {price && (
             <span className="absolute left-3 top-3 rounded-full bg-cream px-md py-xs text-xs font-semibold uppercase tracking-[0.08em] text-navy shadow-brand-sm">
               {price}
+            </span>
+          )}
+          {incentivesAvailable(community.slug) && (
+            <span className="absolute bottom-3 right-3 rounded-full bg-blue px-md py-xs text-xs font-semibold text-cream shadow-brand-sm">
+              Incentives available
             </span>
           )}
         </div>

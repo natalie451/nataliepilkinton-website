@@ -98,7 +98,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Cypress",
     headline: "Northwest Houston, from FM 529 to Tuckerton",
     summary:
-      "Cypress new construction here means Bridgeland, Towne Lake, and Marvida. Elyson is a nearby community the developer markets from a Katy address, so it is not given a Cypress page.",
+      "Cypress new construction here means Bridgeland, Towne Lake, and Marvida. Elyson uses a Katy address and has its own page under Katy.",
   },
   {
     slug: "waller",
@@ -127,6 +127,48 @@ export const newHomeCities: NewHomeCity[] = [
     headline: "US 59 and the Grand Parkway",
     summary:
       "Tavola is the Friendswood Development community with a New Caney address. Valley Ranch, The Highlands, and Harrington Trails are nearby and linked from their own city pages.",
+  },
+  {
+    slug: "tomball",
+    name: "Tomball",
+    headline: "Grand Parkway and Highway 249",
+    summary:
+      "Amira and Oakhill Reserve are the Tomball master plans with current builder pages that name prices and Tomball ISD. Confirm the campus for the lot, because Tomball ISD has been opening west-side schools.",
+  },
+  {
+    slug: "katy",
+    name: "Katy",
+    headline: "North of I-10, along FM 529 and the Grand Parkway",
+    summary:
+      "This page is only the Katy-area master plans north of Interstate 10. Elyson and Cane Island have their own pages. Sunterra and Sunterra Lakes sit north of I-10 and are linked here, with the full pages filed under Waller County.",
+  },
+  {
+    slug: "magnolia",
+    name: "Magnolia",
+    headline: "SH 249 and FM 1488",
+    summary:
+      "Audubon is the Magnolia master plan with a current community site that names builders, price bands, and Magnolia ISD campuses.",
+  },
+  {
+    slug: "humble",
+    name: "Humble",
+    headline: "West Lake Houston, north of Beltway 8",
+    summary:
+      "Balmoral is the Humble master plan with a current builder page for prices and Humble ISD. Fall Creek is an established golf community and is not listed here as an active new-home sales community.",
+  },
+  {
+    slug: "crosby",
+    name: "Crosby",
+    headline: "North of the Crosby Freeway, near Lake Houston",
+    summary:
+      "Enclave at Newport is the active Davidson Homes section inside Newport. Crosby sits north of I-10. Older Newport builder sections have been reported sold out.",
+  },
+  {
+    slug: "dayton",
+    name: "Dayton",
+    headline: "Northeast Harris and Liberty County, north of I-10",
+    summary:
+      "River Ranch Trails is the Dayton new-home section with a current Coventry Homes page, a starting price, and Dayton ISD.",
   },
 ];
 
@@ -820,6 +862,7 @@ const communities: NewHomeCommunity[] = [
   {
     slug: "sunterra",
     citySlug: "waller",
+    alsoListedOn: ["katy"],
     name: "Sunterra",
     developer: "Starwood Land",
     address: "North of I-10 and west of the Grand Parkway. Many sales addresses use Katy, TX",
@@ -876,6 +919,7 @@ const communities: NewHomeCommunity[] = [
   {
     slug: "sunterra-lakes",
     citySlug: "waller",
+    alsoListedOn: ["katy"],
     name: "Sunterra Lakes",
     developer: "Starwood Land",
     address: "Brookshire, in Waller County, north of I-10 and west of the Grand Parkway",
@@ -1258,6 +1302,382 @@ const communities: NewHomeCommunity[] = [
         question: "Where is Tavola?",
         answer:
           "Model addresses on the developer page are on Sentosa Bluff Court and nearby streets in New Caney, TX 77357, with access to US 59 and the Grand Parkway.",
+      },
+    ],
+  },
+  {
+    slug: "amira",
+    citySlug: "tomball",
+    name: "Amira",
+    developer: "Published by the Amira community site. The site names Beazer Homes and Perry Homes as the builders.",
+    address: "20508 Mueschke Road, Tomball, TX 77377",
+    location:
+      "Amira's site places the community just north of the Grand Parkway in Tomball, with access toward Tomball, Cypress, and The Woodlands.",
+    summary:
+      "Amira is a 554-acre master-planned community in Tomball. The community site names Beazer Homes and Perry Homes, The Resort at Amira, five lakes, trails, and Tomball ISD.",
+    priceNote:
+      "The builders page lists Beazer Homes from the $300s to the $660s and Perry Homes from the $300s to the $700s. Beazer's own page also shows a plan from $344,990. Prices change.",
+    homes:
+      "Beazer lists single-family plans of about 1,460 to 3,966 square feet on 45-foot and 50-foot homesites. Perry lists about 1,600 to 3,800 square feet on 45-foot homesites.",
+    builders: [
+      { name: "Beazer Homes", detail: "From the $300s to the $660s. About 1,460 to 3,966 square feet. Models on Bronco Ridge Drive." },
+      { name: "Perry Homes", detail: "From the $300s to the $700s. About 1,600 to 3,800 square feet. Model on Bronco Ridge Drive." },
+    ],
+    amenities: [
+      "The Resort at Amira, with a resort-style pool, sun decks, and shaded verandas",
+      "Dog park, yoga studio, and a fitness center",
+      "Event lawn, walking trails, and five lakes",
+    ],
+    schoolDistrict: "Tomball ISD",
+    schools:
+      "Amira says children attend Tomball ISD. The education page names West Elementary, which opened for the 2024-2025 school year for pre-kindergarten through fourth grade, at 18444 Cypress Heights Drive. The page does not name the intermediate, junior high, or high school. Confirm the full zone with Tomball ISD.",
+    sources: [
+      { label: "Amira homepage", url: "https://amiratexas.com/" },
+      { label: "Amira builders", url: "https://amiratexas.com/builders/" },
+      { label: "Amira schools", url: "https://amiratexas.com/education/" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Amira?",
+        answer:
+          "The Amira site names two builders: Beazer Homes, from the $300s to the $660s, and Perry Homes, from the $300s to the $700s.",
+      },
+      {
+        question: "What school does Amira name?",
+        answer:
+          "Amira says the community is in Tomball ISD and names West Elementary, opened for 2024-2025. Confirm the rest of the zone with the district.",
+      },
+      {
+        question: "Where is The Resort at Amira?",
+        answer:
+          "The community describes The Resort at Amira as the recreation complex, with a resort-style pool, a dog park, a yoga studio, a fitness center, and an event lawn. The published address is 20508 Mueschke Road, Tomball, TX 77377.",
+      },
+    ],
+  },
+  {
+    slug: "oakhill-reserve",
+    citySlug: "tomball",
+    name: "Oakhill Reserve",
+    developer: "Sold by Tri Pointe Homes and Toll Brothers. A single developer is not named on those pages.",
+    address: "22514 Pearl Valley Drive, Tomball, TX 77377",
+    location:
+      "Tri Pointe places Oakhill Reserve near the Grand Parkway in Tomball. Toll Brothers has also used 22414 Decker Prairie Rosehill Road as a community address.",
+    summary:
+      "Oakhill Reserve is a new Tomball community with Tri Pointe Homes and Toll Brothers both publishing homes. Both say the community is in Tomball ISD.",
+    priceNote:
+      "Tri Pointe lists homes from the high $300s, with a 50-foot collection from the mid $400s. Toll Brothers lists the Foxtail Collection from $349,995 and the Longleaf Collection from $449,995. An April 2026 Toll Brothers announcement said pricing starts from the upper $300,000s.",
+    homes:
+      "Tri Pointe: 45-foot plans about 2,128 to 2,931 square feet, and 50-foot plans about 2,391 to 3,289 square feet. Toll Brothers: Foxtail about 1,884 to 3,039 square feet and Longleaf about 2,230 to 3,436 square feet, on 45-foot and 50-foot homesites.",
+    builders: [
+      { name: "Tri Pointe Homes", detail: "From the high $300s on 45-foot homesites and from the mid $400s on 50-foot homesites. Address 22514 Pearl Valley Drive." },
+      { name: "Toll Brothers", detail: "Foxtail Collection from $349,995. Longleaf Collection from $449,995." },
+    ],
+    amenities: [
+      "Toll Brothers' April 2026 opening note describes a resort-style pool, green space, walking and biking trails, pickleball, and a playground",
+      "Tri Pointe says the community is planned for recreation and everyday comfort and does not print a separate amenity list",
+    ],
+    schoolDistrict: "Tomball ISD",
+    schools:
+      "Tri Pointe and Toll Brothers both say Oakhill Reserve is zoned to Tomball ISD. Neither page names the campus list. Confirm the address with the district.",
+    sources: [
+      { label: "Tri Pointe Homes", url: "https://www.tripointehomes.com/tx/houston/oakhill-reserve" },
+      { label: "Toll Brothers", url: "https://www.tollbrothers.com/luxury-homes-for-sale/Texas/Toll-Brothers-at-Oakhill-Reserve" },
+      { label: "Toll Brothers opening note", url: "https://www.tollbrothers.com/blog/toll-brothers-at-oakhill-reserve-tomball-texas-grand-openings" },
+    ],
+    faqs: [
+      {
+        question: "Who is selling in Oakhill Reserve?",
+        answer:
+          "Tri Pointe Homes publishes homes from the high $300s. Toll Brothers publishes the Foxtail Collection from $349,995 and the Longleaf Collection from $449,995.",
+      },
+      {
+        question: "What school district is Oakhill Reserve in?",
+        answer: "Both builder pages say Tomball ISD. Confirm the campus for the homesite.",
+      },
+      {
+        question: "What amenities does Toll Brothers describe?",
+        answer:
+          "The April 2026 opening note lists a resort-style pool, green space, walking and biking trails, pickleball courts, and a playground.",
+      },
+    ],
+  },
+  {
+    slug: "elyson",
+    citySlug: "katy",
+    name: "Elyson",
+    developer: "Brookfield Residential builds in Elyson and the community site is elyson.com.",
+    address: "7303 Prairie Lakeshore Lane, Katy, TX 77493",
+    location:
+      "From the Grand Parkway, exit FM 529 and travel west, then follow Elyson Village Road. FM 529 is north of I-10. The welcome center is 7303 Prairie Lakeshore Lane, Katy, TX 77493.",
+    summary:
+      "Elyson is a Katy master-planned community north of I-10. The homepage says there are 9 builders and 27 model homes, with new homes from Brookfield Residential and David Weekley starting in the low $300s. Sections west of Peek Road are Katy ISD. Sections east of Peek Road are Cy-Fair ISD.",
+    priceNote:
+      "The builders page lists Brookfield Residential and Chesmar Homes from the low $300s, Beazer Homes and David Weekley from the mid $300s, and Highland Homes and Toll Brothers from the low to mid $400s. The homepage also says homes from the low $300s.",
+    homes:
+      "Published size ranges include Brookfield about 1,594 to 3,808 square feet, Chesmar about 1,474 to 4,011 square feet, and Highland collections up to about 4,994 square feet. The homepage describes paired homes, single-family homes, luxury homes, and single-story plans.",
+    builders: [
+      { name: "Beazer Homes", detail: "About 1,604 to 2,828 square feet, from the mid $300s" },
+      { name: "Brookfield Residential", detail: "About 1,594 to 3,808 square feet, from the low $300s" },
+      { name: "Chesmar Homes", detail: "About 1,474 to 4,011 square feet, from the low $300s" },
+      { name: "David Weekley Homes", detail: "About 1,639 to 2,795 square feet, from the mid $300s" },
+      { name: "Highland Homes", detail: "Collections from the low $400s and the mid $400s, with plans up to about 4,994 square feet" },
+      { name: "Toll Brothers", detail: "Collections from the mid $400s, about 2,210 to 4,634 square feet and about 2,410 to 3,905 square feet" },
+    ],
+    amenities: [
+      "The homepage describes parks and a new neighborhood where Brookfield and David Weekley models start in the low $300s",
+      "A full amenity inventory is not printed on the builders or schools pages reviewed here. Ask at the welcome center which parks and pools are open",
+    ],
+    schoolDistrict: "Katy ISD west of Peek Road. Cy-Fair ISD east of Peek Road.",
+    schools:
+      "Elyson says students west of Peek Road attend Katy ISD, including Boudny Elementary, McElwain Elementary, Nelson Junior High, and Freeman High School. Students east of Peek Road attend Cy-Fair ISD. Harmony School of Excellence - Katy, a public charter, is on site and the community says it accepts students from either side. Confirm the lot.",
+    sources: [
+      { label: "Elyson homepage", url: "https://www.elyson.com/" },
+      { label: "Elyson builders", url: "https://www.elyson.com/homes/homebuilders/" },
+      { label: "Elyson schools", url: "https://www.elyson.com/schools/" },
+    ],
+    faqs: [
+      {
+        question: "Is Elyson north of I-10?",
+        answer:
+          "Yes. The directions on elyson.com start at the Grand Parkway and FM 529, which is north of Interstate 10. The welcome center is in Katy, TX 77493.",
+      },
+      {
+        question: "Who is building in Elyson?",
+        answer:
+          "The builders page names Beazer Homes, Brookfield Residential, Chesmar Homes, David Weekley Homes, Highland Homes, and Toll Brothers, with starting prices from the low $300s to the mid $400s. The homepage says the community has 9 builders.",
+      },
+      {
+        question: "Which school district is Elyson in?",
+        answer:
+          "Elyson says west of Peek Road is Katy ISD and east of Peek Road is Cy-Fair ISD. Named Katy ISD campuses include Boudny Elementary, McElwain Elementary, Nelson Junior High, and Freeman High School.",
+      },
+    ],
+  },
+  {
+    slug: "cane-island",
+    citySlug: "katy",
+    name: "Cane Island",
+    developer: "Published at caneisland.com. The site does not name a separate development company on the pages reviewed here.",
+    address: "2100 Cane Island Parkway, Katy, TX 77493",
+    location:
+      "Cane Island says it is three minutes from I-10 on Cane Island Parkway, just west of the Grand Parkway and north of I-10.",
+    summary:
+      "Cane Island is a Katy master-planned community north of I-10. The community says the final sections are selling, with six premier builders, 14 models, and an on-site Katy ISD elementary school.",
+    priceNote:
+      "The community says move-in ready homes run from the $400s to the millions. The builders page names William David Custom Homes from $1.75 million and up. A community news note has also listed David Weekley homes from the mid $300s on 50-foot homesites and from the mid $400s on 60-foot homesites, and Perry Homes from the $370s. Confirm who is still selling before you visit.",
+    homes:
+      "The hometown page says buyers can choose floor plans from six builders and that homesites include oversized lots. The Estates section has been described as half-acre custom homesites.",
+    builders: [
+      { name: "Six premier builders", detail: "The current hometown page says six builders and 14 models, with homes from the $400s to the millions. It does not print all six names in the text." },
+      { name: "William David Custom Homes", detail: "From $1.75 million and up, listed on the builders page." },
+    ],
+    amenities: [
+      "The hometown page lists an on-site Katy ISD elementary, a yoga studio, and an on-site restaurant",
+      "The builders page points visitors to resort-style amenities at Cane Quarter",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Cane Island says it is zoned to Katy ISD. Robertson Elementary is on site at 7400 Innovation Drive, northwest of Cane Island Parkway. The schools page does not name the junior high or high school. Confirm those with Katy ISD.",
+    sources: [
+      { label: "Cane Island hometown", url: "https://caneisland.com/hometown" },
+      { label: "Cane Island builders", url: "https://caneisland.com/homes/builders" },
+      { label: "Cane Island schools", url: "https://caneisland.com/schools" },
+    ],
+    faqs: [
+      {
+        question: "Is Cane Island north of I-10?",
+        answer:
+          "Yes. The community site says Cane Island is just west of the Grand Parkway and north of I-10, at 2100 Cane Island Parkway, Katy, TX 77493.",
+      },
+      {
+        question: "What does a new home cost in Cane Island?",
+        answer:
+          "The community says move-in ready homes run from the $400s to the millions. William David Custom Homes is listed from $1.75 million and up.",
+      },
+      {
+        question: "What school is inside Cane Island?",
+        answer:
+          "Robertson Elementary, a Katy ISD campus, is on site at 7400 Innovation Drive. Confirm junior high and high school with the district.",
+      },
+    ],
+  },
+  {
+    slug: "audubon",
+    citySlug: "magnolia",
+    name: "Audubon",
+    developer: "Published at audubonliving.com.",
+    address: "40001 Audubon Parkway, Magnolia, TX 77354",
+    location:
+      "Audubon says it is in the Magnolia extraterritorial jurisdiction in Montgomery County, at SH 249 and FM 1488.",
+    summary:
+      "Audubon is a Magnolia master-planned community with several districts, homes the FAQ lists from the $270s to $1 million, and Magnolia ISD schools including an on-site elementary.",
+    priceNote:
+      "The FAQ says new homes run from the $270s to $1 million. The districts page lists Creekside from the high $200s to $1 million and Audubon Park from the high $400s to the $800s and up.",
+    homes:
+      "Creekside North is described with 40-foot and 50-foot homesites. Audubon Park is described with 60-foot and 70-foot homesites. Creekside South is described with 45-foot, 60-foot patio, and 80-foot homesites.",
+    builders: [
+      { name: "Creekside North", detail: "The FAQ names Anglia Homes and Smith Douglas Homes on 40-foot and 50-foot homesites. The districts page also names Century Communities, David Weekley, Drees, Newmark, Perry, and Sitterle in the Creekside districts." },
+      { name: "Audubon Park", detail: "The FAQ names Drees Custom Homes, Empire, Perry Homes, and Ravenna Homes on 60-foot and 70-foot homesites." },
+      { name: "Creekside South", detail: "The FAQ names David Weekley Homes, Drees Custom Homes, Newmark Homes, Perry Homes, and Sitterle Homes." },
+    ],
+    amenities: [
+      "Screech Park in Heron Heights, with a play structure, swings, lawns, and trails",
+      "Legacy Park, with oak trees, a play area, picnic spots, and trails",
+      "Audubon Park trail and a pond viewing area",
+      "Future amenities named on the FAQ include a club amenity center, a resort-style pool, and a kids' pool",
+    ],
+    schoolDistrict: "Magnolia ISD",
+    schools:
+      "Audubon says students attend Magnolia ISD. The FAQ lists Audubon Elementary (fall 2024), Magnolia Parkway Elementary, Bear Branch Intermediate, Bear Branch Junior High, and Magnolia High School. Confirm the lot, because the FAQ says the first neighborhoods use that list.",
+    sources: [
+      { label: "Audubon FAQ", url: "https://audubonliving.com/faq/" },
+      { label: "Audubon districts", url: "https://audubonliving.com/districts/" },
+    ],
+    faqs: [
+      {
+        question: "Where is Audubon?",
+        answer:
+          "Audubon publishes 40001 Audubon Parkway, Magnolia, TX 77354, at SH 249 and FM 1488 in Montgomery County.",
+      },
+      {
+        question: "What is the price range?",
+        answer:
+          "The FAQ says homes run from the $270s to $1 million. District pages break that into a Creekside range from the high $200s and an Audubon Park range from the high $400s.",
+      },
+      {
+        question: "What schools does Audubon name?",
+        answer:
+          "Magnolia ISD, including Audubon Elementary, Magnolia Parkway Elementary, Bear Branch Intermediate, Bear Branch Junior High, and Magnolia High School.",
+      },
+    ],
+  },
+  {
+    slug: "balmoral",
+    citySlug: "humble",
+    name: "Balmoral",
+    developer: "A 2023 community brochure identifies Starwood Land.",
+    address: "15815 Invergelder Drive, Humble, TX 77346",
+    location:
+      "Chesmar's Balmoral page places the community in Humble, north of Beltway 8, in the West Lake Houston area. That is north of I-10.",
+    summary:
+      "Balmoral is a Humble master-planned community still selling homes. Chesmar calls its section a final opportunity and lists Humble ISD. A 2023 brochure describes a Crystal Lagoon and a wider builder list that may have changed.",
+    priceNote:
+      "Chesmar publishes Balmoral homes from $302,990, about 1,474 to 2,054 square feet. That is Chesmar's section, not a price for every builder.",
+    homes:
+      "Chesmar describes a courtyard collection and two-story plans. The 2023 brochure listed Brightland Homes, CastleRock Communities, Chesmar Homes, Colina Homes, New Home Co., Lennar, Long Lake, and WB Homes. Treat that roster as the brochure's list, and confirm who still has homes.",
+    builders: [
+      { name: "Chesmar Homes", detail: "From $302,990. About 1,474 to 2,054 square feet. Model area at 15815 Invergelder Drive. The builder page says final opportunity." },
+      { name: "2023 brochure roster", detail: "Brightland, CastleRock, Colina, New Home Co., Lennar, Long Lake, and WB Homes were named with Chesmar in the October 2023 brochure. Confirm who is still selling." },
+    ],
+    amenities: [
+      "The 2023 brochure describes a Crystal Lagoon, sand beach, a 7,500-square-foot clubhouse, fitness center, splash pad, playground, and an infinity-edge pool",
+      "Victory Park is described with sports courts and playgrounds",
+    ],
+    schoolDistrict: "Humble ISD",
+    schools:
+      "Chesmar lists Humble ISD and names Centennial Elementary, Autumn Ridge Middle School, and Summer Creek High School. The 2023 brochure also mentions Ridge Creek Elementary and a future school. Confirm the address with Humble ISD.",
+    sources: [
+      { label: "Chesmar Homes at Balmoral", url: "https://www.chesmar.com/texas/houston-new-homes/humble/balmoral/" },
+      { label: "2023 Balmoral brochure", url: "https://balmoralhouston.com/wp-content/uploads/2024/12/BAL-23029-Brochure-Update-October-2023_v6-WEB.pdf" },
+    ],
+    faqs: [
+      {
+        question: "Is Balmoral still selling new homes?",
+        answer:
+          "Chesmar's page calls its Balmoral section a final opportunity and still lists homes from $302,990. Other builders named in the 2023 brochure should be confirmed before a tour.",
+      },
+      {
+        question: "What schools does Chesmar list?",
+        answer:
+          "Humble ISD: Centennial Elementary, Autumn Ridge Middle School, and Summer Creek High School. Confirm the lot.",
+      },
+      {
+        question: "What is the lagoon?",
+        answer:
+          "The 2023 brochure describes Balmoral's amenity village around a Crystal Lagoon, with a sand beach, clubhouse, splash pad, and an infinity-edge pool.",
+      },
+    ],
+  },
+  {
+    slug: "enclave-at-newport",
+    citySlug: "crosby",
+    name: "Enclave at Newport",
+    developer: "Davidson Homes, inside the Newport community.",
+    address: "16023 Port O Call Street, Crosby, TX 77532",
+    location:
+      "Davidson Homes places Enclave at Newport just north of the Crosby Freeway, about 25 miles northeast of downtown Houston. Crosby is north of I-10.",
+    summary:
+      "Enclave at Newport is Davidson Homes' new-home section in Crosby, with access to Newport's clubhouse, golf, and pool. The page names Crosby ISD campuses and shows homes from about $273,990.",
+    priceNote:
+      "Davidson lists plans from $273,990 and shows a quick move-in at 15919 Port O Call Street for $316,990. Plan sizes run about 1,300 to 2,500 square feet.",
+    homes: "Plans with 3 to 4 bedrooms, 2 to 3 bathrooms, and two-car garages, about 1,300 to 2,500 square feet.",
+    builders: [
+      { name: "Davidson Homes", detail: "From $273,990. About 1,300 to 2,500 square feet. Sales address 16023 Port O Call Street, Crosby, TX 77532." },
+    ],
+    amenities: [
+      "Davidson says residents get access to a clubhouse and golf course, a community pool, a splash pad, tennis courts, and a playground",
+      "The page also points to Lake Houston and the San Jacinto River nearby",
+    ],
+    schoolDistrict: "Crosby ISD",
+    schools:
+      "Davidson names Newport Elementary School, Crosby Middle School, and Crosby High School. Confirm the address with Crosby ISD.",
+    sources: [
+      { label: "Davidson Homes, Enclave at Newport", url: "https://www.davidsonhomes.com/states/texas/houston-market-area/crosby/enclave-at-newport/" },
+    ],
+    faqs: [
+      {
+        question: "Is this the same as Newport?",
+        answer:
+          "Enclave at Newport is the Davidson Homes section inside Newport in Crosby. Older Newport sections by other builders have been reported sold out. This page is the section Davidson is selling now.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "Davidson lists plans from $273,990, with a quick move-in example at $316,990.",
+      },
+      {
+        question: "What schools are named?",
+        answer: "Crosby ISD: Newport Elementary, Crosby Middle School, and Crosby High School.",
+      },
+    ],
+  },
+  {
+    slug: "river-ranch-trails",
+    citySlug: "dayton",
+    name: "River Ranch Trails",
+    developer: "Coventry Homes publishes the section inside River Ranch.",
+    address: "209 Estelle Court, Dayton, TX 77535",
+    location:
+      "Coventry places River Ranch Trails in Dayton, in a gated section of River Ranch. Dayton is northeast of Houston and north of I-10.",
+    summary:
+      "River Ranch Trails is a Dayton new-home section by Coventry Homes, starting at $249,990, with Dayton ISD and access to River Ranch's Angel Lagoon.",
+    priceNote:
+      "Coventry lists homes starting at $249,990, with plans about 1,480 to 2,587 square feet. A listed quick move-in, the Young plan, was shown at $343,644.",
+    homes: "About 1,480 to 2,587 square feet, with plans described as 3 to 5 bedrooms.",
+    builders: [
+      { name: "Coventry Homes", detail: "Starting at $249,990. About 1,480 to 2,587 square feet. Address 209 Estelle Court, Dayton, TX 77535." },
+    ],
+    amenities: [
+      "Coventry describes Angel Lagoon as a 40-acre lagoon with white sand beaches",
+      "Walking trails, parks, and a recreation center",
+    ],
+    schoolDistrict: "Dayton ISD",
+    schools:
+      "Coventry says the community is in Dayton ISD and mentions access to local elementary, middle, and high schools. The page does not name the campuses. Confirm the address with the district.",
+    sources: [
+      { label: "Coventry Homes, River Ranch Trails", url: "https://www.coventryhomes.com/new-homes/tx/dayton/river-ranch-trails/" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in River Ranch Trails?",
+        answer: "Coventry Homes publishes this section, with homes starting at $249,990.",
+      },
+      {
+        question: "What is Angel Lagoon?",
+        answer: "Coventry describes Angel Lagoon as a 40-acre lagoon with white sand beaches inside River Ranch.",
+      },
+      {
+        question: "What school district is it?",
+        answer: "Dayton ISD. The builder page does not name the individual campuses. Confirm the lot.",
       },
     ],
   },

@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
-import { CommunityPromotions } from "@/components/new-homes/BuilderPromotions";
+import { BuildersInCommunity } from "@/components/new-homes/BuilderPromotions";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -206,19 +206,7 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
         </Container>
       </Section>
 
-      <Section tone="light">
-        <Container>
-          <h2>Builders</h2>
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-md">
-            {community.builders.map((builder) => (
-              <article key={builder.name} className="border border-gray-light bg-white rounded-xs p-lg">
-                <h3 className="mt-0 mb-sm text-xl">{builder.name}</h3>
-                <p className="mb-0 text-gray-dark">{builder.detail}</p>
-              </article>
-            ))}
-          </div>
-        </Container>
-      </Section>
+      <BuildersInCommunity community={community} />
 
       <Section>
         <Container className="max-w-[48rem]">
@@ -230,8 +218,6 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </ul>
         </Container>
       </Section>
-
-      <CommunityPromotions name={community.name} slug={community.slug} />
 
       <Section id="tour" tone="accent">
         <Container>

@@ -31,7 +31,7 @@ const pages: { path: string; title: string; summary: string }[] = [
     path: "/new-homes",
     title: "New homes",
     summary:
-      "New construction in Conroe, Montgomery, Willis, Spring, Cypress, Waller, Porter, Splendora, and New Caney.",
+      "New construction north of I-10, including Conroe, Tomball, Katy, Cypress, Magnolia, Humble, Crosby, Dayton, Waller, Porter, Splendora, and New Caney.",
   },
   {
     path: "/sellers",

@@ -255,6 +255,57 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/tavola/club.webp","alt":"Amenity interior at Tavola","width":600,"height":400},
     ],
   },
+  "amira": {
+    creditName: "Amira",
+    creditUrl: "https://amiratexas.com/",
+    photos: [
+      {"src":"/new-homes/amira/hero.webp","alt":"Resort pool and clubhouse at Amira","width":1234,"height":685},
+    ],
+  },
+  "elyson": {
+    creditName: "Elyson",
+    creditUrl: "https://www.elyson.com/",
+    photos: [
+      {"src":"/new-homes/elyson/hero.webp","alt":"Residents by a lake in Elyson, from the community homepage","width":723,"height":768},
+      {"src":"/new-homes/elyson/builders.webp","alt":"Kitchen published on the Elyson builders page","width":1200,"height":366},
+    ],
+  },
+  "cane-island": {
+    creditName: "Cane Island",
+    creditUrl: "https://caneisland.com/homes/builders",
+    photos: [
+      {"src":"/new-homes/cane-island/models.webp","alt":"Model home published on the Cane Island builders page","width":1200,"height":664},
+    ],
+  },
+  "oakhill-reserve": {
+    creditName: "Tri Pointe Homes",
+    creditUrl: "https://www.tripointehomes.com/tx/houston/oakhill-reserve",
+    photos: [
+      {"src":"/new-homes/oakhill-reserve/hero.webp","alt":"Sales center homes at Oakhill Reserve","width":1600,"height":1067},
+    ],
+  },
+  "enclave-at-newport": {
+    creditName: "Davidson Homes",
+    creditUrl: "https://www.davidsonhomes.com/states/texas/houston-market-area/crosby/enclave-at-newport/",
+    photos: [
+      {"src":"/new-homes/enclave-at-newport/hero.webp","alt":"Davidson Homes sales center at 16023 Port O Call Street in Enclave at Newport","width":1600,"height":1067},
+      {"src":"/new-homes/enclave-at-newport/two.webp","alt":"Photo on the Enclave at Newport page","width":1200,"height":802},
+      {"src":"/new-homes/enclave-at-newport/three.webp","alt":"Second photo on the Enclave at Newport page","width":1200,"height":800},
+      {"src":"/new-homes/enclave-at-newport/four.webp","alt":"Third photo on the Enclave at Newport page","width":1200,"height":800},
+    ],
+  },
+  "river-ranch-trails": {
+    creditName: "Coventry Homes",
+    creditUrl: "https://www.coventryhomes.com/new-homes/tx/dayton/river-ranch-trails/",
+    photos: [
+      {"src":"/new-homes/river-ranch-trails/hero.webp","alt":"Angel Lagoon beach at River Ranch","width":1600,"height":1423},
+      {"src":"/new-homes/river-ranch-trails/lagoon.webp","alt":"Lagoon photo on the River Ranch Trails page","width":1200,"height":900},
+      {"src":"/new-homes/river-ranch-trails/beach.webp","alt":"Beach at Angel Lagoon","width":1200,"height":800},
+      {"src":"/new-homes/river-ranch-trails/home.webp","alt":"Home at 209 Estelle Court in River Ranch Trails","width":1200,"height":800},
+      {"src":"/new-homes/river-ranch-trails/street.webp","alt":"Street scene on the River Ranch Trails page","width":1200,"height":899},
+      {"src":"/new-homes/river-ranch-trails/park.webp","alt":"Another River Ranch photo on the Coventry page","width":1200,"height":899},
+    ],
+  },
 };
 
 export function getCommunityGallery(slug: string) {
