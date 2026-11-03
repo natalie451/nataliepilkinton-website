@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { CommunityPhotoCard } from "@/components/new-homes/CommunityPhotoCard";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
+import { PromoStrip } from "@/components/new-homes/BuilderPromotions";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -92,6 +93,8 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
           </Container>
         </section>
       ) : null}
+
+      <PromoStrip title={`Current builder promotions in ${city.name}`} communities={[...primary, ...linked]} />
 
       <Section>
         <Container>

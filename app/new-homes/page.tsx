@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { CommunityPhotoCard } from "@/components/new-homes/CommunityPhotoCard";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
+import { PromoStrip } from "@/components/new-homes/BuilderPromotions";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/data/navigation";
 import { getCommunityGallery } from "@/lib/data/newHomePhotos";
@@ -76,6 +77,11 @@ export default function NewHomesPage() {
           </p>
         </Container>
       </section>
+
+      <PromoStrip
+        title="Current builder promotions"
+        communities={newHomeCities.flatMap((city) => communitiesForCity(city.slug).primary)}
+      />
 
       <Section id="cities">
         <Container>

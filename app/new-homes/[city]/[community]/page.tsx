@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
+import { CommunityPromotions } from "@/components/new-homes/BuilderPromotions";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -229,6 +230,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </ul>
         </Container>
       </Section>
+
+      <CommunityPromotions name={community.name} slug={community.slug} />
 
       <Section id="tour" tone="accent">
         <Container>
