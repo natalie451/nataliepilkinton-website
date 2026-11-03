@@ -1,0 +1,275 @@
+export type CommunityPhoto = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+export type CommunityGallery = {
+  creditName: string;
+  creditUrl: string;
+  /** First photo is the hero. The rest are the amenity gallery. */
+  photos: CommunityPhoto[];
+};
+
+export const communityGalleries: Record<string, CommunityGallery> = {
+  "artavia": {
+    creditName: "ARTAVIA",
+    creditUrl: "https://artaviatx.com/",
+    photos: [
+      {"src":"/new-homes/artavia/hero.webp","alt":"Pine trail published as the ARTAVIA homepage hero","width":1500,"height":844},
+      {"src":"/new-homes/artavia/lake.webp","alt":"Lake and boardwalk at ARTAVIA","width":1200,"height":800},
+      {"src":"/new-homes/artavia/splash.webp","alt":"Splash pad at Dapple Park in ARTAVIA","width":1200,"height":800},
+      {"src":"/new-homes/artavia/trails.webp","alt":"Shaded trail in ARTAVIA","width":1200,"height":799},
+      {"src":"/new-homes/artavia/playground.webp","alt":"Playground at ARTAVIA","width":1200,"height":800},
+      {"src":"/new-homes/artavia/amenity-center.webp","alt":"Amenity center at ARTAVIA","width":1200,"height":800},
+      {"src":"/new-homes/artavia/cafe.webp","alt":"Palate Cafe at ARTAVIA","width":1200,"height":800},
+      {"src":"/new-homes/artavia/fitness.webp","alt":"FitCenter at ARTAVIA","width":1200,"height":799},
+    ],
+  },
+  "grand-central-park": {
+    creditName: "Grand Central Park",
+    creditUrl: "https://www.grandcentralparktx.com/lakehouse",
+    photos: [
+      {"src":"/new-homes/grand-central-park/hero.webp","alt":"The Lake House at Grand Central Park","width":1800,"height":712},
+      {"src":"/new-homes/grand-central-park/aerial.webp","alt":"Aerial of the Lake House and lake at Grand Central Park","width":1200,"height":559},
+      {"src":"/new-homes/grand-central-park/grandeur.webp","alt":"Entrance to The Grandeur preserve at Grand Central Park","width":800,"height":625},
+      {"src":"/new-homes/grand-central-park/homes.webp","alt":"Homes published on the Grand Central Park site","width":960,"height":460},
+    ],
+  },
+  "harpers-preserve": {
+    creditName: "Harper's Preserve",
+    creditUrl: "https://syi.net/syi-projects/harpers-preserve/",
+    photos: [
+      {"src":"/new-homes/harpers-preserve/hero.webp","alt":"Entrance view on the Harper's Preserve site","width":1496,"height":768},
+      {"src":"/new-homes/harpers-preserve/pool.webp","alt":"Pool at Harper's Preserve","width":1200,"height":1124},
+      {"src":"/new-homes/harpers-preserve/pool-patio.webp","alt":"Pool patio at Harper's Preserve","width":1200,"height":851},
+      {"src":"/new-homes/harpers-preserve/park.webp","alt":"Park at Harper's Preserve","width":1200,"height":800},
+      {"src":"/new-homes/harpers-preserve/bikes.webp","alt":"Residents on a path at Harper's Preserve","width":1200,"height":800},
+      {"src":"/new-homes/harpers-preserve/landing.webp","alt":"Homes at Harper's Preserve","width":1200,"height":800},
+      {"src":"/new-homes/harpers-preserve/trees.webp","alt":"Wooded setting at Harper's Preserve","width":1200,"height":801},
+      {"src":"/new-homes/harpers-preserve/street.webp","alt":"Street of homes at Harper's Preserve","width":1200,"height":801},
+    ],
+  },
+  "woodforest": {
+    creditName: "Woodforest",
+    creditUrl: "https://www.woodforesttx.com/amenities",
+    photos: [
+      {"src":"/new-homes/woodforest/amenity-pool.webp","alt":"Community pool at Woodforest","width":960,"height":1205},
+      {"src":"/new-homes/woodforest/pool.webp","alt":"Pool at The Vue in Woodforest","width":960,"height":1204},
+      {"src":"/new-homes/woodforest/pavilion.webp","alt":"Pavilion at The Vue in Woodforest","width":960,"height":1204},
+      {"src":"/new-homes/woodforest/trail.webp","alt":"Trail at Woodforest","width":960,"height":1204},
+      {"src":"/new-homes/woodforest/golf.webp","alt":"Junior golfer on the course at Woodforest","width":960,"height":1200},
+      {"src":"/new-homes/woodforest/hero.webp","alt":"Overlook published as The Vue at Woodforest","width":960,"height":1204},
+      {"src":"/new-homes/woodforest/pines.webp","alt":"Pine woods at Woodforest","width":960,"height":1200},
+      {"src":"/new-homes/woodforest/palms.webp","alt":"Palm fronds in a Woodforest amenity photo","width":960,"height":1200},
+    ],
+  },
+  "fairwater": {
+    creditName: "Fairwater",
+    creditUrl: "https://www.forestar.com/community/fairwater/",
+    photos: [
+      {"src":"/new-homes/fairwater/hero.webp","alt":"Fairwater Park sign and playground","width":1600,"height":1068},
+      {"src":"/new-homes/fairwater/splash.webp","alt":"Splash pad at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/park.webp","alt":"Park lawn at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/park-2.webp","alt":"Park path at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/park-3.webp","alt":"Play area at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/pickleball.webp","alt":"Pickleball court at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/picnic.webp","alt":"Picnic area at Fairwater","width":1200,"height":801},
+      {"src":"/new-homes/fairwater/lawn.webp","alt":"Open lawn at Fairwater","width":1200,"height":801},
+    ],
+  },
+  "the-woodlands-hills": {
+    creditName: "The Woodlands Hills",
+    creditUrl: "https://thewoodlandshills.com/",
+    photos: [
+      {"src":"/new-homes/the-woodlands-hills/hero.webp","alt":"Aerial overview of The Woodlands Hills","width":1600,"height":964},
+      {"src":"/new-homes/the-woodlands-hills/pool.webp","alt":"Pool at The Woodlands Hills","width":1200,"height":801},
+      {"src":"/new-homes/the-woodlands-hills/fitness-pool.webp","alt":"Fitness pool at The Woodlands Hills","width":1200,"height":801},
+      {"src":"/new-homes/the-woodlands-hills/path.webp","alt":"Residents walking a pathway at The Woodlands Hills","width":1200,"height":800},
+      {"src":"/new-homes/the-woodlands-hills/bridge.webp","alt":"Bridge on a trail at The Woodlands Hills","width":800,"height":1200},
+      {"src":"/new-homes/the-woodlands-hills/school-path.webp","alt":"Path toward school at The Woodlands Hills","width":1200,"height":674},
+      {"src":"/new-homes/the-woodlands-hills/model.webp","alt":"J. Patrick model home in The Woodlands Hills","width":1200,"height":800},
+      {"src":"/new-homes/the-woodlands-hills/harvest.webp","alt":"Community gathering at The Woodlands Hills","width":1200,"height":679},
+    ],
+  },
+  "harmony": {
+    creditName: "Harmony",
+    creditUrl: "https://landtejas.com/historical/harmony/",
+    photos: [
+      {"src":"/new-homes/harmony/hero.webp","alt":"Splash pad at Harmony, the hero photo on the Land Tejas page","width":1800,"height":563},
+    ],
+  },
+  "woodsons-reserve": {
+    creditName: "Woodson's Reserve",
+    creditUrl: "https://woodsonsreserve.com/",
+    photos: [
+      {"src":"/new-homes/woodsons-reserve/club.webp","alt":"Seating inside the Woodson's Club","width":850,"height":580},
+      {"src":"/new-homes/woodsons-reserve/grounds.webp","alt":"Landscaped grounds at Woodson's Reserve","width":1200,"height":801},
+      {"src":"/new-homes/woodsons-reserve/homes.webp","alt":"Homes at Woodson's Reserve","width":800,"height":800},
+      {"src":"/new-homes/woodsons-reserve/school.webp","alt":"School interior published on the Woodson's Reserve site","width":800,"height":800},
+      {"src":"/new-homes/woodsons-reserve/event-lawn.webp","alt":"Outdoor gathering at Woodson's Reserve","width":1000,"height":600},
+      {"src":"/new-homes/woodsons-reserve/hero.webp","alt":"Candy-making event for residents at Woodson's Reserve","width":1800,"height":1200},
+      {"src":"/new-homes/woodsons-reserve/pool.webp","alt":"Daylily in the landscaping at Woodson's Reserve","width":683,"height":1024},
+      {"src":"/new-homes/woodsons-reserve/path.webp","alt":"Residents at an indoor community event at Woodson's Reserve","width":640,"height":480},
+    ],
+  },
+  "bridgeland": {
+    creditName: "Bridgeland",
+    creditUrl: "https://www.bridgeland.com/",
+    photos: [
+      {"src":"/new-homes/bridgeland/hero.webp","alt":"Runner on a boardwalk over Josey Lake in Bridgeland","width":1114,"height":835},
+      {"src":"/new-homes/bridgeland/pools.webp","alt":"Pool amenity photo on the Bridgeland site","width":742,"height":494},
+      {"src":"/new-homes/bridgeland/trails.webp","alt":"Trail photo on the Bridgeland site","width":740,"height":494},
+      {"src":"/new-homes/bridgeland/parks.webp","alt":"Park photo on the Bridgeland site","width":742,"height":494},
+      {"src":"/new-homes/bridgeland/amenities.webp","alt":"Amenity view on the Bridgeland site","width":1200,"height":514},
+      {"src":"/new-homes/bridgeland/lilypad.webp","alt":"Lily Pad Park in Bridgeland","width":1200,"height":675},
+      {"src":"/new-homes/bridgeland/creekland.webp","alt":"Creekland Village in Bridgeland","width":1200,"height":800},
+      {"src":"/new-homes/bridgeland/prairieland.webp","alt":"Prairieland Village in Bridgeland","width":1200,"height":800},
+    ],
+  },
+  "towne-lake": {
+    creditName: "Towne Lake",
+    creditUrl: "https://townelaketexas.com/",
+    photos: [
+      {"src":"/new-homes/towne-lake/hero.webp","alt":"Water skiing on the lake at Towne Lake","width":1800,"height":1200},
+      {"src":"/new-homes/towne-lake/marina.webp","alt":"Marina at Towne Lake","width":1200,"height":613},
+      {"src":"/new-homes/towne-lake/boardwalk.webp","alt":"Boardwalk at Towne Lake","width":1200,"height":800},
+      {"src":"/new-homes/towne-lake/waterpark.webp","alt":"Water park at Towne Lake","width":1200,"height":800},
+      {"src":"/new-homes/towne-lake/lakehouse.webp","alt":"Lake house at Towne Lake","width":1200,"height":800},
+      {"src":"/new-homes/towne-lake/docks.webp","alt":"Boat docks at Towne Lake","width":1200,"height":801},
+      {"src":"/new-homes/towne-lake/trails.webp","alt":"Parks and trails at Towne Lake","width":1200,"height":801},
+      {"src":"/new-homes/towne-lake/boat.webp","alt":"Boat on the lake at Towne Lake","width":1127,"height":599},
+    ],
+  },
+  "marvida": {
+    creditName: "Marvida",
+    creditUrl: "https://marvidahouston.com/",
+    photos: [
+      {"src":"/new-homes/marvida/hero.webp","alt":"Aerial of Marvida","width":1800,"height":1011},
+      {"src":"/new-homes/marvida/aerial-2.webp","alt":"Neighborhood aerial at Marvida","width":1200,"height":674},
+      {"src":"/new-homes/marvida/amenity.webp","alt":"Amenity aerial at Marvida","width":1200,"height":674},
+      {"src":"/new-homes/marvida/street.webp","alt":"Streetscape at Marvida","width":1200,"height":674},
+      {"src":"/new-homes/marvida/homes.webp","alt":"Homes at Marvida","width":1200,"height":844},
+      {"src":"/new-homes/marvida/play.webp","alt":"Outdoor area at Marvida","width":1200,"height":802},
+    ],
+  },
+  "dellrose": {
+    creditName: "Dellrose",
+    creditUrl: "https://dellroseliving.com/",
+    photos: [
+      {"src":"/new-homes/dellrose/hero.webp","alt":"Aerial of Dellrose","width":1800,"height":1011},
+      {"src":"/new-homes/dellrose/aerial-2.webp","alt":"Second aerial of Dellrose","width":1200,"height":680},
+      {"src":"/new-homes/dellrose/homes.webp","alt":"Homes in Dellrose","width":1200,"height":804},
+      {"src":"/new-homes/dellrose/street.webp","alt":"Street in Dellrose","width":1200,"height":810},
+      {"src":"/new-homes/dellrose/green.webp","alt":"Green space in Dellrose","width":1200,"height":807},
+      {"src":"/new-homes/dellrose/monument.webp","alt":"Dellrose entrance monument","width":1200,"height":588},
+      {"src":"/new-homes/dellrose/model.webp","alt":"Coventry model home in Dellrose","width":1200,"height":703},
+    ],
+  },
+  "sunterra": {
+    creditName: "Sunterra",
+    creditUrl: "https://sunterratx.com/",
+    photos: [
+      {"src":"/new-homes/sunterra/beach.webp","alt":"Beach cabanas at the Sunterra lagoon","width":1200,"height":800},
+      {"src":"/new-homes/sunterra/lagoon.webp","alt":"Residents in the Sunterra lagoon","width":960,"height":633},
+      {"src":"/new-homes/sunterra/hero.webp","alt":"The Retreat amenity village at Sunterra","width":1600,"height":1198},
+      {"src":"/new-homes/sunterra/welcome.webp","alt":"Welcome center at Sunterra","width":1200,"height":1109},
+      {"src":"/new-homes/sunterra/model.webp","alt":"Model home at Sunterra","width":640,"height":428},
+    ],
+  },
+  "sunterra-lakes": {
+    creditName: "Sunterra Lakes",
+    creditUrl: "https://sunterralakestx.com/",
+    photos: [
+      {"src":"/new-homes/sunterra-lakes/hero.webp","alt":"Splash pad at Sunterra Lakes","width":1800,"height":1707},
+      {"src":"/new-homes/sunterra-lakes/pool.webp","alt":"Pool at Sunterra Lakes","width":960,"height":712},
+      {"src":"/new-homes/sunterra-lakes/slide.webp","alt":"Waterslide at the Sunterra Lakes pool","width":960,"height":640},
+      {"src":"/new-homes/sunterra-lakes/playground.webp","alt":"Playground at Sunterra Lakes","width":960,"height":960},
+      {"src":"/new-homes/sunterra-lakes/park.webp","alt":"Park lawn at Sunterra Lakes","width":960,"height":1440},
+      {"src":"/new-homes/sunterra-lakes/patio.webp","alt":"Outdoor patio at Sunterra Lakes","width":960,"height":960},
+      {"src":"/new-homes/sunterra-lakes/family-pool.webp","alt":"Family at the Sunterra Lakes pool","width":960,"height":815},
+      {"src":"/new-homes/sunterra-lakes/gym.webp","alt":"Fitness room photo on the Sunterra Lakes site","width":960,"height":712},
+    ],
+  },
+  "the-highlands": {
+    creditName: "The Highlands",
+    creditUrl: "https://thehighlands.com/",
+    photos: [
+      {"src":"/new-homes/the-highlands/slides.webp","alt":"Water slides at The Highlands","width":1600,"height":1067},
+      {"src":"/new-homes/the-highlands/clubhouse.webp","alt":"The Hideaway clubhouse at The Highlands","width":1400,"height":933},
+      {"src":"/new-homes/the-highlands/wings.webp","alt":"Wing sculpture at The Highlands","width":1200,"height":800},
+      {"src":"/new-homes/the-highlands/lake.webp","alt":"Parent and child on a wooded path, published on The Highlands site","width":499,"height":392},
+      {"src":"/new-homes/the-highlands/gathering.webp","alt":"Model home interior published on The Highlands site","width":1200,"height":798},
+      {"src":"/new-homes/the-highlands/event.webp","alt":"Residents at a Highlands community event","width":1400,"height":933},
+    ],
+  },
+  "valley-ranch": {
+    creditName: "Valley Ranch",
+    creditUrl: "https://www.valley-ranch.com/",
+    photos: [
+      {"src":"/new-homes/valley-ranch/live.webp","alt":"Clubhouse or leasing building at Valley Ranch","width":688,"height":564},
+      {"src":"/new-homes/valley-ranch/entry.webp","alt":"Aerial of Valley Ranch Town Center and the Grand Parkway interchange","width":1200,"height":626},
+      {"src":"/new-homes/valley-ranch/play.webp","alt":"Play photo published on the Valley Ranch site","width":688,"height":564},
+      {"src":"/new-homes/valley-ranch/shop.webp","alt":"Shopping photo published on the Valley Ranch site","width":688,"height":564},
+      {"src":"/new-homes/valley-ranch/dine.webp","alt":"Dining photo published on the Valley Ranch site","width":688,"height":564},
+    ],
+  },
+  "harrington-trails": {
+    creditName: "D.R. Horton",
+    creditUrl: "https://www.drhorton.com/texas/houston/new-caney/harrington-trails-at-the-canopies",
+    photos: [
+      {"src":"/new-homes/harrington-trails/hero.webp","alt":"Aerial of lakes and homes in the Harrington Trails gallery","width":1150,"height":647},
+      {"src":"/new-homes/harrington-trails/street.webp","alt":"Homes in Harrington Trails","width":1150,"height":647},
+      {"src":"/new-homes/harrington-trails/homes.webp","alt":"Another view of homes in Harrington Trails","width":1150,"height":647},
+      {"src":"/new-homes/harrington-trails/front.webp","alt":"Home on Central Concave Drive in Harrington Trails","width":1150,"height":647},
+      {"src":"/new-homes/harrington-trails/yard.webp","alt":"Front yard in Harrington Trails","width":1150,"height":647},
+      {"src":"/new-homes/harrington-trails/elevation.webp","alt":"Home elevation in Harrington Trails","width":1150,"height":647},
+    ],
+  },
+  "the-canopies": {
+    creditName: "The Canopies",
+    creditUrl: "https://www.forestar.com/community/the-canopies/",
+    photos: [
+      {"src":"/new-homes/the-canopies/hero.webp","alt":"The Canopies entrance monument and lake","width":1600,"height":1066},
+      {"src":"/new-homes/the-canopies/aerial-2.webp","alt":"Aerial in The Canopies gallery","width":1200,"height":799},
+      {"src":"/new-homes/the-canopies/aerial-3.webp","alt":"Lake aerial in The Canopies gallery","width":1200,"height":799},
+      {"src":"/new-homes/the-canopies/homes.webp","alt":"Homes in The Canopies gallery","width":1200,"height":800},
+      {"src":"/new-homes/the-canopies/street.webp","alt":"Street of homes in The Canopies gallery","width":1200,"height":800},
+      {"src":"/new-homes/the-canopies/park.webp","alt":"Neighborhood view in The Canopies gallery","width":1200,"height":800},
+      {"src":"/new-homes/the-canopies/view.webp","alt":"Another neighborhood view in The Canopies gallery","width":1200,"height":800},
+      {"src":"/new-homes/the-canopies/trees.webp","alt":"Trees and homes in The Canopies gallery","width":1200,"height":800},
+    ],
+  },
+  "tavola": {
+    creditName: "Tavola",
+    creditUrl: "https://friendswooddevelopment.com/communities/master-planned/tavola",
+    photos: [
+      {"src":"/new-homes/tavola/hero.webp","alt":"Entry monument area at Tavola","width":1800,"height":1027},
+      {"src":"/new-homes/tavola/trails.webp","alt":"Trail in Tavola","width":1200,"height":800},
+      {"src":"/new-homes/tavola/playground.webp","alt":"Playground in Tavola","width":1200,"height":800},
+      {"src":"/new-homes/tavola/playground-2.webp","alt":"Second playground view in Tavola","width":1200,"height":800},
+      {"src":"/new-homes/tavola/landscape.webp","alt":"Landscaping in Tavola","width":1200,"height":800},
+      {"src":"/new-homes/tavola/rec.webp","alt":"Recreation center at Tavola","width":600,"height":338},
+      {"src":"/new-homes/tavola/pool.webp","alt":"Playground beside the Tavola recreation area","width":600,"height":338},
+      {"src":"/new-homes/tavola/club.webp","alt":"Amenity interior at Tavola","width":600,"height":400},
+    ],
+  },
+};
+
+export function getCommunityGallery(slug: string) {
+  return communityGalleries[slug];
+}
+
+/** Pulls the first "from the $X" phrase a developer actually published. */
+export function publishedPriceLabel(note: string) {
+  const match = note.match(/from (?:the )?(?:low |mid |high )?\$[\d,]+(?:s| millions?)?/i);
+  return match ? match[0].replace(/\s+/g, " ") : null;
+}
+
+export function amenityChips(amenities: string[], count = 4) {
+  return amenities.slice(0, count).map((item) => {
+    const head = item.split(/[,.(]/)[0]?.trim() ?? item;
+    return head.length > 46 ? `${head.slice(0, 44).trim()}...` : head;
+  });
+}

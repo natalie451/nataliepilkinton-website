@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
-import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { CommunityPhotoCard } from "@/components/new-homes/CommunityPhotoCard";
+import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
+import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
+import { getCommunityGallery } from "@/lib/data/newHomePhotos";
 import { communitiesForCity, getNewHomeCity, newHomeCities, newHomeCommunities } from "@/lib/data/newHomes";
 
 type Params = { city: string };
@@ -30,10 +34,14 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     });
   }
 
+  const cover = communitiesForCity(city.slug).primary
+    .map((community) => getCommunityGallery(community.slug)?.photos[0]?.src)
+    .find(Boolean);
   return buildMetadata({
     title: `New homes in ${city.name}, TX`,
     description: `New construction in ${city.name}, TX. ${city.headline}. Tour with Natalie before you register at a builder model.`,
     path: `/new-homes/${city.slug}`,
+    image: cover,
   });
 }
 
@@ -43,6 +51,9 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
   if (!city) notFound();
 
   const { primary, linked } = communitiesForCity(city.slug);
+  const coverCommunity = primary.find((community) => getCommunityGallery(community.slug)?.photos[0]);
+  const coverGallery = coverCommunity ? getCommunityGallery(coverCommunity.slug) : undefined;
+  const coverPhoto = coverGallery?.photos[0];
   const placeSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -69,21 +80,25 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
           { name: city.name, path: `/new-homes/${city.slug}` },
         ]}
       />
-      <Hero align="left" eyebrow={`${city.name}, TX`} title={`New homes in ${city.name}`} subheading={city.headline} />
+      {coverPhoto && coverGallery ? (
+        <section className="relative isolate flex min-h-[70vh] items-end overflow-hidden bg-blue text-cream">
+          <Image src={coverPhoto.src} alt={coverPhoto.alt} fill priority sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a33] via-[#0a1a33]/75 to-[#0a1a33]/20" />
+          <Container className="relative z-10 py-3xl">
+            <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">{city.name}, TX</p>
+            <h1 className="mb-sm max-w-[16ch] text-cream">New homes in {city.name}</h1>
+            <p className="mb-md max-w-[40rem] text-lg text-cream">{city.headline}</p>
+            <PhotoCredit name={coverGallery.creditName} url={coverGallery.creditUrl} tone="on-dark" />
+          </Container>
+        </section>
+      ) : null}
 
       <Section>
         <Container>
           <p className="max-w-[46rem] text-gray-dark">{city.summary}</p>
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-lg mt-xl">
+          <div className="mt-xl grid grid-cols-2 gap-lg max-md:grid-cols-1">
             {primary.map((community) => (
-              <Link key={community.slug} href={`/new-homes/${community.citySlug}/${community.slug}`} className="block h-full">
-                <article className="h-full border border-gray-light rounded-xs p-lg bg-white shadow-brand-sm border-t-4 border-t-blue">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue mb-sm">{community.developer}</p>
-                  <h2 className="text-2xl mt-0 mb-sm">{community.name}</h2>
-                  <p className="text-gray-dark">{community.priceNote}</p>
-                  <span className="text-sm font-semibold text-blue">Tour {community.name}</span>
-                </article>
-              </Link>
+              <CommunityPhotoCard key={community.slug} community={community} />
             ))}
           </div>
         </Container>
@@ -97,19 +112,11 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
               These communities use more than one city name. The full page lives under the city that matches the
               published address or school zone.
             </p>
-            <ul className="grid grid-cols-2 max-md:grid-cols-1 gap-md list-none p-0">
-              {linked.map((community) => {
-                const home = newHomeCities.find((item) => item.slug === community.citySlug);
-                return (
-                  <li key={community.slug}>
-                    <Link href={`/new-homes/${community.citySlug}/${community.slug}`} className="text-blue font-semibold">
-                      {community.name}
-                    </Link>
-                    <p className="text-gray-dark mb-0">Filed under {home?.name}. {community.address}</p>
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="grid grid-cols-2 gap-lg max-md:grid-cols-1">
+              {linked.map((community) => (
+                <CommunityPhotoCard key={community.slug} community={community} />
+              ))}
+            </div>
           </Container>
         </Section>
       )}
@@ -155,6 +162,8 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
           </p>
         </Container>
       </Section>
+      <div className="h-28" aria-hidden />
+      <TourWithNatalieBar href={siteConfig.bookingUrl} label={`Tour a ${city.name} home with Natalie`} />
     </>
   );
 }

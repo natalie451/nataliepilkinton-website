@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
@@ -7,10 +8,13 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
+import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
+import { amenityChips, getCommunityGallery, publishedPriceLabel } from "@/lib/data/newHomePhotos";
 import {
   communitiesForCity,
   getNewHomeCity,
@@ -41,10 +45,12 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     });
   }
 
+  const gallery = getCommunityGallery(community.slug);
   return buildMetadata({
     title: `${community.name} new homes in ${city.name}, TX`,
     description: `${community.name} in ${city.name}: ${community.developer}. ${community.priceNote}`.slice(0, 180),
     path: `/new-homes/${city.slug}/${community.slug}`,
+    image: gallery?.photos[0]?.src,
   });
 }
 
@@ -57,6 +63,11 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
   const { primary } = communitiesForCity(city.slug);
   const siblings = primary.filter((item) => item.slug !== community.slug);
   const pagePath = `/new-homes/${city.slug}/${community.slug}`;
+  const gallery = getCommunityGallery(community.slug);
+  const heroPhoto = gallery?.photos[0];
+  const galleryPhotos = gallery?.photos.slice(1) ?? [];
+  const price = publishedPriceLabel(community.priceNote);
+  const chips = amenityChips(community.amenities);
 
   const placeSchema = {
     "@context": "https://schema.org",
@@ -92,12 +103,76 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           { name: community.name, path: pagePath },
         ]}
       />
-      <Hero
-        align="left"
-        eyebrow={`${city.name}, TX`}
-        title={community.name}
-        subheading={`${community.developer}. ${community.address}`}
-      />
+      {heroPhoto && gallery ? (
+        <section className="relative isolate flex min-h-[78vh] items-end overflow-hidden bg-blue text-cream">
+          <Image
+            src={heroPhoto.src}
+            alt={heroPhoto.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1a33] via-[#0a1a33]/75 to-[#0a1a33]/25" />
+          <Container className="relative z-10 py-3xl">
+            <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">{city.name}, TX</p>
+            <h1 className="mb-sm max-w-[16ch] text-cream">{community.name}</h1>
+            <p className="mb-md max-w-[40rem] text-lg text-cream">{community.developer}. {community.address}</p>
+            <div className="mb-lg flex flex-wrap gap-sm">
+              {price && (
+                <span className="rounded-full bg-cream px-md py-xs text-sm font-semibold text-navy">{price}</span>
+              )}
+              {chips.map((chip) => (
+                <span key={chip} className="rounded-full border border-cream/40 bg-[#0a1a33]/50 px-md py-xs text-sm text-cream">
+                  {chip}
+                </span>
+              ))}
+            </div>
+            <div className="mb-md flex flex-wrap gap-sm">
+              <Button href="#tour" variant="on-blue">Tour {community.name} with Natalie</Button>
+              <Button href={siteConfig.bookingUrl} external variant="on-blue">Book on Calendly</Button>
+            </div>
+            <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} tone="on-dark" />
+          </Container>
+        </section>
+      ) : (
+        <Hero
+          align="left"
+          eyebrow={`${city.name}, TX`}
+          title={community.name}
+          subheading={`${community.developer}. ${community.address}. The community site did not publish usable photographs.`}
+        />
+      )}
+
+      {galleryPhotos.length > 0 && gallery && (
+        <Section>
+          <Container>
+            <h2>Around {community.name}</h2>
+            <p className="max-w-[42rem] text-gray-dark">
+              These are photographs from the community website. They show the places the developer chose to publish, and they can be replaced when that site updates.
+            </p>
+            <div className="grid grid-cols-3 gap-sm max-lg:grid-cols-2 max-sm:grid-cols-1">
+              {galleryPhotos.map((photo) => (
+                <figure key={photo.src} className="m-0 overflow-hidden rounded-xs bg-cream">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="px-sm py-xs text-sm text-navy">{photo.alt}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <div className="mt-md">
+              <PhotoCredit name={gallery.creditName} url={gallery.creditUrl} />
+            </div>
+          </Container>
+        </Section>
+      )}
 
       <Section>
         <Container className="max-w-[52rem]">
@@ -229,6 +304,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </Link>
         </Container>
       </Section>
+      <div className="h-28" aria-hidden />
+      <TourWithNatalieBar label={`Tour ${community.name} with Natalie`} />
     </>
   );
 }
