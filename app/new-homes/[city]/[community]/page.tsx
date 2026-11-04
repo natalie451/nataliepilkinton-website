@@ -205,8 +205,22 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
             <div className="bg-cream rounded-xs p-md">
               <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-blue mb-xs">Schools</dt>
               <dd className="mb-0 text-navy">
-                <span className="font-semibold">{community.schoolDistrict}. </span>
-                {community.schools}
+                {community.schoolDistrict ? (
+                  <>
+                    <span className="font-semibold">{community.schoolDistrict}. </span>
+                    {community.schools}
+                  </>
+                ) : (
+                  <>
+                    <p className="mb-sm">Ask Natalie about schools for this community</p>
+                    <div className="flex flex-wrap gap-sm">
+                      <Button href="#tour" size="small">Tour with Natalie</Button>
+                      <Button href={siteConfig.phoneHref} size="small" variant="secondary">
+                        Call or text
+                      </Button>
+                    </div>
+                  </>
+                )}
               </dd>
             </div>
             <div className="bg-cream rounded-xs p-md">

@@ -431,4 +431,85 @@ export const pass2Communities: NewHomeCommunity[] = [
       },
     ],
   },
+  {
+    slug: "reserve-at-huntsville",
+    citySlug: "huntsville",
+    name: "The Reserve at Huntsville",
+    developer: "Lennar",
+    address: "104 Lantana Lane, Huntsville, TX 77320",
+    location: "Lennar lists the community at 104 Lantana Lane, Huntsville, TX 77320.",
+    summary:
+      "The Reserve at Huntsville is a Lennar community of single-family homes. Lennar lists the community from $186,990 to $232,990. The page does not name a school district.",
+    priceNote:
+      "Lennar lists the community from $186,990 to $232,990. Plan prices on the page include the Littleton and Ramsey from $224,990, the Oxford from $228,990, and the Newlin from $232,990.",
+    homes:
+      "Published plans include the Newlin at 1,484 square feet, the Ramsey at 1,676 square feet, the Oxford at 1,716 square feet, and the Littleton at 1,922 square feet.",
+    builders: [
+      {
+        name: "Lennar",
+        detail: "From $186,990. Welcome home center at 104 Lantana Lane, Huntsville, TX 77320. Phone 888-671-8175.",
+      },
+    ],
+    amenities: ["Lennar lists a park and a lake or pond"],
+    schoolDistrict: "",
+    schools: "",
+    sources: [
+      { label: "Lennar, The Reserve at Huntsville", url: "https://www.lennar.com/new-homes/texas/houston/huntsville/the-reserve-at-huntsville" },
+    ],
+    faqs: [
+      {
+        question: "Who builds at The Reserve at Huntsville?",
+        answer: "Lennar. The page lists the community from $186,990 to $232,990.",
+      },
+      {
+        question: "What are the welcome home center hours?",
+        answer: "Lennar lists Monday through Saturday 10:00 a.m. to 6:00 p.m., and Sunday 12:00 p.m. to 6:00 p.m.",
+      },
+      {
+        question: "Does Lennar name a school district?",
+        answer: "No. The Lennar page does not name a school district. Ask Natalie about schools for this community.",
+      },
+    ],
+  },
+  {
+    slug: "sila",
+    citySlug: "huffman",
+    name: "Sila",
+    developer: "Lennar",
+    address: "810 Prunella Lane, Huffman, TX 77336",
+    location:
+      "Lennar lists the community at 810 Prunella Lane, Huffman, TX 77336. The welcome home center is at 808 Prunella Ln.",
+    summary:
+      "Sila is a Lennar master-planned community of single-family homes in Huffman. Lennar lists homes from $132,990 to $304,990. The page does not name a school district.",
+    priceNote:
+      "Lennar lists Sila from $132,990 to $304,990. Collection prices on the page include the Wellton Collection from $132,990, the Cottage Collection from $168,990, and the Watermill Collection from $171,990.",
+    homes:
+      "Lennar publishes several collections. Named plans include the Kofa at 1,013 square feet and larger plans such as the Littleton at 1,968 square feet.",
+    builders: [
+      {
+        name: "Lennar",
+        detail: "From $132,990. Community address 810 Prunella Lane. Welcome home center at 808 Prunella Ln, Huffman, TX 77336. Phone 888-671-8175.",
+      },
+    ],
+    amenities: ["Lennar lists a swimming pool, parks, walking trails, and a pickleball court"],
+    schoolDistrict: "",
+    schools: "",
+    sources: [
+      { label: "Lennar, Sila", url: "https://www.lennar.com/new-homes/texas/houston/huffman/sila" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Sila?",
+        answer: "Lennar. The page lists homes from $132,990 to $304,990.",
+      },
+      {
+        question: "What amenities does Lennar list?",
+        answer: "A swimming pool, parks, walking trails, and a pickleball court.",
+      },
+      {
+        question: "Does Lennar name a school district?",
+        answer: "No. The Lennar page does not name a school district. Ask Natalie about schools for this community.",
+      },
+    ],
+  },
 ];

@@ -45,6 +45,7 @@ export type NewHomeCommunity = {
   homes: string;
   builders: NewHomeBuilder[];
   amenities: string[];
+  /** Empty when the official page does not name a district. */
   schoolDistrict: string;
   schools: string;
   sources: NewHomeSource[];
@@ -242,12 +243,26 @@ export const newHomeCities: NewHomeCity[] = [
     summary:
       "Grand Oaks by Century Communities and Riceland by Autograph Homes both publish a from-price and Barbers Hill ISD.",
   },
+  {
+    slug: "huntsville",
+    name: "Huntsville",
+    headline: "Lennar community in Huntsville",
+    summary:
+      "The Reserve at Huntsville is a Lennar community. Lennar lists homes from $186,990. The Lennar page does not name a school district.",
+  },
+  {
+    slug: "huffman",
+    name: "Huffman",
+    headline: "Lennar community in Huffman",
+    summary:
+      "Sila is a Lennar community in Huffman. Lennar lists homes from $132,990. The Lennar page does not name a school district.",
+  },
 ];
 
 export const newHomeRegions: { name: string; citySlugs: string[] }[] = [
   {
     name: "North Houston",
-    citySlugs: ["conroe", "montgomery", "willis", "spring", "porter", "splendora", "new-caney", "humble"],
+    citySlugs: ["conroe", "montgomery", "willis", "spring", "huntsville", "porter", "splendora", "new-caney", "humble"],
   },
   {
     name: "Northwest",
@@ -271,7 +286,7 @@ export const newHomeRegions: { name: string; citySlugs: string[] }[] = [
   },
   {
     name: "East",
-    citySlugs: ["crosby", "dayton", "mont-belvieu"],
+    citySlugs: ["crosby", "dayton", "huffman", "mont-belvieu"],
   },
 ];
 
