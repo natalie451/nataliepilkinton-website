@@ -32,7 +32,7 @@ const pages: { path: string; title: string; summary: string }[] = [
     path: "/new-homes",
     title: "New homes",
     summary:
-      "New construction north of I-10, including Conroe, Tomball, Katy, Cypress, Magnolia, Humble, Crosby, Dayton, Waller, Porter, Splendora, and New Caney.",
+      "New construction across Greater Houston, including Conroe, Katy, Fulshear, Missouri City, Manvel, Sugar Land, and the communities already listed north and east of the city.",
   },
   {
     path: "/sellers",
@@ -111,7 +111,7 @@ function newHomesLines() {
   const cityName = (slug: string) => newHomeCities.find((city) => city.slug === slug)?.name ?? slug;
   return [
     `${siteConfig.siteUrl}/new-homes`,
-    "Hub for new construction north of I-10 in Greater Houston.",
+    "Hub for new construction across Greater Houston. Cities are grouped by region.",
     ...newHomeCities.map(
       (city) =>
         `${siteConfig.siteUrl}/new-homes/${city.slug}\nNew homes in ${city.name}, TX. ${city.headline}`,

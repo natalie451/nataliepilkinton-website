@@ -2,7 +2,9 @@
  * Current builder promotions, keyed by community slug.
  * Update this file weekly. Pages read it and do not hard-code offers.
  * Only include language printed on that community's or builder's official page.
- * Last checked: November 3, 2026.
+ * Last checked: November 4, 2026.
+ * Offers already in this file were read on November 3, 2026 and were not re-opened on November 4.
+ * Cross Creek West incentives were read on November 4, 2026.
  */
 
 export type BuilderPromo = {
@@ -15,7 +17,7 @@ export type BuilderPromo = {
   sourceUrl: string;
 };
 
-export const promoLastChecked = "November 3, 2026";
+export const promoLastChecked = "November 4, 2026";
 
 export const promoDisclaimer =
   "Promotions change often and are set by the builder; ask Natalie for the latest.";
@@ -321,6 +323,20 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     },
   ],
   tavola: [],
+  "cross-creek-west": [
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event. Up to 55K flex cash and a 4.99% interest rate for a limited time. The Cross Creek West incentives page does not print an APR or an end date.",
+      sourceLabel: "Cross Creek West builder incentives",
+      sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
+    },
+    {
+      builder: "Highland Homes",
+      text: "Season of Traditions Sales Event, printed on the page as Highland Homes 60. Up to 75K to personalize your new home. The page prints an asterisk and does not explain it or print an end date.",
+      sourceLabel: "Cross Creek West builder incentives",
+      sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
+    },
+  ],
 };
 
 export function promosForCommunity(slug: string) {

@@ -138,9 +138,9 @@ export const newHomeCities: NewHomeCity[] = [
   {
     slug: "katy",
     name: "Katy",
-    headline: "North of I-10, along FM 529 and the Grand Parkway",
+    headline: "FM 529, the Grand Parkway, and Fulshear south of I-10",
     summary:
-      "This page is only the Katy-area master plans north of Interstate 10. Elyson and Cane Island have their own pages. Sunterra and Sunterra Lakes sit north of I-10 and are linked here, with the full pages filed under Waller County.",
+      "Elyson and Cane Island are north of Interstate 10. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West and Tamarron are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
   },
   {
     slug: "magnolia",
@@ -169,6 +169,61 @@ export const newHomeCities: NewHomeCity[] = [
     headline: "Northeast Harris and Liberty County, north of I-10",
     summary:
       "River Ranch Trails is the Dayton new-home section with a current Coventry Homes page, a starting price, and Dayton ISD.",
+  },
+  {
+    slug: "fulshear",
+    name: "Fulshear",
+    headline: "FM 359, Jordan Road, and the Katy Freeway",
+    summary:
+      "Cross Creek West and Tamarron are the Fulshear master plans with current builder pages that name prices and Lamar CISD campuses. Both are south of I-10 and are also linked from the Katy page.",
+  },
+  {
+    slug: "missouri-city",
+    name: "Missouri City",
+    headline: "Fort Bend Parkway and Highway 6",
+    summary:
+      "Sienna is the Johnson Development community in Missouri City with a current builder directory, published prices, and Fort Bend ISD schools inside the community. Riverstone's sales office is in Sugar Land and is linked here.",
+  },
+  {
+    slug: "manvel",
+    name: "Manvel",
+    headline: "Highway 288, south of Pearland",
+    summary:
+      "Meridiana and Pomona publish current builder lists, prices, and Alvin ISD schools. Meridiana's information center address is in Iowa Colony. Pomona's contact address is in Manvel.",
+  },
+  {
+    slug: "sugar-land",
+    name: "Sugar Land",
+    headline: "University Boulevard, Fort Bend County",
+    summary:
+      "Riverstone's community site says the last new homes are selling now, from the $340s, in Fort Bend ISD, with an on-site elementary school. The published sales office is in Sugar Land.",
+  },
+];
+
+export const newHomeRegions: { name: string; citySlugs: string[] }[] = [
+  {
+    name: "North Houston",
+    citySlugs: ["conroe", "montgomery", "willis", "spring", "porter", "splendora", "new-caney", "humble"],
+  },
+  {
+    name: "Northwest",
+    citySlugs: ["tomball", "cypress", "magnolia", "waller"],
+  },
+  {
+    name: "West/Katy",
+    citySlugs: ["katy", "fulshear"],
+  },
+  {
+    name: "Southwest/Fort Bend",
+    citySlugs: ["sugar-land", "missouri-city"],
+  },
+  {
+    name: "South/Brazoria",
+    citySlugs: ["manvel"],
+  },
+  {
+    name: "East",
+    citySlugs: ["crosby", "dayton"],
   },
 ];
 
@@ -1681,6 +1736,326 @@ const communities: NewHomeCommunity[] = [
       },
     ],
   },
+  {
+    slug: "cross-creek-west",
+    citySlug: "fulshear",
+    alsoListedOn: ["katy"],
+    name: "Cross Creek West",
+    developer: "Johnson Development",
+    address: "4803 Garden Crest Lane, Fulshear, TX 77441",
+    location:
+      "The community news page places Cross Creek West on FM 359 and Jordan Road in Fulshear, a few miles from Cross Creek Ranch and Jordan Ranch. The builder directory lists the information center at 4803 Garden Crest Lane.",
+    summary:
+      "Cross Creek West is a Johnson Development community in Fulshear planned for more than 3,000 homes on 1,258 acres. The builder page lists homes from the $390s, and the schools page places it in Lamar CISD with Haygood Elementary on site.",
+    priceNote:
+      "The builder directory prints Perry Homes 45-foot homesites from the $390s, Newmark 50-foot from the $430s, Westin 45-foot from the $450s, Coventry 50-foot from the $450s, Village Builders 60-foot from the $470s, Perry 55-foot from the $490s, Westin 55-foot from the $560s, Highland 60-foot from the $580s, Ravenna 60-foot from the $600s, Toll Brothers 65-foot from the $600s, and Highland 70-foot from the $700s.",
+    homes:
+      "Johnson Development says the 1,258-acre plan is for more than 3,000 homes. The north phase adds 65-, 70-, and 80-foot homesites. The south tract is still selling.",
+    builders: [
+      { name: "Perry Homes", detail: "45-foot from the $390s at 31506 Wild Yukon Ct. 55-foot from the $490s at 31518 Wild Yukon Court." },
+      { name: "Newmark Homes", detail: "50-foot from the $430s at 31514 Wild Yukon Court. A 70-foot model is listed at 32007 Monarch Skies Dr without a from-price on that line." },
+      { name: "Westin Homes", detail: "45-foot from the $450s at 31510 Wild Yukon Court. 55-foot from the $560s at 31522 Wild Yukon Ct." },
+      { name: "Coventry Homes", detail: "50-foot from the $450s at 31507 Wild Yukon Ct. The page says the model is coming soon to the south tract model home park." },
+      { name: "Village Builders", detail: "60-foot from the $470s at 31506 Bramble Hollow Ct." },
+      { name: "David Weekley Homes", detail: "65-foot model listed at 32015 Monarch Skies Dr. That line does not print a from-price." },
+      { name: "Highland Homes", detail: "60-foot from the $580s at 31523 Wild Yukon Court. 70-foot from the $700s at 32003 Monarch Skies Dr." },
+      { name: "Ravenna Homes", detail: "60-foot from the $600s at 31511 Wild Yukon Ct. The page says the model is coming soon." },
+      { name: "Toll Brothers", detail: "65-foot from the $600s at 32011 Monarch Skies Dr." },
+    ],
+    amenities: [
+      "Resort-style pool, 3-lane lap pool, kids splash park, tennis or pickleball courts, playground, and fitness center at The Waterhole",
+      "Cross Creek Ranch amenities are shared, including the page's count of 35 or more parks, three pools, 60 or more miles of trails, and 400 or more acres of lakes",
+      "Coming soon on the amenities page: Zoomies Dog Park, Silly Goose Park, The Links putting green, and Twilight Park",
+    ],
+    schoolDistrict: "Lamar CISD",
+    schools:
+      "The schools page lists current campuses as on-site Haygood Elementary, Roberts Middle School, Dean Leaman Junior High, and Fulshear High School. It says a 2026 rezoning note keeps south-tract students at those four schools. Campuses it lists as opening in 2027 are Cantu Elementary, Dresner Middle School, on-site Debbie Urbanski Junior High, and on-site Troy Williams High School. Confirm the lot.",
+    sources: [
+      { label: "Cross Creek West builders", url: "https://www.crosscreekwesttx.com/fulshear-home-builders" },
+      { label: "Cross Creek West schools", url: "https://www.crosscreekwesttx.com/fulshear-schools" },
+      { label: "Cross Creek West amenities", url: "https://www.crosscreekwesttx.com/amenities" },
+      { label: "Cross Creek West north phase", url: "https://www.crosscreekwesttx.com/news/11223/cross-creek-west-begins-north-phase-of-development" },
+      { label: "Cross Creek West builder incentives", url: "https://www.crosscreekwesttx.com/builder-incentives" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Cross Creek West?",
+        answer:
+          "The builder directory lists Perry Homes, Newmark Homes, Westin Homes, Coventry Homes, Village Builders, David Weekley Homes, Highland Homes, Ravenna Homes, and Toll Brothers, with published from-prices starting at the $390s.",
+      },
+      {
+        question: "What school district is Cross Creek West in?",
+        answer:
+          "Lamar CISD. The schools page lists on-site Haygood Elementary now, plus Roberts Middle, Dean Leaman Junior High, and Fulshear High. It also lists new campuses opening in 2027. Confirm the address.",
+      },
+      {
+        question: "Can Cross Creek West residents use Cross Creek Ranch amenities?",
+        answer:
+          "The amenities page says Cross Creek West is part of the Cross Creek Ranch Community Association and that residents have access to amenities in both communities.",
+      },
+    ],
+  },
+  {
+    slug: "tamarron",
+    citySlug: "fulshear",
+    alsoListedOn: ["katy"],
+    name: "Tamarron",
+    developer: "D.R. Horton",
+    address: "31730 Barrymoor Trace, Fulshear, TX 77441",
+    location:
+      "D.R. Horton places Tamarron off Jordan Road and Tamarron Parkway in Fulshear, with access to the Katy Freeway and downtown Fulshear.",
+    summary:
+      "Tamarron is a D.R. Horton community in Fulshear. The builder page lists homes from $280,990 on 45-, 50-, and 60-foot homesites, in Lamar CISD, with Tamarron Elementary and Slawinski Elementary in the community.",
+    priceNote:
+      "D.R. Horton lists Tamarron from $280,990. Homes range from 1,535 to 3,188 square feet, with 3 to 5 bedrooms. A listed quick move-in on the same page was shown at $304,990.",
+    homes: "About 1,535 to 3,188 square feet, on 45-foot, 50-foot, and 60-foot homesites, one and two stories.",
+    builders: [
+      {
+        name: "D.R. Horton",
+        detail: "Tradition Series from $280,990. Sales center at 31730 Barrymoor Trace, Fulshear, TX 77441. About 1,535 to 3,188 square feet.",
+      },
+    ],
+    amenities: [
+      "Two recreation centers with a resort-style pool, a competition lap pool, a splash pad, water slides, and fitness centers",
+      "Soccer fields, lakes, pickleball, tennis, a playground, and walking trails. The amenities list also says 8 miles of walking trails.",
+    ],
+    schoolDistrict: "Lamar CISD",
+    schools:
+      "D.R. Horton says Tamarron is zoned to Lamar Consolidated ISD and that Tamarron Elementary and Slawinski Elementary are in the community. The same page lists Dean Leaman Junior High, Roberts Middle School, and Fulshear High School. Confirm the lot, because nearby sections can differ.",
+    sources: [
+      { label: "D.R. Horton, Tamarron", url: "https://www.drhorton.com/texas/houston/fulshear/tamarron" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Tamarron?",
+        answer: "D.R. Horton publishes Tamarron, with homes from $280,990.",
+      },
+      {
+        question: "Where is the Tamarron sales center?",
+        answer: "31730 Barrymoor Trace, Fulshear, TX 77441. The page lists Sunday and Monday 12:00 p.m. to 7:00 p.m., and Tuesday through Saturday 10:00 a.m. to 7:00 p.m.",
+      },
+      {
+        question: "What schools does D.R. Horton list?",
+        answer:
+          "Tamarron Elementary, Slawinski Elementary, Dean Leaman Junior High, Roberts Middle School, and Fulshear High School, in Lamar CISD. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "sienna",
+    citySlug: "missouri-city",
+    name: "Sienna",
+    developer: "Johnson Development",
+    address: "Missouri City, TX",
+    location:
+      "The Sienna FAQ places the community in Missouri City, about 25 miles southwest of downtown Houston, with access from Fort Bend Parkway, Highway 6, Beltway 8, and Loop 610.",
+    summary:
+      "Sienna is a 10,800-acre Johnson Development community in Missouri City. The facts page says homes start from the $250s. The FAQ says prices typically run from the $300s to more than $1 million. Fort Bend ISD campuses are inside the community.",
+    priceNote:
+      "The facts page says homes from the $250s. The FAQ says prices typically range from the $300s to more than $1 million. The builders page prints Beazer from the $290s and a Toll Brothers ladder from the $380s on 45-foot homesites through from the $850s on 90-foot homesites.",
+    homes:
+      "The FAQ describes single-family homes, luxury estates, duets, and townhomes. Builder sections on the directory run from about 1,474 square feet in a Chesmar courtyard collection to about 6,092 square feet on Toll Brothers 90-foot homesites.",
+    builders: [
+      { name: "Beazer Homes", detail: "From the $290s. Signature Collection about 1,610 to 2,572 square feet." },
+      { name: "Chesmar Homes", detail: "Courtyard Collection about 1,474 to 2,746 square feet. Chateau Collection about 1,710 to 1,901 square feet. The page also prints from the $330s and from the $400s on the Chesmar block." },
+      { name: "David Weekley Homes", detail: "40-foot homesites about 1,592 to 2,502 square feet, with from the $320s printed on that section. 42-foot about 1,544 to 3,073 square feet. 65-foot about 2,564 to 4,537 square feet." },
+      { name: "Toll Brothers", detail: "45-foot from the $380s, 50-foot from the $420s, 60-foot from the $540s, 70-foot from the $640s, 80-foot from the $760s, and 90-foot from the $850s." },
+      { name: "Newmark Homes", detail: "45-foot about 2,134 to 2,650 square feet. 50-foot about 1,926 to 2,989 square feet, with from the $470s printed beside the 50-foot line." },
+      { name: "Westin Homes", detail: "45-foot about 2,599 to 2,800 square feet. 60-foot about 3,429 to 3,800 square feet, with from the $630s printed on the Westin block." },
+      { name: "Tri Pointe Homes", detail: "45-foot about 2,125 to 2,688 square feet. 60-foot about 3,039 to 4,091 square feet. 80-foot about 3,799 to 5,344 square feet." },
+      { name: "Perry Homes", detail: "50-foot about 2,300 to 3,200 square feet. 55-foot about 2,700 to 3,500 square feet. 60-foot about 2,700 to 3,800 square feet. 65-foot about 3,400 to 4,600 square feet." },
+      { name: "Shea Homes", detail: "65-foot about 2,671 to 4,122 square feet. 70-foot about 3,086 to 4,838 square feet." },
+      { name: "Highland Homes", detail: "Listed on the builders page, including plans about 3,050 to 3,926 square feet." },
+      { name: "J. Patrick Homes", detail: "70-foot homesites about 2,802 to 4,683 square feet, and plans about 3,598 to 5,580 square feet." },
+      { name: "Partners in Building", detail: "Named on the Sienna FAQ builder list and on the builders page. The directory block does not print a from-price." },
+      { name: "Jamestown Estate Homes", detail: "100-foot homesites on the builders page. The FAQ also names Jamestown Estate Homes." },
+    ],
+    amenities: [
+      "Sawmill Lake Club, Club Sienna, and Camp Sienna, which the FAQ calls a 160-acre sports complex",
+      "Pools, fitness centers, tennis, sand volleyball, playgrounds, fishing docks, and trails",
+      "Sienna Oaks Amenity Center is described on the FAQ as a future clubhouse, lap pool, playground, and event lawn",
+    ],
+    schoolDistrict: "Fort Bend ISD",
+    schools:
+      "The facts page says Sienna is entirely in Fort Bend ISD. Elementary schools it names are Donald Leonetti, Jan Schiff, Sienna Crossing, Scanlan Oaks, and Alyssa Ferguson. Middle schools are Ronald Thornton, Billy Baines, and First Colony. High schools are Almeta Crawford, Hightower, and Ridge Point. Confirm the lot.",
+    sources: [
+      { label: "Sienna FAQ", url: "https://www.siennatx.com/faq" },
+      { label: "Sienna builders", url: "https://www.siennatx.com/builders" },
+      { label: "Sienna facts", url: "https://www.siennatx.com/sienna-facts" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Sienna?",
+        answer:
+          "The Sienna FAQ names Beazer, Chesmar, David Weekley, Highland, J. Patrick, Jamestown Estate Homes, Newmark, Partners in Building, Perry, Shea, Toll Brothers, Tri Pointe, and Westin.",
+      },
+      {
+        question: "What do homes cost in Sienna?",
+        answer:
+          "The FAQ says prices typically range from the $300s to more than $1 million. The builders page also prints Beazer from the $290s and Toll Brothers from the $380s to from the $850s by homesite width.",
+      },
+      {
+        question: "What school district is Sienna in?",
+        answer:
+          "Fort Bend ISD. The facts page names Donald Leonetti, Jan Schiff, Sienna Crossing, Scanlan Oaks, and Alyssa Ferguson elementaries, Ronald Thornton, Billy Baines, and First Colony middle schools, and Almeta Crawford, Hightower, and Ridge Point high schools. Confirm the address.",
+      },
+    ],
+  },
+  {
+    slug: "meridiana",
+    citySlug: "manvel",
+    name: "Meridiana",
+    developer: "Meridiana",
+    address: "4003 Meridiana Parkway, Iowa Colony, TX 77583",
+    location:
+      "The FAQ places Meridiana in Iowa Colony and Manvel, off State Highway 288, about 10 minutes south of Pearland Town Center.",
+    summary:
+      "Meridiana is a 3,000-acre community in Iowa Colony and Manvel. The FAQ says pricing starts in the $260s and goes past $1 million, with nine builders, Alvin ISD, and on-site Meridiana Elementary, Barbara Bennett Elementary, and Jackie Doucet Caffey Junior High.",
+    priceNote:
+      "The FAQ form lists Chesmar from the $260s, Imagination Homes from the $300s, Beazer from the $330s, Highland from the $330s, Newmark from the $330s, David Weekley from the $340s, Perry from the $350s, Westin from the $490s, Shea from the $550s, and Drees from the $620s. The same page says pricing starts in the $260s and goes to over $1 million.",
+    homes:
+      "The FAQ says offerings range from townhomes and 40-foot lots to custom estates on 90-foot lots, with 23 model homes and 9 home builders.",
+    builders: [
+      { name: "Chesmar Homes", detail: "From the $260s on the FAQ form" },
+      { name: "Imagination Homes", detail: "From the $300s on the FAQ form" },
+      { name: "Beazer Homes", detail: "From the $330s on the FAQ form" },
+      { name: "Highland Homes", detail: "From the $330s on the FAQ form" },
+      { name: "Newmark Homes", detail: "From the $330s on the FAQ form" },
+      { name: "David Weekley Homes", detail: "From the $340s on the FAQ form" },
+      { name: "Perry Homes", detail: "From the $350s on the FAQ form" },
+      { name: "Westin Homes", detail: "From the $490s on the FAQ form" },
+      { name: "Shea Homes", detail: "From the $550s on the FAQ form" },
+      { name: "Drees Custom Homes", detail: "From the $620s on the FAQ form" },
+    ],
+    amenities: [
+      "Oasis Village with a fitness center, family pool, splash pad, lap pool, amphitheater, and conservatory",
+      "Adventure Cove with a wave pool, tidal river, island pool, a second fitness center, and a food truck park",
+      "The FAQ lists more than 50 miles of trails, Iowa Colony Regional Park, Challenger Park, and two dog parks",
+    ],
+    schoolDistrict: "Alvin ISD",
+    schools:
+      "The FAQ says Meridiana is served by Alvin ISD. On-site campuses named there are Meridiana Elementary, Barbara Bennett Elementary, and Jackie Doucet Caffey Junior High. Iowa Colony High School is described as immediately adjacent. Confirm the lot.",
+    sources: [
+      { label: "Meridiana FAQ", url: "https://meridianatexas.com/frequently-asked-questions/" },
+      { label: "Meridiana schools", url: "https://www.meridianatexas.com/schools/" },
+    ],
+    faqs: [
+      {
+        question: "Where is the Meridiana information center?",
+        answer: "4003 Meridiana Parkway, Iowa Colony, TX 77583. The FAQ lists Monday through Saturday, 10 a.m. to 6 p.m.",
+      },
+      {
+        question: "Who builds in Meridiana?",
+        answer:
+          "The FAQ names Chesmar, David Weekley, Imagination Homes, Beazer, Drees, Highland, Newmark, Perry, Shea, and Westin, and says buyers can choose among 9 home builders.",
+      },
+      {
+        question: "What school district is Meridiana in?",
+        answer:
+          "Alvin ISD. The FAQ names Meridiana Elementary, Barbara Bennett Elementary, Jackie Doucet Caffey Junior High, and adjacent Iowa Colony High School.",
+      },
+    ],
+  },
+  {
+    slug: "pomona",
+    citySlug: "manvel",
+    name: "Pomona",
+    developer: "Hillwood Communities",
+    address: "4545 Pomona Parkway, Manvel, TX 77578",
+    location:
+      "The Pomona FAQ places the community in Manvel, south of Houston off Highway 288, near Pearland Town Center.",
+    summary:
+      "Pomona is a Hillwood Communities master plan in Manvel. The FAQ names Coventry, David Weekley, Highland, Lennar, and Toll Brothers. The site plan prints section prices from the $240s, and the schools page places the community in Alvin ISD with Pomona Elementary on site.",
+    priceNote:
+      "The site plan prints Coventry from the $240s to the $310s, Perry and Highland from the $290s to the $360s, Perry and Coventry from the $320s to the $420s, Coventry and Highland from the $380s to the $470s, a gated Toll Brothers section from the $410s to the $500s, Coventry and Toll from the $490s to the $670s, and a Coventry, Highland, and Perry section from the $430s to the $530s.",
+    homes: "The site plan groups homes by builder and price band. It does not print a single square-footage range for the whole community.",
+    builders: [
+      { name: "Coventry Homes", detail: "Named on the FAQ. The site plan shows Coventry in bands from the $240s to the $310s and in higher bands with other builders." },
+      { name: "David Weekley Homes", detail: "Named on the Pomona FAQ builder list. The site plan price bands do not print a separate Weekley from-price." },
+      { name: "Highland Homes", detail: "Named on the FAQ. The site plan pairs Highland with Perry from the $290s to the $360s and with other builders in higher bands." },
+      { name: "Lennar", detail: "Named on the Pomona FAQ builder list." },
+      { name: "Toll Brothers", detail: "Named on the FAQ. The site plan shows a gated Toll section from the $410s to the $500s and a Coventry and Toll band from the $490s to the $670s." },
+      { name: "Perry Homes", detail: "Named on the site plan with Highland from the $290s to the $360s and in other bands. The FAQ builder list does not include Perry." },
+    ],
+    amenities: [
+      "The FAQ describes pocket parks, a fitness center, a lake with a Fish Camp and The Dock for electric boats, kayaks, and paddleboards",
+      "The site plan describes Camp Pomona with a playground, resort-style pools, cabanas, a catering kitchen, an event lawn, and a fitness center",
+      "HOA dues are $1,375 per year on the FAQ, including amenity access",
+      "The Grove and The Zone are described as amenities in development. The Dock label on the site plan still says Coming Summer 2021.",
+    ],
+    schoolDistrict: "Alvin ISD",
+    schools:
+      "The FAQ says Pomona is zoned to Alvin ISD. Pomona Elementary is within walking distance. Rodeo Palms Junior High and Manvel High School are within seven miles. Confirm the lot.",
+    sources: [
+      { label: "Pomona FAQ", url: "https://www.pomonabyhillwood.com/news/faq" },
+      { label: "Pomona site plan", url: "https://www.pomonabyhillwood.com/location/site-plan" },
+      { label: "Pomona schools", url: "https://www.pomonabyhillwood.com/location/schools" },
+    ],
+    faqs: [
+      {
+        question: "Who builds in Pomona?",
+        answer:
+          "The FAQ names Coventry Homes, David Weekley Homes, Highland Homes, Lennar, and Toll Brothers. The site plan also names Perry Homes in published price bands.",
+      },
+      {
+        question: "What is the Pomona contact address?",
+        answer: "The FAQ lists 4545 Pomona Parkway, Manvel, TX 77578. The site plan header also prints 4714 Orchard Creek Lane, Manvel, TX.",
+      },
+      {
+        question: "What school district is Pomona in?",
+        answer: "Alvin ISD. The FAQ names Pomona Elementary, Rodeo Palms Junior High, and Manvel High School.",
+      },
+    ],
+  },
+  {
+    slug: "riverstone",
+    citySlug: "sugar-land",
+    alsoListedOn: ["missouri-city"],
+    name: "Riverstone",
+    developer: "Riverstone",
+    address: "18353 University Boulevard, Sugar Land, TX 77479",
+    location:
+      "The community page describes Riverstone as a Fort Bend County community near Sugar Land. The contact address on the site is 18353 University Boulevard, Sugar Land, TX 77479.",
+    summary:
+      "Riverstone's site says luxury homes start from the $340s and that the last new homes are now selling. The schools page says residents are served by Fort Bend ISD, including on-site Sullivan Elementary.",
+    priceNote:
+      "The community page says luxury homes from the $340s. The builders page says Psalms Fine Homes is selling the last newly constructed homes, at 5,200 to 6,200 square feet, and lists 4707 Sunset Circle, Sugar Land, TX 77479. It does not print a dollar price for that home.",
+    homes: "Psalms Fine Homes is listed at 5,200 to 6,200 square feet. The virtual tour page, which is still on the site, describes a wider range from the $340,000s to the millions.",
+    builders: [
+      {
+        name: "Psalms Fine Homes",
+        detail: "The builders page says these are the last newly constructed homes in Riverstone, 5,200 to 6,200 square feet, at 4707 Sunset Circle, Sugar Land, TX 77479.",
+      },
+    ],
+    amenities: [
+      "The virtual tour page lists resort-style pools, neighborhood parks and playgrounds, walking trails, tennis, and catch-and-release fishing",
+      "The Club at Riverstone, more than 200 acres of lakes, and another 500 acres of open space and recreation, as printed on that page",
+    ],
+    schoolDistrict: "Fort Bend ISD",
+    schools:
+      "The schools page says Riverstone is served by Fort Bend ISD, including Sullivan Elementary on site. The same page discusses Commonwealth Elementary and Fort Settlement Middle School in a 2020 ranking note. Confirm the campus for the lot.",
+    sources: [
+      { label: "Riverstone community", url: "https://www.riverstone.com/riverstone-community" },
+      { label: "Riverstone builders", url: "https://www.riverstone.com/builders" },
+      { label: "Riverstone schools", url: "https://www.riverstone.com/schools" },
+      { label: "Riverstone virtual tour", url: "https://www.riverstone.com/virtualtour" },
+    ],
+    faqs: [
+      {
+        question: "Are new homes still for sale in Riverstone?",
+        answer:
+          "The builders page says Psalms Fine Homes is now selling the last newly constructed homes in the community, at 5,200 to 6,200 square feet.",
+      },
+      {
+        question: "What school district is Riverstone in?",
+        answer: "Fort Bend ISD. The schools page names on-site Sullivan Elementary. Confirm the address with the district.",
+      },
+      {
+        question: "Where is the Riverstone office?",
+        answer: "18353 University Boulevard, Sugar Land, TX 77479, as printed on the community site.",
+      },
+    ],
+  },
 ];
 
 export const newHomeCommunities: NewHomeCommunity[] = communities.map((community) => ({
@@ -1703,7 +2078,7 @@ export function communitiesForCity(citySlug: string) {
 }
 
 /** Content date for sitemap lastmod. Not a build clock. */
-export const newHomesContentDate = "2026-11-03";
+export const newHomesContentDate = "2026-11-04";
 
 export function newHomePaths() {
   return [

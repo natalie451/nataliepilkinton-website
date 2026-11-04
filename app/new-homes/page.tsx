@@ -11,12 +11,12 @@ import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/data/navigation";
 import { getCommunityGallery } from "@/lib/data/newHomePhotos";
-import { communitiesForCity, newHomeCities, newHomeCommunities } from "@/lib/data/newHomes";
+import { communitiesForCity, getNewHomeCity, newHomeCommunities, newHomeRegions } from "@/lib/data/newHomes";
 
 export const metadata: Metadata = buildMetadata({
-  title: "New Homes in North Houston",
+  title: "New Homes in Greater Houston",
   description:
-    "New homes north of I-10: Conroe, Tomball, Katy, Cypress, Humble, Crosby, and Dayton. Tour with Natalie before the builder registers you.",
+    "New homes across Greater Houston: Conroe, Katy, Fulshear, Missouri City, Manvel, and Sugar Land. Tour with Natalie before the builder registers you.",
   path: "/new-homes",
   image: "/new-homes/bridgeland/hero.webp",
 });
@@ -55,9 +55,9 @@ export default function NewHomesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a33] via-[#0a1a33]/88 to-[#0a1a33]/35" />
         <Container className="relative z-10 flex min-h-[82vh] flex-col justify-end py-3xl">
           <p className="mb-sm text-xs font-semibold uppercase tracking-[0.16em] text-cream">New construction</p>
-          <h1 className="mb-md max-w-[14ch] text-cream">New homes north of Houston</h1>
+          <h1 className="mb-md max-w-[16ch] text-cream">New homes across Greater Houston</h1>
           <p className="mb-lg max-w-[38rem] text-lg text-cream">
-            Nine cities. Photographs and builder facts from each community website. Tour with Natalie before a model home registers an agent.
+            North, northwest, Katy and Fulshear, Fort Bend, Manvel, and the east side. Photographs and builder facts come from each community website. Tour with Natalie before a model home registers an agent.
           </p>
           <div className="mb-md flex flex-wrap gap-sm">
             <Button href="#cities" variant="on-blue">See the communities</Button>
@@ -86,28 +86,39 @@ export default function NewHomesPage() {
             compensation. Call or text {siteConfig.phone}.
           </p>
           <div className="flex flex-col gap-3xl">
-            {newHomeCities.map((city) => {
-              const { primary } = communitiesForCity(city.slug);
+            {newHomeRegions.map((region) => {
+              const cities = region.citySlugs
+                .map((slug) => getNewHomeCity(slug))
+                .filter((city) => city !== undefined);
+              if (cities.length === 0) return null;
               return (
-                <div key={city.slug}>
-                  <div className="mb-lg flex flex-wrap items-end justify-between gap-sm">
-                    <div>
-                      <p className="mb-xs text-xs font-semibold uppercase tracking-[0.14em] text-blue">{city.headline}</p>
-                      <h3 className="mb-0 mt-0 text-3xl">
-                        <Link href={`/new-homes/${city.slug}`} className="text-navy hover:text-blue">
-                          {city.name}
-                        </Link>
-                      </h3>
-                    </div>
-                    <Link href={`/new-homes/${city.slug}`} className="text-sm font-semibold text-blue">
-                      {city.name} overview
-                    </Link>
-                  </div>
-                  <div className="grid grid-cols-3 gap-lg max-lg:grid-cols-2 max-sm:grid-cols-1">
-                    {primary.map((community) => (
-                      <CommunityPhotoCard key={community.slug} community={community} />
-                    ))}
-                  </div>
+                <div key={region.name} className="flex flex-col gap-3xl">
+                  <p className="mb-0 text-sm font-semibold uppercase tracking-[0.16em] text-navy">{region.name}</p>
+                  {cities.map((city) => {
+                    const { primary } = communitiesForCity(city.slug);
+                    return (
+                      <div key={city.slug}>
+                        <div className="mb-lg flex flex-wrap items-end justify-between gap-sm">
+                          <div>
+                            <p className="mb-xs text-xs font-semibold uppercase tracking-[0.14em] text-blue">{city.headline}</p>
+                            <h3 className="mb-0 mt-0 text-3xl">
+                              <Link href={`/new-homes/${city.slug}`} className="text-navy hover:text-blue">
+                                {city.name}
+                              </Link>
+                            </h3>
+                          </div>
+                          <Link href={`/new-homes/${city.slug}`} className="text-sm font-semibold text-blue">
+                            {city.name} overview
+                          </Link>
+                        </div>
+                        <div className="grid grid-cols-3 gap-lg max-lg:grid-cols-2 max-sm:grid-cols-1">
+                          {primary.map((community) => (
+                            <CommunityPhotoCard key={community.slug} community={community} />
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               );
             })}

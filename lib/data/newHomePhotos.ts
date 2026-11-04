@@ -313,6 +313,32 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/river-ranch-trails/park.webp","alt":"Another River Ranch photo on the Coventry page","width":1200,"height":899},
     ],
   },
+  "cross-creek-west": {
+    creditName: "Cross Creek West",
+    creditUrl: "https://www.crosscreekwesttx.com/amenities",
+    photos: [
+      {"src":"/new-homes/cross-creek-west/hero.webp","alt":"Aerial of tennis courts, the pool, and playground at The Waterhole in Cross Creek West","width":1800,"height":1200},
+      {"src":"/new-homes/cross-creek-west/waterhole.webp","alt":"Overhead view of The Waterhole pool, playground, and courts at Cross Creek West","width":1800,"height":1348},
+      {"src":"/new-homes/cross-creek-west/pool.webp","alt":"Residents at the Cross Creek West community pool","width":1800,"height":1200},
+      {"src":"/new-homes/cross-creek-west/playground.webp","alt":"Playground beside the pool at The Waterhole in Cross Creek West","width":1800,"height":1200},
+      {"src":"/new-homes/cross-creek-west/fitness.webp","alt":"Fitness center at The Waterhole in Cross Creek West","width":1800,"height":1201},
+    ],
+  },
+  "tamarron": {
+    creditName: "D.R. Horton",
+    creditUrl: "https://www.drhorton.com/texas/houston/fulshear/tamarron",
+    photos: [
+      {"src":"/new-homes/tamarron/hero.webp","alt":"Lancaster model exterior published on the D.R. Horton Tamarron page","width":1030,"height":579},
+    ],
+  },
+  "sienna": {
+    creditName: "Sienna",
+    creditUrl: "https://www.siennatx.com/",
+    photos: [
+      {"src":"/new-homes/sienna/hero.webp","alt":"Water slide and pool published on the Sienna homepage","width":960,"height":910},
+      {"src":"/new-homes/sienna/pool.webp","alt":"Pool with a Sienna Plantation chair, published on the Sienna homepage","width":1200,"height":800},
+    ],
+  },
 };
 
 function imageSize(file: string) {
