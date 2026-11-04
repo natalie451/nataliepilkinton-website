@@ -12,6 +12,8 @@ import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { BuildersInCommunity } from "@/components/new-homes/BuilderPromotions";
+import { NewHomesTrust } from "@/components/new-homes/NewHomesTrust";
+import { WaysToMakeItWork, financingFaqs } from "@/components/new-homes/WaysToMakeItWork";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -205,8 +207,22 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
             <div className="bg-cream rounded-xs p-md">
               <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-blue mb-xs">Schools</dt>
               <dd className="mb-0 text-navy">
-                <span className="font-semibold">{community.schoolDistrict}. </span>
-                {community.schools}
+                {community.schoolDistrict ? (
+                  <>
+                    <span className="font-semibold">{community.schoolDistrict}. </span>
+                    {community.schools}
+                  </>
+                ) : (
+                  <>
+                    <p className="mb-sm">Ask Natalie about schools for this community</p>
+                    <div className="flex flex-wrap gap-sm">
+                      <Button href="#tour" size="small">Tour with Natalie</Button>
+                      <Button href={siteConfig.phoneHref} size="small" variant="secondary">
+                        Call or text
+                      </Button>
+                    </div>
+                  </>
+                )}
               </dd>
             </div>
             <div className="bg-cream rounded-xs p-md">
@@ -219,6 +235,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
 
       <BuildersInCommunity community={community} />
 
+      <WaysToMakeItWork variant="full" ctaHref="#tour" />
+
       <Section>
         <Container className="max-w-[48rem]">
           <h2>Amenities</h2>
@@ -229,6 +247,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </ul>
         </Container>
       </Section>
+
+      <NewHomesTrust />
 
       <Section id="tour" tone="accent">
         <Container>
@@ -265,7 +285,7 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
       <Section>
         <Container className="max-w-[48rem]">
           <h2>Questions about {community.name}</h2>
-          <FAQ items={community.faqs} />
+          <FAQ items={[...community.faqs, ...financingFaqs]} />
         </Container>
       </Section>
 
