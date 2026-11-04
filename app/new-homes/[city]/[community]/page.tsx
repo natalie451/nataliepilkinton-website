@@ -13,6 +13,7 @@ import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { BuildersInCommunity } from "@/components/new-homes/BuilderPromotions";
 import { NewHomesTrust } from "@/components/new-homes/NewHomesTrust";
+import { WaysToMakeItWork, financingFaqs } from "@/components/new-homes/WaysToMakeItWork";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -234,6 +235,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
 
       <BuildersInCommunity community={community} />
 
+      <WaysToMakeItWork variant="full" ctaHref="#tour" />
+
       <Section>
         <Container className="max-w-[48rem]">
           <h2>Amenities</h2>
@@ -282,7 +285,7 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
       <Section>
         <Container className="max-w-[48rem]">
           <h2>Questions about {community.name}</h2>
-          <FAQ items={community.faqs} />
+          <FAQ items={[...community.faqs, ...financingFaqs]} />
         </Container>
       </Section>
 

@@ -10,6 +10,7 @@ import { CommunityPhotoCard } from "@/components/new-homes/CommunityPhotoCard";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { NewHomesTrust } from "@/components/new-homes/NewHomesTrust";
+import { WaysToMakeItWork } from "@/components/new-homes/WaysToMakeItWork";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -140,6 +141,8 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
           </Container>
         </Section>
       )}
+
+      <WaysToMakeItWork variant="short" ctaHref={siteConfig.bookingUrl} ctaExternal showFaq />
 
       <NewHomesTrust />
 
