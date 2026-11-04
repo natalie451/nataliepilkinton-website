@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { CommunityPhotoCard } from "@/components/new-homes/CommunityPhotoCard";
 import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
+import { NewHomesTrust } from "@/components/new-homes/NewHomesTrust";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -139,6 +140,8 @@ export default async function NewHomeCityPage({ params }: { params: Promise<Para
           </Container>
         </Section>
       )}
+
+      <NewHomesTrust />
 
       <Section tone="accent">
         <Container className="max-w-[46rem]">

@@ -12,6 +12,7 @@ import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { TourCommunityForm } from "@/components/new-homes/TourCommunityForm";
 import { TourWithNatalieBar } from "@/components/new-homes/TourWithNatalieBar";
 import { BuildersInCommunity } from "@/components/new-homes/BuilderPromotions";
+import { NewHomesTrust } from "@/components/new-homes/NewHomesTrust";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
@@ -243,6 +244,8 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </ul>
         </Container>
       </Section>
+
+      <NewHomesTrust />
 
       <Section id="tour" tone="accent">
         <Container>
