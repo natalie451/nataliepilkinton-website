@@ -4,6 +4,8 @@
  * Prices and school zones change. Pages tell buyers to confirm both.
  */
 
+import { pass2Communities } from "@/lib/data/newHomesPass2";
+
 export type NewHomeSource = {
   label: string;
   url: string;
@@ -140,7 +142,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Katy",
     headline: "FM 529, the Grand Parkway, and Fulshear south of I-10",
     summary:
-      "Elyson and Cane Island are north of Interstate 10. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West and Tamarron are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
+      "Elyson and Cane Island are north of Interstate 10. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, and Jordan Ranch are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
   },
   {
     slug: "magnolia",
@@ -175,7 +177,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Fulshear",
     headline: "FM 359, Jordan Road, and the Katy Freeway",
     summary:
-      "Cross Creek West and Tamarron are the Fulshear master plans with current builder pages that name prices and Lamar CISD campuses. Both are south of I-10 and are also linked from the Katy page.",
+      "Cross Creek West, Tamarron, and Jordan Ranch are Fulshear communities with current builder pages that name prices and Lamar CISD. All three are south of I-10 and are also linked from the Katy page.",
   },
   {
     slug: "missouri-city",
@@ -198,6 +200,48 @@ export const newHomeCities: NewHomeCity[] = [
     summary:
       "Riverstone's community site says the last new homes are selling now, from the $340s, in Fort Bend ISD, with an on-site elementary school. The published sales office is in Sugar Land.",
   },
+  {
+    slug: "richmond",
+    name: "Richmond",
+    headline: "Fort Bend County, along the Grand Parkway and US 59",
+    summary:
+      "Harvest Green, Veranda, and Briscoe Falls have official pages that name a builder, a from-price, and a school district. Harvest Green and Veranda name Fort Bend ISD or Lamar CISD on their own sites. Briscoe Falls is a KB Home community in Lamar CISD.",
+  },
+  {
+    slug: "pearland",
+    name: "Pearland",
+    headline: "Alvin ISD, along Highway 288",
+    summary:
+      "Massey Oaks is a Meritage community in Pearland, zoned to Alvin ISD. Canterra Creek is an LGI community whose sales address is in Arcola and whose page markets it near Pearland, also in Alvin ISD.",
+  },
+  {
+    slug: "league-city",
+    name: "League City",
+    headline: "I-45, between Houston and Galveston",
+    summary:
+      "Westland Ranch is a Forestar community in League City with new homes from the $270,000s. The community site says it is in Clear Creek ISD and Santa Fe ISD.",
+  },
+  {
+    slug: "texas-city",
+    name: "Texas City",
+    headline: "I-45, on the southwest shore of Galveston Bay",
+    summary:
+      "Lago Mar is the Texas City master plan with a current developer brochure that names builders, a price range, and Dickinson ISD schools. The full page is here and is also linked from Dickinson.",
+  },
+  {
+    slug: "dickinson",
+    name: "Dickinson",
+    headline: "Dickinson ISD, next to Texas City",
+    summary:
+      "Lago Mar's information center is in Texas City, and the community site says students attend Dickinson ISD. The full page is filed under Texas City and linked here.",
+  },
+  {
+    slug: "mont-belvieu",
+    name: "Mont Belvieu",
+    headline: "Barbers Hill ISD, near the Grand Parkway",
+    summary:
+      "Grand Oaks by Century Communities and Riceland by Autograph Homes both publish a from-price and Barbers Hill ISD.",
+  },
 ];
 
 export const newHomeRegions: { name: string; citySlugs: string[] }[] = [
@@ -215,15 +259,19 @@ export const newHomeRegions: { name: string; citySlugs: string[] }[] = [
   },
   {
     name: "Southwest/Fort Bend",
-    citySlugs: ["sugar-land", "missouri-city"],
+    citySlugs: ["sugar-land", "missouri-city", "richmond"],
   },
   {
     name: "South/Brazoria",
-    citySlugs: ["manvel"],
+    citySlugs: ["manvel", "pearland"],
+  },
+  {
+    name: "Bay Area/Galveston",
+    citySlugs: ["league-city", "texas-city", "dickinson"],
   },
   {
     name: "East",
-    citySlugs: ["crosby", "dayton"],
+    citySlugs: ["crosby", "dayton", "mont-belvieu"],
   },
 ];
 
@@ -2056,6 +2104,7 @@ const communities: NewHomeCommunity[] = [
       },
     ],
   },
+  ...pass2Communities,
 ];
 
 export const newHomeCommunities: NewHomeCommunity[] = communities.map((community) => ({

@@ -323,6 +323,23 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     },
   ],
   tavola: [],
+  "massey-oaks": [
+    {
+      builder: "Meritage Homes",
+      text: "National Sales Event, November 2-15. 3.5% introductory rate (6.266% APR) plus $10,000 toward closing costs. The page does not print the year.",
+      expires: "November 15",
+      sourceLabel: "Meritage, Massey Oaks Village",
+      sourceUrl: "https://www.meritagehomes.com/state/tx/houston/massey-oaks-village",
+    },
+  ],
+  "canterra-creek": [
+    {
+      builder: "LGI Homes",
+      text: "The feature list includes builder-paid closing costs, no down payment required, and zero down options. The page does not print a dollar amount.",
+      sourceLabel: "LGI Homes, Canterra Creek",
+      sourceUrl: "https://www.lgihomes.com/texas/houston/canterra-creek",
+    },
+  ],
   "cross-creek-west": [
     {
       builder: "Perry Homes",

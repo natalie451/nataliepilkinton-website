@@ -331,6 +331,14 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/tamarron/hero.webp","alt":"Lancaster model exterior published on the D.R. Horton Tamarron page","width":1030,"height":579},
     ],
   },
+  "grand-oaks": {
+    creditName: "Century Communities",
+    creditUrl: "https://www.centurycommunities.com/find-your-new-home/texas/houston-metro/mont-belvieu/grand-oaks/",
+    photos: [
+      {"src":"/new-homes/grand-oaks/hero.webp","alt":"Grand Oaks model home published on the Century Communities page","width":1800,"height":1348},
+      {"src":"/new-homes/grand-oaks/home.webp","alt":"Home at 12026 Old Fashion Circle in Grand Oaks, Mont Belvieu","width":1800,"height":1200},
+    ],
+  },
   "sienna": {
     creditName: "Sienna",
     creditUrl: "https://www.siennatx.com/",
