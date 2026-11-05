@@ -14,7 +14,7 @@ const staticPaths = [
   "/about",
   "/booking",
   "/contact",
-  "/privacy-policy",
+  "/privacy",
   "/terms-of-service",
   "/webinar",
 

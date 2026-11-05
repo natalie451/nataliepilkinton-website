@@ -123,7 +123,7 @@ export const footerNav = {
     links: [
       { label: "Why HomeRock", href: "/about" },
       { label: "Join My Team", href: "/join-my-team" },
-      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms-of-service" },
     ] as NavChild[],
   },

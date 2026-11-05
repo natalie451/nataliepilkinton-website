@@ -106,7 +106,7 @@ export function Footer() {
         <div className="pt-lg pb-lg flex justify-between items-center text-sm text-cream/70 max-md:flex-col max-md:gap-md max-md:text-center">
           <div>&copy; {new Date().getFullYear()} Natalie Pilkinton | HomeRock Realty. All rights reserved.</div>
           <div className="flex gap-lg">
-            <Link href="/privacy-policy" className="text-cream/70 hover:text-white transition-colors">
+            <Link href="/privacy" className="text-cream/70 hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <Link href="/terms-of-service" className="text-cream/70 hover:text-white transition-colors">
