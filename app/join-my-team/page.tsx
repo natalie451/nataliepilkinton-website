@@ -156,12 +156,6 @@ export default function JoinMyTeamPage() {
             <dd className="m-0 text-gray-dark">{joinOffice.broker}</dd>
             <dt className="font-semibold text-navy">Office</dt>
             <dd className="m-0 text-gray-dark">{joinOffice.address}</dd>
-            <dt className="font-semibold text-navy">Office phone</dt>
-            <dd className="m-0">
-              <a href={joinOffice.phoneHref} className="font-semibold text-blue underline underline-offset-2">
-                {joinOffice.phone}
-              </a>
-            </dd>
             <dt className="font-semibold text-navy">Natalie</dt>
             <dd className="m-0">
               <a href={siteConfig.phoneHref} className="font-semibold text-blue underline underline-offset-2">
@@ -227,7 +221,7 @@ export default function JoinMyTeamPage() {
         <Container>
           <h2 className="mb-sm">Book a call</h2>
           <p className="mb-lg max-w-[40rem] text-gray-dark">
-            Pick a time on Natalie&rsquo;s calendar. The office phone is {joinOffice.phone} if you would rather call the brokerage.
+            Pick a time on Natalie&rsquo;s calendar.
           </p>
           <CalendlyInline />
         </Container>

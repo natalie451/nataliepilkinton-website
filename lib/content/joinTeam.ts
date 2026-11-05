@@ -5,8 +5,6 @@ export const joinTeamContentDate = "2026-11-04";
 
 export const joinOffice = {
   address: "24624 I-45 N Ste 120, Spring, TX 77386",
-  phone: "(832) 290-7003",
-  phoneHref: "tel:+18322907003",
   broker: "Cory Kammerdiener",
   brokerTitle: "Designated Broker",
 };
@@ -138,6 +136,6 @@ export function joinTeamAssistantFacts() {
     `The first conversation can be a free commission audit, or a meeting with ${joinOffice.broker}, ${joinOffice.brokerTitle}.`,
     "List Natalie Pilkinton as your referral.",
     "Weekly team training every Tuesday, 11:20 AM to 1:30 PM.",
-    `Email ${siteConfig.email}. Natalie: ${siteConfig.phone}. HomeRock office phone is ${joinOffice.phone}. Office: ${joinOffice.address}.`,
+    `Email ${siteConfig.email}. Natalie: ${siteConfig.phone}. Office: ${joinOffice.address}.`,
   ].join(" ");
 }
