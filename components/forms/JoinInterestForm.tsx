@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
+import { trackLead } from "@/lib/tracking/events";
 
 /** Reuses the existing lead-magnet endpoint. No new backend. */
 export function JoinInterestForm() {
@@ -16,6 +17,14 @@ export function JoinInterestForm() {
   }
 
   return (
-    <LeadMagnetForm resource="join-my-team" interest="agent" submitLabel="Send my interest" onSuccess={() => setSent(true)} />
+    <LeadMagnetForm
+      resource="join-my-team"
+      interest="agent"
+      submitLabel="Send my interest"
+      onSuccess={() => {
+        trackLead();
+        setSent(true);
+      }}
+    />
   );
 }

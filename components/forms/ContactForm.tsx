@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { submitLead } from "@/lib/leads/submit";
+import { trackLead } from "@/lib/tracking/events";
 
 const inputClasses =
   "w-full p-md border border-gray-light rounded-xs text-base font-sans focus:outline-none focus:border-blue focus:shadow-[0_0_0_3px_rgba(26,79,191,0.1)]";
@@ -49,6 +50,7 @@ export function ContactForm() {
       return;
     }
 
+    trackLead();
     setSubmitted(true);
   }
 
