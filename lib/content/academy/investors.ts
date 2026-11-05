@@ -464,7 +464,7 @@ export const privateLendingGuide: AcademyGuide = {
     {
       question: "How do I talk with her about lending or partnering?",
       answer:
-        "Call or text (832) 863-3468, or [book a call](https://calendly.com/nataliepilkinton). You can also meet other investors at her monthly meetup. The next date, time, and place are on Meetup.com.",
+        "Call or text (832) 981-5271, or [book a call](https://calendly.com/nataliepilkinton). You can also meet other investors at her monthly meetup. The next date, time, and place are on Meetup.com.",
     },
   ],
   related: [

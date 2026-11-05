@@ -15,7 +15,7 @@ import { buyerJourney, buyerFaq, buyerModules } from "@/lib/content/buyers";
 export const metadata: Metadata = buildMetadata({
   title: "Buy a Home in Spring, TX",
   description:
-    "Buying in Spring, TX or Greater Houston? Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 863-3468.",
+    "Buying in Spring, TX or Greater Houston? Natalie Pilkinton serves Greater Houston, especially north of I-10 up to Huntsville, including Houston, Conroe, The Woodlands, Tomball, Magnolia, and Huntsville. Call or text (832) 981-5271.",
   path: "/buyers",
 });
 

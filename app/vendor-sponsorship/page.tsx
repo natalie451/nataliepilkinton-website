@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -277,18 +278,13 @@ export default function VendorSponsorshipPage() {
           Questions? Let&apos;s Talk!
         </h2>
         <p className="mt-3 sm:mt-4 text-sm sm:text-base font-semibold">Natalie Pilkinton</p>
-        <p className="mt-2 text-xs sm:text-sm text-gray-600">
-          <a className="hover:text-blue-600" href="tel:+18328633468">
-            (832) 863-3468
-          </a>{" "}
-          <span aria-hidden="true">•</span>{" "}
-          <a
-            className="hover:text-blue-600"
-            href="mailto:natalie@nataliepilkinton.com"
-          >
-            natalie@nataliepilkinton.com
+        <div className="mt-2 flex flex-wrap items-center justify-center gap-xs text-xs sm:text-sm text-gray-600">
+          <a className="hover:text-blue-600" href="tel:+18329815271">
+            (832) 981-5271
           </a>
-        </p>
+          <span aria-hidden="true">•</span>
+          <EmailAddress />
+        </div>
       </footer>
 
       {/* Vendor Directory CTA Section - Horizontal Layout */}

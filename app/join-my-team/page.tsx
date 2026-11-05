@@ -10,9 +10,10 @@ import { EndCta } from "@/components/cta/EndCta";
 import { JoinInterestForm } from "@/components/forms/JoinInterestForm";
 import { CalendlyInline } from "@/components/booking/CalendlyInline";
 import { FlyerGallery } from "@/components/join/FlyerGallery";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/data/navigation";
-import { joinOffice, revshareLevels, transactionFees, valueStack } from "@/lib/content/joinTeam";
+import { joinOffice, revshareLevels, valueStack } from "@/lib/content/joinTeam";
 
 export const metadata: Metadata = buildMetadata({
   title: "Join a Real Estate Team in Spring, TX / North Houston",
@@ -96,18 +97,6 @@ export default function JoinMyTeamPage() {
             </table>
           </div>
 
-          <h3 className="mb-sm mt-xl text-2xl">Transaction fees</h3>
-          <ul className="m-0 grid list-none grid-cols-3 gap-md p-0 max-md:grid-cols-1">
-            {transactionFees.map((fee) => (
-              <li key={fee.label} className="rounded-xs border border-gray-light bg-white p-md">
-                <p className="mb-xs font-semibold text-ink">{fee.label}</p>
-                <p className="mb-0 text-gray-dark">
-                  {fee.amount}
-                  <span className="block text-sm">{fee.note}</span>
-                </p>
-              </li>
-            ))}
-          </ul>
         </Container>
       </Section>
 
@@ -130,17 +119,9 @@ export default function JoinMyTeamPage() {
       <Section tone="accent">
         <Container>
           <h2 className="mb-sm">We put our agents over our bottom line</h2>
-          <p className="mb-lg max-w-[40rem] text-cream">These two figures are printed together on the flyer.</p>
-          <div className="grid max-w-[40rem] grid-cols-2 gap-md max-sm:grid-cols-1">
-            <div className="rounded-xs border border-cream/40 p-md">
-              <p className="mb-xs text-sm font-semibold uppercase tracking-[0.06em] text-cream">Brokerage revshare earned</p>
-              <p className="mb-0 font-serif text-3xl text-cream">$26,440.06</p>
-            </div>
-            <div className="rounded-xs border border-cream/40 p-md">
-              <p className="mb-xs text-sm font-semibold uppercase tracking-[0.06em] text-cream">Agent revshare paid</p>
-              <p className="mb-0 font-serif text-3xl text-cream">$27,192.38</p>
-            </div>
-          </div>
+          <p className="mb-0 max-w-[40rem] text-cream">
+            The revshare paid to agents is higher than the revshare the brokerage earned.
+          </p>
         </Container>
       </Section>
 
@@ -189,9 +170,7 @@ export default function JoinMyTeamPage() {
             </dd>
             <dt className="font-semibold text-navy">Email</dt>
             <dd className="m-0">
-              <a href={siteConfig.emailHref} className="font-semibold text-blue underline underline-offset-2">
-                {siteConfig.email}
-              </a>
+              <EmailAddress />
             </dd>
             <dt className="font-semibold text-navy">Team training</dt>
             <dd className="m-0 text-gray-dark">Weekly team training every Tuesday, 11:20 AM to 1:30 PM.</dd>
@@ -234,7 +213,11 @@ export default function JoinMyTeamPage() {
         <Container className="max-w-[40rem]">
           <h2 className="mb-sm">Tell Natalie you are interested</h2>
           <p className="text-gray-dark">
-            Send your name and email. You can also call or text {siteConfig.phone}, email {siteConfig.email}, or book a call.
+            Send your name and email. You can also call or text {siteConfig.phone}, email{" "}
+            <a href={siteConfig.emailHref} className="font-semibold text-blue underline underline-offset-2 break-all">
+              {siteConfig.email}
+            </a>
+            , or book a call.
           </p>
           <JoinInterestForm />
         </Container>

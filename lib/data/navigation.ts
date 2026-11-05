@@ -149,9 +149,9 @@ export const siteConfig = {
     "https://assets.cdn.filesafe.space/p6coQEMK9WucfxjPnduV/media/69bd835a9d53bf7545b5be81.png",
   headshotUrl:
     "https://assets.cdn.filesafe.space/p6coQEMK9WucfxjPnduV/media/6a58be7f524a3ec4c61853f3.png",
-  phone: "(832) 863-3468",
-  phoneHref: "tel:+18328633468",
-  smsHref: "sms:+18328633468",
+  phone: "(832) 981-5271",
+  phoneHref: "tel:+18329815271",
+  smsHref: "sms:+18329815271",
   email: "natalie@nataliepilkinton.com",
   emailHref: "mailto:natalie@nataliepilkinton.com",
   googleReviewUrl: "https://g.page/r/CTl2UurDdEQLEBM/review",

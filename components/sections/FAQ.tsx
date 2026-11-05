@@ -1,13 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
+import { siteConfig } from "@/lib/data/navigation";
 import { jsonLdScriptProps, faqSchema } from "@/lib/seo/schema";
 
 export type FAQEntry = {
   question: string;
   answer: string;
 };
+
+function renderAnswer(answer: string): ReactNode {
+  if (!answer.includes(siteConfig.email)) return answer;
+  const parts = answer.split(siteConfig.email);
+  return parts.flatMap((part, index) =>
+    index === 0
+      ? [part]
+      : [
+          <a
+            key={`email-${index}`}
+            href={siteConfig.emailHref}
+            className="font-semibold text-blue underline underline-offset-2 break-all"
+          >
+            {siteConfig.email}
+          </a>,
+          part,
+        ],
+  );
+}
 
 export function FAQ({ items }: { items: FAQEntry[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -32,7 +52,7 @@ export function FAQ({ items }: { items: FAQEntry[] }) {
                 ⌄
               </span>
             </button>
-            {isOpen && <div className="pt-md leading-relaxed text-gray-dark">{item.answer}</div>}
+            {isOpen && <div className="pt-md leading-relaxed text-gray-dark">{renderAnswer(item.answer)}</div>}
           </div>
         );
       })}

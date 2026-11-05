@@ -47,7 +47,7 @@ export function TourCommunityForm({ communityName, resource }: TourCommunityForm
     return (
       <p className="text-navy leading-relaxed mb-0">
         Natalie has your request to tour {communityName}. She will follow up to pick a time. You can also call or text
-        (832) 863-3468 if you want to talk before then.
+        (832) 981-5271 if you want to talk before then.
       </p>
     );
   }

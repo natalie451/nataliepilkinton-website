@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Book a Call with Natalie Pilkinton",
   description:
-    "Book a call with Spring, TX REALTOR Natalie Pilkinton. Prefer to talk now? Call or text (832) 863-3468 or email natalie@nataliepilkinton.com.",
+    "Book a call with Spring, TX REALTOR Natalie Pilkinton. Prefer to talk now? Call or text (832) 981-5271 or email natalie@nataliepilkinton.com.",
   path: "/booking",
 });
 

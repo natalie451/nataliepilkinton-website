@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils/cn";
 
 type HeroProps = {
   title: string;
-  subheading?: string;
+  subheading?: ReactNode;
   /** Small uppercase label above the headline (e.g. a role/positioning line). Centered heroes only. */
   eyebrow?: string;
   children?: ReactNode;

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { footerNav, formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
@@ -37,9 +38,7 @@ export function Footer() {
             </div>
             <ul className="list-none space-y-xs mb-lg text-sm">
               <li>
-                <a href={siteConfig.emailHref} className="text-cream hover:text-white">
-                  {siteConfig.email}
-                </a>
+                <EmailAddress tone="on-dark" />
               </li>
               <li>
                 <a href={siteConfig.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="text-cream hover:text-white">

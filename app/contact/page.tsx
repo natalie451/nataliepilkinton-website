@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { ContactActions } from "@/components/cta/ContactActions";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -13,7 +14,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Natalie Pilkinton, Spring TX REALTOR",
   description:
-    "Call or text (832) 863-3468, email natalie@nataliepilkinton.com, or book a time. Natalie Pilkinton is based in Spring and serves Greater Houston, especially north of I-10 up to Huntsville.",
+    "Call or text (832) 981-5271, email natalie@nataliepilkinton.com, or book a time. Natalie Pilkinton is based in Spring and serves Greater Houston, especially north of I-10 up to Huntsville.",
   path: "/contact",
 });
 
@@ -30,7 +31,15 @@ export default function ContactPage() {
       <BreadcrumbBar items={[{ name: "Contact", path: "/contact" }]} />
       <Hero
         title="Contact Natalie"
-        subheading={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time. Based in Spring, serving ${serviceRegion}, including ${formatCityList(serviceAreas)}.`}
+        subheading={
+          <>
+            Call or text {siteConfig.phone}, email{" "}
+            <a href={siteConfig.emailHref} className="font-semibold text-cream underline underline-offset-2 break-all hover:text-white">
+              {siteConfig.email}
+            </a>
+            , or book a time. Based in Spring, serving {serviceRegion}, including {formatCityList(serviceAreas)}.
+          </>
+        }
       >
         <ContactActions tone="on-dark" showReview bookHref={siteConfig.bookingUrl} />
       </Hero>
@@ -59,9 +68,9 @@ export default function ContactPage() {
 
               <div className="mb-2xl">
                 <h4 className="mb-md text-lg">Email</h4>
-                <p className="mb-0">
-                  <a href={siteConfig.emailHref}>{siteConfig.email}</a>
-                </p>
+                <div className="mb-0">
+                  <EmailAddress />
+                </div>
               </div>
 
               <div className="mb-2xl">

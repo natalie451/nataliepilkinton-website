@@ -1,4 +1,5 @@
 import { CallOrTextChoice } from "@/components/cta/CallOrTextChoice";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/data/navigation";
 import { cn } from "@/lib/utils/cn";
@@ -10,7 +11,7 @@ type ContactActionsProps = {
   showEmail?: boolean;
   showBook?: boolean;
   showReview?: boolean;
-  /** Equal tiles share one shape. Hero keeps three equal buttons on one desktop row. */
+  /** Equal tiles share one shape. Hero keeps the call and book buttons on one desktop row. */
   layout?: "inline" | "equal" | "hero";
   /** Defaults to the on-site booking page. Pass the Calendly URL when the button should open that calendar. */
   bookHref?: string;
@@ -40,10 +41,8 @@ export function ContactActions({
   const equal = layout === "equal";
   const hero = layout === "hero";
   const stretch = equal ? "h-[6.25rem] w-full px-sm" : "max-sm:w-full";
-  // Tight horizontal padding so "Email Natalie" stays on one line inside the hero column.
-  const heroButton =
-    "w-full min-w-0 px-3 text-base leading-tight min-h-14 lg:px-1.5 lg:text-sm lg:min-h-12 lg:whitespace-nowrap";
-  const actionCount = 1 + Number(showBook) + Number(showEmail) + Number(showReview);
+  const heroButton = "w-full min-w-0 px-3 text-base leading-tight min-h-14 lg:px-3 lg:text-base lg:min-h-12";
+  const actionCount = 1 + Number(showBook) + Number(showReview);
   const columns =
     actionCount >= 4
       ? "grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4"
@@ -54,43 +53,40 @@ export function ContactActions({
           : "grid-cols-1";
 
   return (
-    <div
-      className={cn(
-        hero
-          ? "grid w-full grid-cols-1 items-stretch gap-sm lg:grid-cols-3"
-          : equal
-            ? cn("grid w-full items-stretch gap-sm", columns)
-            : "flex flex-wrap items-center gap-sm",
-        className,
-      )}
-    >
-      <CallOrTextChoice
-        variant={callVariant}
-        size={size}
-        className={hero ? "min-w-0 w-full" : cn(stretch, buttonClassName)}
-        buttonClassName={hero ? heroButton : buttonClassName ? cn(stretch, buttonClassName) : undefined}
-      />
-      {showBook && (
-        <Button
-          href={bookHref}
-          external={bookHref.startsWith("http")}
-          variant={secondary}
+    <div className={cn("flex flex-col items-start gap-sm", className)}>
+      <div
+        className={cn(
+          hero
+            ? "grid w-full grid-cols-1 items-stretch gap-sm lg:grid-cols-2"
+            : equal
+              ? cn("grid w-full items-stretch gap-sm", columns)
+              : "flex flex-wrap items-center gap-sm",
+        )}
+      >
+        <CallOrTextChoice
+          variant={callVariant}
           size={size}
-          className={cn(hero ? heroButton : stretch, buttonClassName)}
-        >
-          {bookLabel}
-        </Button>
-      )}
-      {showEmail && (
-        <Button href={siteConfig.emailHref} variant={secondary} size={size} className={hero ? heroButton : stretch}>
-          Email Natalie
-        </Button>
-      )}
-      {showReview && (
-        <Button href={siteConfig.googleReviewUrl} external variant={secondary} size={size} className={hero ? heroButton : stretch}>
-          Leave a Google review
-        </Button>
-      )}
+          className={hero ? "min-w-0 w-full" : cn(stretch, buttonClassName)}
+          buttonClassName={hero ? heroButton : buttonClassName ? cn(stretch, buttonClassName) : undefined}
+        />
+        {showBook && (
+          <Button
+            href={bookHref}
+            external={bookHref.startsWith("http")}
+            variant={secondary}
+            size={size}
+            className={cn(hero ? heroButton : stretch, buttonClassName)}
+          >
+            {bookLabel}
+          </Button>
+        )}
+        {showReview && (
+          <Button href={siteConfig.googleReviewUrl} external variant={secondary} size={size} className={hero ? heroButton : stretch}>
+            Leave a Google review
+          </Button>
+        )}
+      </div>
+      {showEmail && <EmailAddress tone={onBlue ? "on-dark" : "on-light"} />}
     </div>
   );
 }
