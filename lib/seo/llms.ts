@@ -1,4 +1,5 @@
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
+import { joinTeamLlmsLine } from "@/lib/content/joinTeam";
 import { podcastShow } from "@/lib/data/podcast";
 import { newHomeCities, newHomeCommunities } from "@/lib/data/newHomes";
 
@@ -140,7 +141,7 @@ export function llmsTxt() {
     "- Home sellers.",
     "- Real estate investors.",
     "- Referral partner for agents whose clients are buying, selling, or investing in her service area.",
-    "- Team for agents who want to join HomeRock Realty. Published team terms: 90/10 commission split, 50% revenue share on agents you bring in, and $0 monthly fees when you bring in 3 agents. Weekly team training is Tuesday, 11:20 AM to 1:30 PM.",
+    `- Team for agents who want to join HomeRock Realty. ${joinTeamLlmsLine}`,
     `- Podcast: ${podcastShow.name}, with Mindy Price and Kelly Williams. YouTube: ${podcastShow.channelUrl}`,
     "",
     "## Key pages",

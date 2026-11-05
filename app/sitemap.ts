@@ -7,6 +7,7 @@ import { getListingSlugs } from "@/lib/listings";
 import { getPodcastEpisodeIndex } from "@/lib/content/podcastEpisodes";
 import { isPlaceholderPath } from "@/lib/seo/placeholders";
 import { newHomePaths, newHomesContentDate } from "@/lib/data/newHomes";
+import { joinTeamContentDate } from "@/lib/content/joinTeam";
 
 const staticPaths = [
   "/",
@@ -88,8 +89,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // on every URL tells search engines nothing and gets ignored.
   const newHomesUpdated = parseDate(newHomesContentDate);
 
-const entries: Entry[] = [
-    ...staticPaths.map((path) => ({ path })),
+  const staticContentDates: Record<string, string> = {
+    "/join-my-team": joinTeamContentDate,
+  };
+
+  const entries: Entry[] = [
+    ...staticPaths.map((path) => ({ path, lastModified: parseDate(staticContentDates[path]) })),
     ...newHomePaths().map((path) => ({ path, lastModified: newHomesUpdated })),
     ...blogCategories.map((category) => ({ path: `/blog/${category}` })),
     ...getAllBlogFilePosts().map((post) => ({

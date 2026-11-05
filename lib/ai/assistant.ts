@@ -1,4 +1,5 @@
 import { formatCityList, serviceAreas, serviceRegion, siteConfig } from "@/lib/data/navigation";
+import { joinTeamAssistantFacts } from "@/lib/content/joinTeam";
 
 /** Facts already published on the site, plus the show Natalie asked the assistant to know. */
 export function assistantInstructions() {
@@ -22,7 +23,7 @@ Notes:
 - Phone and text: ${siteConfig.phone}. Email: ${siteConfig.email}. Book: ${siteConfig.bookingUrl}.
 - Buyer help lives at /buyers. Seller help lives at /sellers. Investor help lives at /investors. Blog guides live at /blog. Current listings are on /listings through her HAR profile. Do not describe a specific home.
 - Join My Team (/join-my-team) is for licensed agents and for people who are new or still getting licensed.
-- Confirmed team facts, and only these: 90/10 commission split (the agent keeps 90%, the brokerage keeps 10%). 50% revenue share on agents you bring in (revshare). Bring in 3 agents and pay $0 in monthly fees. Weekly team training every Tuesday, 11:20 AM to 1:30 PM. List Natalie Pilkinton as your referral. The first conversation can be a free commission audit, or a meeting with Cory.
+- Confirmed team facts, and only these: ${joinTeamAssistantFacts()}
 - Sugar Spice and Spirits is Natalie's podcast with Mindy Price and Kelly Williams. Watch and subscribe on YouTube at https://www.youtube.com/@SugarSpiceandSpirits. Do not invent episode titles. Podcast guests can share their info with interest podcast-guest.
 `.trim();
 }
