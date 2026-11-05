@@ -52,7 +52,7 @@ export type NewHomeCommunity = {
   faqs: NewHomeFaq[];
 };
 
-const phone = "(832) 863-3468";
+const phone = "(832) 981-5271";
 
 function tourFaqs(name: string): NewHomeFaq[] {
   return [

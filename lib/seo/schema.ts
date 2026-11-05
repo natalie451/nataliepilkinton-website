@@ -67,7 +67,7 @@ export function personSchema() {
     description: `Spring, TX REALTOR® and real estate investor with ${siteConfig.yearsExperience} years of experience. She serves ${serviceRegion}, including ${formatCityList(siteConfig.areasServed)}.`,
     worksFor: { "@id": schemaIds.brokerage },
     address: postalAddress,
-    telephone: "+1-832-863-3468",
+    telephone: "+1-832-981-5271",
     email: siteConfig.email,
     knowsAbout: [
       "Residential real estate",
@@ -101,7 +101,7 @@ export function localBusinessSchema() {
     url: siteConfig.siteUrl,
     image: siteConfig.headshotUrl,
     logo: siteConfig.logoUrl,
-    telephone: "+1-832-863-3468",
+    telephone: "+1-832-981-5271",
     email: siteConfig.email,
     address: postalAddress,
     identifier: {
@@ -121,7 +121,7 @@ export function localBusinessSchema() {
       `Spring, TX real estate agent serving ${serviceRegion}, including ${formatCityList(siteConfig.areasServed)}.`,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-832-863-3468",
+      telephone: "+1-832-981-5271",
       email: siteConfig.email,
       contactType: "sales",
       areaServed: "US-TX",

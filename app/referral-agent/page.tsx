@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Referral Agent in Spring and Greater Houston",
   description:
-    "Refer a buyer, seller, or investor to Natalie Pilkinton, REALTOR with HomeRock Realty in Spring, TX. She covers Greater Houston, especially north of I-10 up to Huntsville. Call or text (832) 863-3468.",
+    "Refer a buyer, seller, or investor to Natalie Pilkinton, REALTOR with HomeRock Realty in Spring, TX. She covers Greater Houston, especially north of I-10 up to Huntsville. Call or text (832) 981-5271.",
   path: "/referral-agent",
 });
 
@@ -73,7 +73,11 @@ export default function ReferralAgentPage() {
             <li className="mb-sm">She contacts the client and handles the local work.</li>
           </ol>
           <p className="text-gray-dark">
-            Phone and text {siteConfig.phone}. Email {siteConfig.email}. Book a time at{" "}
+            Phone and text {siteConfig.phone}. Email{" "}
+            <a href={siteConfig.emailHref} className="font-semibold text-blue underline underline-offset-2 break-all">
+              {siteConfig.email}
+            </a>
+            . Book a time at{" "}
             <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-navy underline underline-offset-2">
               {siteConfig.bookingUrl}
             </a>
@@ -114,7 +118,15 @@ export default function ReferralAgentPage() {
 
       <CTA
         title="Send a referral to Natalie"
-        description={`Call or text ${siteConfig.phone}, email ${siteConfig.email}, or book a time.`}
+        description={
+          <>
+            Call or text {siteConfig.phone}, email{" "}
+            <a href={siteConfig.emailHref} className="font-semibold text-cream underline underline-offset-2 break-all hover:text-white">
+              {siteConfig.email}
+            </a>
+            , or book a time.
+          </>
+        }
       >
         <ContactActions tone="on-dark" />
       </CTA>

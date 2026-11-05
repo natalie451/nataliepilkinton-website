@@ -5,8 +5,6 @@ export const joinTeamContentDate = "2026-11-04";
 
 export const joinOffice = {
   address: "24624 I-45 N Ste 120, Spring, TX 77386",
-  phone: "(832) 290-7003",
-  phoneHref: "tel:+18322907003",
   broker: "Cory Kammerdiener",
   brokerTitle: "Designated Broker",
 };
@@ -15,12 +13,6 @@ export const revshareLevels = [
   { level: "Level 1", share: "50%", max: "$5,000" },
   { level: "Level 2", share: "30%", max: "$3,000" },
   { level: "Level 3", share: "20%", max: "$2,000" },
-] as const;
-
-export const transactionFees = [
-  { label: "Residential", amount: "$195", note: "Client paid" },
-  { label: "Lease", amount: "$50", note: "Client paid" },
-  { label: "Commercial", amount: "$595", note: "Sale or lease" },
 ] as const;
 
 /** Categories named on the $149 value flyer. The flyer states the total as $15,000+ per year. */
@@ -49,7 +41,8 @@ export type JoinFlyer = {
 };
 
 /**
- * All 12 recruiting flyers. None shows a past calendar date for an event.
+ * Recruiting flyers. The transaction-fee chart is omitted.
+ * None shows a past calendar date for an event.
  * "Meet the broker, Sunday 1 to 3" has a weekday and hours, not a date that has passed.
  */
 export const joinFlyers: JoinFlyer[] = [
@@ -80,20 +73,6 @@ export const joinFlyers: JoinFlyer[] = [
     width: 448,
     height: 585,
     alt: "Now hiring Realtors flyer from HomeRock Realty. It states a 90/10 split with a $10,000 cap and a 3-level revenue share table: level 1 is 50% with a max of $5,000 per agent per year, level 2 is 30% with a max of $3,000, and level 3 is 20% with a max of $2,000. An illustration shows potential revshare across 39 agents, marked as potential earnings for capping agents in their anniversary year.",
-  },
-  {
-    src: "/images/join-my-team/transaction-fees.webp",
-    title: "Transaction fees",
-    width: 1707,
-    height: 952,
-    alt: "Chart titled Core brokerage economics: the path to 100%. It shows a 90/10 commission split, a $10,000 annual cap, and an example of $100,000 in gross commission with $90,000 to the agent and $10,000 to the brokerage. Fees listed are $195 residential (client paid), $50 residential lease (client paid), and $595 commercial sale or lease.",
-  },
-  {
-    src: "/images/join-my-team/agents-over-bottom-line.webp",
-    title: "Agents over the bottom line",
-    width: 1254,
-    height: 1254,
-    alt: "HomeRock Realty flyer with the line We put our agents over our bottom line. It shows brokerage revshare earned of $26,440.06 and agent revshare paid of $27,192.38.",
   },
   {
     src: "/images/join-my-team/boldtrail-pro.webp",
@@ -140,7 +119,7 @@ export const joinFlyers: JoinFlyer[] = [
 ];
 
 export const joinTeamLlmsLine =
-  "Published team terms: 90/10 commission split with a $10,000 cap and $0 post-cap fees. The monthly brokerage fee is $149, waived when you refer 3 agents (must meet eligibility). 3-level revshare: Level 1 is 50% (max $5,000 per agent per year), Level 2 is 30% (max $3,000), and Level 3 is 20% (max $2,000). Transaction fees: $195 residential (client paid), $50 lease (client paid), and $595 commercial. Weekly team training is Tuesday, 11:20 AM to 1:30 PM.";
+  "Published team terms: 90/10 commission split with a $10,000 cap and $0 post-cap fees. The monthly brokerage fee is $149, waived when you refer 3 agents (must meet eligibility). 3-level revshare: Level 1 is 50% (max $5,000 per agent per year), Level 2 is 30% (max $3,000), and Level 3 is 20% (max $2,000). Weekly team training is Tuesday, 11:20 AM to 1:30 PM.";
 
 export function joinTeamAssistantFacts() {
   return [
@@ -148,16 +127,16 @@ export function joinTeamAssistantFacts() {
     "On a flyer example of $100,000 in gross commission, $90,000 goes to the agent and $10,000 to the brokerage, the annual cap.",
     "Monthly brokerage fee is $149, waived when you refer 3 agents (must meet eligibility).",
     "3-level revshare: Level 1 is 50% (max $5,000 per agent per year), Level 2 is 30% (max $3,000 per agent per year), Level 3 is 20% (max $2,000 per agent per year).",
-    "Transaction fees: $195 residential (client paid), $50 lease (client paid), $595 commercial (sale or lease).",
     "Tech: BoldTrail Pro with an IDX website, an AI CRM, BackOffice transaction management, Microsoft 365, and live training. A flyer compares this with BoldTrail Pro retail at $949 a month.",
     "The $149 fee is described as an investment, with a stated total of $15,000+ per year, covering community, training and coaching, events, office and workspace, tech and tools, marketing, a transaction coordinator, revshare, lead generation, brokerage backing, HomeRock Mortgage and Insurance referral programs, business building, and culture.",
-    "Flyer line: We put our agents over our bottom line. Brokerage revshare earned $26,440.06. Agent revshare paid $27,192.38.",
+    "We put our agents over our bottom line. The revshare paid to agents is higher than the revshare the brokerage earned.",
+    "Agents can join HomeRock Realty as an individual agent or by joining a team.",
     "Natalie is a mentor with 20 years in real estate.",
     "Free agent marketing toolkit: templates, follow-up scripts, and a 30-day social calendar.",
     "The process is 100% confidential.",
     `The first conversation can be a free commission audit, or a meeting with ${joinOffice.broker}, ${joinOffice.brokerTitle}.`,
     "List Natalie Pilkinton as your referral.",
     "Weekly team training every Tuesday, 11:20 AM to 1:30 PM.",
-    `Email ${siteConfig.email}. Natalie's cell is ${siteConfig.phone}. HomeRock office phone is ${joinOffice.phone}. Office: ${joinOffice.address}.`,
+    `Email ${siteConfig.email}. Natalie: ${siteConfig.phone}. Office: ${joinOffice.address}.`,
   ].join(" ");
 }

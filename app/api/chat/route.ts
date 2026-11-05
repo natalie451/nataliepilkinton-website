@@ -83,7 +83,7 @@ function sanitizeMessages(input: unknown): UIMessage[] | null {
 export async function POST(request: Request) {
   if (!allowChatRequest(chatClientKey(request))) {
     return Response.json(
-      { error: "Too many messages. Please wait a few minutes, or call or text (832) 863-3468." },
+      { error: "Too many messages. Please wait a few minutes, or call or text (832) 981-5271." },
       { status: 429 },
     );
   }
@@ -108,7 +108,7 @@ export async function POST(request: Request) {
   const hasGatewayAuth = Boolean(process.env.AI_GATEWAY_API_KEY?.trim() || process.env.VERCEL_OIDC_TOKEN?.trim());
   if (!hasGatewayAuth) {
     return Response.json(
-      { error: "Chat answers are not turned on yet. Call or text (832) 863-3468, or book a time." },
+      { error: "Chat answers are not turned on yet. Call or text (832) 981-5271, or book a time." },
       { status: 503 },
     );
   }
@@ -128,7 +128,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("[chat] request failed", error instanceof Error ? error.message : "unknown");
     return Response.json(
-      { error: "Chat is unavailable right now. Call or text (832) 863-3468, or book a time." },
+      { error: "Chat is unavailable right now. Call or text (832) 981-5271, or book a time." },
       { status: 503 },
     );
   }

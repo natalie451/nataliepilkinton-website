@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Callout } from "@/components/ui/Callout";
+import { EmailAddress } from "@/components/cta/EmailAddress";
 import { siteConfig } from "@/lib/data/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -118,15 +119,15 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <h2>9. Contact Us</h2>
-          <p className="mb-0">
+          <div className="mb-0 leading-relaxed text-gray-dark">
             {siteConfig.address.line1}
             <br />
             {siteConfig.address.line2}, {siteConfig.address.line3}
             <br />
             Phone: <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
             <br />
-            Email: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-          </p>
+            Email: <EmailAddress />
+          </div>
         </Container>
       </Section>
     </>

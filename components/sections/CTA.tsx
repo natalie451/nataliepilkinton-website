@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 
 type CTAProps = {
   title: string;
-  description?: string;
+  description?: ReactNode;
   children: ReactNode;
 };
 

@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "What's My Spring TX Home Worth",
   description:
-    "Ask Natalie Pilkinton, a Spring, TX REALTOR, for a home value conversation. Call or text (832) 863-3468 or send the form.",
+    "Ask Natalie Pilkinton, a Spring, TX REALTOR, for a home value conversation. Call or text (832) 981-5271 or send the form.",
   path: "/sellers/home-value",
 });
 

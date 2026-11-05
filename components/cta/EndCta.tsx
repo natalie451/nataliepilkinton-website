@@ -48,11 +48,24 @@ const copy: Record<
 };
 
 /** One primary action at the end of a page, plus a call or text link. */
-export function EndCta({ audience }: { audience: EndCtaAudience }) {
+export function EndCta({
+  audience,
+  title,
+  description,
+  label,
+}: {
+  audience: EndCtaAudience;
+  title?: string;
+  description?: string;
+  label?: string;
+}) {
   const primary = copy[audience];
+  const heading = title ?? primary.title;
+  const text = description ?? primary.description;
+  const buttonLabel = label ?? primary.label;
 
   return (
-    <CTA title={primary.title} description={primary.description}>
+    <CTA title={heading} description={text}>
       {review ? (
         <figure className="w-full max-w-[40rem] text-left bg-white/10 border border-cream/40 rounded-xs p-md">
           <blockquote className="text-cream text-base italic m-0">&ldquo;{review.text}&rdquo;</blockquote>
@@ -64,7 +77,7 @@ export function EndCta({ audience }: { audience: EndCtaAudience }) {
         </a>
       )}
       <Button href={primary.href} external={primary.external} variant="on-blue">
-        {primary.label}
+        {buttonLabel}
       </Button>
       <p className="text-cream text-sm mb-0">
         <a href={siteConfig.phoneHref} className="font-semibold text-cream underline underline-offset-2">

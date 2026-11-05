@@ -63,7 +63,7 @@ const faqs = [
   {
     question: "Where does Natalie Pilkinton work?",
     answer:
-      "Natalie is a REALTOR® with HomeRock Realty, a full-service brokerage. Her business address is 6046 FM 2920, Ste 326, Spring, TX 77379, and she can be reached at (832) 863-3468.",
+      "Natalie is a REALTOR® with HomeRock Realty, a full-service brokerage. Her business address is 6046 FM 2920, Ste 326, Spring, TX 77379, and she can be reached at (832) 981-5271.",
   },
   {
     question: "What areas does Natalie Pilkinton serve?",

@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Relocating to Spring and Greater Houston",
   description:
-    "Moving to Spring, The Woodlands, Conroe, Tomball, Magnolia, Houston, or Huntsville? Natalie Pilkinton is a Spring, TX REALTOR with HomeRock Realty. Call or text (832) 863-3468.",
+    "Moving to Spring, The Woodlands, Conroe, Tomball, Magnolia, Houston, or Huntsville? Natalie Pilkinton is a Spring, TX REALTOR with HomeRock Realty. Call or text (832) 981-5271.",
   path: "/buyers/relocation",
 });
 
