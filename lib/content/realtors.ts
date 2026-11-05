@@ -18,11 +18,6 @@ export const reasonsAgentsJoin = [
 export const commissionStructure = {
   split: "90/10 split",
   cap: "$10,000 annual cap",
-  fees: [
-    "$195 residential transaction fee (client paid)",
-    "$50 residential lease fee (client paid)",
-    "$595 commercial (sale or lease)",
-  ],
   example: "On $100,000 in gross commission income (GCI): $90,000 to the agent, $10,000 to the brokerage (the annual cap; after that, the agent keeps 100%).",
 };
 

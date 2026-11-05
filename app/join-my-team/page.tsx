@@ -16,10 +16,10 @@ import { siteConfig } from "@/lib/data/navigation";
 import { joinOffice, revshareLevels, valueStack } from "@/lib/content/joinTeam";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Join a Real Estate Team in Spring, TX / North Houston",
+  title: "Join a Real Estate Team in Texas and Florida",
   absoluteTitle: true,
   description:
-    "Join Natalie Pilkinton's HomeRock Realty team in Spring, TX. 90/10 split with a $10,000 cap, a $149 monthly fee, and a free commission audit.",
+    "Join Natalie Pilkinton's HomeRock Realty team in Texas and Florida. 90/10 split with a $10,000 cap, a $149 monthly fee, and a free commission audit.",
   path: "/join-my-team",
 });
 
@@ -45,8 +45,8 @@ export default function JoinMyTeamPage() {
       <BreadcrumbBar items={[{ name: "Join My Team", path: "/join-my-team" }]} />
 
       <Hero
-        title="Join a real estate team in Spring, TX"
-        subheading="Natalie Pilkinton is building a team at HomeRock Realty for licensed agents and for people who are new or still getting licensed. Spring is home base, and the work is across North Houston."
+        title="Join a real estate team in Texas and Florida"
+        subheading="Natalie Pilkinton is building a team at HomeRock Realty for licensed agents and for people who are new or still getting licensed. The work is across Texas and Florida."
         align="left"
       >
         <ContactActions tone="on-dark" size="large" />
@@ -162,7 +162,7 @@ export default function JoinMyTeamPage() {
                 {joinOffice.phone}
               </a>
             </dd>
-            <dt className="font-semibold text-navy">Natalie&rsquo;s cell</dt>
+            <dt className="font-semibold text-navy">Natalie</dt>
             <dd className="m-0">
               <a href={siteConfig.phoneHref} className="font-semibold text-blue underline underline-offset-2">
                 {siteConfig.phone}

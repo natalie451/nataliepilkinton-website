@@ -77,13 +77,6 @@ export const joinFlyers: JoinFlyer[] = [
     alt: "Now hiring Realtors flyer from HomeRock Realty. It states a 90/10 split with a $10,000 cap and a 3-level revenue share table: level 1 is 50% with a max of $5,000 per agent per year, level 2 is 30% with a max of $3,000, and level 3 is 20% with a max of $2,000. An illustration shows potential revshare across 39 agents, marked as potential earnings for capping agents in their anniversary year.",
   },
   {
-    src: "/images/join-my-team/agents-over-bottom-line.webp",
-    title: "Agents over the bottom line",
-    width: 1254,
-    height: 1254,
-    alt: "HomeRock Realty flyer with the line We put our agents over our bottom line. It compares brokerage revshare earned with the revshare paid to agents.",
-  },
-  {
     src: "/images/join-my-team/boldtrail-pro.webp",
     title: "BoldTrail Pro",
     width: 1391,
@@ -145,6 +138,6 @@ export function joinTeamAssistantFacts() {
     `The first conversation can be a free commission audit, or a meeting with ${joinOffice.broker}, ${joinOffice.brokerTitle}.`,
     "List Natalie Pilkinton as your referral.",
     "Weekly team training every Tuesday, 11:20 AM to 1:30 PM.",
-    `Email ${siteConfig.email}. Natalie's cell is ${siteConfig.phone}. HomeRock office phone is ${joinOffice.phone}. Office: ${joinOffice.address}.`,
+    `Email ${siteConfig.email}. Natalie: ${siteConfig.phone}. HomeRock office phone is ${joinOffice.phone}. Office: ${joinOffice.address}.`,
   ].join(" ");
 }
