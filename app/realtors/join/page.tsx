@@ -9,7 +9,7 @@ import { missionVision, commissionStructure, founders } from "@/lib/content/real
 
 export const metadata: Metadata = buildMetadata({
   title: "Join HomeRock Realty",
-  description: "Why join HomeRock Realty as a licensed Texas real estate agent: mission, commission structure, and founders.",
+  description: "Join HomeRock Realty as an individual agent or on a team. Mission, commission structure, and founders.",
   path: "/realtors/join",
 });
 
@@ -20,7 +20,7 @@ export default function JoinPage() {
 
       <Hero
         title="Join HomeRock Realty"
-        subheading="What makes HomeRock Realty different for growth-minded agents"
+        subheading="Join as an individual agent or join a team. See what makes HomeRock Realty different for growth-minded agents."
         align="left"
       />
 
@@ -55,7 +55,11 @@ export default function JoinPage() {
         </Container>
       </Section>
 
-      <EndCta audience="join" />
+      <EndCta
+        audience="join"
+        description="Join HomeRock Realty as an individual agent or join a team. You can also call or text."
+        label="Join HomeRock"
+      />
     </>
   );
 }

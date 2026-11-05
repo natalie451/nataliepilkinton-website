@@ -16,10 +16,10 @@ import { siteConfig } from "@/lib/data/navigation";
 import { joinOffice, revshareLevels, valueStack } from "@/lib/content/joinTeam";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Join a Real Estate Team in Texas and Florida",
+  title: "Join HomeRock Realty in Texas and Florida",
   absoluteTitle: true,
   description:
-    "Join Natalie Pilkinton's HomeRock Realty team in Texas and Florida. 90/10 split with a $10,000 cap, a $149 monthly fee, and a free commission audit.",
+    "Join HomeRock Realty with Natalie Pilkinton in Texas and Florida, as an individual agent or on a team. 90/10 split with a $10,000 cap, a $149 monthly fee, and a free commission audit.",
   path: "/join-my-team",
 });
 
@@ -45,8 +45,8 @@ export default function JoinMyTeamPage() {
       <BreadcrumbBar items={[{ name: "Join My Team", path: "/join-my-team" }]} />
 
       <Hero
-        title="Join a real estate team in Texas and Florida"
-        subheading="Natalie Pilkinton is building a team at HomeRock Realty for licensed agents and for people who are new or still getting licensed. The work is across Texas and Florida."
+        title="Join HomeRock Realty in Texas and Florida"
+        subheading="Natalie Pilkinton is with HomeRock Realty, for licensed agents and for people who are new or still getting licensed. Join as an individual agent or join a team. The work is across Texas and Florida."
         align="left"
       >
         <ContactActions tone="on-dark" size="large" />
@@ -129,7 +129,7 @@ export default function JoinMyTeamPage() {
         <Container className="max-w-[48rem]">
           <h2 className="mb-sm">Who this is for</h2>
           <p className="text-base leading-relaxed text-gray-dark">
-            Licensed agents who want a team, and new or aspiring agents who are working toward a license. Natalie is a mentor with 20 years in real estate. The first conversation can be a free commission audit, or a meeting with {joinOffice.broker}, {joinOffice.brokerTitle}. The process is 100% confidential.
+            Licensed agents can join as an individual or on a team, and new or aspiring agents can join while working toward a license. Natalie is a mentor with 20 years in real estate. The first conversation can be a free commission audit, or a meeting with {joinOffice.broker}, {joinOffice.brokerTitle}. The process is 100% confidential.
           </p>
           <p className="text-base leading-relaxed text-gray-dark">
             There is a free agent marketing toolkit: templates, follow-up scripts, and a 30-day social calendar.
@@ -207,7 +207,7 @@ export default function JoinMyTeamPage() {
         <Container className="max-w-[40rem]">
           <h2 className="mb-sm">Tell Natalie you are interested</h2>
           <p className="text-gray-dark">
-            Send your name and email. You can also call or text {siteConfig.phone}, email{" "}
+            Join as an individual agent or join a team. Send your name and email. You can also call or text {siteConfig.phone}, email{" "}
             <a href={siteConfig.emailHref} className="font-semibold text-blue underline underline-offset-2 break-all">
               {siteConfig.email}
             </a>
@@ -227,7 +227,11 @@ export default function JoinMyTeamPage() {
         </Container>
       </Section>
 
-      <EndCta audience="join" />
+      <EndCta
+        audience="join"
+        description="Join HomeRock Realty as an individual agent or join a team. You can also call or text."
+        label="Join HomeRock"
+      />
     </>
   );
 }

@@ -130,6 +130,7 @@ export function joinTeamAssistantFacts() {
     "Tech: BoldTrail Pro with an IDX website, an AI CRM, BackOffice transaction management, Microsoft 365, and live training. A flyer compares this with BoldTrail Pro retail at $949 a month.",
     "The $149 fee is described as an investment, with a stated total of $15,000+ per year, covering community, training and coaching, events, office and workspace, tech and tools, marketing, a transaction coordinator, revshare, lead generation, brokerage backing, HomeRock Mortgage and Insurance referral programs, business building, and culture.",
     "We put our agents over our bottom line. The revshare paid to agents is higher than the revshare the brokerage earned.",
+    "Agents can join HomeRock Realty as an individual agent or by joining a team.",
     "Natalie is a mentor with 20 years in real estate.",
     "Free agent marketing toolkit: templates, follow-up scripts, and a 30-day social calendar.",
     "The process is 100% confidential.",
