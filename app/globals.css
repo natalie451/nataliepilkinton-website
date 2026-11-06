@@ -202,6 +202,44 @@
   }
 }
 
+/* Recruiting pages only. #0068c8 is the HR logo blue sampled from
+   public/images/join-my-team/one-brand-one-family.webp (logo box and tagline).
+   #e7f3fc is that blue mixed into white for quiet bands.
+   Full-width bands stay the site navy so cream text keeps its contrast.
+   No gold: the flyers do not use it. */
+.homerock-recruit {
+  --blue: #0068c8;
+  --blue-hover: #005299;
+  --blue-soft: #e7f3fc;
+}
+
+.homerock-recruit > section.bg-blue {
+  background-color: #0a1a33;
+}
+
+.homerock-recruit > section.bg-white {
+  background-color: #e7f3fc;
+}
+
+.homerock-recruit > section:not(.bg-blue) h2 {
+  border-left: 4px solid #0068c8;
+  padding-left: 0.75rem;
+}
+
+.homerock-recruit > section.bg-blue a.bg-cream,
+.homerock-recruit > section.bg-blue button.bg-cream {
+  background-color: #0068c8;
+  color: #ffffff;
+  border-color: #0068c8;
+}
+
+.homerock-recruit > section.bg-blue a.bg-cream:hover,
+.homerock-recruit > section.bg-blue button.bg-cream:hover {
+  background-color: #005299;
+  color: #ffffff;
+  border-color: #005299;
+}
+
 @media (max-width: 480px) {
   :root {
     --spacing-md: 1rem;

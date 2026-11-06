@@ -41,7 +41,7 @@ const headlineFacts = [
 
 export default function JoinMyTeamPage() {
   return (
-    <>
+    <div className="homerock-recruit">
       <BreadcrumbBar items={[{ name: "Join My Team", path: "/join-my-team" }]} />
 
       <Hero
@@ -232,6 +232,6 @@ export default function JoinMyTeamPage() {
         description="Join HomeRock Realty as an individual agent or join a team. You can also call or text."
         label="Join HomeRock"
       />
-    </>
+    </div>
   );
 }
