@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    // Static, self-contained quiz page in public/ready-to-buy (Facebook lead magnet).
+    return [{ source: "/ready-to-buy", destination: "/ready-to-buy/index.html" }];
+  },
   async redirects() {
     const transcriptRedirects: { source: string; destination: string }[] = [
       { source: "ep1-uncovering-your-why", destination: "ep01-uncovering-your-why" },

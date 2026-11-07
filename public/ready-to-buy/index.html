@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Am I Ready to Buy?</title>
+<meta name="description" content="Take Natalie Pilkinton's 30-second home buyer quiz: credit score, down payment and timeline. Then join her free LIVE Home Buying Seminar on Nov 11.">
+<link rel="canonical" href="https://www.nataliepilkinton.com/ready-to-buy">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nataliepilkinton.com/ready-to-buy">
+<meta property="og:title" content="Am I ready to buy a home? Take the 30-second quiz">
+<meta property="og:description" content="Credit score, down payment, timeline. Get your personal plan from Natalie Pilkinton, REALTOR®, plus a free LIVE Home Buying Seminar on Nov 11.">
+<meta property="og:image" content="https://www.nataliepilkinton.com/ready-to-buyog.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,800;1,900&family=Source+Sans+3:wght@400;600;700&display=swap">
+</head>
+<body>
+<style>
+/* Layout: one phone-shaped stage, centered; video first, then tap-through quiz screens inside the same frame. Single dark look matching Natalie's navy + gold seminar flyer. */
+:root{
+  --navy:#0a1f4d; --deep:#050d22; --panel:#102a63; --gold:#ffc21a; --live:#e3262f;
+  --ink:#f4f6fb; --mute:#a9b7d6; --line:rgba(255,255,255,.14); --good:#3ddc97; --warn:#ffb020;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Source Sans 3",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box} [hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,#17377f 0%,var(--navy) 40%,var(--deep) 100%) fixed;background-color:var(--deep);color:var(--ink);font:400 17px/1.45 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px;display:flex;flex-direction:column;align-items:center}
+.top{width:100%;max-width:440px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.brand{font:800 13px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.brand b{color:var(--ink)}
+.livepill{display:inline-flex;align-items:center;gap:8px;background:var(--live);color:#fff;font:800 12px/1 var(--display);letter-spacing:.08em;padding:7px 12px;border-radius:999px;white-space:nowrap}
+.livepill i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.1s infinite}
+@keyframes blink{50%{opacity:.25}}
+.stage{position:relative;width:100%;max-width:440px;aspect-ratio:9/16;max-height:calc(100vh - 120px);border-radius:28px;overflow:hidden;background:var(--deep);box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+@supports (height:100dvh){.stage{max-height:calc(100dvh - 120px)}}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column}
+.screen[hidden]{display:none!important}
+
+/* video screen */
+video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.tapzone{position:absolute;inset:0;border:0;background:transparent;cursor:pointer;padding:0}
+.tapzone:focus-visible{outline:3px solid var(--gold);outline-offset:-6px;border-radius:28px}
+.sound{position:absolute;bottom:96px;right:14px;z-index:3;border:0;border-radius:999px;background:rgba(5,13,34,.78);color:#fff;font:700 14px/1 var(--body);padding:10px 14px;cursor:pointer;backdrop-filter:blur(6px)}
+.sound:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.tapcue{position:absolute;left:14px;right:14px;bottom:16px;z-index:2;pointer-events:none;display:flex;align-items:center;gap:12px;background:var(--gold);color:var(--deep);border-radius:18px;padding:12px 16px;box-shadow:0 12px 30px rgba(0,0,0,.45);animation:nudge 2.2s ease-in-out infinite}
+.tapcue .hand{font-size:28px;line-height:1}
+.tapcue b{font:900 italic 19px/1.05 var(--display);display:block}
+.tapcue span{font:600 14px/1.2 var(--body)}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.ended{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;background:rgba(5,13,34,.82);backdrop-filter:blur(3px)}
+.ended h2{margin:0;font:900 italic clamp(28px,8vw,38px)/1.02 var(--display);text-wrap:balance}
+
+/* quiz screens */
+.qwrap{flex:1;display:flex;flex-direction:column;padding:22px 20px 20px;background:radial-gradient(ellipse at 50% 0%,#1a4596 0%,var(--navy) 45%,var(--deep) 100%);overflow-y:auto}
+.qwrap>*{flex-shrink:0}
+.prog{display:flex;gap:6px;margin-bottom:18px}
+.prog span{flex:1;height:6px;border-radius:6px;background:var(--line)}
+.prog span.on{background:var(--gold)}
+.eyebrow{font:800 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.q{margin:0 0 18px;font:900 italic clamp(26px,7.2vw,34px)/1.05 var(--display);text-wrap:balance}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:2px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);border-radius:16px;padding:14px 16px;cursor:pointer;font:700 18px/1.2 var(--body);transition:transform .12s,border-color .12s,background .12s}
+.opt:hover{border-color:rgba(255,194,26,.6)}
+.opt:active{transform:scale(.98)}
+.opt .k{flex:none;min-width:74px;font:800 15px/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.opt small{display:block;font:600 14px/1.25 var(--body);color:var(--mute)}
+.opt.picked{border-color:var(--gold);background:rgba(255,194,26,.14)}
+.opts.done .opt:not(.picked){opacity:.35}
+
+/* reveal sheet */
+.reveal{position:absolute;left:0;right:0;bottom:0;z-index:4;background:#fff;color:#0b1838;border-radius:26px 26px 0 0;padding:22px 20px 20px;box-shadow:0 -20px 50px rgba(0,0,0,.45);transform:translateY(105%);transition:transform .38s cubic-bezier(.2,.9,.3,1.1)}
+.reveal.show{transform:none}
+.reveal .tag{display:inline-block;font:800 12px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:8px;margin-bottom:10px}
+.tag.good{background:#d8f8ea;color:#0b6b43}.tag.ok{background:#fff1cc;color:#7a5200}.tag.work{background:#ffe0e0;color:#a3171e}.tag.info{background:#e1eaff;color:#1b3f99}
+.reveal h3{margin:0 0 8px;font:900 italic 24px/1.08 var(--display);text-wrap:balance}
+.reveal p{margin:0 0 16px;color:#33415f;font-size:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:14px 18px;font:800 16px/1 var(--display);cursor:pointer;text-decoration:none}
+.btn.gold{background:var(--gold);color:var(--deep)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn.wide{width:100%}
+
+/* result */
+.meter{position:relative;height:16px;border-radius:16px;background:rgba(255,255,255,.12);overflow:hidden;margin:6px 0 6px}
+.meter i{position:absolute;left:0;top:0;bottom:0;border-radius:16px;background:linear-gradient(90deg,var(--warn),var(--gold),var(--good));width:0;transition:width 1s cubic-bezier(.2,.9,.3,1)}
+.scale{display:flex;justify-content:space-between;font:700 12px/1 var(--display);letter-spacing:.06em;color:var(--mute);text-transform:uppercase;margin-bottom:16px}
+.steps{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.steps li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:16px}
+.steps li b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--deep);display:flex;align-items:center;justify-content:center;font:800 14px/1 var(--display)}
+.event{background:#fff;color:#0b1838;border-radius:20px;padding:18px;display:grid;gap:12px}
+.event .row{display:flex;gap:14px;align-items:center}
+.event img.qr{width:96px;height:96px;flex:none;image-rendering:pixelated;border:1px solid #dde3f0;border-radius:10px}
+.event img.face{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 15%;background:#dfe7f5;border:3px solid var(--gold);flex:none}
+.event h4{margin:0;font:900 italic 22px/1.05 var(--display)}
+.event .when{font:800 15px/1.3 var(--display);color:var(--live)}
+.event .small{font-size:14px;color:#4a5878}
+.phone{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f1f4fb;border-radius:12px;padding:10px 12px}
+.phone span{font:800 20px/1 var(--display);font-variant-numeric:tabular-nums;user-select:all}
+.copy{border:0;background:var(--navy);color:#fff;border-radius:10px;padding:9px 12px;font:700 14px/1 var(--body);cursor:pointer}
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fine{font-size:12.5px;color:var(--mute);margin:14px 0 0;line-height:1.4}
+.lead label{display:block;font:700 14px/1.2 var(--body);color:var(--mute);margin:0 0 6px}
+.lead input[type=text],.lead input[type=tel],.lead input[type=email]{width:100%;border:2px solid var(--line);background:rgba(255,255,255,.07);color:var(--ink);border-radius:14px;padding:13px 14px;font:600 17px/1.2 var(--body)}
+.lead input:focus{outline:none;border-color:var(--gold)}
+.lead .f{display:grid;gap:12px;margin-bottom:14px}
+.lead .consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:var(--mute);margin:4px 0 16px}
+.lead .consent input{margin-top:2px;width:20px;height:20px;flex:none;accent-color:var(--gold)}
+.lead .err{color:#ff8a8a;font:700 14px/1.3 var(--body);min-height:18px;margin:-4px 0 10px}
+.skip{background:none;border:0;color:var(--mute);text-decoration:underline;font:600 14px/1 var(--body);cursor:pointer;margin-top:12px;padding:8px}
+.teaser{display:flex;gap:12px;align-items:center;background:rgba(255,194,26,.12);border:1px solid rgba(255,194,26,.45);border-radius:14px;padding:12px 14px;margin-bottom:16px;font-size:15px}
+.teaser b{font:900 italic 18px/1.1 var(--display);color:var(--gold)}
+.below{width:100%;max-width:440px;margin-top:14px;text-align:center;font-size:13px;color:var(--mute)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="top">
+  <div class="brand"><b>Natalie Pilkinton</b> · REALTOR®</div>
+  <div class="livepill"><i></i>LIVE · NOV 11</div>
+</div>
+
+<div class="stage" id="stage">
+  <!-- 1. video -->
+  <section class="screen" id="s-video" aria-label="Seminar video">
+    <video id="vid" src="/ready-to-buy/promo.mp4" poster="/ready-to-buy/poster.jpg" playsinline muted autoplay preload="auto"></video>
+    <button class="tapzone" id="tapzone" aria-label="Take the home buyer quiz"></button>
+    <button class="sound" id="sound" aria-label="Turn sound on">🔇 Tap for sound</button>
+    <div class="tapcue" id="tapcue"><span class="hand">👆</span><div><b>Am I ready to buy?</b><span>Tap the video · 4 quick questions</span></div></div>
+    <div class="ended" id="ended" hidden>
+      <div class="eyebrow">30-second check</div>
+      <h2>Are you ready to buy a home?</h2>
+      <button class="btn gold" id="startEnd">Find out now →</button>
+      <button class="btn ghost" id="replay">↺ Watch again</button>
+    </div>
+  </section>
+
+  <!-- 2. question screen (reused) -->
+  <section class="screen" id="s-quiz" hidden aria-live="polite">
+    <div class="qwrap">
+      <div class="prog" id="prog"></div>
+      <div class="eyebrow" id="qnum"></div>
+      <h2 class="q" id="qtext"></h2>
+      <div class="opts" id="opts"></div>
+    </div>
+    <div class="reveal" id="reveal" role="dialog" aria-modal="false">
+      <span class="tag" id="rtag"></span>
+      <h3 id="rhead"></h3>
+      <p id="rbody"></p>
+      <button class="btn navy wide" id="next">Next question →</button>
+    </div>
+  </section>
+
+  <!-- 3. lead capture -->
+  <section class="screen" id="s-lead" hidden>
+    <div class="qwrap lead">
+      <div class="prog"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      <div class="eyebrow">Your results are ready</div>
+      <h2 class="q" style="margin-bottom:12px">Where should I send your plan?</h2>
+      <div class="teaser"><span style="font-size:30px">📋</span><div><b id="teaseLvl">Almost there</b><div>Your personal 4-step plan + the seminar link</div></div></div>
+      <form id="leadForm" novalidate>
+        <div class="f">
+          <div><label for="fname">First name</label><input type="text" id="fname" name="first_name" autocomplete="given-name" required></div>
+          <div><label for="phone">Mobile number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(281) 555-0123" required></div>
+          <div><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required></div>
+        </div>
+        <label class="consent" for="agree"><input type="checkbox" id="agree" required><span>I agree to receive calls, texts and emails from Natalie Pilkinton, REALTOR® with HomeRock Realty about my results, the seminar and my home search. Consent isn't required to buy anything. Msg &amp; data rates may apply. Reply STOP to opt out.</span></label>
+        <input type="text" id="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="err" id="ferr" role="alert"></div>
+        <button class="btn gold wide" id="send" type="submit">Show my results →</button>
+      </form>
+      <div style="text-align:center"><button class="skip" id="skip" type="button">Skip and just show my results</button></div>
+    </div>
+  </section>
+
+  <!-- 4. result -->
+  <section class="screen" id="s-result" hidden>
+    <div class="qwrap">
+      <div class="eyebrow">Your home buyer readiness</div>
+      <h2 class="q" id="level" style="margin-bottom:10px"></h2>
+      <div class="meter"><i id="meterfill"></i></div>
+      <div class="scale"><span>Getting started</span><span>Almost there</span><span>Ready</span></div>
+      <ul class="steps" id="steps"></ul>
+      <div class="event">
+        <div class="row">
+          <img class="face" src="/ready-to-buy/head.webp" alt="Natalie Pilkinton">
+          <div>
+            <div class="when">● LIVE · WED NOV 11 · 7 PM CST</div>
+            <h4>Free Home Buying Seminar</h4>
+            <div class="small">On YouTube, Facebook &amp; TikTok. Bring your questions.</div>
+          </div>
+        </div>
+        <div class="ctas">
+          <a class="btn gold" href="https://www.facebook.com/events/1134454938984969/" target="_blank" rel="noopener">RSVP free</a>
+          <a class="btn navy" href="https://nataliepilkinton.com" target="_blank" rel="noopener">Book a call</a>
+        </div>
+        <div class="row">
+          <img class="qr" src="/ready-to-buy/qr.png" alt="QR code that saves Natalie's contact card">
+          <div style="flex:1;min-width:0">
+            <div class="small" style="font-weight:700;color:#0b1838">Moving to Texas? Connect with Natalie</div>
+            <div class="phone" style="margin-top:8px"><span>(832) 863-3468</span><button class="copy" id="copy">Copy</button></div>
+            <div class="small" style="margin-top:6px">Text or call · HomeRock Realty</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn ghost wide" id="restart" style="margin-top:14px">↺ Retake the quiz</button>
+      <p class="fine">General education only, not a loan approval or financial advice. A licensed mortgage lender confirms what you qualify for.</p>
+    </div>
+  </section>
+</div>
+<div class="below">Natalie Pilkinton · REALTOR® · HomeRock Realty · nataliepilkinton.com</div>
+
+<script>
+/* ===== SETTINGS: fill these in on the hosted copy ===== */
+const CONFIG = {
+  LEAD_URL: "/api/lead-magnet",   // the website's own lead endpoint (saves to GoHighLevel)
+  PIXEL_ID: "",      // optional Meta Pixel ID for the Lead event
+    EVENT: "Home Buying Seminar LIVE - Nov 11, 2026"
+};
+const Q = [
+  { key:"credit", eyebrow:"Question 1 of 4", text:"What's your credit score?",
+    opts:[
+      {k:"740+", label:"Excellent", pts:3, tag:["good","Great position"], head:"You're in the top tier 🎉",
+        body:"Scores of 740 and up usually get lenders' best pricing. Keep your credit cards low and avoid new accounts until you close."},
+      {k:"670–739", label:"Good", pts:3, tag:["good","Strong"], head:"Most loan programs are open to you 👍",
+        body:"Conventional, FHA and VA loans are all realistic in this range. A small bump toward 740 can lower your rate, so ask your lender what moves the needle."},
+      {k:"580–669", label:"Fair", pts:2, tag:["ok","You can buy"], head:"FHA was built for this range 🏡",
+        body:"FHA loans allow as little as 3.5% down with a 580+ score. Some conventional loans may work too, though many lenders still set their own minimums."},
+      {k:"Under 580", label:"Building", pts:1, tag:["work","Plan ahead"], head:"Still possible, with a plan 💪",
+        body:"FHA can go as low as 500 with 10% down. A few months of on-time payments and lower card balances can open a lot more doors."},
+      {k:"Not sure", label:"Haven't checked", pts:1, tag:["info","Easy first step"], head:"Check it today, it's free 🔎",
+        body:"Most banking and credit card apps show your score for free, and checking your own score doesn't lower it."}
+    ]},
+  { key:"down", eyebrow:"Question 2 of 4", text:"How much have you saved for a down payment?",
+    opts:[
+      {k:"20%+", label:"of the price", pts:3, tag:["good","Strong"], head:"No PMI on a conventional loan 🙌",
+        body:"Putting 20% down on a conventional loan avoids private mortgage insurance, which keeps your monthly payment lower."},
+      {k:"10–20%", label:"of the price", pts:3, tag:["good","Solid"], head:"You have real options 👍",
+        body:"You'll likely pay mortgage insurance until you reach 20% equity, but your payment and rate choices are wide open."},
+      {k:"3–10%", label:"of the price", pts:2, tag:["ok","Enough to start"], head:"That can be enough 🏡",
+        body:"Some conventional loans start at 3% down and FHA at 3.5%. Don't forget closing costs, which are often 2–5% of the price."},
+      {k:"Under 3%", label:"or nothing yet", pts:1, tag:["info","Ask about help"], head:"Down payment help exists 💡",
+        body:"Texas has down payment assistance programs, and VA and USDA loans can mean 0% down for buyers who qualify. Natalie's team helps you find the right one."}
+    ]},
+  { key:"when", eyebrow:"Question 3 of 4", text:"When do you want to move?",
+    opts:[
+      {k:"0–3 mo", label:"ASAP", pts:3, tag:["good","Let's go"], head:"Get pre-approved this week ⏱️",
+        body:"A pre-approval tells you your real budget and makes your offer stronger when you find the one."},
+      {k:"3–6 mo", label:"This season", pts:3, tag:["good","Perfect timing"], head:"Ideal runway 📅",
+        body:"Enough time to compare lenders, tour neighborhoods, and check the commute at rush hour before you commit."},
+      {k:"6–12 mo", label:"Within a year", pts:2, tag:["ok","Plan it out"], head:"Use the time to boost your numbers 📈",
+        body:"Paying balances down and growing savings now can mean a better rate and more choices later."},
+      {k:"Exploring", label:"Just looking", pts:1, tag:["info","Smart move"], head:"Learning first is the right call 🎓",
+        body:"The live seminar on Nov 11 walks through the whole process, start to finish, with no pressure."}
+    ]},
+  { key:"first", eyebrow:"Question 4 of 4", text:"Is this your first home?",
+    opts:[
+      {k:"Yes", label:"First-time buyer", pts:0, tag:["info","Good news"], head:"First-time buyers get extra perks 🔑",
+        body:"Many assistance programs are aimed at first-time buyers, and most count you as one if you haven't owned a home in the last 3 years."},
+      {k:"No", label:"I've owned before", pts:0, tag:["good","Experienced"], head:"Your equity can work for you 🏠",
+        body:"If you're selling too, timing the sale and the purchase together is where a local agent saves you stress and money."},
+      {k:"Moving to TX", label:"Relocating", pts:0, tag:["info","Welcome!"], head:"Pick the area before the house 🗺️",
+        body:"Start with your job location, commute, schools and budget, then the neighborhood, then the home. Natalie can walk you through Houston."}
+    ]}
+];
+const $ = id => document.getElementById(id);
+const vid = $("vid"), screens = {video:$("s-video"), quiz:$("s-quiz"), lead:$("s-lead"), result:$("s-result")};
+let step = 0, answers = [];
+function show(name){ Object.entries(screens).forEach(([k,el]) => el.hidden = k !== name); }
+
+// video controls
+const soundBtn = $("sound");
+soundBtn.addEventListener("click", e => {
+  e.stopPropagation();
+  vid.muted = !vid.muted;
+  if (!vid.muted) { try { if (vid.ended) vid.currentTime = 0; vid.play(); } catch(_){} }
+  soundBtn.textContent = vid.muted ? "🔇 Tap for sound" : "🔊 Sound on";
+  soundBtn.setAttribute("aria-label", vid.muted ? "Turn sound on" : "Turn sound off");
+});
+vid.addEventListener("ended", () => { $("ended").hidden = false; $("tapcue").hidden = true; });
+$("tapzone").addEventListener("click", startQuiz);
+$("startEnd").addEventListener("click", startQuiz);
+$("replay").addEventListener("click", () => { $("ended").hidden = true; $("tapcue").hidden = false; vid.currentTime = 0; vid.play().catch(()=>{}); });
+vid.play().catch(()=>{});
+
+function startQuiz(){ vid.pause(); step = 0; answers = []; show("quiz"); renderQ(); }
+function renderQ(){
+  const q = Q[step];
+  $("prog").innerHTML = Q.map((_,i) => `<span class="${i<=step?'on':''}"></span>`).join("");
+  $("qnum").textContent = q.eyebrow; $("qtext").textContent = q.text;
+  const box = $("opts"); box.className = "opts"; box.innerHTML = "";
+  q.opts.forEach((o,i) => {
+    const b = document.createElement("button");
+    b.className = "opt"; b.id = `opt-${q.key}-${i}`;
+    b.innerHTML = `<span class="k">${o.k}</span><span>${o.label}</span>`;
+    b.addEventListener("click", () => pick(i, b));
+    box.appendChild(b);
+  });
+  $("reveal").classList.remove("show");
+}
+function pick(i, btn){
+  const box = $("opts"); if (box.classList.contains("done")) return;
+  const o = Q[step].opts[i]; answers[step] = o;
+  btn.classList.add("picked"); box.classList.add("done");
+  const t = $("rtag"); t.className = "tag " + o.tag[0]; t.textContent = o.tag[1];
+  $("rhead").textContent = o.head; $("rbody").textContent = o.body;
+  $("next").textContent = step < Q.length - 1 ? "Next question →" : "See my result →";
+  requestAnimationFrame(() => $("reveal").classList.add("show"));
+  $("next").focus({preventScroll:true});
+}
+$("next").addEventListener("click", () => { step++; step < Q.length ? renderQ() : showLead(); });
+
+function showResult(){
+  const pts = scoreOf().pts;   // 3..9
+  const pct = Math.round(((pts - 3) / 6) * 100);
+  const lvl = pts >= 8 ? "Ready to shop 🏡" : pts >= 6 ? "Almost there 🔑" : "Getting started 🌱";
+  $("level").textContent = lvl;
+  const c = answers[0].k, d = answers[1].k, w = answers[2].k, f = answers[3].k;
+  const s = [];
+  s.push(c === "Not sure" ? "Check your credit score for free in your bank or card app." :
+         (c === "Under 580" || c === "580–669") ? "Ask a lender which loan fits your score. FHA is often the first stop." :
+         "Get pre-approved so you know your exact budget.");
+  s.push((d === "Under 3%") ? "Ask about Texas down payment assistance and 0%-down VA or USDA options." :
+         (d === "3–10%") ? "Budget 2–5% for closing costs on top of your down payment." :
+         "Compare 2–3 lenders' rates on the same day.");
+  s.push(f === "Moving to TX" ? "Narrow the area first: work, commute, schools, then the home." :
+         f === "Yes" ? "Ask about first-time buyer programs before you make an offer." :
+         "Plan the timing of your sale and your purchase together.");
+  s.push("Join the free LIVE seminar on Nov 11 and bring your questions.");
+  $("steps").innerHTML = s.map((t,i) => `<li><b>${i+1}</b><span>${t}</span></li>`).join("");
+  show("result");
+  const fill = $("meterfill"); fill.style.width = "0";
+  requestAnimationFrame(() => requestAnimationFrame(() => fill.style.width = Math.max(12, pct) + "%"));
+}
+
+function scoreOf(){ const pts = answers.slice(0,3).reduce((s,o) => s + o.pts, 0); return {pts, lvl: pts >= 8 ? "Ready to shop" : pts >= 6 ? "Almost there" : "Getting started"}; }
+function showLead(){ $("teaseLvl").textContent = "You're: " + scoreOf().lvl; $("ferr").textContent = ""; show("lead"); }
+const UTM = (() => { const o = {}; try { const q = new URLSearchParams(location.search); ["utm_source","utm_medium","utm_campaign","utm_content","fbclid"].forEach(k => { if (q.get(k)) o[k] = q.get(k); }); } catch(_){} return o; })();
+if (CONFIG.PIXEL_ID) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.PIXEL_ID); fbq('track', 'PageView');
+}
+$("leadForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const fname = $("fname").value.trim(), email = $("email").value.trim(), digits = $("phone").value.replace(/\D/g,"").replace(/^1(?=\d{10}$)/,"");
+  const err = $("ferr");
+  if (!fname) return err.textContent = "Please add your first name.";
+  if (digits.length !== 10) return err.textContent = "Please enter a 10-digit US mobile number.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return err.textContent = "Please check your email address.";
+  if (!$("agree").checked) return err.textContent = "Please tick the box so Natalie can send your results.";
+  err.textContent = ""; const btn = $("send"); btn.disabled = true; btn.textContent = "Sending…";
+  const sc = scoreOf();
+  const note = [
+    "Ready-to-Buy Quiz (" + CONFIG.EVENT + ")",
+    "Credit score: " + answers[0].k,
+    "Down payment saved: " + answers[1].k,
+    "Move timeline: " + answers[2].k,
+    "Buyer type: " + answers[3].label,
+    "Readiness: " + sc.lvl + " (" + sc.pts + "/9)",
+    Object.keys(UTM).length ? "Tracking: " + Object.entries(UTM).map(([k,v]) => k + "=" + v).join(", ") : "",
+    "Consent (" + new Date().toISOString() + "): " + document.querySelector(".consent span").textContent
+  ].filter(Boolean).join("\n");
+  const payload = { name: fname, email, phone: digits, resource: "ready-to-buy-quiz", interest: "buyer", honeypot: $("hp").value, note };
+  if (CONFIG.LEAD_URL) {
+    try {
+      const r = await fetch(CONFIG.LEAD_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload)});
+      if (!r.ok) console.warn("Lead save failed", r.status);
+    } catch(_) { /* still show results */ }
+  }
+  if (window.fbq) fbq('track', 'Lead', {content_name: 'Ready-to-Buy Quiz'});
+  btn.disabled = false; btn.textContent = "Show my results →";
+  showResult();
+});
+$("skip").addEventListener("click", showResult);
+["fname","phone","email","agree"].forEach(id => $(id).addEventListener("input", () => $("ferr").textContent = ""));
+$("restart").addEventListener("click", startQuiz);
+$("copy").addEventListener("click", e => {
+  const b = e.currentTarget;
+  navigator.clipboard.writeText("(832) 863-3468").then(() => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1600); })
+    .catch(() => { const r = document.createRange(); r.selectNodeContents(b.previousElementSibling); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); b.textContent = "Selected"; });
+});
+</script>
+
+</body>
+</html>
