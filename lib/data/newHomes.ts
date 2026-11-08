@@ -101,7 +101,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Cypress",
     headline: "Northwest Houston, from FM 529 to Tuckerton",
     summary:
-      "Cypress new construction here means Bridgeland, Towne Lake, and Marvida. Elyson uses a Katy address and has its own page under Katy.",
+      "Cypress new construction here means Bridgeland, Towne Lake, Marvida, Mason Woods, and Avalon at Cypress. Elyson uses a Katy address and has its own page under Katy.",
   },
   {
     slug: "waller",
@@ -143,7 +143,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Katy",
     headline: "FM 529, the Grand Parkway, and Fulshear south of I-10",
     summary:
-      "Elyson and Cane Island are north of Interstate 10. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, and Jordan Ranch are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
+      "Elyson and Cane Island are north of Interstate 10. Grand Mason Crossing is east of the Grand Parkway, with a Katy address and Katy ISD. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, and Jordan Ranch are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
   },
   {
     slug: "magnolia",
@@ -1175,6 +1175,120 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "mason-woods",
+    citySlug: "cypress",
+    name: "Mason Woods",
+    developer: "Taylor Morrison and Tri Pointe Homes",
+    address: "22038 Mason Woods Road, Cypress, TX 77433",
+    location:
+      "Tri Pointe Homes publishes the community address as 22038 Mason Woods Road, Cypress, TX 77433. Taylor Morrison says Mason Woods is about 300 acres between Cypress and Katy, with access to the Grand Parkway, I-10, and US 290. This is a different community from Grand Mason Crossing, which uses a Katy address east of the Grand Parkway.",
+    summary:
+      "Mason Woods is a master-planned community in Cypress. Taylor Morrison says it covers about 300 acres, with 40-foot and 45-foot collections, and that it is zoned to Cy-Fair ISD. Tri Pointe Homes also sells The Cove, The Ridge, and The Timbers at Mason Woods.",
+    priceNote:
+      "Taylor Morrison lists the Burton plan at 21823 Lush Pampa Lane from $298,990. That card also shows $319,990. The 40-foot collection is labeled the upper $200s, about 1,366 to 2,236 square feet, and the 45-foot collection is labeled the low $300s, about 1,612 to 2,897 square feet. Tri Pointe lists The Cove and The Ridge in the low $300s and The Timbers in the mid $300s. Prices change.",
+    homes:
+      "About 300 acres, with Taylor Morrison collections on 40-foot and 45-foot lots. Tri Pointe lists The Cove at about 1,492 to 2,492 square feet, The Ridge at about 1,474 to 2,313 square feet, and The Timbers at about 1,622 to 2,442 square feet. Tri Pointe hours are Monday through Saturday 10 am to 6 pm, and Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "40-foot collection from the upper $200s, about 1,366 to 2,236 square feet. 45-foot collection from the low $300s, about 1,612 to 2,897 square feet. A Burton plan at 21823 Lush Pampa Lane is listed at $298,990, reduced from $319,990. The published model photo is at 22026 Mason Woods Road.",
+      },
+      {
+        name: "Tri Pointe Homes",
+        detail:
+          "The Cove and The Ridge are priced from the low $300s. The Timbers are priced from the mid $300s. Square footage on the page runs about 1,474 to 2,492. Sales address 22038 Mason Woods Road, Cypress, TX 77433.",
+      },
+    ],
+    amenities: [
+      "Community pool, trails, and a fitness center on the Taylor Morrison page",
+      "Pavilion and playground on the Tri Pointe page",
+    ],
+    schoolDistrict: "Cy-Fair ISD",
+    schools:
+      "Taylor Morrison says Mason Woods is zoned to Cy-Fair ISD. The page does not name the campuses. Confirm the lot with the district.",
+    sources: [
+      { label: "Taylor Morrison, Mason Woods", url: "https://www.taylormorrison.com/tx/houston/mason-woods" },
+      { label: "Tri Pointe Homes, Mason Woods", url: "https://www.tripointehomes.com/tx/houston/mason-woods" },
+      {
+        label: "Tri Pointe Homes Value of Now",
+        url: "https://www.tripointehomes.com/promotion/tx/houston/value-of-now-sales-event-fha-4-875-fixed-rate-5-950-apr-estimated-payment-for-375k-sales-price",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Mason Woods the same community as Grand Mason Crossing?",
+        answer:
+          "No. Mason Woods uses a Cypress address on Mason Woods Road and is sold by Taylor Morrison and Tri Pointe Homes. Grand Mason Crossing uses 5658 Belton Hollow Lane, Katy, TX 77449, and is sold by Long Lake.",
+      },
+      {
+        question: "What do homes at Mason Woods cost?",
+        answer:
+          "Taylor Morrison labels the 40-foot collection from the upper $200s and lists a Burton plan at $298,990. Tri Pointe labels The Cove and The Ridge from the low $300s and The Timbers from the mid $300s. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Mason Woods name?",
+        answer:
+          "Cy-Fair ISD. Taylor Morrison does not name the campuses on the Mason Woods page. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "avalon-at-cypress",
+    citySlug: "cypress",
+    name: "Avalon at Cypress",
+    developer: "Taylor Morrison",
+    address: "21835 Brooking Gorge Lane, Cypress, TX 77433",
+    location:
+      "Taylor Morrison's directions page lists the sales center at 21835 Brooking Gorge Lane, Cypress, TX 77433. From Grand Parkway, the page says to exit West Road, go east toward Mason Road, turn left on Mason Road, and turn right toward Avalon Landing. The community page also mentions the Grand Parkway and future access to the Mason Road expansion.",
+    summary:
+      "Avalon at Cypress is a Taylor Morrison community in Cypress. The builder page lists four collections, from the 40-foot Milestone homes in the high $300s through the 70-foot Affinity homes in the high $500s, and says the community is in Cy-Fair ISD.",
+    priceNote:
+      "Taylor Morrison labels Avalon at Cypress 40s, Milestone, from the high $300s, about 1,675 to 2,462 square feet. The 50s, Endeavor, are from the low $400s, about 2,380 to 3,432 square feet. The 60s, Venture, are from the mid $500s, about 2,796 to 3,934 square feet. The 70s, Affinity, are from the high $500s, about 3,174 to 4,925 square feet. Prices change.",
+    homes:
+      "Four Taylor Morrison collections on the Avalon at Cypress page: 40-foot Milestone, 50-foot Endeavor, 60-foot Venture, and 70-foot Affinity. Sales center hours on the directions page are Monday through Saturday 10 am to 6 pm, and Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "40s Milestone from the high $300s. 50s Endeavor from the low $400s. 60s Venture from the mid $500s. 70s Affinity from the high $500s. The Avalon at Cypress page did not print a Houston incentive on November 8, 2026. Ask Natalie about current incentives.",
+      },
+    ],
+    amenities: [
+      "Community pool",
+      "Outdoor fireplace",
+      "Playscape",
+      "Tennis and pickleball courts",
+    ],
+    schoolDistrict: "Cy-Fair ISD",
+    schools:
+      "Taylor Morrison says Avalon at Cypress is surrounded by the Cy-Fair Independent School District. The page does not name the campuses. Confirm the lot with the district.",
+    sources: [
+      { label: "Taylor Morrison, Avalon at Cypress", url: "https://www.taylormorrison.com/tx/houston/avalon-at-cypress" },
+      {
+        label: "Avalon at Cypress directions",
+        url: "https://www.taylormorrison.com/tx/houston/cypress/avalon-at-cypress-50s-endeavor/directions",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Avalon at Cypress?",
+        answer:
+          "The Taylor Morrison sales center is 21835 Brooking Gorge Lane, Cypress, TX 77433, near the Grand Parkway and West Road.",
+      },
+      {
+        question: "What do homes at Avalon at Cypress cost?",
+        answer:
+          "Taylor Morrison labels the 40-foot collection from the high $300s, the 50-foot collection from the low $400s, the 60-foot collection from the mid $500s, and the 70-foot collection from the high $500s. Confirm the homesite.",
+      },
+      {
+        question: "Did the Avalon page list a current incentive?",
+        answer:
+          "On November 8, 2026 the legal text attached to the rate banner on the Avalon at Cypress page described Treasure Coast quick move-in homes, not Houston. That offer is not listed here. Ask Natalie about a current Houston incentive.",
+      },
+    ],
+  },
+  {
     slug: "dellrose",
     citySlug: "waller",
     name: "Dellrose",
@@ -1843,6 +1957,75 @@ const communities: NewHomeCommunity[] = [
         question: "What amenities does Toll Brothers describe?",
         answer:
           "The April 2026 opening note lists a resort-style pool, green space, walking and biking trails, pickleball courts, and a playground.",
+      },
+    ],
+  },
+  {
+    slug: "grand-mason-crossing",
+    citySlug: "katy",
+    name: "Grand Mason Crossing",
+    developer: "Long Lake Ltd",
+    address: "5658 Belton Hollow Lane, Katy, TX 77449",
+    location:
+      "Long Lake publishes 5658 Belton Hollow Lane, Katy, TX 77449, and calls the area Katy/Fulshear. The page says the community is on the east side of the Grand Parkway (Highway 99), about seven miles north of I-10, and minutes from Elyson Town Center and Katy Asian Town. It is not Mason Woods. Mason Woods uses a Cypress address on Mason Woods Road.",
+    summary:
+      "Grand Mason Crossing is a Long Lake community in Katy. The page lists Katy ISD schools, future amenities, and current inventory from $400,480. Long Lake is the builder. The model lines named on the page are Briarwood, Discovery, Lake Ridge, and Lakewood.",
+    priceNote:
+      "Current inventory on the Grand Mason Crossing page runs from $400,480. On November 8, 2026 the page listed 5618 Toledo Pines Lane, Plan 264, at $400,480, with $498,325 shown with a line through it, and 5627 Toldeo Pines Lane, Plan 265, at $453,990. Prices change.",
+    homes:
+      "The page lists homes now for sale on Toledo Pines Lane and Cisco Point Lane. Hours are Monday through Saturday 10 am to 7 pm, and Sunday 12 pm to 7 pm. The page names Crest Management as the HOA contact and lists water service as NW Harris County MUD 12.",
+    builders: [
+      {
+        name: "Long Lake Ltd.",
+        detail:
+          "Inventory on the community page starts at $400,480 for 5618 Toledo Pines Lane, Plan 264. 5627 Toldeo Pines Lane, Plan 265, is listed at $453,990. Other homes on the same list are in the $410,000s to the $430,000s. Sales office 5658 Belton Hollow Lane, Katy, TX 77449.",
+      },
+    ],
+    amenities: [
+      "Future pickleball court",
+      "Future playground with shade",
+      "Future pavilion seating",
+      "Future synthetic turf lawn and landscaped gathering areas",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Long Lake says Grand Mason Crossing is in Katy ISD. The page lists McRoberts Elementary at 3535 Fry Rd, Katy, TX 77449, McDonald Junior High at 3635 Lakes of Bridgewater Dr, Katy, TX 77449, and Paetow High School at 23111 Stockdick School Rd, Katy, TX 77493. Confirm the lot with the district.",
+    sources: [
+      { label: "Grand Mason Crossing", url: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/" },
+      { label: "Long Lake promotions", url: "https://www.longlakeltd.com/promotions/" },
+      {
+        label: "Long Lake inventory savings flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-inventory-savings.webp",
+      },
+      {
+        label: "Long Lake Season of Savings flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-pick-rate2.webp",
+      },
+      {
+        label: "Long Lake new-build FHA/VA flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/10/new-homes-promotion-fha-va-6-5-fixed.webp",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Grand Mason Crossing?",
+        answer:
+          "The published address is 5658 Belton Hollow Lane, Katy, TX 77449, on the east side of the Grand Parkway. It is a Long Lake community, separate from Mason Woods in Cypress.",
+      },
+      {
+        question: "What do homes in Grand Mason Crossing cost?",
+        answer:
+          "On November 8, 2026 the community page listed inventory from $400,480, including 5618 Toledo Pines Lane at $400,480 and 5627 Toldeo Pines Lane at $453,990. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Grand Mason Crossing name?",
+        answer:
+          "Katy ISD. The page lists McRoberts Elementary, McDonald Junior High, and Paetow High School. Confirm the lot with the district.",
+      },
+      {
+        question: "Are the amenities open?",
+        answer:
+          "The page describes a future amenity area with a pickleball court, shaded playground, pavilion, synthetic turf, and landscaped gathering areas. It does not say that area is open.",
       },
     ],
   },

@@ -278,6 +278,27 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/evergreen/park.webp","alt":"Children on a climbing structure, published with Curiosity Park on the Evergreen site","width":1142,"height":958},
     ],
   },
+  "avalon-at-cypress": {
+    creditName: "Taylor Morrison",
+    creditUrl: "https://www.taylormorrison.com/tx/houston/avalon-at-cypress",
+    photos: [
+      {"src":"/new-homes/avalon-at-cypress/hero.webp","alt":"Front of the stone and stucco home published for 9207 Ocean Onyx at Avalon at Cypress","width":1000,"height":668},
+    ],
+  },
+  "grand-mason-crossing": {
+    creditName: "Long Lake Ltd.",
+    creditUrl: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/",
+    photos: [
+      {"src":"/new-homes/grand-mason-crossing/hero.webp","alt":"Stone and brick home published as the Grand Mason Crossing image","width":1600,"height":800},
+    ],
+  },
+  "mason-woods": {
+    creditName: "Tri Pointe Homes",
+    creditUrl: "https://www.tripointehomes.com/tx/houston/mason-woods",
+    photos: [
+      {"src":"/new-homes/mason-woods/hero.webp","alt":"Pool, pavilion, and playground published on the Tri Pointe Mason Woods page","width":1600,"height":1066},
+    ],
+  },
   "everly": {
     creditName: "Everly",
     creditUrl: "https://www.everlytx.com/",

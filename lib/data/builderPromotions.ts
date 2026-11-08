@@ -28,6 +28,9 @@ const promoLastCheckedByCommunity: Record<string, string> = {
   evergreen: "November 8, 2026",
   "two-step-farm": "November 8, 2026",
   "stewarts-ranch": "November 8, 2026",
+  "grand-mason-crossing": "November 8, 2026",
+  "mason-woods": "November 8, 2026",
+  "avalon-at-cypress": "November 8, 2026",
 };
 
 export function lastCheckedLabel(slug: string) {
@@ -534,6 +537,42 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       expires: "Contract November 2, 2026 to November 15, 2026. Close within 60 days of the contract.",
       sourceLabel: "Meritage Homes Houston sales-event disclaimer",
       sourceUrl: "https://www.meritagehomes.com/company/legal/national-sales-event-disclaimers",
+    },
+  ],
+  "grand-mason-crossing": [
+    {
+      builder: "Long Lake Ltd.",
+      text: "Long Lake's promotions page shows an Inventory Savings flyer: 4.99% on a 5/1 ARM, 5.99% fixed FHA/VA, and 6.5% fixed conventional, on select inventory homes. The flyer says the offer can expire without notice, covers select homes under construction and select move-in ready homes, and is available with preferred lenders. It does not print an APR or an end date, and it says to ask a sales counselor which addresses qualify.",
+      sourceLabel: "Long Lake inventory savings flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-inventory-savings.webp",
+    },
+    {
+      builder: "Long Lake Ltd.",
+      text: "The Season of Savings flyer on the same promotions page says select move-in ready homes can have reduced pricing, additional incentives, and a BTSA. The rate choices printed are 4.99% FHA fixed and 5.5% conventional fixed, on select homes only. The flyer says the offer can expire without notice and is available with preferred lenders. It does not print an APR or an end date.",
+      sourceLabel: "Long Lake Season of Savings flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-pick-rate2.webp",
+    },
+    {
+      builder: "Long Lake Ltd.",
+      text: "A separate Long Lake flyer says buyers can use a 6.5% fixed FHA/VA rate on new build homes. It says inventory homes and homes under construction are excluded. The flyer says the offer can expire without notice and is available with preferred lenders. It does not print an APR or an end date.",
+      sourceLabel: "Long Lake new-build FHA/VA flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/10/new-homes-promotion-fha-va-6-5-fixed.webp",
+    },
+  ],
+  "mason-woods": [
+    {
+      builder: "Taylor Morrison",
+      text: "The Mason Woods page banner says $0 down, zero closing costs, and a reduced FHA rate when using Taylor Morrison Home Funding. The details print 5.75% (6.57% APR) with 3.5% forgivable down payment assistance, for contracts entered from October 28, 2026 through November 11, 2026, on select Houston quick move-in homes that close by December 31, 2026. The example uses a $400,000 price, a loan amount of $392,755, 3.5% down, and a 640 credit score.",
+      expires: "Contract by November 11, 2026. Close by December 31, 2026.",
+      sourceLabel: "Taylor Morrison, Mason Woods",
+      sourceUrl: "https://www.taylormorrison.com/tx/houston/mason-woods",
+    },
+    {
+      builder: "Tri Pointe Homes",
+      text: "The Mason Woods page lists a special rate: FHA 30-year fixed at 4.875% (5.950% APR). The linked terms say the purchase agreement must be entered between October 23, 2026 and November 15, 2026, the home must close by December 31, 2026, and the rate requires financing through Tri Pointe Connect. The sample uses a $375,000 sales price.",
+      expires: "Contract by November 15, 2026. Close by December 31, 2026.",
+      sourceLabel: "Tri Pointe Homes Value of Now",
+      sourceUrl: "https://www.tripointehomes.com/promotion/tx/houston/value-of-now-sales-event-fha-4-875-fixed-rate-5-950-apr-estimated-payment-for-375k-sales-price",
     },
   ],
 };

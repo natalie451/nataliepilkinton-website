@@ -100,6 +100,44 @@ const builderHomePhotos: Record<string, Record<string, BuilderHomePhoto>> = {
       creditUrl: "https://coltontx.com/builders/westin-homes/",
     },
   },
+  "grand-mason-crossing": {
+    "Long Lake Ltd.": {
+      src: "/new-homes/grand-mason-crossing/builders/long-lake.webp",
+      alt: "Front of the brick home at 5627 Toledo Pines Lane, published on the Grand Mason Crossing page.",
+      width: 1024,
+      height: 684,
+      creditName: "Long Lake Ltd.",
+      creditUrl: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/",
+    },
+  },
+  "mason-woods": {
+    "Taylor Morrison": {
+      src: "/new-homes/mason-woods/builders/taylor-morrison.webp",
+      alt: "Front of the Taylor Morrison home at 22026 Mason Woods Road, published on the Mason Woods page.",
+      width: 1600,
+      height: 1066,
+      creditName: "Taylor Morrison",
+      creditUrl: "https://www.taylormorrison.com/tx/houston/mason-woods",
+    },
+    "Tri Pointe Homes": {
+      src: "/new-homes/mason-woods/builders/tri-pointe.webp",
+      alt: "Front of the Tri Pointe Barton home published for Mason Woods.",
+      width: 1600,
+      height: 1064,
+      creditName: "Tri Pointe Homes",
+      creditUrl: "https://www.tripointehomes.com/tx/houston/mason-woods",
+    },
+  },
+  "avalon-at-cypress": {
+    "Taylor Morrison": {
+      src: "/new-homes/avalon-at-cypress/builders/taylor-morrison.webp",
+      alt: "Front of the stone and stucco home published for 9207 Ocean Onyx at Avalon at Cypress.",
+      width: 1000,
+      height: 668,
+      creditName: "Taylor Morrison",
+      creditUrl: "https://www.taylormorrison.com/tx/houston/avalon-at-cypress",
+    },
+  },
 };
 
 export function builderHomePhoto(communitySlug: string, builderName: string) {
