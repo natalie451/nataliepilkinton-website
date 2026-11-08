@@ -1,5 +1,8 @@
+import Image from "next/image";
+import { PhotoCredit } from "@/components/new-homes/PhotoCredit";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { builderHomePhoto } from "@/lib/data/builderHomePhotos";
 import { siteConfig } from "@/lib/data/navigation";
 import type { NewHomeCommunity } from "@/lib/data/newHomes";
 import {
@@ -44,13 +47,39 @@ export function BuildersInCommunity({ community }: { community: NewHomeCommunity
         <div className="grid grid-cols-2 gap-md max-md:grid-cols-1">
           {community.builders.map((builder) => {
             const promos = promosForBuilder(community.slug, builder.name);
+            const photo = builderHomePhoto(community.slug, builder.name);
             return (
-              <article key={builder.name} className="rounded-xs border border-gray-light bg-white p-lg">
-                <h3 className="mb-sm mt-0 text-xl">{builder.name}</h3>
-                <p className={promos.length ? "mb-0 text-gray-dark" : "mb-0 text-gray-dark"}>{builder.detail}</p>
-                {promos.map((promo) => (
-                  <IncentiveBlock key={promo.text.slice(0, 40)} promo={promo} />
-                ))}
+              <article
+                key={builder.name}
+                className={
+                  photo
+                    ? "overflow-hidden rounded-xs border border-gray-light bg-white"
+                    : "rounded-xs border border-gray-light bg-white p-lg"
+                }
+              >
+                {photo ? (
+                  <figure className="m-0">
+                    <div className="relative w-full bg-cream" style={{ aspectRatio: "3 / 2" }}>
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 767px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="px-lg pt-sm">
+                      <PhotoCredit name={photo.creditName} url={photo.creditUrl} />
+                    </figcaption>
+                  </figure>
+                ) : null}
+                <div className={photo ? "px-lg pb-lg" : undefined}>
+                  <h3 className={photo ? "mb-sm mt-sm text-xl" : "mb-sm mt-0 text-xl"}>{builder.name}</h3>
+                  <p className="mb-0 text-gray-dark">{builder.detail}</p>
+                  {promos.map((promo) => (
+                    <IncentiveBlock key={promo.text.slice(0, 40)} promo={promo} />
+                  ))}
+                </div>
               </article>
             );
           })}
