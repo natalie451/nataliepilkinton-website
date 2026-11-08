@@ -173,6 +173,20 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
         </Section>
       )}
 
+      {gallery?.areaPhotos && gallery.areaPhotos.length > 0 && (
+        <Section id="nearby">
+          <Container>
+            <h2>Nearby in the {community.name} area</h2>
+            <p className="max-w-[42rem] text-gray-dark">
+              Natalie Pilkinton took these photos in the {community.name} area. Shops and restaurants are nearby.
+              This gallery does not place them inside the community boundary, and none of these photos is a
+              single-family home for sale.
+            </p>
+            <AreaPhotoGrid photos={gallery.areaPhotos} />
+          </Container>
+        </Section>
+      )}
+
       {gallery?.interiorPhotos && gallery.interiorPhotos.length > 0 && (
         <Section>
           <Container>
@@ -327,6 +341,30 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
       <div className="h-28" aria-hidden />
       <TourWithNatalieBar label={`Tour ${community.name} with Natalie`} />
     </>
+  );
+}
+
+function AreaPhotoGrid({ photos }: { photos: CommunityPhoto[] }) {
+  return (
+    <div className="grid grid-cols-2 gap-md max-md:grid-cols-1">
+      {photos.map((photo) => (
+        <figure key={photo.src} className="m-0 overflow-hidden rounded-xs bg-cream">
+          <div className="relative w-full" style={{ aspectRatio: `${photo.width} / ${photo.height}` }}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="px-md py-sm text-sm text-navy">
+            <span className="block">{photo.alt}</span>
+            {photo.creditName ? <span className="mt-xs block text-xs text-gray-dark">Photo: {photo.creditName}</span> : null}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }
 

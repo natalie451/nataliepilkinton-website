@@ -17,6 +17,8 @@ export type CommunityGallery = {
   photos: CommunityPhoto[];
   /** Model-home interiors, shown in their own gallery after the amenity shots. */
   interiorPhotos?: CommunityPhoto[];
+  /** Places photographed nearby. Not homes for sale. */
+  areaPhotos?: CommunityPhoto[];
 };
 
 export const communityGalleries: Record<string, CommunityGallery> = {
@@ -133,6 +135,50 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/bridgeland/lilypad.webp","alt":"Lily Pad Park in Bridgeland","width":1200,"height":675},
       {"src":"/new-homes/bridgeland/creekland.webp","alt":"Creekland Village in Bridgeland","width":1200,"height":800},
       {"src":"/new-homes/bridgeland/prairieland.webp","alt":"Prairieland Village in Bridgeland","width":1200,"height":800},
+    ],
+    areaPhotos: [
+      {
+        src: "/new-homes/bridgeland/area-starling.webp",
+        alt: "Starling at Bridgeland. The monument shows 16200, with multifamily buildings behind it. Starling is not a single-family home for sale.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-heb.webp",
+        alt: "H-E-B storefront photographed in the Bridgeland area. Nearby shopping, not listed here as inside the community boundary.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-building.webp",
+        alt: "A modern multi-story building photographed in the Bridgeland area. The photo does not name the building.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-art.webp",
+        alt: "An outdoor installation of orange vertical rods, photographed in the Bridgeland area.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-costco.webp",
+        alt: "Costco gas station photographed in the Bridgeland area. The sign on the canopy reads OPENING December 5, 2026 at 6 A.M. That date is what the sign shows and can change. The photo does not show the station as open.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-texas-roadhouse.webp",
+        alt: "Texas Roadhouse photographed in the Bridgeland area. Nearby dining, not listed here as inside the community boundary.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
     ],
   },
   "towne-lake": {
