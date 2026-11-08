@@ -148,9 +148,9 @@ export const newHomeCities: NewHomeCity[] = [
   {
     slug: "magnolia",
     name: "Magnolia",
-    headline: "SH 249 and FM 1488",
+    headline: "SH 249, FM 1488, and FM 1486",
     summary:
-      "Audubon is the Magnolia master plan with a current community site that names builders, price bands, and Magnolia ISD campuses.",
+      "Audubon and COLTON are the Magnolia-area master plans with current community sites. Audubon uses a Magnolia address at SH 249 and FM 1488. COLTON uses a Todd Mission address at SH 249 and FM 1486 and publishes Magnolia ISD schools.",
   },
   {
     slug: "humble",
@@ -1670,6 +1670,125 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "colton",
+    citySlug: "magnolia",
+    name: "COLTON",
+    developer: "AIRIA Development",
+    address: "42030 Texoma Way, Todd Mission, TX 77316",
+    location:
+      "The sales address is 42030 Texoma Way, Todd Mission, TX 77316. COLTON says the community spans three counties, with most of it in Montgomery County and smaller portions in Waller and Grimes Counties. Phase 1 is in Montgomery County, inside the extraterritorial jurisdiction of Todd Mission, at SH 249 (Aggie Expressway) and FM 1486. The community facts page says that is about 45 miles from College Station and about 45 miles from downtown Houston. From SH 249 north, exit FM 1486 and go south 0.2 miles. The entrance is on the right.",
+    summary:
+      "COLTON is a 5,700-acre AIRIA Development community in the Todd Mission area of Montgomery County. The developer says about 11,000 single-family homes are planned at build-out. Phase 1 has about 685 lots and 11 builders. Builder pages start in the $300s. Arroyos Park is set to open in 2026.",
+    priceNote:
+      "Village Builders lists homes from the $300s. Other builder pages list David Weekley Homes from the $340s and the $550s, Westin Homes from the $390s and the $520s, Beazer Homes from the $420s, Highland Homes from the $420s and the $510s, Perry Homes from the $440s, Coventry Homes from the $510s, Drees Homes from the $590s, J. Patrick Homes from the $770s, Fedrick Harris Estate Homes from the high $870s, and Partners in Building from the $970s. Prices change.",
+    homes:
+      "About 5,700 acres, with approximately 11,000 single-family homes at build-out. Phase 1 is about 685 lots, 45 to 80 feet wide, with minimum depths starting at 125 feet, and 11 builders. The community page lists 2026 HOA dues of $1,440 per year, managed by Crest Management. It also prints a 2025 combined tax rate of $3.0808 per $100 of valuation and says those rates are estimates to verify.",
+    builders: [
+      {
+        name: "Beazer Homes",
+        detail: "55-foot lots, 1,800 to 3,200 square feet, from the $420s. Model home open.",
+      },
+      {
+        name: "Coventry Homes",
+        detail: "65-foot lots, 2,600 to 4,100 square feet, from the $510s. Model home open.",
+      },
+      {
+        name: "David Weekley Homes",
+        detail:
+          "45-foot lots, 1,500 to 2,700 square feet, from the $340s. 65-foot lots, 2,600 to 4,100 square feet, from the $550s. Model homes open.",
+      },
+      {
+        name: "Drees Homes",
+        detail: "70-foot lots, 2,800 to 4,600 square feet, from the $590s. Model home open.",
+      },
+      {
+        name: "Highland Homes",
+        detail:
+          "50-foot lots, 1,600 to 2,900 square feet, and 60-foot lots, 2,400 to 3,700 square feet, from the $420s and the $510s. Model homes open.",
+      },
+      {
+        name: "J. Patrick Homes",
+        detail: "70-foot lots, 2,800 to 4,600 square feet, from the $770s. Model home open.",
+      },
+      {
+        name: "Fedrick Harris Estate Homes",
+        detail:
+          "80-foot lots, 3,500 to 5,750 square feet, from the high $870s. Model home open. The COLTON incentives page did not list a current offer for this builder. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Partners in Building",
+        detail: "80-foot lots, 3,500 to 5,750 square feet, from the $970s. Model home open.",
+      },
+      {
+        name: "Perry Homes",
+        detail: "55-foot lots, 1,800 to 3,200 square feet, from the $440s.",
+      },
+      {
+        name: "Village Builders",
+        detail: "50-foot lots, 1,600 to 2,900 square feet, from the $300s.",
+      },
+      {
+        name: "Westin Homes",
+        detail:
+          "45-foot lots, 1,500 to 2,700 square feet, from the $390s. 60-foot lots, 2,400 to 3,700 square feet, from the $520s.",
+      },
+    ],
+    amenities: [
+      "Phase 1 green space of over 186 acres, with 10-foot-wide hike and bike trails connected to walking trails",
+      "Arroyos Park, about 8 acres, set to open in 2026, with W. Blakley Hall, The Welcome Inn, and The Iron Yard 24/7 gym",
+      "Planned splash pad, playgrounds, amphitheater, picnic areas, and a fire pit at Arroyos Park",
+      "Micro 9-hole disc golf course at Arroyos Park, plus a championship disc golf course by HouckDesign planned through the green space",
+    ],
+    schoolDistrict: "Magnolia ISD",
+    schools:
+      "COLTON says students are zoned to Williams Elementary, Magnolia Parkway Intermediate, Magnolia Parkway Junior High, and Magnolia West High School. A COLTON news post says the Magnolia ISD board approved a land exchange for a future elementary site inside COLTON, about 16 acres, after the 2026 bond. The post says the district will set the timing, so that campus is not open. Confirm the lot with Magnolia ISD.",
+    sources: [
+      { label: "COLTON community facts", url: "https://coltontx.com/community-facts/" },
+      { label: "COLTON location", url: "https://coltontx.com/location/" },
+      { label: "COLTON amenities", url: "https://coltontx.com/amenities/" },
+      { label: "COLTON schools", url: "https://coltontx.com/schools/" },
+      {
+        label: "Future elementary site",
+        url: "https://coltontx.com/future-elementary-school-site-approved-within-colton/",
+      },
+      { label: "COLTON community HOA and taxes", url: "https://coltontx.com/community/" },
+      { label: "COLTON builder incentives", url: "https://coltontx.com/builder-incentives/" },
+      { label: "Beazer Homes at COLTON", url: "https://coltontx.com/builders/beazer-homes/" },
+      { label: "Coventry Homes at COLTON", url: "https://coltontx.com/builders/coventry-homes/" },
+      { label: "David Weekley Homes at COLTON", url: "https://coltontx.com/builders/david-weekley-homes/" },
+      { label: "Drees Homes at COLTON", url: "https://coltontx.com/builders/drees-homes/" },
+      { label: "Highland Homes at COLTON", url: "https://coltontx.com/builders/highland-homes/" },
+      { label: "J. Patrick Homes at COLTON", url: "https://coltontx.com/builders/j-patrick-homes/" },
+      { label: "Fedrick Harris Estate Homes at COLTON", url: "https://coltontx.com/builders/fedrick-harris-estate-homes/" },
+      { label: "Partners in Building at COLTON", url: "https://coltontx.com/builders/partners-in-building/" },
+      { label: "Perry Homes at COLTON", url: "https://coltontx.com/builders/perry-homes/" },
+      { label: "Village Builders at COLTON", url: "https://coltontx.com/builders/village-builders/" },
+      { label: "Westin Homes at COLTON", url: "https://coltontx.com/builders/westin-homes/" },
+    ],
+    faqs: [
+      {
+        question: "Where is COLTON?",
+        answer:
+          "The published address is 42030 Texoma Way, Todd Mission, TX 77316, at SH 249 and FM 1486. Phase 1 is in Montgomery County, in the extraterritorial jurisdiction of Todd Mission. COLTON says the full community also includes smaller portions in Waller and Grimes Counties, and that the entrance is about 45 miles from College Station and about 45 miles from downtown Houston.",
+      },
+      {
+        question: "What do new homes in COLTON cost?",
+        answer:
+          "The builder pages start with Village Builders from the $300s. The same pages list ranges up through Partners in Building from the $970s and Fedrick Harris Estate Homes from the high $870s. Those are advertising prices. Confirm the homesite.",
+      },
+      {
+        question: "Which schools does COLTON name?",
+        answer:
+          "Magnolia ISD. COLTON says current students are zoned to Williams Elementary, Magnolia Parkway Intermediate, Magnolia Parkway Junior High, and Magnolia West High School. A news post says a future elementary site inside COLTON was approved through a land exchange. That campus is not open, and Magnolia ISD sets the schedule.",
+      },
+      {
+        question: "Is Arroyos Park open?",
+        answer:
+          "COLTON says Arroyos Park is set to open in 2026. The amenities page describes the hall, gym, splash pad, playgrounds, amphitheater, and disc golf as what the park will include.",
+      },
+    ],
+  },
+  {
     slug: "balmoral",
     citySlug: "humble",
     name: "Balmoral",
@@ -2142,7 +2261,7 @@ export function communitiesForCity(citySlug: string) {
 }
 
 /** Content date for sitemap lastmod. Not a build clock. */
-export const newHomesContentDate = "2026-11-04";
+export const newHomesContentDate = "2026-11-07";
 
 export function newHomePaths() {
   return [
