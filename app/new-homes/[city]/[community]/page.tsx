@@ -247,6 +247,46 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
         </Container>
       </Section>
 
+      {community.directory && (
+        <Section id="directory">
+          <Container>
+            <h2>Village and neighborhood directory</h2>
+            <p className="max-w-[46rem] text-gray-dark">{community.directory.intro}</p>
+            {(["Villages", "Neighborhoods", "HOA areas", "Recorded sections"] as const).map((group) => {
+              const places = community.directory?.places.filter((place) => place.group === group) ?? [];
+              if (places.length === 0) return null;
+              return (
+                <div key={group} className="mt-xl">
+                  <h3 className="mb-md">{group}</h3>
+                  <div className="grid gap-md">
+                    {places.map((place) => (
+                      <article key={place.name} className="rounded-xs border border-gray-light bg-white p-md">
+                        <p className="mb-xs text-xs font-semibold uppercase tracking-[0.12em] text-blue">
+                          {place.kind}
+                          {place.parent ? ` in ${place.parent}` : ""}
+                        </p>
+                        <h3 className="mb-xs mt-0 text-xl">{place.name}</h3>
+                        <p className="mb-sm text-navy">{place.status}</p>
+                        <p className="mb-sm text-gray-dark">{place.detail}</p>
+                        <a
+                          href={place.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold text-blue"
+                        >
+                          {place.sourceLabel}
+                        </a>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+            <p className="mt-xl max-w-[46rem] text-sm text-gray-dark">{community.directory.limitation}</p>
+          </Container>
+        </Section>
+      )}
+
       <BuildersInCommunity community={community} />
 
       <WaysToMakeItWork variant="full" ctaHref="#tour" />

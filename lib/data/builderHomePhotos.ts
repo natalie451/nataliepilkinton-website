@@ -100,6 +100,36 @@ const builderHomePhotos: Record<string, Record<string, BuilderHomePhoto>> = {
       creditUrl: "https://coltontx.com/builders/westin-homes/",
     },
   },
+  redbud: {
+    "Taylor Morrison": {
+      src: "/new-homes/redbud/builders/taylor-morrison.webp",
+      alt: "Front of the Taylor Morrison home at 18034 Old Barrel Drive. A red yard sign reads Allegro.",
+      width: 1600,
+      height: 900,
+      creditName: "Taylor Morrison",
+      creditUrl: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-40s-ascent",
+    },
+  },
+  stokesbury: {
+    "Centex Homes": {
+      src: "/new-homes/stokesbury/builders/centex.webp",
+      alt: "Single-story home published as a model exterior on the Centex Stokesbury page.",
+      width: 1600,
+      height: 1200,
+      creditName: "Centex Homes",
+      creditUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    },
+  },
+  "the-pines-at-seven-coves": {
+    "Centex Homes": {
+      src: "/new-homes/the-pines-at-seven-coves/builders/centex.webp",
+      alt: "Front of the Centex model at 10519 Killdeer Court. A sign on the door reads Office Hours.",
+      width: 1600,
+      height: 1034,
+      creditName: "Centex Homes",
+      creditUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    },
+  },
   "grand-mason-crossing": {
     "Long Lake Ltd.": {
       src: "/new-homes/grand-mason-crossing/builders/long-lake.webp",

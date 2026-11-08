@@ -331,6 +331,54 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/avalon-at-cypress/hero.webp","alt":"Front of the stone and stucco home published for 9207 Ocean Onyx at Avalon at Cypress","width":1000,"height":668},
     ],
   },
+  redbud: {
+    creditName: "Taylor Morrison",
+    creditUrl: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-40s-ascent",
+    photos: [
+      {
+        src: "/new-homes/redbud/hero.webp",
+        alt: "Front of the Taylor Morrison home at 18034 Old Barrel Drive. A red yard sign reads Allegro.",
+        width: 1600,
+        height: 900,
+      },
+    ],
+  },
+  stokesbury: {
+    creditName: "Centex Homes",
+    creditUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    photos: [
+      {
+        src: "/new-homes/stokesbury/hero.webp",
+        alt: "Single-story home published as a model exterior on the Centex Stokesbury page.",
+        width: 1600,
+        height: 1200,
+      },
+      {
+        src: "/new-homes/stokesbury/monument.webp",
+        alt: "Stone entrance sign reading Stokesbury, A Centex Community.",
+        width: 1600,
+        height: 1034,
+      },
+    ],
+  },
+  "the-pines-at-seven-coves": {
+    creditName: "Centex Homes",
+    creditUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    photos: [
+      {
+        src: "/new-homes/the-pines-at-seven-coves/hero.webp",
+        alt: "Front of the Centex model at 10519 Killdeer Court. A sign on the door reads Office Hours.",
+        width: 1600,
+        height: 1034,
+      },
+      {
+        src: "/new-homes/the-pines-at-seven-coves/monument.webp",
+        alt: "Entrance sign reading The Pines at Seven Coves, A Centex Community.",
+        width: 1600,
+        height: 1034,
+      },
+    ],
+  },
   "grand-mason-crossing": {
     creditName: "Long Lake Ltd.",
     creditUrl: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/",

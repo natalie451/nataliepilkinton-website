@@ -50,6 +50,21 @@ export type NewHomeCommunity = {
   schools: string;
   sources: NewHomeSource[];
   faqs: NewHomeFaq[];
+  /** Named villages, neighborhoods, or recorded sections. Absent when the page has none. */
+  directory?: {
+    intro: string;
+    limitation: string;
+    places: {
+      name: string;
+      group: "Villages" | "Neighborhoods" | "HOA areas" | "Recorded sections";
+      kind: "Village" | "Neighborhood" | "Multifamily" | "Active-adult community" | "HOA area" | "Plat section";
+      parent?: string;
+      status: string;
+      detail: string;
+      sourceLabel: string;
+      sourceUrl: string;
+    }[];
+  };
 };
 
 const phone = "(832) 981-5271";
@@ -87,7 +102,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Willis",
     headline: "I-45 north of Conroe, along FM 830",
     summary:
-      "Willis is the north end of this new-home corridor. The Woodlands Hills, a Howard Hughes community, has neighborhoods in both Willis and Conroe and is zoned to Willis ISD.",
+      "Willis is the north end of this new-home corridor. The Woodlands Hills, a Howard Hughes community, has neighborhoods in both Willis and Conroe and is zoned to Willis ISD. The Pines at Seven Coves is the Centex community off FM 830 and Highway 75, also in Willis ISD.",
   },
   {
     slug: "spring",
@@ -108,7 +123,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Waller",
     headline: "Waller ISD and Waller County, including Hockley and Brookshire",
     summary:
-      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose and Everly use Hockley addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
+      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, and Redbud use Hockley addresses and Waller ISD. Stokesbury uses a Waller address and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
   },
   {
     slug: "porter",
@@ -989,6 +1004,60 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "the-pines-at-seven-coves",
+    citySlug: "willis",
+    name: "The Pines at Seven Coves",
+    developer: "Centex Homes",
+    address: "10519 Killdeer Court, Willis, TX 77378",
+    location:
+      "Centex publishes the sales address as 10519 Killdeer Court, Willis, TX 77378. The page says the community is off FM 830 and TX Highway 75, next to Willis High School, less than one mile from I-45, and six miles from Lake Conroe. Centex also describes it as north Conroe. The monument reads The Pines at Seven Coves.",
+    summary:
+      "The Pines at Seven Coves is a Centex community in Willis. The page lists carriage homes and single-family homes from $193,990, about 1,204 to 2,531 square feet. Schools on the page are Willis ISD. This is the Centex community by that name, not a section inside another master plan.",
+    priceNote:
+      "Centex lists The Pines at Seven Coves from $193,990, about 1,204 to 2,531 square feet. Inventory cards on the page are labeled Villages. One example checked November 8, 2026 is 10646 Willet Way, the Springfield plan, at $245,489, with $254,489 shown with a line through it. Prices change.",
+    homes:
+      "Carriage homes and single-family homes. Villages is the series name on the inventory cards, not a separate neighborhood. Sales hours are Monday, Tuesday, Thursday, Friday, and Saturday 10 am to 6 pm, and Wednesday and Sunday 12 pm to 6 pm. Phone (936) 755-5262.",
+    builders: [
+      {
+        name: "Centex Homes",
+        detail:
+          "From $193,990, about 1,204 to 2,531 square feet. Sales address 10519 Killdeer Court, Willis, TX 77378. The page lists carriage homes and single-family homes.",
+      },
+    ],
+    amenities: [
+      "Walking trails",
+      "Less than one mile from I-45",
+      "Less than 15 miles from The Woodlands",
+      "Six miles from Lake Conroe",
+    ],
+    schoolDistrict: "Willis ISD",
+    schools:
+      "Centex lists Turner Elementary School at 10575 HWY 75 N, Robert P. Brabham Middle School at 10000 FM 830, and Willis High School. The page prints a phone for Willis High School, (936) 856-1250, and does not print the high school street address. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Centex, The Pines at Seven Coves",
+        url: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is The Pines at Seven Coves?",
+        answer:
+          "Centex lists 10519 Killdeer Court, Willis, TX 77378, off FM 830 and TX Highway 75, next to Willis High School. The page says it is six miles from Lake Conroe.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "The Centex page starts at $193,990, with homes about 1,204 to 2,531 square feet. Confirm the plan.",
+      },
+      {
+        question: "What schools does Centex name?",
+        answer:
+          "Willis ISD: Turner Elementary, Robert P. Brabham Middle School, and Willis High School.",
+      },
+    ],
+  },
+  {
     slug: "bridgeland",
     citySlug: "cypress",
     name: "Bridgeland",
@@ -997,7 +1066,7 @@ const communities: NewHomeCommunity[] = [
     location:
       "Bridgeland is in Cypress, in northwest Houston. Howard Hughes describes it as one of the largest communities in that corridor. Model homes on the builder page use Cypress addresses along streets such as Skylark Forest Drive, Medina River Drive, and Linnaeus Lane.",
     summary:
-      "Bridgeland is an 11,500-acre Howard Hughes community in Cypress. The homepage cites 250 miles of trails, more than 75 parks, about 90,000 square feet of retail and restaurants, and 70,000 residents at buildout. Villages include Prairieland, Parkland, Creekland, and Bridgeland Central.",
+      "Bridgeland is an 11,500-acre Howard Hughes community in Cypress. The homepage cites 250 miles of trails, more than 75 parks, about 90,000 square feet of retail and restaurants, and 70,000 residents at buildout. The villages page names five villages: Lakeland, Parkland, Prairieland, Creekland, and Bridgeland Central.",
     priceNote:
       "Bridgeland does not publish one price for every village. Century Communities lists Creekland Village homes from $329,990. Other builders on the model list publish their own prices. Expect a wide range, including a Del Webb active-adult section.",
     homes:
@@ -1031,7 +1100,20 @@ const communities: NewHomeCommunity[] = [
       "Bridgeland's homepage says the community is home to top-ranked schools and does not assign one district to every village. Creekland Village has been marketed with Waller ISD in builder materials, while other villages are commonly checked against Cypress-Fairbanks ISD. Confirm the homesite with the district before you compare schools.",
     sources: [
       { label: "Bridgeland homepage", url: "https://www.bridgeland.com/" },
+      { label: "Bridgeland villages", url: "https://www.bridgeland.com/homes/villages/" },
       { label: "Builders and model homes", url: "https://www.bridgeland.com/homes/builders-model-homes/" },
+      {
+        label: "2025 HOA rates",
+        url: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+      },
+      {
+        label: "2024 tax rates by area",
+        url: "https://www.bridgeland.com/wp-content/uploads/2025/04/Tax-Rates-for-2024.xlsx",
+      },
+      {
+        label: "Bridgeland inventory list",
+        url: "https://dts.bridgeland.com/DTS/lots/fb_inventory.asp",
+      },
       {
         label: "Century Communities, Creekland Village",
         url: "https://www.centurycommunities.com/find-your-new-home/texas/houston-metro/cypress/bridgeland/",
@@ -1054,6 +1136,318 @@ const communities: NewHomeCommunity[] = [
           "No. The community covers more than one attendance zone. Confirm the district and campus for the lot. Do not assume a Cypress mailing address means Cypress-Fairbanks ISD.",
       },
     ],
+    directory: {
+      intro:
+        "Howard Hughes says the Bridgeland master plan features five villages. This directory separates those villages, the neighborhoods Bridgeland's own pages describe, and the extra-fee areas printed on the 2025 HOA rate sheet. Parks on the village pages are left off.",
+      limitation:
+        "Checked November 8, 2026 against the villages page, the five village pages, the news posts linked below, the 2025 HOA rate PDF, and the 2024 tax sheet. This is not a complete plat list. The HOA sheet names areas that pay an extra 2025 assessment. Sections that pay only the village fee do not appear on it. Parkland's page says its neighborhoods are named after Texas State Parks and does not publish that full list. Lockhart, San Angelo, Colorado Bend, Falcon, and Sheldon Lake are the park-style names that do appear on the HOA sheet. Prairieland and Creekland village pages name parks and do not name smaller neighborhoods. The 2025 HOA sheet has no Bridgeland Central column, so Southbridge, Easthaven, Emerald Heights, Starling, and Del Webb are not on it. The 2024 tax sheet groups Lakeland Village, Parkland Village Section 1-8, Parkland Village Section 9+, Prairieland Village Section 1-4, Prairieland Village Section 5+, Creekland Village, Bridgeland Central, and Harmony Grove. Those section ranges are tax groups. The Easthaven announcement describes Village Green as shops, restaurants, workplaces, and entertainment. City Series by Highland Homes is a townhome product. Builder lot-width labels are not neighborhoods.",
+      places: [
+        {
+          name: "Lakeland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "Opened in 2006. Bridgeland's first village.",
+          detail: "The village page says it has grown to more than 3,000 families.",
+          sourceLabel: "Lakeland Village",
+          sourceUrl: "https://www.bridgeland.com/village/lakeland-village/",
+        },
+        {
+          name: "Lakeland Heights",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Lakeland Village",
+          status: "Existing. The village page calls it Bridgeland's first traditional neighborhood design. The 2025 HOA sheet lists a $50 Lakeland Heights assessment.",
+          detail: "A separate HOA line, TH @ Lakeland Heights, is $2,142. That line is listed with the HOA areas below.",
+          sourceLabel: "Lakeland Village",
+          sourceUrl: "https://www.bridgeland.com/village/lakeland-village/",
+        },
+        {
+          name: "Harmony Grove",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Lakeland Village",
+          status: "Announced February 10, 2020 as the final neighborhood in Lakeland Village. The 2025 HOA sheet lists a $2,544 Harmony Grove assessment. The 2024 tax sheet also lists Harmony Grove as its own tax area.",
+          detail: "The post says Beazer Homes townhomes, 68 homesites, about 1,563 to 2,063 square feet, from the $220s in that announcement, with front-yard maintenance. The post's event dates say 2019 while the publish date is February 10, 2020.",
+          sourceLabel: "Harmony Grove announcement",
+          sourceUrl: "https://www.bridgeland.com/news/find-peace-at-harmony-grove/",
+        },
+        {
+          name: "Parkland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "One of the five villages on the master-plan page.",
+          detail: "The page says its neighborhoods are named after Texas State Parks. It does not list those neighborhood names. The highlights on that page are parks.",
+          sourceLabel: "Parkland Village",
+          sourceUrl: "https://www.bridgeland.com/village/parkland-village/",
+        },
+        {
+          name: "Parkland Square",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Parkland Village",
+          status: "The October 6, 2021 article says it sold out earlier that year. The 2025 HOA sheet still lists a $110 Parkland Square assessment.",
+          detail: "The article calls it the traditional neighborhood design that Parkland Row follows.",
+          sourceLabel: "Parkland Row article",
+          sourceUrl: "https://www.bridgeland.com/parkland-row-a-new-tnd-coming-to-parkland-village/",
+        },
+        {
+          name: "Parkland Row",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Parkland Village",
+          status: "Announced October 6, 2021. Models were anticipated in winter 2022. The 2025 HOA sheet lists a $110 Parkland Row assessment. The article does not give a later sales update.",
+          detail: "Near Fry Road and Tuckerton Road. 288 homesites. The article's first sentence names David Weekley Homes. A later sentence prints David Weekly. About 1,400 to 3,400 square feet.",
+          sourceLabel: "Parkland Row article",
+          sourceUrl: "https://www.bridgeland.com/parkland-row-a-new-tnd-coming-to-parkland-village/",
+        },
+        {
+          name: "Prairieland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "One of the five villages on the master-plan page.",
+          detail: "The village page says it includes about 7,000 homesites. It names parks and an activity center, not smaller neighborhoods.",
+          sourceLabel: "Prairieland Village",
+          sourceUrl: "https://www.bridgeland.com/village/prairieland-village/",
+        },
+        {
+          name: "Creekland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "Selling. The January 10, 2023 post called it the fourth and final residential village and said the first homesites were available.",
+          detail: "The post says nearly 2,300 acres and about 3,000 single-family homes, with lots from 28 to 50 feet, and homes from the $290s at that announcement. The village page names parks and does not name smaller neighborhoods.",
+          sourceLabel: "Creekland Village",
+          sourceUrl: "https://www.bridgeland.com/village/creekland-village/",
+        },
+        {
+          name: "Bridgeland Central",
+          group: "Villages",
+          kind: "Village",
+          status: "Described as a 925-acre emerging urban district.",
+          detail: "The page says it will include office, retail, dining, medical, entertainment, single-family homes, and multifamily homes.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Southbridge",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "The Bridgeland Central page says new homes here are now selling.",
+          detail: "Named in the same sentence as Easthaven. The page does not add a separate description.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Easthaven",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "The Bridgeland Central page says new homes here are now selling.",
+          detail: "Also called the Easthaven Collection on that page. DRB Homes and David Weekley Homes. Floor plans about 2,500 to 3,150 square feet, with 2 to 4 bedrooms.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Emerald Heights",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "Newest traditional neighborhood design in Bridgeland Central. The January 21, 2026 post says presales are underway and models will begin construction soon.",
+          detail: "350 homesites, 35-foot, 42-foot, and 50-foot. David Weekley Homes and Perry Homes. Off North Bridgeland Lake Parkway and Emerald Enclave Drive. The Bridgeland Central page says presales will begin soon and model homes will be complete this spring. The Bridgeland inventory list dated November 7, 2026 includes Emerald Heights rows on Emerald Enclave Drive, and some of those rows say Available Now.",
+          sourceLabel: "Emerald Heights news post",
+          sourceUrl: "https://www.bridgeland.com/news/emerald-heights-the-latest-neighborhood-coming-to-bridgeland-central/",
+        },
+        {
+          name: "Starling at Bridgeland",
+          group: "Neighborhoods",
+          kind: "Multifamily",
+          parent: "Bridgeland Central",
+          status: "Named on the Bridgeland Central page as multifamily.",
+          detail: "Apartments, not single-family homes for sale. The page describes a clubhouse, fitness center, and a resort-style pool.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Del Webb Bridgeland",
+          group: "Neighborhoods",
+          kind: "Active-adult community",
+          status: "Announced February 5, 2026. Model homes are slated to be complete this fall. The announcement does not name a parent village.",
+          detail: "Gated 55+ community. 190 acres. 672 homes on 50-foot and 65-foot homesites, with a Del Webb amenity center. The 2025 HOA sheet does not list it.",
+          sourceLabel: "Del Webb Bridgeland announcement",
+          sourceUrl: "https://www.bridgeland.com/news/del-webb-announces-first-active-adult-community-in-bridgeland/",
+        },
+        {
+          name: "Allen Shores",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $500. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Hidden Creek Estates",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $935. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Hidden Creek Reserve",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $935. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Reserve at First Bend",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $1,900. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "TH @ Lakeland Heights",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $2,142. Separate from the $50 Lakeland Heights line.",
+          detail: "Printed under Lakeland Village CAI. The sheet does not spell out the TH abbreviation.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "BL Central (Sec 1)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,100. Printed in the Parkland Village column.",
+          detail: "The sheet prints BL Central (Sec 1) under Parkland Village CAI. It is a different label from the Bridgeland Central village.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Lockhart",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,200. The village page does not list this name.",
+          detail: "Printed under Parkland Village CAI. Lockhart is also the name of a Texas state park. The sheet does not say this is one of the park-named neighborhoods.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "San Angelo (Sec 42)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,250.",
+          detail: "Printed under Parkland Village CAI with section 42.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Colorado Bend Quads (Sec 55/60)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $75.",
+          detail: "Printed under Parkland Village CAI with sections 55 and 60.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Falcon (Sec 57)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,250.",
+          detail: "Printed under Parkland Village CAI with section 57.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Sheldon Lake",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $800. The village page does not list this name.",
+          detail: "Printed under Parkland Village CAI.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Desert Marble (Sec 24)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $800.",
+          detail: "Printed under Prairieland Village CAI with section 24. The village page does not describe it.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Olympia Marble (Sec 28)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $800.",
+          detail: "Printed under Prairieland Village CAI with section 28.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Zebra Swallowtail (Sec 34)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Prairieland Village CAI with section 34.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Fiery Skipper (Sec 10)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $75.",
+          detail: "Printed under Prairieland Village CAI with section 10.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Medina (Sec 2)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Creekland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Creekland Village CAI with section 2. The village page does not describe it.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Maravillas (Sec 5)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Creekland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Creekland Village CAI with section 5.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+      ],
+    },
   },
   {
     slug: "towne-lake",
@@ -1415,6 +1809,123 @@ const communities: NewHomeCommunity[] = [
         question: "What are the HOA dues?",
         answer:
           "The FAQ says the current annual HOA assessment is $1,100, managed by Sterling Association Services.",
+      },
+    ],
+  },
+  {
+    slug: "redbud",
+    citySlug: "waller",
+    name: "Redbud",
+    developer: "Taylor Morrison",
+    address: "18034 Old Barrel Drive, Hockley, TX 77447",
+    location:
+      "Taylor Morrison's January 2026 fact sheet lists 18034 Old Barrel Drive, Hockley, TX 77447. It says the entrance is off Bauer Hockley Road and Hopfe Road, along the Grand Parkway. The mailing city is Hockley. The page is under Waller because the fact sheet names Waller ISD.",
+    summary:
+      "Redbud is a Taylor Morrison community in Hockley. The fact sheet names Waller ISD schools, a $950 annual HOA fee, and planned resort-style amenities. Taylor Morrison sells two collections, Redbud 40s (Ascent) and Redbud 45s (Passage).",
+    priceNote:
+      "The January 2026 fact sheet does not print a starting price. A Redbud 45s home page checked November 8, 2026 listed 21938 Longhorn Ridge Drive, the Barrett plan, at $275,000, with $301,990 shown with a line through it. That is one home, not a community-wide starting price.",
+    homes:
+      "Redbud 40s is the Ascent collection. Redbud 45s is the Passage collection. Those names are lot-width series. The fact sheet does not name other internal neighborhoods. The directions page lists sales hours of Monday through Saturday 10 am to 6 pm and Sunday 12 pm to 6 pm. Phone on the fact sheet: (281) 619-8241.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "Builder of Redbud 40s (Ascent) and Redbud 45s (Passage). Sales address 18034 Old Barrel Drive, Hockley, TX 77447. The fact sheet does not print a starting price. One Redbud 45s home, 21938 Longhorn Ridge Drive, was listed at $275,000 on November 8, 2026.",
+      },
+    ],
+    amenities: [
+      "The fact sheet says Redbud has planned resort-style amenities",
+      "A Redbud 45s home page says community amenities are coming soon, including a pool, a playground, and greenspace",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "The fact sheet names Waller ISD: Lowe Elementary at 31502 Conifer Farm Dr, Schultz Junior High at 20950 Fields Store Rd, and Waller High School at 31213 Waller Spring Creek Rd. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Taylor Morrison Redbud fact sheet, January 2026",
+        url: "https://www.taylormorrison.com/-/media/sites/tm/homes/texas/houston/hockley/redbud/collateral/redbud-community-fact-sheet-jan-2026-(1).pdf",
+      },
+      {
+        label: "Redbud 40s directions",
+        url: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-40s-ascent/directions",
+      },
+      {
+        label: "Redbud 45s, Barrett at 21938 Longhorn Ridge Drive",
+        url: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-45s-passage/floor-plans/barrett/home-available-now-at-21938-longhorn-ridge-drive",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Redbud in Cypress or Hockley?",
+        answer:
+          "The fact sheet address is 18034 Old Barrel Drive, Hockley, TX 77447. The entrance is off Bauer Hockley Road and Hopfe Road. Schools on the fact sheet are Waller ISD.",
+      },
+      {
+        question: "What is the HOA fee?",
+        answer:
+          "The fact sheet lists a homeowners association fee of $950 a year and a $950 capital fee due once at closing. It names Inframark Community Management.",
+      },
+      {
+        question: "What schools does the fact sheet name?",
+        answer:
+          "Waller ISD: Lowe Elementary, Schultz Junior High, and Waller High School. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "stokesbury",
+    citySlug: "waller",
+    name: "Stokesbury",
+    developer: "Centex Homes",
+    address: "23134 Deanston Drive, Waller, TX 77484",
+    location:
+      "Centex publishes the Stokesbury sales address as 23134 Deanston Drive, Waller, TX 77484. The page describes the community as new construction in Waller. Centex also publishes a separate community, The Courtyards at Stokesbury, at 23126 Deanston Drive.",
+    summary:
+      "Stokesbury is a Centex community in Waller. The page lists single-family homes from $220,990, about 1,204 to 2,947 square feet, in three series: Villages, Arbors, and Villas. Schools on the page are Waller ISD.",
+    priceNote:
+      "Centex lists Stokesbury from $220,990. Villages start at $220,990 and about 1,204 square feet. Arbors start at $245,990 and about 1,408 square feet. Villas start at $279,990, with plans from about 1,762 to 2,947 square feet. Prices change.",
+    homes:
+      "One and two story single-family homes. Villages, Arbors, and Villas are home series on this page, not separate neighborhoods. The Courtyards at Stokesbury is a different Centex page, with plans from $184,990 and about 1,056 to 1,353 square feet, at 23126 Deanston Drive. Sales hours are Monday through Saturday 10 am to 6 pm and Sunday 12 pm to 6 pm. Phone (936) 296-3200.",
+    builders: [
+      {
+        name: "Centex Homes",
+        detail:
+          "From $220,990, about 1,204 to 2,947 square feet. Villages from $220,990, Arbors from $245,990, and Villas from $279,990. Sales address 23134 Deanston Drive, Waller, TX 77484.",
+      },
+    ],
+    amenities: [
+      "Resort-style pool",
+      "Pickleball courts",
+      "Bocce ball court",
+      "Playground",
+      "Walking trails",
+      "Lake",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Centex lists Waller High School at 31213 Waller Spring Creek Road, Schultz Junior High School at 20950 Field Store Road, and Cure Elementary. The page does not print a street address or phone for Cure Elementary. Confirm the lot with the district.",
+    sources: [
+      { label: "Centex, Stokesbury", url: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361" },
+      {
+        label: "Centex, The Courtyards at Stokesbury",
+        url: "https://www.centex.com/homes/texas/houston/waller/the-courtyards-at-stokesbury-211630/davilla-699894",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Stokesbury?",
+        answer:
+          "Centex lists the sales address as 23134 Deanston Drive, Waller, TX 77484. The Courtyards at Stokesbury is a separate Centex page at 23126 Deanston Drive.",
+      },
+      {
+        question: "What do homes in Stokesbury cost?",
+        answer:
+          "The community page starts at $220,990. Villages, Arbors, and Villas are the three series, from $220,990, $245,990, and $279,990.",
+      },
+      {
+        question: "What schools does Centex name?",
+        answer:
+          "Waller High School, Schultz Junior High School, and Cure Elementary. The page prints addresses for the high school and junior high, and the name only for Cure Elementary.",
       },
     ],
   },
@@ -1992,6 +2503,15 @@ const communities: NewHomeCommunity[] = [
       "Long Lake says Grand Mason Crossing is in Katy ISD. The page lists McRoberts Elementary at 3535 Fry Rd, Katy, TX 77449, McDonald Junior High at 3635 Lakes of Bridgewater Dr, Katy, TX 77449, and Paetow High School at 23111 Stockdick School Rd, Katy, TX 77493. Confirm the lot with the district.",
     sources: [
       { label: "Grand Mason Crossing", url: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/" },
+      {
+        label: "Houston Planning staff report, Mason Road",
+        url: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+      },
+      { label: "TDLR TABS2026000447", url: "https://www.tdlr.texas.gov/TABS/Projects/TABS2026000447" },
+      {
+        label: "Briarwood Crossing model series",
+        url: "https://www.longlakeltd.com/new-homes/communities/briarwood/",
+      },
       { label: "Long Lake promotions", url: "https://www.longlakeltd.com/promotions/" },
       {
         label: "Long Lake inventory savings flyer",
@@ -2028,6 +2548,41 @@ const communities: NewHomeCommunity[] = [
           "The page describes a future amenity area with a pickleball court, shaded playground, pavilion, synthetic turf, and landscaped gathering areas. It does not say that area is open.",
       },
     ],
+    directory: {
+      intro:
+        "Long Lake does not name internal villages or neighborhoods on the Grand Mason Crossing page. Briarwood, Discovery, Lake Ridge, and Lakewood are the model series on that page. The same four series are also printed on Briarwood Crossing in Rosenberg. Mason Woods is a separate community on Mason Woods Road in Cypress.",
+      limitation:
+        "Checked November 8, 2026: the Long Lake community page, the Long Lake neighborhoods index, the Long Lake communities list, a City of Houston Planning staff report, and a Texas Department of Licensing and Regulation project record. None of those sources gives Grand Mason Crossing a set of named villages. The records below use section numbers. This page does not treat those numbers as neighborhood names, and it does not claim later sections will not be platted. The Houston staff report's table is plats within a quarter mile of a Mason Road study. Elyson, Westfield Village, and the 1,138-acre Grand Mason GP in that table are nearby plans. Grand Mason GP is a separate general plan from Grand Mason Crossing GP.",
+      places: [
+        {
+          name: "Grand Mason Crossing GP",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "General plan. 0 lots on the staff-report table.",
+          detail: "The Houston Planning staff report lists Grand Mason Crossing GP, cycle 2023-21, as a general plan of 217.52 acres.",
+          sourceLabel: "Houston Planning staff report, Mason Road",
+          sourceUrl: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+        },
+        {
+          name: "Grand Mason Crossing Sec 2",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "Recorded single-family section. 60 lots.",
+          detail: "The same staff report lists Grand Mason Crossing Sec 2, cycle 2024-10, as single-family residential with drainage and detention, 23.31 acres and 60 lots.",
+          sourceLabel: "Houston Planning staff report, Mason Road",
+          sourceUrl: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+        },
+        {
+          name: "Section 1 landscape improvements",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "Landscape and amenity permit. The record dates the work from January 1, 2026 to May 1, 2026.",
+          detail: "TDLR project TABS2026000447 is named Grand Mason Crossing Section 1 Landscape Improvements. The scope lists a sidewalk, site furniture, drainage, a pavilion, a pickleball court, synthetic lawn, a playground, amenity fountains, irrigation, and planting. The record address is W. Little York Rd / Mason Rd, Katy, TX 77449.",
+          sourceLabel: "TDLR TABS2026000447",
+          sourceUrl: "https://www.tdlr.texas.gov/TABS/Projects/TABS2026000447",
+        },
+      ],
+    },
   },
   {
     slug: "elyson",
