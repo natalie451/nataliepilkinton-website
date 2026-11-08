@@ -269,6 +269,16 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/amira/hero.webp","alt":"Resort pool and clubhouse at Amira","width":1234,"height":685},
     ],
   },
+  "colton": {
+    creditName: "COLTON",
+    creditUrl: "https://coltontx.com/",
+    photos: [
+      {"src":"/new-homes/colton/hero.webp","alt":"White building with a Todd Mission sign, published on the COLTON site","width":1600,"height":1068},
+      {"src":"/new-homes/colton/construction.webp","alt":"Building under construction at sunset, published on the COLTON site","width":1600,"height":1068},
+      {"src":"/new-homes/colton/music.webp","alt":"Musician performing at a COLTON community event","width":1600,"height":2000},
+      {"src":"/new-homes/colton/event.webp","alt":"Performer with a lasso at a COLTON community event","width":1600,"height":1068},
+    ],
+  },
   "elyson": {
     creditName: "Elyson",
     creditUrl: "https://www.elyson.com/",

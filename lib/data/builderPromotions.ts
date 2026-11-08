@@ -5,6 +5,7 @@
  * Last checked: November 4, 2026.
  * Offers already in this file were read on November 3, 2026 and were not re-opened on November 4.
  * Cross Creek West incentives were read on November 4, 2026.
+ * COLTON incentives were read on November 7, 2026.
  */
 
 export type BuilderPromo = {
@@ -18,6 +19,15 @@ export type BuilderPromo = {
 };
 
 export const promoLastChecked = "November 4, 2026";
+
+/** Communities checked on a later date than promoLastChecked. */
+const promoLastCheckedByCommunity: Record<string, string> = {
+  colton: "November 7, 2026",
+};
+
+export function lastCheckedLabel(slug: string) {
+  return promoLastCheckedByCommunity[slug] ?? promoLastChecked;
+}
 
 export const promoDisclaimer =
   "Promotions change often and are set by the builder; ask Natalie for the latest.";
@@ -338,6 +348,112 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       text: "The feature list includes builder-paid closing costs, no down payment required, and zero down options. The page does not print a dollar amount.",
       sourceLabel: "LGI Homes, Canterra Creek",
       sourceUrl: "https://www.lgihomes.com/texas/houston/canterra-creek",
+    },
+  ],
+  colton: [
+    {
+      builder: "Beazer Homes",
+      text: "National Sales Event on the Beazer COLTON page. Rates as low as 2.99% (5.959% APR) through November 30, when financing through Jet HomeLoans. The page does not print the year on that date.",
+      sourceLabel: "Beazer Homes at COLTON",
+      sourceUrl: "https://www.beazer.com/houston-TX/todd-mission/colton",
+    },
+    {
+      builder: "Beazer Homes",
+      text: "The flyer linked from the COLTON incentives page shows an FHA 2/1 buydown example on a $400,000 purchase price: 2.99% in year 1, 3.99% in year 2, and 4.99% in years 3 to 30, each at 5.959% APR. It says the offer is for select homesites on loans closed on or before December 31, 2026, and that the incentive requires financing with Jet HomeLoans.",
+      expires: "Close by December 31, 2026",
+      sourceLabel: "COLTON Beazer sales event flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/National-Sales-Event-with-Interest-Rate-offer.pdf",
+    },
+    {
+      builder: "Coventry Homes",
+      text: "Hometown Heroes. $2,000 in options for currently serving or retired U.S. military, and for currently active firefighters, nurses, teachers, doctors, EMTs, and police officers, on a new Coventry home in the Houston area. Original contract dates run from January 1, 2026 through December 31, 2026. The flyer says this cannot be combined with the Homeowner Loyalty promotion.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON Coventry Hometown Heroes flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/03/112023-COV_Hometown-Heroes-Flyer_PRINT.pdf",
+    },
+    {
+      builder: "Coventry Homes",
+      text: "2026 Homeowner Loyalty Program. $2,500 in free upgrades for a buyer who already owns a Coventry home that was purchased new, not as a resale. The flyer applies to earnest money contracts dated February 2, 2026 through December 31, 2026.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON Coventry Homeowner Loyalty flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/09/COV_Homeowner-Loyalty-Flyer-2026.pdf",
+    },
+    {
+      builder: "David Weekley Homes",
+      text: "New Employee Pricing. From October 19 through December 31, 2026, 7% of the base price in flex dollars, up to $40,000, on a select David Weekley home in the Houston area. The flyer says flex dollars can go toward a home discount, Design Studio selections, flex options, or financing incentives with Grace Home Lending.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON David Weekley employee pricing flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/10/HOU-26-005526-Employee-Pricing-promo-Holiday-Edition_Flyer.pdf",
+    },
+    {
+      builder: "Drees Homes",
+      text: "2-1 buydown on a quick move-in home financed with First Equity Mortgage. The flyer prints year 1 at 4.625% (6.713% APR), year 2 at 5.625% (6.713% APR), and years 3 to 30 at 6.625% (6.713% APR). Purchase agreements accepted October 1 through November 22, 2026, and close by December 22, 2026. The example uses a $700,000 sales price.",
+      expires: "Sign by November 22, 2026. Close by December 22, 2026.",
+      sourceLabel: "COLTON Drees November flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/NOV-Drees-Ad.pdf",
+    },
+    {
+      builder: "Highland Homes",
+      text: "On Colton 50-foot homes, up to $25,000 toward home features and up to $15,000 toward design studio options. Contract on or after October 19, 2026 and on or before December 31, 2026, and close within 12 months. Up to $10,000 more toward title, closing costs, discount points, or prepaids when the loan is from Highland HomeLoans. The COLTON incentives page titles this offer as up to $50,000 to personalize your new home, plus more savings.",
+      expires: "Contract by December 31, 2026. Close within 12 months.",
+      sourceLabel: "COLTON Highland 50-foot flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/10/HOU-2026-0830-Houston-Seasons-of-Traditions-Campaign_FLYER_50K_APPROVED.pdf",
+    },
+    {
+      builder: "Highland Homes",
+      text: "On Colton 60-foot homes, up to $25,000 toward design studio options and up to $25,000 toward home features. Same contract window, October 19, 2026 through December 31, 2026, and close within 12 months. Up to $25,000 more toward title, closing costs, discount points, or prepaids when the loan is from Highland HomeLoans. The COLTON incentives page titles this offer as up to $75,000 to personalize your new home, plus more savings.",
+      expires: "Contract by December 31, 2026. Close within 12 months.",
+      sourceLabel: "COLTON Highland 60-foot flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/10/HOU-2026-0830-Houston-Seasons-of-Traditions-Campaign_FLYER_75K_APPROVED-USE.pdf",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "Through December 31, 2026, $20,000 when you finance and close with a J. Patrick Homes preferred lender. The flyer says the money can buy down the interest rate, go toward closing costs, or pay for an interest rate lock.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON J. Patrick financing flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/20K-Financing-Incentives_11.1.2026.pdf",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "$70,000 in Design Center options when you purchase a new home to build from the ground up on 70-foot lots. The flyer says the offer expires December 31, 2026 and cannot be combined with any other offer.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON J. Patrick design center flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/JPH-70_Promotion-Flyer.11.1.2026.pdf",
+    },
+    {
+      builder: "Partners in Building",
+      text: "$30,000 design center incentive on to-be-built custom homes, and discounted pricing on select homes, from November 1 through December 31, 2026 in Greater Houston. The flyer lists 41655 Wendele Way in Colton at $999,950, reduced from $1,049,950.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON Partners in Building sales event flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/PiB_Houston_Sales_Event_Legal.pdf",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event. Up to $55,000 in flex cash and a 4.99% interest rate (5.898% APR) on a 7-year ARM. The flyer says the home must close by December 31, 2026.",
+      expires: "December 31, 2026",
+      sourceLabel: "COLTON Perry Year End flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/10/PH_YearEndSalesEvent_2026_Flyer_505600_HOU-10.14-scaled.jpg",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Holiday Home Tour. Visit a Perry model home in any Houston community, tour an available inventory home, and be entered to win a $3,000 holiday shopping spree. The COLTON event runs from Sunday, November 1 through Sunday, December 6. Model hours on the event page are Monday through Saturday, 10am to 6pm, and Sunday, 12pm to 6pm.",
+      expires: "December 6, 2026",
+      sourceLabel: "COLTON Perry Holiday Home Tour",
+      sourceUrl: "https://coltontx.com/event/perry-homes-holiday-home-tour/",
+    },
+    {
+      builder: "Village Builders",
+      text: "Black Friday deal on the flyer linked from the COLTON incentives page. Sign a purchase agreement between November 4, 2026 and November 8, 2026 and close by November 30, 2026. The flyer lists a price reduction of up to $40,000, up to $6,000 off the homesite premium, half off the earnest money deposit, and a move-in ready appliance package with an approximate retail value not to exceed $3,400. It also prints up to $6,000 in closing costs on the earnest-money footnote. A sample payment uses a $179,990 price and a 3.99% (7.240% APR) FHA 5/1 ARM. That sample price is not a COLTON home price.",
+      expires: "Sign by November 8, 2026. Close by November 30, 2026.",
+      sourceLabel: "COLTON Village Builders Black Friday flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/HOU-Customer-BF-Flyer-.pdf",
+    },
+    {
+      builder: "Westin Homes",
+      text: "Up to $75,000 in incentives on select move-in-ready inventory homes in COLTON. The flyer says the purchase agreement must be accepted by Westin Homes and the home must close by November 30, 2026.",
+      expires: "November 30, 2026",
+      sourceLabel: "COLTON Westin Give Thanks flyer",
+      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/Give-Thanks-COLT.jpg",
     },
   ],
   "cross-creek-west": [

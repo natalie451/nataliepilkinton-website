@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/data/navigation";
 import type { NewHomeCommunity } from "@/lib/data/newHomes";
 import {
+  lastCheckedLabel,
   promoDisclaimer,
-  promoLastChecked,
   promosForBuilder,
   promosForCommunity,
   unmatchedPromos,
@@ -40,7 +40,7 @@ export function BuildersInCommunity({ community }: { community: NewHomeCommunity
     <section className="bg-white py-3xl">
       <Container>
         <h2 className="mt-0">Builders in {community.name}</h2>
-        <p className="text-sm font-semibold text-navy">Last checked: {promoLastChecked}</p>
+        <p className="text-sm font-semibold text-navy">Last checked: {lastCheckedLabel(community.slug)}</p>
         <div className="grid grid-cols-2 gap-md max-md:grid-cols-1">
           {community.builders.map((builder) => {
             const promos = promosForBuilder(community.slug, builder.name);
