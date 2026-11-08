@@ -269,6 +269,38 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/amira/hero.webp","alt":"Resort pool and clubhouse at Amira","width":1234,"height":685},
     ],
   },
+  "evergreen": {
+    creditName: "Evergreen",
+    creditUrl: "https://evergreen-texas.com/amenities/",
+    photos: [
+      {"src":"/new-homes/evergreen/pool.webp","alt":"Pool and lounge chairs at The Arbor in Evergreen, with a wood pavilion behind the water","width":1328,"height":884},
+      {"src":"/new-homes/evergreen/splash.webp","alt":"Splash pad at The Arbor in Evergreen","width":1328,"height":884},
+      {"src":"/new-homes/evergreen/park.webp","alt":"Children on a climbing structure, published with Curiosity Park on the Evergreen site","width":1142,"height":958},
+    ],
+  },
+  "everly": {
+    creditName: "Everly",
+    creditUrl: "https://www.everlytx.com/",
+    photos: [
+      {"src":"/new-homes/everly/hero.webp","alt":"White brick two-story home at 18831 Peony Manor Lane, published on the Everly site","width":1600,"height":900},
+    ],
+  },
+  "stewarts-ranch": {
+    creditName: "Meritage Homes",
+    creditUrl: "https://www.meritagehomes.com/state/tx/houston/stewarts-ranch",
+    photos: [
+      {"src":"/new-homes/stewarts-ranch/hero.webp","alt":"Single-story stone home published on the Meritage Homes Stewart's Ranch page","width":1600,"height":1200},
+    ],
+  },
+  "two-step-farm": {
+    creditName: "Two Step Farm",
+    creditUrl: "https://twostepfarm.com/",
+    photos: [
+      {"src":"/new-homes/two-step-farm/hall.webp","alt":"Wood building with a Two Step Hall sign, published on the Two Step Farm site","width":1600,"height":900},
+      {"src":"/new-homes/two-step-farm/farm-shop.webp","alt":"Farm Shop building published on the Two Step Farm site","width":1600,"height":900},
+      {"src":"/new-homes/two-step-farm/pavilion.webp","alt":"Open pavilion with string lights, published on the Two Step Farm site","width":1600,"height":900},
+    ],
+  },
   "colton": {
     creditName: "COLTON",
     creditUrl: "https://coltontx.com/",

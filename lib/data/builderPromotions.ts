@@ -6,6 +6,7 @@
  * Offers already in this file were read on November 3, 2026 and were not re-opened on November 4.
  * Cross Creek West incentives were read on November 4, 2026.
  * COLTON incentives were read on November 7, 2026.
+ * Everly, Evergreen, Two Step Farm, and Stewart's Ranch incentives were read on November 8, 2026.
  */
 
 export type BuilderPromo = {
@@ -23,6 +24,10 @@ export const promoLastChecked = "November 4, 2026";
 /** Communities checked on a later date than promoLastChecked. */
 const promoLastCheckedByCommunity: Record<string, string> = {
   colton: "November 7, 2026",
+  everly: "November 8, 2026",
+  evergreen: "November 8, 2026",
+  "two-step-farm": "November 8, 2026",
+  "stewarts-ranch": "November 8, 2026",
 };
 
 export function lastCheckedLabel(slug: string) {
@@ -468,6 +473,67 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       text: "Season of Traditions Sales Event, printed on the page as Highland Homes 60. Up to 75K to personalize your new home. The page prints an asterisk and does not explain it or print an end date.",
       sourceLabel: "Cross Creek West builder incentives",
       sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
+    },
+  ],
+  everly: [
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event 2026, linked from the Perry Everly page. Purchase a select Perry Homes inventory residence in Houston. The offer is up to $55,000 toward a 7-year / 6-month ARM with an initial rate of 4.99% (5.898% APR) and flex cash. Flex cash and closing costs together are capped at 6% of the contract sales price. The home must close by 12/31/2026. The promotional rate requires financing through Crestmark Mortgage or Parkstone Mortgage. Perry Homes says it is not a lender, and a buyer is not required to use those lenders to purchase the home. The example uses a $500,000 price, 10% down, and a 780 FICO score. The page says that example rate is effective as of 10/7/2026.",
+      expires: "12/31/2026",
+      sourceLabel: "Perry Homes Year End Sales Event 2026",
+      sourceUrl: "https://www.perryhomes.com/promotion/year-end-sales-event-2026/houston",
+    },
+    {
+      builder: "Drees Homes",
+      text: "Drees publishes a page titled Special USDA Financing at Everly. It says a qualified buyer may be able to use a USDA loan with no down payment on a new home in Everly, and that the buyer should ask a First Equity Mortgage loan officer. The page does not print a rate, a dollar credit, or an end date. It says the advertised program is for borrowers who meet USDA requirements, and that First Equity Mortgage is not the USDA.",
+      sourceLabel: "Drees Homes, Everly USDA financing",
+      sourceUrl: "https://www.dreeshomes.com/new-homes-houston/promotions/everly-usda/",
+    },
+  ],
+  evergreen: [
+    {
+      builder: "Chesmar Homes",
+      text: "The Chesmar incentives page, linked from the Evergreen pages, offers 4.999% (5.737% APR) FHA 30-year fixed-rate financing on select homes that close by 12/31/26. Available 10/19/26 through 11/15/26 with financing provided by HomeAmerican Mortgage. The page says Chesmar and HomeAmerican are affiliated, and that a buyer is not required to use HomeAmerican.",
+      expires: "Offer window 10/19/26 through 11/15/26. Close by 12/31/26.",
+      sourceLabel: "Chesmar Homes incentives",
+      sourceUrl: "https://www.chesmar.com/incentives/",
+    },
+    {
+      builder: "Highland Homes",
+      text: "The Highland Homes Evergreen page shows a banner that says Up to $50K in Savings. The page does not print an end date, an APR, or which homes qualify.",
+      sourceLabel: "Highland Homes, Evergreen",
+      sourceUrl: "https://www.highlandhomes.com/houston/conroe/evergreen",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event 2026, linked from the Perry Evergreen page. Purchase a select Perry Homes inventory residence in Houston. The offer is up to $55,000 toward a 7-year / 6-month ARM with an initial rate of 4.99% (5.898% APR) and flex cash. Flex cash and closing costs together are capped at 6% of the contract sales price. The home must close by 12/31/2026. The promotional rate requires financing through Crestmark Mortgage or Parkstone Mortgage. Perry Homes says it is not a lender, and a buyer is not required to use those lenders to purchase the home. The example uses a $500,000 price, 10% down, and a 780 FICO score. The page says that example rate is effective as of 10/7/2026.",
+      expires: "12/31/2026",
+      sourceLabel: "Perry Homes Year End Sales Event 2026",
+      sourceUrl: "https://www.perryhomes.com/promotion/year-end-sales-event-2026/houston",
+    },
+    {
+      builder: "Trilogy Evergreen",
+      text: "The Trilogy Evergreen page prints a Founders Circle credit on the collections: $20,000 on the Freedom 35-foot plans, priced from $334,950; $25,000 on the 40-foot plans, priced from $374,950; and $35,000 on the 50-foot plans, priced from $434,950. The page does not print an end date.",
+      sourceLabel: "Shea Homes, Trilogy Evergreen",
+      sourceUrl: "https://www.sheahomes.com/new-homes/texas/houston-area/conroe/trilogy-evergreen",
+    },
+  ],
+  "two-step-farm": [
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event 2026, linked from the Perry Two Step Farm page. Purchase a select Perry Homes inventory residence in Houston. The offer is up to $55,000 toward a 7-year / 6-month ARM with an initial rate of 4.99% (5.898% APR) and flex cash. Flex cash and closing costs together are capped at 6% of the contract sales price. The home must close by 12/31/2026. The promotional rate requires financing through Crestmark Mortgage or Parkstone Mortgage. Perry Homes says it is not a lender, and a buyer is not required to use those lenders to purchase the home. The example uses a $500,000 price, 10% down, and a 780 FICO score. The page says that example rate is effective as of 10/7/2026.",
+      expires: "12/31/2026",
+      sourceLabel: "Perry Homes Year End Sales Event 2026",
+      sourceUrl: "https://www.perryhomes.com/promotion/year-end-sales-event-2026/houston",
+    },
+  ],
+  "stewarts-ranch": [
+    {
+      builder: "Meritage Homes",
+      text: "National Sales Event on the Stewart's Ranch page: through November 15, an introductory rate as low as 3.5% (6.266% APR) with a 2/1 buydown, plus up to $10,000 in closing costs, on select Houston-area homes. The Houston disclaimer says the contract must be accepted between November 2, 2026 and November 15, 2026, on a select quick move-in home, and must close on or before 60 days from the contract. If the buyer uses MTH Mortgage and Carefree Title, the rate example is 3.5% in year 1, 4.5% in year 2, and 5.5% after that (6.266% APR), on a 30-year conforming conventional, VA, or FHA owner-occupied loan. The example uses a $400,000 price, an FHA loan, 3.5% down, and a 640+ FICO score. Credits cannot exceed 3% of the base price plus any lot premium. A buyer may use another lender or pay cash, and this promotion does not apply in that case.",
+      expires: "Contract November 2, 2026 to November 15, 2026. Close within 60 days of the contract.",
+      sourceLabel: "Meritage Homes Houston sales-event disclaimer",
+      sourceUrl: "https://www.meritagehomes.com/company/legal/national-sales-event-disclaimers",
     },
   ],
 };
