@@ -160,7 +160,7 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       },
       {
         src: "/new-homes/bridgeland/area-art.webp",
-        alt: "An outdoor installation of orange vertical rods, photographed in the Bridgeland area.",
+        alt: "A park in the Bridgeland area, with an installation of orange vertical rods. The photo does not name the park.",
         width: 1600,
         height: 900,
         creditName: "Natalie Pilkinton",
