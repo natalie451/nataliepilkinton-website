@@ -73,14 +73,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Conroe",
     headline: "SH 242, I-45, and the north side of The Woodlands",
     summary:
-      "Conroe's largest new-home searches cluster along SH 242 and I-45. This page covers ARTAVIA, Grand Central Park, and Harper's Preserve, plus a link to The Woodlands Hills, which sits in both Conroe and Willis.",
+      "Conroe's largest new-home searches cluster along SH 242 and I-45. This page covers ARTAVIA, Evergreen, Grand Central Park, Harper's Preserve, and Stewart's Ranch, plus a link to The Woodlands Hills, which sits in both Conroe and Willis.",
   },
   {
     slug: "montgomery",
     name: "Montgomery",
-    headline: "Lake Conroe and FM 2854",
+    headline: "Lake Conroe, FM 2854, and FM 1488",
     summary:
-      "Montgomery's master-planned new homes sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854.",
+      "Woodforest and Fairwater sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854. Two Step Farm is the Oxland Group community north of FM 1488, between I-45 and Highway 249.",
   },
   {
     slug: "willis",
@@ -108,7 +108,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Waller",
     headline: "Waller ISD and Waller County, including Hockley and Brookshire",
     summary:
-      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Sunterra, and Sunterra Lakes are those communities.",
+      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose and Everly use Hockley addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
   },
   {
     slug: "porter",
@@ -466,6 +466,146 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "evergreen",
+    citySlug: "conroe",
+    name: "Evergreen",
+    developer: "Shea Homes",
+    address: "Northwest corner of FM 242 and FM 1314, Conroe, TX",
+    location:
+      "The Evergreen homepage says the community is a 740-acre Shea Homes community at the northwest corner of FM 242 and FM 1314 in Conroe. From I-45, the connect page says to take FM 242 east and proceed 5 miles. Evergreen is on the left. Shea lists The Arbor amenity village at 16305 Gulf Coast Road, Conroe, TX 77302, and a Trilogy model gallery at 16135 Reunion Rd., Conroe, TX 77302.",
+    summary:
+      "Evergreen is Shea Homes' 740-acre master-planned community in Conroe, at FM 242 and FM 1314. The community map says about 2,000 homes at completion, on homesites from 40 feet to 70 feet, with Shea Homes, Perry Homes, Highland Homes, and Chesmar Homes. Trilogy Evergreen is the 55+ section Shea calls Converde on the builders page.",
+    priceNote:
+      "Trilogy Evergreen is priced from $334,950. Shea Homes lists the 40-foot collection from $334,990, the 45-foot from $361,990, the 50-foot from $386,990, the 55-foot from $439,990, the 60-foot from $505,990, and the 70-foot from $605,990. Highland Homes lists the Portofino plan starting at $346,990. Chesmar lists the 40-foot collection from $350,000 and the 60-foot collection from $490,000. Perry Homes lists the 50-foot section from the $440s and the 70-foot section from the $670s. Prices change.",
+    homes:
+      "740 acres and about 2,000 homes at completion. First-phase homesites are 40, 45, 50, 55, 60, and 70 feet. The community map says more than 100 acres are devoted to parks, green space, and amenities. The builders page says model homes are open daily.",
+    builders: [
+      {
+        name: "Chesmar Homes",
+        detail:
+          "40-foot collection from $350,000, about 1,683 to 2,630 square feet. 60-foot collection from $490,000, about 2,637 to 3,636 square feet. The 60-foot page says final opportunities. Model address 16339 Sheridan River Trail, Conroe, TX 77302. Chesmar says Conroe ISD.",
+      },
+      {
+        name: "Highland Homes",
+        detail:
+          "Model at 12990 Soaring Forest Dr, Conroe, TX 77302. The Portofino plan is listed starting at $346,990. The Evergreen page shows a banner that says Up to $50K in Savings and does not print the terms.",
+      },
+      {
+        name: "Perry Homes",
+        detail:
+          "50-foot section from the $440s, about 2,100 to 3,100 square feet. 70-foot section from the $670s, about 2,800 to 5,300 square feet.",
+      },
+      {
+        name: "Shea Homes",
+        detail:
+          "40-foot from $334,990, about 1,529 to 2,588 square feet. 45-foot from $361,990, about 1,741 to 2,978 square feet. 50-foot from $386,990, about 1,802 to 3,023 square feet. 55-foot from $439,990, about 2,110 to 3,576 square feet. 60-foot from $505,990, about 2,671 to 4,136 square feet. 70-foot from $605,990, about 3,086 to 4,838 square feet. The Evergreen incentives page said no current incentives were available. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Trilogy Evergreen",
+        detail:
+          "Shea's 55+ section, also called Converde on the Evergreen builders page. Priced from $334,950, about 1,514 to 2,524 square feet, single story. Model gallery at 16135 Reunion Rd., Conroe, TX 77302. The collection pages print Founders Circle credits of $20,000, $25,000, and $35,000.",
+      },
+    ],
+    amenities: [
+      "The Arbor amenity village at 16305 Gulf Coast Road, with a clubhouse, playground, pickleball courts, and event space",
+      "Resort-style pool and splash pad",
+      "Curiosity Park",
+      "The Sandlot whiffleball field",
+      "Bark Avenue Dog Park, named on the amenities page",
+      "Trails, and more than 100 acres of parks, green space, and amenities",
+    ],
+    schoolDistrict: "Conroe ISD",
+    schools:
+      "The Evergreen education page says Mittie J. Campbell Elementary is now open on site. It also lists Grangerland Intermediate, Moorhead Junior High, and Caney Creek High. The page says enrollment and boundaries are subject to change.",
+    sources: [
+      { label: "Evergreen homepage", url: "https://evergreen-texas.com/" },
+      { label: "Evergreen builders", url: "https://evergreen-texas.com/our-builders/" },
+      { label: "Evergreen community map", url: "https://evergreen-texas.com/community-map/" },
+      { label: "Evergreen amenities", url: "https://evergreen-texas.com/amenities/" },
+      { label: "Evergreen schools", url: "https://evergreen-texas.com/education/" },
+      { label: "Evergreen directions", url: "https://evergreen-texas.com/connect/" },
+      { label: "Evergreen builder incentives", url: "https://evergreen-texas.com/builder-incentives/" },
+      { label: "Shea Homes at Evergreen", url: "https://www.sheahomes.com/new-homes/texas/houston-area/conroe/evergreen" },
+      { label: "Trilogy Evergreen", url: "https://www.sheahomes.com/new-homes/texas/houston-area/conroe/trilogy-evergreen" },
+      { label: "Perry Homes at Evergreen", url: "https://www.perryhomes.com/new-homes/texas/houston/evergreen" },
+      { label: "Highland Homes at Evergreen", url: "https://www.highlandhomes.com/houston/conroe/evergreen" },
+      { label: "Chesmar Homes Evergreen 40s", url: "https://www.chesmar.com/texas/houston-new-homes/conroe/evergreen-40s/" },
+      { label: "Chesmar Homes Evergreen 60s", url: "https://www.chesmar.com/texas/houston-new-homes/conroe/evergreen-60s/" },
+      { label: "Chesmar Homes incentives", url: "https://www.chesmar.com/incentives/" },
+    ],
+    faqs: [
+      {
+        question: "Where is Evergreen?",
+        answer:
+          "Evergreen publishes its location as the northwest corner of FM 242 and FM 1314 in Conroe. From I-45, take FM 242 east about 5 miles. The community is on the left.",
+      },
+      {
+        question: "What do new homes in Evergreen cost?",
+        answer:
+          "Shea Homes lists collections from $334,990, and Trilogy Evergreen from $334,950. Highland, Chesmar, and Perry publish their own starting prices on their Evergreen pages. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Evergreen name?",
+        answer:
+          "Conroe ISD. The education page says Mittie J. Campbell Elementary is open on site, and it lists Grangerland Intermediate, Moorhead Junior High, and Caney Creek High. Boundaries can change.",
+      },
+    ],
+  },
+  {
+    slug: "stewarts-ranch",
+    citySlug: "conroe",
+    name: "Stewart's Ranch",
+    developer: "Meritage Homes",
+    address: "1514 Hughes Ranch Ct, Conroe, TX 77301",
+    location:
+      "Meritage Homes says Stewart's Ranch is off SH 336 in Conroe, with access to I-45. The sales office is 1514 Hughes Ranch Ct, Conroe, TX 77301. Sunday hours are 12:00 PM to 6:00 PM. Monday through Saturday hours are 10:00 AM to 6:00 PM.",
+    summary:
+      "Stewart's Ranch is a Meritage Homes community in Conroe. The builder page says homes are priced from $319,540, and from the low $300s. It describes a future playground and pavilion, and it points buyers to the nearby 201-acre Carl Barton Jr. park.",
+    priceNote:
+      "Meritage Homes says new homes in Conroe at Stewart's Ranch are priced from $319,540, and from the low $300s. Prices change.",
+    homes:
+      "Meritage lists floor plans from The Greenville at 1,654 square feet, with 3 bedrooms and 2 bathrooms, through larger plans including The Cedar at 3,176 square feet. The page does not name a separate developer.",
+    builders: [
+      {
+        name: "Meritage Homes",
+        detail:
+          "Priced from $319,540. Plans on the page include The Greenville at 1,654 square feet and The Cedar at 3,176 square feet. Sales office at 1514 Hughes Ranch Ct, Conroe, TX 77301.",
+      },
+    ],
+    amenities: [
+      "Future playground and pavilion, as the Meritage page describes them",
+      "The page points to the nearby 201-acre Carl Barton Jr. park",
+      "The page map lists Bozman Intermediate School. It does not name a school district.",
+    ],
+    schoolDistrict: "",
+    schools:
+      "The Meritage page does not name a school district. Its map lists Bozman Intermediate School. Confirm the address with the district.",
+    sources: [
+      { label: "Stewart's Ranch, Meritage Homes", url: "https://www.meritagehomes.com/state/tx/houston/stewarts-ranch" },
+      {
+        label: "Meritage Homes Houston sales-event disclaimer",
+        url: "https://www.meritagehomes.com/company/legal/national-sales-event-disclaimers",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Stewart's Ranch?",
+        answer:
+          "The Meritage sales office is 1514 Hughes Ranch Ct, Conroe, TX 77301. The page says the community is off SH 336, with access to I-45.",
+      },
+      {
+        question: "What do homes at Stewart's Ranch cost?",
+        answer:
+          "Meritage says the community is priced from $319,540, and from the low $300s. That is the builder's advertised price. Confirm the homesite.",
+      },
+      {
+        question: "Does Meritage name the schools?",
+        answer:
+          "The Stewart's Ranch page does not name a school district. The map on that page lists Bozman Intermediate School. Confirm the lot with the district before you rely on a campus.",
+      },
+    ],
+  },
+  {
     slug: "woodforest",
     citySlug: "montgomery",
     name: "Woodforest",
@@ -562,6 +702,116 @@ const communities: NewHomeCommunity[] = [
         question: "Can I still buy new construction in Fairwater?",
         answer:
           "Maybe. The developer page is still up, and D.R. Horton and CastleRock have both sold homes here. Listing sites have marked some of those sections sold out. Natalie can check which models are actually open before you drive out.",
+      },
+    ],
+  },
+  {
+    slug: "two-step-farm",
+    citySlug: "montgomery",
+    name: "Two Step Farm",
+    developer: "Oxland Group",
+    address: "11725 Howdy Drive, Montgomery, TX 77316",
+    location:
+      "Two Step Farm publishes 11725 Howdy Drive, Montgomery, TX 77316. The homepage says it is just north of The Woodlands, off Fish Creek Thoroughfare and FM 1488. A July 20, 2026 Oxland release says it sits north of FM 1488, between I-45 and Highway 249. Several builder pages say the main entrance is not finished and give 3319 Wilderness Way, Montgomery, TX 77316, as a temporary GPS address.",
+    summary:
+      "Two Step Farm is an Oxland Group master-planned community in Montgomery. The homepage says more than 4,000 homes, with nine builders and prices from the $300s to over $1 million. A July 20, 2026 Oxland release calls the community 1,800 acres and says phase 2 homesites start going to builders in December 2026.",
+    priceNote:
+      "David Weekley Homes lists the Ashby plan from $287,990. The same page says pricing runs from the $300s to the high $400s. Autograph Homes lists the Brazos plan from $330,990. Other builder pages on the Two Step Farm site list Coventry from the mid $300s, DSLD from the mid $300s, Pulte from the $300s, Highland from the mid $400s, Perry from the $440s and the $570s, Drees from the $600s, and Partners in Building from the $900s. Prices change.",
+    homes:
+      "The homepage says more than 4,000 homes, with floor plans from around 1,400 to 6,000 square feet, and names Autograph Homes, Coventry Homes, David Weekley Homes, Drees Custom Homes, DSLD Homes, Highland Homes, Partners in Building, Perry Homes, and Pulte Homes. The July 20, 2026 release says phase 2 is 156 acres, with homes anticipated from the mid-$300,000s to more than $1 million, and adds McKinley Homes, Trilogy by Shea Homes, and William David Homes. It says homesites go to builders beginning in December 2026.",
+    builders: [
+      {
+        name: "Autograph Homes",
+        detail:
+          "Trio and Symphony collections, about 1,700 to 2,600 square feet, starting in the low $300s. The Brazos plan is listed from $330,990. Models at 8117, 8113, and 8109 Yall Street. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Coventry Homes",
+        detail:
+          "About 1,400 to 3,200 square feet, prices starting in the mid $300s. The Wildorado plan is listed from $354,990. Ask Natalie about current incentives.",
+      },
+      {
+        name: "David Weekley Homes",
+        detail:
+          "Floor plans about 1,374 to 3,370 square feet. The page says pricing from the $300s to the high $400s, and lists the Ashby plan from $287,990. Patio homes are described as coming in 2027. Models at 8133, 8129, and 8138 Yall Street. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Drees Custom Homes",
+        detail:
+          "The Two Step Farm page says homes start in the $600s. The Brenner plan is listed from $588,900. Detached townhomes are described as coming in 2027. Ask Natalie about current incentives.",
+      },
+      {
+        name: "DSLD Homes",
+        detail:
+          "About 1,500 to 3,600 square feet, prices starting in the mid $300s. The Ironstone II plan is listed from $348,990. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Highland Homes",
+        detail:
+          "Artisan and Classic collections, about 2,100 to 4,000 square feet, starting in the mid $400s. The Dorchester plan is listed from $449,000. Models at 8215 and 8219 Folks Street. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Partners in Building",
+        detail:
+          "Custom homes about 3,800 to over 6,000 square feet, pricing from the $900s. Ask Natalie about current incentives.",
+      },
+      {
+        name: "Perry Homes",
+        detail:
+          "On the Perry site, the 50-foot section is from the $440s, about 2,100 to 3,600 square feet, and the 60-foot section is from the $570s, about 2,700 to 4,100 square feet. Models at 8211 and 8207 Folks Street.",
+      },
+      {
+        name: "Pulte Homes",
+        detail:
+          "About 1,600 to 3,300 square feet, starting in the $300s. The Kerrville plan is listed from $341,990. Models at 8110, 8106, and 8102 Yall Street. Ask Natalie about current incentives.",
+      },
+    ],
+    amenities: [
+      "Two Step Hall, the dance hall named on the homepage",
+      "The Grazery",
+      "Beer garden",
+      "Goat barn",
+      "Farm Shop, shown in a photo on the community site",
+      "Green spaces and trails in preserved forest",
+    ],
+    schoolDistrict: "Montgomery ISD",
+    schools:
+      "The Two Step Farm homepage says the community has Montgomery ISD schools and does not name the campuses. A Perry Homes plan page for Two Step Farm lists Keenan Elementary, Oak Hills Junior High, and Lake Creek High School. Confirm the lot with Montgomery ISD.",
+    sources: [
+      { label: "Two Step Farm homepage", url: "https://twostepfarm.com/" },
+      { label: "Autograph Homes at Two Step Farm", url: "https://twostepfarm.com/autograph-homes" },
+      { label: "Coventry Homes at Two Step Farm", url: "https://twostepfarm.com/coventry-homes" },
+      { label: "David Weekley Homes at Two Step Farm", url: "https://twostepfarm.com/david-weekley-homes" },
+      { label: "Drees Custom Homes at Two Step Farm", url: "https://twostepfarm.com/drees-custom-homes" },
+      { label: "DSLD Homes at Two Step Farm", url: "https://twostepfarm.com/dsld-homes" },
+      { label: "Highland Homes at Two Step Farm", url: "https://twostepfarm.com/highland-homes" },
+      { label: "Partners in Building at Two Step Farm", url: "https://twostepfarm.com/partners-in-building" },
+      { label: "Pulte Homes at Two Step Farm", url: "https://twostepfarm.com/pulte-homes" },
+      { label: "Perry Homes at Two Step Farm", url: "https://www.perryhomes.com/new-homes/texas/houston/two-step-farm" },
+      {
+        label: "Perry Homes schools note",
+        url: "https://www.perryhomes.com/new-homes/texas/houston/two-step-farm/two-step-farm-60/2769w",
+      },
+      {
+        label: "Oxland phase 2 release, July 20, 2026",
+        url: "https://cms.twostepfarm.com/wp-content/uploads/2026/07/Oxland-Phase-2-Builders-Press-Release_072026.pdf",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Two Step Farm?",
+        answer:
+          "The published address is 11725 Howdy Drive, Montgomery, TX 77316, north of FM 1488 and just north of The Woodlands. Some builder pages say the main entrance is not finished and list 3319 Wilderness Way as a temporary GPS point.",
+      },
+      {
+        question: "What do new homes at Two Step Farm cost?",
+        answer:
+          "The homepage says prices run from the $300s to over $1 million. Builder pages list plan prices from David Weekley's Ashby at $287,990 through Partners in Building from the $900s. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Two Step Farm name?",
+        answer:
+          "The homepage says Montgomery ISD and does not list campuses. A Perry Homes plan page lists Keenan Elementary, Oak Hills Junior High, and Lake Creek High School. Confirm the lot with the district.",
       },
     ],
   },
@@ -974,6 +1224,83 @@ const communities: NewHomeCommunity[] = [
         question: "What school is inside Dellrose?",
         answer:
           "Bryan Lowe Elementary is the on-site Waller ISD K-5 school at 31502 Conifer Farm Drive. The community said it opened for the 2024-2025 year. The schools page also names Roberts Road Elementary, Waller Junior High, and Waller High School.",
+      },
+    ],
+  },
+  {
+    slug: "everly",
+    citySlug: "waller",
+    name: "Everly",
+    developer: "Johnson Land Ventures, a Johnson Development Corp. affiliate",
+    address: "21821 Everly Fields Blvd, Hockley, TX 77447",
+    location:
+      "Everly publishes 21821 Everly Fields Blvd, Hockley, TX 77447. The FAQ calls it a Hockley master-planned community and says the builders are near Cypress and Hockley. Johnson Development says it is in Hockley, right off the Grand Parkway. The FAQ lists Harris County tax entities, including Harris County MUD 535. It is on this Waller page because the community says students attend Waller ISD. The mailing city is Hockley.",
+    summary:
+      "Everly is a Johnson Land Ventures community of about 351 acres in Hockley, planned for 1,059 homes. The builders page says homesites run from 45 feet to 60 feet, with prices from the $400s, from Perry Homes, Drees Homes, and Westin Homes. The FAQ lists annual HOA dues of $1,100.",
+    priceNote:
+      "Perry Homes lists the 45-foot section from the $340s, the 50-foot section from the $420s, and the 60-foot section from the $570s. Westin Homes lists the 50-foot section from $489,892. The Everly builders page says prices from the $400s across the builders. The Drees Everly 45 page did not print a starting price. Prices change.",
+    homes:
+      "About 351 acres and 1,059 homes. Homesites from 45 feet to 60 feet. The FAQ says the current annual HOA assessment is $1,100, managed by Sterling Association Services. It also prints 2025 tax rates, including Harris County MUD 535 at $1.50 and Waller ISD at $1.06 per $100, and says to verify them at hctax.net.",
+    builders: [
+      {
+        name: "Drees Homes",
+        detail:
+          "Named on the Everly builders page, with model addresses at 18811 Peony Manor Lane and 18827 Peony Manor Lane, Hockley, TX 77447. The Drees Everly 45 page did not print a starting price. Drees does publish a USDA financing page for Everly.",
+      },
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot section from the $340s, about 1,600 to 2,700 square feet. 50-foot section from the $420s, about 2,200 to 3,400 square feet. 60-foot section from the $570s, about 2,700 to 4,100 square feet. Model addresses on Peony Manor Lane.",
+      },
+      {
+        name: "Westin Homes",
+        detail:
+          "50-foot section from $489,892, about 3,040 to 3,400 square feet. Model at 18823 Peony Manor Lane, Hockley, TX 77447. The Westin Everly page did not print a current incentive. Ask Natalie about current incentives.",
+      },
+    ],
+    amenities: [
+      "Resort-style pool",
+      "Amenity center",
+      "Fitness center",
+      "Pickleball courts",
+      "Playground",
+      "Walking trails",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Everly says students are zoned to Waller ISD. The FAQ lists Bryan Lowe Elementary (Pre-K to 5th), W.C. Schultz Junior High (6th to 8th), and Waller High School (9th to 12th). The education page lists Lowe at 31502 Conifer Farm Drive, Hockley, TX 77447, Schultz at 20950 Field Store Rd, Waller, TX 77484, and Waller High at 31213 Waller Spring Creek Rd, Waller, TX 77484. The FAQ says boundaries can change.",
+    sources: [
+      { label: "Everly FAQ", url: "https://www.everlytx.com/faq/" },
+      { label: "Everly builders", url: "https://www.everlytx.com/builders/" },
+      { label: "Everly community", url: "https://www.everlytx.com/community/" },
+      { label: "Everly schools", url: "https://www.everlytx.com/education/" },
+      { label: "Johnson Development, Everly", url: "https://www.johnsondevelopment.com/hockley-tx/mpc_everly" },
+      { label: "Perry Homes at Everly", url: "https://www.perryhomes.com/new-homes/texas/houston/everly" },
+      { label: "Westin Homes at Everly", url: "https://www.westin-homes.com/communities/houston/everly" },
+      { label: "Drees Homes Everly 45", url: "https://www.dreeshomes.com/new-homes-houston/hockley/comm-everly/everly-45/" },
+      { label: "Drees Homes, Everly USDA financing", url: "https://www.dreeshomes.com/new-homes-houston/promotions/everly-usda/" },
+      { label: "Perry Homes Year End Sales Event 2026", url: "https://www.perryhomes.com/promotion/year-end-sales-event-2026/houston" },
+    ],
+    faqs: [
+      {
+        question: "Is Everly in Cypress, Katy, or Hockley?",
+        answer:
+          "The published address is 21821 Everly Fields Blvd, Hockley, TX 77447. The community markets itself as near Cypress and Hockley, and Johnson Development says it is off the Grand Parkway. The FAQ lists Harris County tax entities and Waller ISD schools.",
+      },
+      {
+        question: "What do new homes in Everly cost?",
+        answer:
+          "The builders page says prices from the $400s. Perry Homes lists sections from the $340s, the $420s, and the $570s. Westin Homes lists its 50-foot section from $489,892. The Drees page did not print a starting price.",
+      },
+      {
+        question: "What schools does Everly name?",
+        answer:
+          "Waller ISD. The FAQ lists Bryan Lowe Elementary, W.C. Schultz Junior High, and Waller High School, and says to verify enrollment with the district.",
+      },
+      {
+        question: "What are the HOA dues?",
+        answer:
+          "The FAQ says the current annual HOA assessment is $1,100, managed by Sterling Association Services.",
       },
     ],
   },
@@ -2261,7 +2588,7 @@ export function communitiesForCity(citySlug: string) {
 }
 
 /** Content date for sitemap lastmod. Not a build clock. */
-export const newHomesContentDate = "2026-11-07";
+export const newHomesContentDate = "2026-11-08";
 
 export function newHomePaths() {
   return [
