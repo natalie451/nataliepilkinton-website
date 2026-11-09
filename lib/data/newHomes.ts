@@ -2118,50 +2118,59 @@ const communities: NewHomeCommunity[] = [
     alsoListedOn: ["new-caney"],
     name: "Valley Ranch",
     developer: "The Signorelli Company",
-    address: "US 59 and the Grand Parkway, Porter, TX",
+    address: "Azalea Boulevard at Valley Ranch Parkway, Porter, TX 77365",
     location:
-      "Valley Ranch is a Signorelli Company community at US 59/69 and the Grand Parkway. The developer markets it as Porter and says downtown Houston is about 25 minutes away. The Kingwood and Humble area and The Woodlands are the nearby job and shopping centers it names.",
+      "Valley Ranch is the Signorelli community in New Caney and Porter, in Montgomery County, at Interstate 69 (US 59) and the Grand Parkway. First America Homes directions turn onto Valley Ranch Parkway and then Azalea Boulevard. This is the Houston-area community. It is separate from Valley Ranch in Irving.",
     summary:
-      "Valley Ranch is a 1,400-acre master-planned community planned for 1,500 single-family homes and more than 1,000 multifamily residences. The about page lists New Caney ISD schools inside the community and a planned 240-acre town center.",
+      "Valley Ranch is a Signorelli master-planned community. The current live page says Azalea District is the single-family neighborhood, with 359 homesites, and First America Homes is the exclusive builder there. The Pointe at Valley Ranch Town Center and The Gregory are apartments, not the single-family section.",
     priceNote:
-      "The about page says new homes by First America Homes, Legend Homes, D.R. Horton, and CastleRock Communities are priced from the $200,000s to the $400,000s. A new-homes page on the same site says prices range from the $180s to the $400s. Use the builder's current price.",
+      "First America Homes lists the Heritage Collection from $302,990. Plans run about 1,556 to 2,416 square feet. The Signature Collection is from $366,990. Plans run about 1,799 to 3,226 square feet. The collection pages say the model home is coming soon. Prices change.",
     homes:
-      "1,400 acres, with 1,500 single-family homes and more than 1,000 multifamily homes in the plan. The new-homes page also names Signorelli Homes among the model builders.",
+      "Azalea District: 359 single-family homesites. Heritage has 6 floor plans, 3 to 6 bedrooms, 2 to 3 baths, 1 or 2 stories. Signature has 8 floor plans, 3 to 5 bedrooms, 2 to 3.5 baths, 1 or 2 stories. Sales phone on the First America pages: (713) 897-8986.",
     builders: [
-      { name: "First America Homes", detail: "Named on the Valley Ranch about page and the new-homes page" },
-      { name: "Legend Homes", detail: "Named on both Valley Ranch pages" },
-      { name: "D.R. Horton", detail: "Named on the about page" },
-      { name: "CastleRock Communities", detail: "Named on the about page" },
-      { name: "Signorelli Homes", detail: "Named on the new-homes page as a current model builder" },
+      {
+        name: "First America Homes",
+        detail:
+          "Exclusive builder named for Azalea District. Heritage Collection from $302,990, about 1,556 to 2,416 square feet. Signature Collection from $366,990, about 1,799 to 3,226 square feet. Porter, TX 77365. Model homes are listed as coming soon.",
+      },
     ],
     amenities: [
-      "Valley Ranch Recreation Center",
-      "150 acres of parks and green space",
-      "The Grove, a planned 135-acre nature preserve with seven lakes and forested trails",
-      "A planned 240-acre Valley Ranch Town Center, described as more than 1.5 million square feet of shopping, dining, and entertainment",
+      "Recreation center with a pool, playground, and pavilion, listed on the First America Valley Ranch page",
+      "Community clubhouse",
+      "Seven lakes with fountains, described as stocked with fish",
+      "Walking trails connecting neighborhoods to retail",
+      "Valley Ranch Town Center for shopping and dining",
     ],
     schoolDistrict: "New Caney ISD",
     schools:
-      "Both Valley Ranch pages say children can attend New Caney ISD, and the new-homes page says schools are located within the community. The pages reviewed here do not name the campuses. Confirm the address with New Caney ISD.",
+      "The First America Heritage page lists New Caney ISD schools: Valley Ranch Elementary, Pine Valley Middle School, and Porter High School. The Valley Ranch site says attendance zones can change. Confirm the lot with the district.",
     sources: [
-      { label: "About Valley Ranch", url: "https://www.valley-ranch.com/valley-ranch-residential" },
-      { label: "New homes in Porter", url: "https://www.valley-ranch.com/new-homes-porter" },
+      { label: "Valley Ranch, where to live", url: "https://www.valley-ranch.com/live/" },
+      { label: "Valley Ranch, First America Homes", url: "https://www.valley-ranch.com/single-family-page-first-america-homes/" },
+      {
+        label: "First America Homes, Heritage Collection",
+        url: "https://www.firstamericahomes.com/new-homes/tx/houston-metro/porter/valley-ranch-heritage-collection/",
+      },
+      {
+        label: "First America Homes, Signature Collection",
+        url: "https://www.firstamericahomes.com/new-homes/tx/houston-metro/porter/valley-ranch-signature-collection/",
+      },
     ],
     faqs: [
       {
         question: "Is Valley Ranch in Porter or New Caney?",
         answer:
-          "The Signorelli Company markets Valley Ranch as a Porter community at US 59 and the Grand Parkway, and says students attend New Caney ISD. New Caney is the neighboring city and the school district. Use the homesite address when you check taxes.",
+          "Both names are used. The Valley Ranch site says the community is in New Caney, Texas. First America Homes publishes the collections as Porter, TX 77365, at Interstate 69 and the Grand Parkway, in Montgomery County. Schools on the builder page are New Caney ISD.",
       },
       {
-        question: "Who is building in Valley Ranch?",
+        question: "Who is building in Valley Ranch now?",
         answer:
-          "The about page lists First America Homes, Legend Homes, D.R. Horton, and CastleRock Communities, from the $200,000s to the $400,000s. The new-homes page also lists Signorelli Homes and a range from the $180s to the $400s.",
+          "The current Valley Ranch live page says First America Homes is the exclusive homebuilder in Azalea District. Heritage starts at $302,990 and Signature starts at $366,990. The Pointe and The Gregory are apartments.",
       },
       {
-        question: "What is The Grove?",
+        question: "What schools does the builder name?",
         answer:
-          "The developer describes The Grove as a 135-acre nature preserve and park next to the planned town center, with seven lakes and forested trails. The town center itself is described as 240 acres and still planned.",
+          "New Caney ISD. The First America page lists Valley Ranch Elementary, Pine Valley Middle School, and Porter High School. Confirm the address with the district.",
       },
     ],
   },
@@ -3326,7 +3335,7 @@ export function communitiesForCity(citySlug: string) {
 }
 
 /** Content date for sitemap lastmod. Not a build clock. */
-export const newHomesContentDate = "2026-11-08";
+export const newHomesContentDate = "2026-11-09";
 
 export function newHomePaths() {
   return [
