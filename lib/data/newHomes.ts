@@ -109,7 +109,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Spring",
     headline: "Grand Parkway, Rayford, and Natalie's home base",
     summary:
-      "Spring is where Natalie is based. Harmony and Woodson's Reserve are the master-planned communities buyers ask about along the Grand Parkway, Rayford Road, and Riley Fuzzel Road.",
+      "Spring is where Natalie is based. Harmony and Woodson's Reserve are the master-planned communities buyers ask about along the Grand Parkway, Rayford Road, and Riley Fuzzel Road. Falls at Imperial Oaks is the Holcomb community on Birnham Woods Drive, in Conroe ISD. Its site says the initial build-out finished in the late 2010s.",
   },
   {
     slug: "cypress",
@@ -137,14 +137,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Splendora",
     headline: "Highway 242 and east Montgomery County",
     summary:
-      "Splendora ISD covers several new-home communities whose street addresses say New Caney or Cleveland. Harrington Trails, The Canopies, and Pinewood Trails are the ones with current builder pages.",
+      "Splendora ISD covers several new-home communities whose street addresses say New Caney or Cleveland. Harrington Trails and The Canopies are Forestar communities on this corridor. The Canopies lists five builders. Pinewood Trails is the LGI community.",
   },
   {
     slug: "new-caney",
     name: "New Caney",
     headline: "US 59 and the Grand Parkway",
     summary:
-      "Tavola is the Friendswood Development community with a New Caney address. Valley Ranch, The Highlands, and Harrington Trails are nearby and linked from their own city pages.",
+      "Tavola is the Friendswood Development community with a New Caney address. The Trails is the Castle Hill Partners community in New Caney, zoned to Huffman ISD. Valley Ranch, The Highlands, Harrington Trails, and The Canopies are nearby and linked from their own city pages.",
   },
   {
     slug: "tomball",
@@ -270,7 +270,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Huffman",
     headline: "Lennar community in Huffman",
     summary:
-      "Sila is a Lennar community in Huffman. Lennar lists homes from $132,990. The Lennar page does not name a school district.",
+      "Sila is a Lennar community in Huffman. Lennar lists homes from $132,990. The Lennar page does not name a school district. The Trails uses a New Caney address and is zoned to Huffman ISD. Its full page is filed under New Caney and linked here.",
   },
 ];
 
@@ -892,6 +892,64 @@ const communities: NewHomeCommunity[] = [
         question: "What is Founders Park?",
         answer:
           "The community describes Founders Park as a 17-acre amenity with an activity center, fitness center, events lawn, leisure and fitness pools, a lazy river, a playground, a dog park, and tennis courts.",
+      },
+    ],
+  },
+  {
+    slug: "falls-at-imperial-oaks",
+    citySlug: "spring",
+    name: "Falls at Imperial Oaks",
+    developer: "Holcomb Properties. The about page says the homeowners association now manages the community, with Goodwin and Company on site.",
+    address: "31220 Birnham Woods Drive, Spring, TX 77386",
+    location:
+      "Falls at Imperial Oaks publishes its office at 31220 Birnham Woods Drive, Spring, TX 77386, phone (832) 813-7170. David Weekley also calls it The Falls at Imperial Oaks and places it in Spring. The community site says it is minutes from The Woodlands, with access to the Grand Parkway and Interstate 45. Schools are Conroe ISD.",
+    summary:
+      "Falls at Imperial Oaks is a Holcomb Properties community of about 1,500 acres and about 2,080 homes in Spring. The about page says construction began in 2007 and the initial build-out finished in the late 2010s, when control moved to the homeowners association. David Weekley's overview page still prints section prices, but the section links redirect to the Houston index.",
+    priceNote:
+      "The community about page does not publish a current new-home starting price. It says the initial build-out finished in the late 2010s. David Weekley's overview still prints section prices, and the four section links on that page redirect to the Houston new-homes index. The figures are on the builder card. Confirm whether any new homes remain before you use them.",
+    homes:
+      "About 1,500 acres and about 2,080 homes, in gated and non-gated sections. The about page says these builders have constructed homes here: David Weekley Homes, Village Builders, Lennar, Cal-Atlantic, Ryland Homes, and Partners in Building. It does not list current model homes.",
+    builders: [
+      {
+        name: "David Weekley Homes",
+        detail:
+          "The overview page still prints Amber Forest homes from the $373s on 75-foot homesites, Angel Park homes from the $312s on 60-foot homesites, and Arbor Lake homes from the $277s and from the $355s, on 55-foot and 96-foot homesites. The links for Holly Creek, Edgewater, Sable Park, and The Enclave at Sundance Lake redirect to David Weekley's Houston index.",
+      },
+    ],
+    amenities: [
+      "The Lake Club, a 4,200-square-foot gathering space with a kitchen, gym, kids' playroom, resort-style pool, cabanas, concession stand, and splash pad",
+      "The Retreat, a 3,200-square-foot recreation center with a beach-entry pool, splash pad, pavilions, a fire pit, and grilling areas",
+      "Three playgrounds and a tennis court with pickleball striping",
+      "Lake Holcomb, about 100 acres, with trails and a fishing dock, plus about 44 acres at Woodson's Gully",
+      "A dog park and seven lakes with fountains",
+    ],
+    schoolDistrict: "Conroe ISD",
+    schools:
+      "The about page says students are zoned to Birnham Woods Elementary and Bradley Elementary, both described as inside the community, York Junior High, and Grand Oaks High School. Confirm the current zone for the address.",
+    sources: [
+      { label: "Falls at Imperial Oaks", url: "https://www.fallsatimperialoaks.com/" },
+      { label: "Falls at Imperial Oaks about page", url: "https://www.fallsatimperialoaks.com/about" },
+      { label: "Falls at Imperial Oaks amenities", url: "https://www.fallsatimperialoaks.com/amenities" },
+      {
+        label: "David Weekley: The Falls at Imperial Oaks",
+        url: "https://www.davidweekleyhomes.com/page/tx/houston/the-falls-spring",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is the name The Falls or Falls at Imperial Oaks?",
+        answer:
+          "The community site uses Falls at Imperial Oaks. David Weekley uses The Falls at Imperial Oaks. Both refer to the Spring community at 31220 Birnham Woods Drive.",
+      },
+      {
+        question: "Are builders still selling new homes here?",
+        answer:
+          "The about page says the initial build-out finished in the late 2010s and that the homeowners association now manages the community. David Weekley's overview still prints from-prices for Amber Forest, Angel Park, and Arbor Lake, but the section links redirect to the Houston index. Ask the builder whether a new home is actually available.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Conroe ISD. The about page lists Birnham Woods Elementary, Bradley Elementary, York Junior High, and Grand Oaks High School. Confirm the lot with the district.",
       },
     ],
   },
@@ -2175,6 +2233,91 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "the-trails",
+    citySlug: "new-caney",
+    alsoListedOn: ["huffman"],
+    name: "The Trails",
+    developer: "Castle Hill Partners",
+    address: "28827 Cross Pines Drive, New Caney, TX 77357",
+    location:
+      "The Trails publishes its directions address as 28827 Cross Pines Drive, New Caney, TX 77357. The community site says it is in Harris County, along the northeast section of the Grand Parkway. This is the Castle Hill Partners community at thetrailshouston.com. It is separate from Harrington Trails, Pinewood Trails, and other Houston communities that use Trails in the name.",
+    summary:
+      "The Trails is a Castle Hill Partners community of nearly 1,400 acres in New Caney. The FAQ names Chesmar Homes, Coventry Homes, Lennar, and Westin Homes. A Village Builders page is also live on the community site. Students are zoned to Huffman ISD. The playground is open, and the amenity center is under construction.",
+    priceNote:
+      "Lennar lists homes from the $200s, about 1,500 square feet and up. Coventry lists a 40-foot section from the $260s, about 1,500 square feet, and a 50-foot section from the $310s, about 1,900 square feet. Village Builders lists homes from the $280s, about 1,500 square feet and up. Chesmar lists homes from the $320s, about 1,900 square feet and up. Westin lists homes from the $390s, about 2,100 square feet and up. The homepage also says homes for sale starting in the $260s. The FAQ says homes range from the upper $200s to the $500s and up.",
+    homes:
+      "Model contacts published on the builder pages: Chesmar at 411 Aztec Cave Dr, Coventry at 407 Aztec Cave Dr and 405 Aztec Cave Dr, Westin at 409 Aztec Cave Drive, and Lennar and Village Builders at 28802 Arbor Hills Drive. Those street addresses are printed as New Caney, TX, without a ZIP on the builder cards. The community GPS address is 28827 Cross Pines Drive, New Caney, TX 77357.",
+    builders: [
+      {
+        name: "Lennar",
+        detail:
+          "From the $200s, about 1,500 square feet and up. Sales contact on the Trails page: Cristina Kidd, 888.371.0118, 28802 Arbor Hills Drive, New Caney, TX.",
+      },
+      {
+        name: "Coventry Homes",
+        detail:
+          "40-foot homes from the $260s, about 1,500 square feet, at 407 Aztec Cave Dr. 50-foot homes from the $310s, about 1,900 square feet, at 405 Aztec Cave Dr. Sales phone 713.597.5881. New Caney, TX.",
+      },
+      {
+        name: "Village Builders",
+        detail:
+          "From the $280s, about 1,500 square feet and up, at 28802 Arbor Hills Drive, New Caney, TX. The FAQ still names four builders and does not list Village Builders. The Village Builders page on thetrailshouston.com is live.",
+      },
+      {
+        name: "Chesmar Homes",
+        detail:
+          "From the $320s, about 1,900 square feet and up. Online sales consultant Ivette Villarreal, 281-720-6257, 411 Aztec Cave Dr, New Caney, TX.",
+      },
+      {
+        name: "Westin Homes",
+        detail:
+          "From the $390s, about 2,100 square feet and up. Sales manager Laidy Higuera, 832.971.4415, 409 Aztec Cave Drive, New Caney, TX.",
+      },
+    ],
+    amenities: [
+      "Playground is open now, according to the FAQ",
+      "Amenity center is under construction. The FAQ says completion is anticipated later this year and lists a resort-style pool, splash pad, and amenity center",
+      "About 600 acres of open space and miles of nature trails, listed on the FAQ",
+      "Caterpillar Park is a named park on the community site",
+    ],
+    schoolDistrict: "Huffman ISD",
+    schools:
+      "The schools page says children who live in The Trails attend Huffman ISD, and that an on-site school is proposed. It lists Falcon Ridge Elementary at 26503 FM 2100, Huffman, TX 77336, Huffman Middle School at 3407 Huffman Eastgate Road, Huffman, TX 77336, and Hargrave High School at 25400 Willy Lane, Huffman, TX 77336. Confirm the current zone for the lot.",
+    sources: [
+      { label: "The Trails homepage", url: "https://www.thetrailshouston.com/" },
+      { label: "The Trails FAQ", url: "https://www.thetrailshouston.com/faq/" },
+      { label: "The Trails builders", url: "https://www.thetrailshouston.com/builders/" },
+      { label: "The Trails schools", url: "https://www.thetrailshouston.com/schools/" },
+      { label: "Chesmar Homes at The Trails", url: "https://www.thetrailshouston.com/builder/chesmar-homes/" },
+      { label: "Coventry Homes at The Trails", url: "https://www.thetrailshouston.com/builder/coventry-homes/" },
+      { label: "Lennar at The Trails", url: "https://www.thetrailshouston.com/builder/lennar/" },
+      { label: "Village Builders at The Trails", url: "https://www.thetrailshouston.com/builder/village-builders/" },
+      { label: "Westin Homes at The Trails", url: "https://www.thetrailshouston.com/builder/westin-homes/" },
+    ],
+    faqs: [
+      {
+        question: "Which Trails community is this?",
+        answer:
+          "This page is The Trails in New Caney, published at thetrailshouston.com, by Castle Hill Partners. It is not Harrington Trails at The Canopies, and it is not Pinewood Trails.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "Builder pages list Lennar from the $200s, Coventry from the $260s and the $310s, Village Builders from the $280s, Chesmar from the $320s, and Westin from the $390s. The homepage says homes for sale starting in the $260s. The FAQ says the upper $200s to the $500s and up.",
+      },
+      {
+        question: "What is open at the amenity center?",
+        answer:
+          "The FAQ says the playground is open and construction on the amenity center is in progress, with completion anticipated later this year. It lists a resort-style pool, splash pad, playground, about 600 acres of open space, and miles of trails. Do not count the pool as open until the sales office confirms it.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Huffman ISD. The schools page lists Falcon Ridge Elementary, Huffman Middle School, and Hargrave High School, and says an on-site school is proposed. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
     slug: "harrington-trails",
     citySlug: "splendora",
     alsoListedOn: ["new-caney"],
@@ -2235,53 +2378,82 @@ const communities: NewHomeCommunity[] = [
   {
     slug: "the-canopies",
     citySlug: "splendora",
+    alsoListedOn: ["new-caney"],
     name: "The Canopies",
-    developer: "Sold by D.R. Horton. School sites involve Splendora ISD.",
-    address: "Splendora, TX 77372",
+    developer: "Forestar",
+    address: "14104 Golden Rays Drive, Splendora, TX 77372",
     location:
-      "D.R. Horton lists The Canopies in Splendora, TX 77372, as a nearby community on the Harrington Trails page. Splendora ISD has described The Canopies as the site of a junior high and as the alternate site for a replacement elementary school.",
+      "The Canopies is a 611-acre Forestar community in the New Caney and Splendora area. Forestar publishes the location as F.M. 242 and Harrington Drive, New Caney, TX 77357. The community site gives model directions in Splendora, TX 77372, and says Canopies Parkway and Harrington Trails are planned to connect FM 2090 and Highway 242, but that road is not complete. Harrington Trails is the D.R. Horton section at the western entrance, with its own page.",
     summary:
-      "The Canopies is a D.R. Horton community in Splendora. The Harrington Trails page lists it with homes from the $200s and plans from about 1,156 square feet. It is also a school site for Splendora ISD, separate from the homes themselves.",
+      "The Canopies is the Forestar community at thecanopies.com. The homepage says new homes start in the low $200s, in Splendora ISD, with a trail system and a recreation center. Five builders have pages: Imagination Homes, D.R. Horton, CastleRock, Risewell Homes, and Smith Douglas Homes.",
     priceNote:
-      "The nearby-community card says homes from the $200s, 3 to 6 bedrooms, 2 to 3 baths, and from 1,156 square feet. That card is a snapshot. Open the current D.R. Horton price list before you compare it with Harrington Trails.",
-    homes: "D.R. Horton describes 1 and 2 story plans with 3 to 6 bedrooms, from about 1,156 square feet.",
+      "The Canopies homepage says new homes from the low $200s. Builder pages: Imagination Homes from the $200s, with the model address listed as coming soon. CastleRock from the $210s, about 1,201 to 2,334 square feet. The builders directory card for CastleRock says from the $200s. D.R. Horton from the mid $200s, about 1,573 to 2,729 square feet. The homes list also shows a D.R. Horton home at 14404 Tawny Street for $209,990. Risewell Homes from the high $200s, about 1,676 to 2,566 square feet. Smith Douglas Homes from the $220s, about 1,450 to 2,397 square feet.",
+    homes:
+      "Model addresses on the community site: D.R. Horton at 14104 Golden Rays Drive, Splendora, TX 77372. CastleRock at 14203 Firecracker Lane. Risewell Homes at 14235 Moonflower Drive. Smith Douglas Homes at 14202 Firecracker Lane. Imagination Homes lists the model address as coming soon.",
     builders: [
       {
+        name: "Imagination Homes",
+        detail:
+          "From the $200s on 40-foot homesites. The builder page says the model address is coming soon and does not list a square-foot range.",
+      },
+      {
+        name: "CastleRock",
+        detail:
+          "From the $210s, about 1,201 to 2,334 square feet, on 40-foot homesites. Model at 14203 Firecracker Lane. The builders directory card says from the $200s.",
+      },
+      {
         name: "D.R. Horton",
-        detail: "Listed from the $200s, from about 1,156 square feet, in Splendora, TX 77372",
+        detail:
+          "From the mid $200s, about 1,573 to 2,729 square feet. Model at 14104 Golden Rays Drive, Splendora, TX 77372. The community homes list includes 14404 Tawny Street at $209,990.",
+      },
+      {
+        name: "Risewell Homes",
+        detail:
+          "From the high $200s, about 1,676 to 2,566 square feet, on 50-foot homesites. Model at 14235 Moonflower Drive.",
+      },
+      {
+        name: "Smith Douglas Homes",
+        detail:
+          "From the $220s, about 1,450 to 2,397 square feet, on 40-foot homesites. Model at 14202 Firecracker Lane.",
       },
     ],
     amenities: [
-      "Amenity details beyond the home card were not on the page reviewed here. Ask the sales office what is open before you count on a pool or park.",
+      "Walking paths",
+      "Open-air pavilion, event lawn, and food-truck parking",
+      "Playgrounds and parks, including a butterfly garden",
+      "Recreation center with a resort-style pool and a large deck",
     ],
     schoolDistrict: "Splendora ISD",
     schools:
-      "In a May 9, 2024 letter, Splendora ISD said it moved a planned Greenleaf Elementary replacement to The Canopies, next to a junior high site the district said was slated to open in August 2025. Confirm which campus a specific lot is zoned to now.",
+      "The community schools page says two elementary schools and a junior high are in the land plan. It lists Timber Lakes Elementary at 15450 Harrington Drive, New Caney, TX 77357, Piney Woods Elementary at 23395 FM 2090, Splendora, TX 77372, Splendora Junior High at 14395 Canopies Parkway, Splendora, TX 77372, and Splendora High School at 23747 FM 2090, Splendora, TX 77372. The page says a junior high opened in The Canopies in August 2025 and that a new elementary is planned beside it in August 2026. The page also says zoning can change. Confirm the lot with Splendora ISD.",
     sources: [
-      {
-        label: "D.R. Horton nearby listing on the Harrington Trails page",
-        url: "https://www.drhorton.com/texas/houston/new-caney/harrington-trails-at-the-canopies",
-      },
-      {
-        label: "Splendora ISD letter, May 9, 2024",
-        url: "https://www.splendoraisd.org/view-all-news/news-details/~board/district-news/post/greenleaf-elementary-school-replacement-project-update",
-      },
+      { label: "The Canopies homepage", url: "https://thecanopies.com/" },
+      { label: "The Canopies builders", url: "https://thecanopies.com/builders" },
+      { label: "The Canopies homes", url: "https://thecanopies.com/homes" },
+      { label: "The Canopies amenities", url: "https://thecanopies.com/amenities" },
+      { label: "The Canopies schools", url: "https://thecanopies.com/schools" },
+      { label: "Forestar: The Canopies", url: "https://www.forestar.com/community/the-canopies/" },
+      { label: "D.R. Horton at The Canopies", url: "https://thecanopies.com/builder/dr-horton" },
+      { label: "CastleRock at The Canopies", url: "https://thecanopies.com/builder/castlerock" },
+      { label: "Risewell Homes at The Canopies", url: "https://thecanopies.com/builder/risewell-homes" },
+      { label: "Smith Douglas Homes at The Canopies", url: "https://thecanopies.com/builder/smith-douglas-homes" },
+      { label: "Imagination Homes at The Canopies", url: "https://thecanopies.com/builder/imagination-homes" },
     ],
     faqs: [
       {
         question: "How is The Canopies different from Harrington Trails?",
         answer:
-          "D.R. Horton lists them as separate communities. Harrington Trails at The Canopies uses a New Caney model address and starts at $249,990 on that page. The Canopies card says Splendora and homes from the $200s. Tour the model that matches the lot, not the similar name.",
+          "Harrington Trails is the D.R. Horton section at the western entrance of The Canopies. It has its own page and its own model address, 20715 Central Concave Drive. The Canopies is the larger Forestar community, with Imagination Homes, CastleRock, Risewell Homes, Smith Douglas Homes, and D.R. Horton.",
       },
       {
-        question: "Why do school plans mention The Canopies?",
+        question: "Is The Canopies in Splendora or New Caney?",
         answer:
-          "Splendora ISD said in May 2024 that a junior high site and a replacement elementary site were at The Canopies. That is a district plan. Confirm today's zone for the address.",
+          "Both names are used. Forestar publishes F.M. 242 and Harrington Drive, New Caney, TX 77357. The D.R. Horton model directions are 14104 Golden Rays Drive, Splendora, TX 77372. The community says schools are Splendora ISD.",
       },
       {
-        question: "What home sizes are listed?",
+        question: "What schools does the community list?",
         answer:
-          "The D.R. Horton card lists 3 to 6 bedrooms, 2 to 3 baths, one and two story plans, from about 1,156 square feet, priced from the $200s.",
+          "Timber Lakes Elementary, Piney Woods Elementary, Splendora Junior High, and Splendora High School. The page says a junior high opened in the community in August 2025 and a new elementary is planned for August 2026. Confirm the address with the district.",
       },
     ],
   },

@@ -158,6 +158,42 @@ const builderHomePhotos: Record<string, Record<string, BuilderHomePhoto>> = {
       creditUrl: "https://www.tripointehomes.com/tx/houston/mason-woods",
     },
   },
+  "woodsons-reserve": {
+    "Tri Pointe Homes": {
+      src: "/new-homes/woodsons-reserve/builders/tri-pointe.webp",
+      alt: "Front of the Tri Pointe Carignan home published for the 80-foot collection at Woodson's Reserve.",
+      width: 1600,
+      height: 966,
+      creditName: "Tri Pointe Homes",
+      creditUrl: "https://www.tripointehomes.com/tx/houston/woodsons-reserve",
+    },
+    "Toll Brothers": {
+      src: "/new-homes/woodsons-reserve/builders/toll-brothers.webp",
+      alt: "Outdoor living area of the Toll Brothers Lavaca plan, published for Woodson's Reserve.",
+      width: 1600,
+      height: 900,
+      creditName: "Toll Brothers",
+      creditUrl: "https://www.tollbrothers.com/luxury-homes-for-sale/Texas/Woodson's-Reserve",
+    },
+  },
+  "the-canopies": {
+    CastleRock: {
+      src: "/new-homes/the-canopies/builders/castlerock.webp",
+      alt: "Front of the CastleRock home at 14203 Firecracker Lane, with 14203 on the garage.",
+      width: 800,
+      height: 530,
+      creditName: "The Canopies",
+      creditUrl: "https://thecanopies.com/builder/castlerock",
+    },
+    "Risewell Homes": {
+      src: "/new-homes/the-canopies/builders/risewell.webp",
+      alt: "Front of the Risewell home published as 14459 Trumpet at The Canopies.",
+      width: 800,
+      height: 530,
+      creditName: "The Canopies",
+      creditUrl: "https://thecanopies.com/builder/risewell-homes",
+    },
+  },
   "avalon-at-cypress": {
     "Taylor Morrison": {
       src: "/new-homes/avalon-at-cypress/builders/taylor-morrison.webp",

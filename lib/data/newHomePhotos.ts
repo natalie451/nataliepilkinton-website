@@ -280,6 +280,42 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/harrington-trails/elevation.webp","alt":"Home elevation in Harrington Trails","width":1150,"height":647},
     ],
   },
+  "falls-at-imperial-oaks": {
+    creditName: "Falls at Imperial Oaks",
+    creditUrl: "https://www.fallsatimperialoaks.com/amenities",
+    photos: [
+      {
+        src: "/new-homes/falls-at-imperial-oaks/club.webp",
+        alt: "Stone clubhouse with a columned porch, published on the Falls at Imperial Oaks amenities page",
+        width: 1600,
+        height: 900,
+      },
+      {
+        src: "/new-homes/falls-at-imperial-oaks/club-interior.webp",
+        alt: "Clubhouse living room opening to a pool, published on the Falls at Imperial Oaks amenities page",
+        width: 1600,
+        height: 1066,
+      },
+    ],
+  },
+  "the-trails": {
+    creditName: "The Trails",
+    creditUrl: "https://www.thetrailshouston.com/",
+    photos: [
+      {
+        src: "/new-homes/the-trails/path.webp",
+        alt: "Walking path through pines, published on The Trails homepage",
+        width: 1600,
+        height: 1216,
+      },
+      {
+        src: "/new-homes/the-trails/playground.webp",
+        alt: "Playground published on The Trails homepage",
+        width: 1600,
+        height: 1228,
+      },
+    ],
+  },
   "the-canopies": {
     creditName: "The Canopies",
     creditUrl: "https://www.forestar.com/community/the-canopies/",
