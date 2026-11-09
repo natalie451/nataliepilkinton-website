@@ -2,11 +2,7 @@
  * Current builder promotions, keyed by community slug.
  * Update this file weekly. Pages read it and do not hard-code offers.
  * Only include language printed on that community's or builder's official page.
- * Last checked: November 4, 2026.
- * Offers already in this file were read on November 3, 2026 and were not re-opened on November 4.
- * Cross Creek West incentives were read on November 4, 2026.
- * COLTON incentives were read on November 7, 2026.
- * Everly, Evergreen, Two Step Farm, and Stewart's Ranch incentives were read on November 8, 2026.
+ * Last checked: November 9, 2026.
  */
 
 export type BuilderPromo = {
@@ -19,16 +15,10 @@ export type BuilderPromo = {
   sourceUrl: string;
 };
 
-export const promoLastChecked = "November 4, 2026";
+export const promoLastChecked = "November 9, 2026";
 
 /** Communities checked on a later date than promoLastChecked. */
-const promoLastCheckedByCommunity: Record<string, string> = {
-  colton: "November 7, 2026",
-  everly: "November 8, 2026",
-  evergreen: "November 8, 2026",
-  "two-step-farm": "November 8, 2026",
-  "stewarts-ranch": "November 8, 2026",
-};
+const promoLastCheckedByCommunity: Record<string, string> = {};
 
 export function lastCheckedLabel(slug: string) {
   return promoLastCheckedByCommunity[slug] ?? promoLastChecked;
@@ -47,9 +37,65 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     },
     {
       builder: "David Weekley Homes",
-      text: "Enjoy New Employee Pricing on 45-foot, 50-foot, and 65-foot lots. The ARTAVIA savings page names this offer and does not print a dollar amount or an end date.",
+      text: "New Employee Pricing on 45-foot, 50-foot, and 65-foot lots. The flyer linked from the ARTAVIA savings page says buyers who purchase a select David Weekley home in the Houston area between October 19, 2026 and December 31, 2026 receive 7% of the base price in flex dollars, not to exceed $40,000. Financing incentives in that offer require a loan from Grace Home Lending.",
+      expires: "December 31, 2026",
+      sourceLabel: "ARTAVIA David Weekley employee pricing flyer",
+      sourceUrl:
+        "https://artaviatx.com/wp-content/uploads/2026/06/HOU-26-005526-Employee-Pricing-promo-Holiday-Edition_Flyer-12.31.26.pdf",
+    },
+    {
+      builder: "David Weekley Homes",
+      text: "Half A Century of Home Sweet Home on 45-foot, 50-foot, and 65-foot lots. The ARTAVIA savings page titles this offer Save up to $25,000. The linked flyer says buyers who purchase between August 21, 2026 and December 31, 2026 and finance with Grace Home Lending receive $20,000 in financing incentives, plus up to an additional $5,000 toward closing and financing costs, for total savings of up to $25,000. The flyer says a buyer is not required to use Grace Home Lending to purchase the home.",
+      expires: "December 31, 2026",
+      sourceLabel: "ARTAVIA David Weekley 50th anniversary flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/09/DWH-HOU-26-005257-50th-Anniversary_Flyer_HIGH1.pdf",
+    },
+    {
+      builder: "Highland Homes",
+      text: "Up to $50,000 to personalize your new home on 50-foot lots. The ARTAVIA savings page does not print an end date.",
       sourceLabel: "ARTAVIA builder savings",
       sourceUrl: "https://artaviatx.com/available-homes/builder-savings/",
+    },
+    {
+      builder: "Highland Homes",
+      text: "Up to $75,000 to personalize your new home on 60-foot lots. The ARTAVIA savings page does not print an end date.",
+      sourceLabel: "ARTAVIA builder savings",
+      sourceUrl: "https://artaviatx.com/available-homes/builder-savings/",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "Choose Your $20,000 Financing Incentive on 55-foot and 70-foot lots. The linked flyer says the original contract must be accepted by December 31, 2026, on inventory homes and homes to be built, and only if the buyer finances and closes with a J. Patrick Homes preferred lender. The flyer says the money can buy down the interest rate, go toward closing costs, or pay for an interest rate lock. A buyer can use another lender and will not receive this incentive.",
+      expires: "December 31, 2026",
+      sourceLabel: "ARTAVIA J. Patrick financing flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/06/20K-Financing-Incentives_11.1.2026.pdf",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "Up to $55,000 in Design Center options on 55-foot lots. The linked flyer says this is for a new home built from the ground up, it cannot be combined with any other offer, and it expires December 31, 2026.",
+      expires: "December 31, 2026",
+      sourceLabel: "ARTAVIA J. Patrick 55-foot flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/06/JPH-55_Promotion-Flyer_11.1.2026.pdf",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "Up to $70,000 in Design Center options on 70-foot lots. The linked flyer says this is for a new home built from the ground up, it cannot be combined with any other offer, and it expires December 31, 2026.",
+      expires: "December 31, 2026",
+      sourceLabel: "ARTAVIA J. Patrick 70-foot flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/06/JPH-70_Promotion-Flyer.11.1.2026.pdf",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event on 45-foot, 50-foot, and 55-foot lots. The ARTAVIA savings page titles the offer Up to $55,000. The linked flyer says up to $55,000 in flex cash and a 4.99% interest rate (5.898% APR) on a 7-year ARM, and the home must close by 12/31/26.",
+      expires: "12/31/26",
+      sourceLabel: "ARTAVIA Perry Year End flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/06/PH_YearEndSalesEvent_2026_Flyer_325150_HOU_Green.pdf",
+    },
+    {
+      builder: "Ravenna Homes",
+      text: "Christmas tree, family photo shoot, and a 4.75% interest rate on 70-foot lots. The linked flyer says 4.75% (5.977% APR) on a conventional 7/6 ARM, a 10-foot Christmas tree, and a family photo shoot on select inventory homes. The contract must be written between 11/02/2026 and 12/31/2026 and must close within 30 days. The example uses a 740 credit score and 25% down.",
+      expires: "Contract by 12/31/2026. Close within 30 days.",
+      sourceLabel: "ARTAVIA Ravenna holiday flyer",
+      sourceUrl: "https://artaviatx.com/wp-content/uploads/2026/06/Seeing-is-Believing-2026.pdf",
     },
   ],
   "grand-central-park": [
@@ -216,6 +262,56 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceLabel: "Bridgeland builder incentives",
       sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
     },
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event. Up to $55,000 in flex cash and a 4.99% interest rate (5.898% APR, 7-year ARM) through 12/31/26.",
+      expires: "12/31/26",
+      sourceLabel: "Bridgeland builder incentives",
+      sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
+    },
+    {
+      builder: "Ravenna Homes",
+      text: "A Magical Christmas, On Us. A special 4.75% financing rate (5.977% APR), plus a 10-foot Christmas tree and family photo shoot on select inventory homes through 12/31/26.",
+      expires: "12/31/26",
+      sourceLabel: "Bridgeland builder incentives",
+      sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
+    },
+    {
+      builder: "Newmark Homes",
+      text: "Signature Series. Up to $95,000 in flex spending on to-be-built homes through 11/30/26.",
+      expires: "11/30/26",
+      sourceLabel: "Bridgeland builder incentives",
+      sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
+    },
+    {
+      builder: "Newmark Homes",
+      text: "Portrait Series. Up to $50,000 in flex spending and The Newmark Store on to-be-built homes through 11/30/26.",
+      expires: "11/30/26",
+      sourceLabel: "Bridgeland builder incentives",
+      sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
+    },
+    {
+      builder: "Newmark Homes",
+      text: "Artisan Series. Up to $50,000 in flex spending and The Newmark Store on to-be-built homes through 11/30/26.",
+      expires: "11/30/26",
+      sourceLabel: "Bridgeland builder incentives",
+      sourceUrl: "https://www.bridgeland.com/homes/builder-incentives/",
+    },
+    {
+      builder: "Century Communities",
+      text: "Hometown Heroes. First responders, and buyers who show proof of current or former work as a law enforcement officer, first responder, teacher, healthcare worker, or active or retired military, receive up to $1,000 off the sales price. The Century Bridgeland page links to this Houston offer.",
+      expires: "Contract on or before 12/31/2026",
+      sourceLabel: "Century Communities Hometown Heroes",
+      sourceUrl:
+        "https://www.centurycommunities.com/promos/century-communities/texas/houston-metro/hometown-heroes-houston/",
+    },
+    {
+      builder: "Century Communities",
+      text: "Tour for a chance to win $10,000 from Wayfair. The official rules say one $10,000 Wayfair gift card will be given away by a random drawing. To be entered, tour a Century Communities or Century Complete home on or between November 4, 2026 and November 30, 2026. No purchase is necessary. The card is for Wayfair merchandise only.",
+      expires: "Tour by November 30, 2026",
+      sourceLabel: "Century Communities Wayfair tour drawing",
+      sourceUrl: "https://www.centurycommunities.com/promos/national/2026-wayfair-black-friday-10k/",
+    },
   ],
   "towne-lake": [],
   marvida: [],
@@ -223,6 +319,12 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     {
       builder: "Empire Homes",
       text: "For a limited time, lock in a 30-year, 4.99% fixed rate on select homes. The Dellrose promotions page does not print an end date.",
+      sourceLabel: "Dellrose builder incentives",
+      sourceUrl: "https://dellroseliving.com/builders/promotions/",
+    },
+    {
+      builder: "Empire Homes",
+      text: "Empire Heroes Program. Armed forces, police officers, firefighters, paramedics, teachers, and nurses receive a $1,000 discount off the base price of a new Empire home. For every home purchased, Empire will make a donation to HomeAid Houston. The Dellrose promotions page does not print an end date.",
       sourceLabel: "Dellrose builder incentives",
       sourceUrl: "https://dellroseliving.com/builders/promotions/",
     },
@@ -238,17 +340,18 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
   "sunterra-lakes": [
     {
       builder: "Century Communities",
-      text: "Financing offer on select homes through Inspire Home Loans. Contract on or before 11/16/2026 and close on or before 11/30/2026. Printed options include an FHA or VA 5/1 ARM at 3.875% for years 1 to 5 (FHA 4.735% APR, VA 4.302% APR), a conventional 7/6 ARM at 4.875% for years 1 to 7 (7.36% APR), and 30-year fixed rates of 5.25% FHA (6.143% APR), 5.25% VA (5.719% APR), or 5.5% conventional (5.775% APR). Sunterra Lakes in Brookshire is on the eligible community list.",
-      expires: "Contract by 11/16/2026. Close by 11/30/2026.",
-      sourceLabel: "Century Communities Houston financing offer",
-      sourceUrl: "https://www.centurycommunities.com/promos/century-communities/texas/houston-metro/financing-offer/?communityLinkID=1073745935",
-    },
-    {
-      builder: "Century Communities",
       text: "Hometown Heroes. First responders, and buyers who show proof of current or former work as a law enforcement officer, first responder, teacher, healthcare worker, or active or retired military, receive up to $1,000 off the sales price. The Sunterra Lakes page links to this Houston offer.",
       expires: "Contract on or before 12/31/2026",
       sourceLabel: "Century Communities Hometown Heroes",
       sourceUrl: "https://www.centurycommunities.com/promos/century-communities/texas/houston-metro/hometown-heroes-houston/?communityLinkID=1073745935",
+    },
+    {
+      builder: "Century Communities",
+      text: "Tour for a chance to win $10,000 from Wayfair. The Sunterra Lakes page links to this drawing. The official rules say one $10,000 Wayfair gift card will be given away by a random drawing. To be entered, tour a Century Communities or Century Complete home on or between November 4, 2026 and November 30, 2026. No purchase is necessary. The card is for Wayfair merchandise only.",
+      expires: "Tour by November 30, 2026",
+      sourceLabel: "Century Communities Wayfair tour drawing",
+      sourceUrl:
+        "https://www.centurycommunities.com/promos/national/2026-wayfair-black-friday-10k/?communityLinkID=1073745935",
     },
   ],
   "the-highlands": [
@@ -305,6 +408,34 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceLabel: "The Highlands builder incentives",
       sourceUrl: "https://thehighlands.com/home-builder-incentives/",
     },
+    {
+      builder: "Drees Homes",
+      text: "Sign a purchase agreement on a quick move-in home between October 1 and November 22, 2026 and close by December 22 to use a 2-1 buydown starting at 4.625% (6.713% APR) in year one, 5.625% in year two, and 6.625% for years 3 through 30.",
+      expires: "Sign by November 22, 2026. Close by December 22, 2026.",
+      sourceLabel: "The Highlands builder incentives",
+      sourceUrl: "https://thehighlands.com/home-builder-incentives/",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Close on your new home by December 31, 2026 and receive up to $55,000 in flex cash plus a 4.99% interest rate (5.898% APR) on a 7-year ARM, subject to credit approval.",
+      expires: "December 31, 2026",
+      sourceLabel: "The Highlands builder incentives",
+      sourceUrl: "https://thehighlands.com/home-builder-incentives/",
+    },
+    {
+      builder: "Partners in Building",
+      text: "Between November 1 and December 31, 2026, receive a $30,000 Design Center incentive on to-be-built custom homes across Greater Houston, plus save on select move-in ready custom homes, with price reductions ranging from $20,000 to $50,000 and up to $200,000 off the Sienna model home. The Highlands incentives page prints the Sienna model home in this offer.",
+      expires: "December 31, 2026",
+      sourceLabel: "The Highlands builder incentives",
+      sourceUrl: "https://thehighlands.com/home-builder-incentives/",
+    },
+    {
+      builder: "Ravenna Homes",
+      text: "Purchase a select inventory home between November 2 and December 31, 2026 and close within 30 days to receive a financing rate of 4.75% (5.977% APR) on a 7/6 ARM, plus a 10-foot Christmas tree and a family photo shoot.",
+      expires: "Contract by December 31, 2026. Close within 30 days.",
+      sourceLabel: "The Highlands builder incentives",
+      sourceUrl: "https://thehighlands.com/home-builder-incentives/",
+    },
   ],
   "valley-ranch": [],
   "harrington-trails": [
@@ -336,6 +467,12 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceLabel: "LGI Homes, Pinewood Trails",
       sourceUrl: "https://www.lgihomes.com/texas/houston/pinewood-trails",
     },
+    {
+      builder: "LGI Homes",
+      text: "3.99% interest rate. For a limited time, an interest rate as low as 3.99% (5.566 APR) exclusively in Houston area communities. The Pinewood Trails page prints the APR without a percent sign and does not print an end date. The button links to the Make Your Move page.",
+      sourceLabel: "LGI Homes, Pinewood Trails",
+      sourceUrl: "https://www.lgihomes.com/texas/houston/pinewood-trails",
+    },
   ],
   tavola: [],
   "massey-oaks": [
@@ -351,6 +488,12 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     {
       builder: "LGI Homes",
       text: "The feature list includes builder-paid closing costs, no down payment required, and zero down options. The page does not print a dollar amount.",
+      sourceLabel: "LGI Homes, Canterra Creek",
+      sourceUrl: "https://www.lgihomes.com/texas/houston/canterra-creek",
+    },
+    {
+      builder: "LGI Homes",
+      text: "3.99% interest rate. For a limited time, an interest rate as low as 3.99% (5.566 APR) exclusively in Houston area communities. The Canterra Creek page prints the APR without a percent sign and does not print an end date. The button links to the Make Your Move page.",
       sourceLabel: "LGI Homes, Canterra Creek",
       sourceUrl: "https://www.lgihomes.com/texas/houston/canterra-creek",
     },
@@ -447,13 +590,6 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceUrl: "https://coltontx.com/event/perry-homes-holiday-home-tour/",
     },
     {
-      builder: "Village Builders",
-      text: "Black Friday deal on the flyer linked from the COLTON incentives page. Sign a purchase agreement between November 4, 2026 and November 8, 2026 and close by November 30, 2026. The flyer lists a price reduction of up to $40,000, up to $6,000 off the homesite premium, half off the earnest money deposit, and a move-in ready appliance package with an approximate retail value not to exceed $3,400. It also prints up to $6,000 in closing costs on the earnest-money footnote. A sample payment uses a $179,990 price and a 3.99% (7.240% APR) FHA 5/1 ARM. That sample price is not a COLTON home price.",
-      expires: "Sign by November 8, 2026. Close by November 30, 2026.",
-      sourceLabel: "COLTON Village Builders Black Friday flyer",
-      sourceUrl: "https://coltontx.com/wp-content/uploads/2026/11/HOU-Customer-BF-Flyer-.pdf",
-    },
-    {
       builder: "Westin Homes",
       text: "Up to $75,000 in incentives on select move-in-ready inventory homes in COLTON. The flyer says the purchase agreement must be accepted by Westin Homes and the home must close by November 30, 2026.",
       expires: "November 30, 2026",
@@ -471,6 +607,18 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     {
       builder: "Highland Homes",
       text: "Season of Traditions Sales Event, printed on the page as Highland Homes 60. Up to 75K to personalize your new home. The page prints an asterisk and does not explain it or print an end date.",
+      sourceLabel: "Cross Creek West builder incentives",
+      sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
+    },
+    {
+      builder: "Newmark Homes",
+      text: "Newmark Homes 50. Purchase a to-be-built home from the Artisan Series in November and receive up to $50,000 in flex spending. The page prints an asterisk and does not print the year.",
+      sourceLabel: "Cross Creek West builder incentives",
+      sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
+    },
+    {
+      builder: "Newmark Homes",
+      text: "Newmark Homes 70. Purchase a to-be-built Signature Series home in November and receive up to $95,000 in flex spending. The page prints an asterisk and does not print the year.",
       sourceLabel: "Cross Creek West builder incentives",
       sourceUrl: "https://www.crosscreekwesttx.com/builder-incentives",
     },
@@ -517,6 +665,12 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceLabel: "Shea Homes, Trilogy Evergreen",
       sourceUrl: "https://www.sheahomes.com/new-homes/texas/houston-area/conroe/trilogy-evergreen",
     },
+    {
+      builder: "Trilogy Evergreen",
+      text: "Trailblazer Savings. Up to $35,000 in incentives on all new homes, plus 25% off options on select quick move-in homes. The banner prints an asterisk and does not explain it or print an end date.",
+      sourceLabel: "Shea Homes, Trilogy Evergreen",
+      sourceUrl: "https://www.sheahomes.com/new-homes/texas/houston-area/conroe/trilogy-evergreen",
+    },
   ],
   "two-step-farm": [
     {
@@ -534,6 +688,191 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       expires: "Contract November 2, 2026 to November 15, 2026. Close within 60 days of the contract.",
       sourceLabel: "Meritage Homes Houston sales-event disclaimer",
       sourceUrl: "https://www.meritagehomes.com/company/legal/national-sales-event-disclaimers",
+    },
+  ],
+  tamarron: [
+    {
+      builder: "D.R. Horton",
+      text: "A special incentive for everyday heroes, airline employees, and industrial and transportation workers. Purchase a D.R. Horton home across Houston between January 1 and December 31, 2026 and receive up to $1,000 towards closing costs or an options allowance. This text is on the Tamarron community page.",
+      expires: "December 31, 2026",
+      sourceLabel: "D.R. Horton, Tamarron",
+      sourceUrl: "https://www.drhorton.com/texas/houston/fulshear/tamarron",
+    },
+  ],
+  balmoral: [
+    {
+      builder: "Chesmar Homes",
+      text: "The Chesmar Balmoral page shows a banner for 4.999% (5.737% APR) FHA 30-year fixed-rate special financing on select homes. The Chesmar incentives page says the rate is on select homes that close by 12/31/26, available 10/19/26 through 11/15/26, with financing from HomeAmerican Mortgage. Chesmar and HomeAmerican are affiliated, and a buyer is not required to use HomeAmerican.",
+      expires: "Offer window 10/19/26 through 11/15/26. Close by 12/31/26.",
+      sourceLabel: "Chesmar Homes incentives",
+      sourceUrl: "https://www.chesmar.com/incentives/",
+    },
+  ],
+  sienna: [
+    {
+      builder: "Beazer Homes",
+      text: "Biggest savings and lowest prices of the year, with rates as low as 2.99% (5.959% APR) on select quick move-in homes. The Sienna incentives page prints an asterisk and does not print an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "Chesmar Homes",
+      text: "Imagine Happier Bonus. Upgrade and personalize your new home with fixtures, finishes, and other features. The Sienna incentives page prints an asterisk and does not print a dollar amount or an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "Receive $20,000 in financing incentives when you work with a J. Patrick Homes preferred lender. Use it to buy down the interest rate, toward closing costs, or to pay for an interest rate lock. The Sienna incentives page prints an asterisk and does not print an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "J. Patrick Homes 70. Purchase a new home to build from the ground up and receive $70,000 in Design Center options. The page prints an asterisk and does not print an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "J. Patrick Homes",
+      text: "J. Patrick Homes 90. Purchase a new home to build from the ground up and receive $90,000 in Design Center options. The page prints an asterisk and does not print an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "Partners in Building",
+      text: "Year End Sales Event. Save on select custom homes with a $30,000 Design Center incentive on to-be-built homes only, and discounted pricing on select available homes. The page prints an asterisk and does not print an end date.",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event. Up to $55,000 for a limited time, as flex cash and a 4.99% interest rate, 5.898% APR, on a 7-year ARM. Must close by 12/31/2026.",
+      expires: "12/31/2026",
+      sourceLabel: "Sienna builder incentives",
+      sourceUrl: "https://www.siennatx.com/builder-incentives",
+    },
+  ],
+  "harvest-green": [
+    {
+      builder: "Perry Homes",
+      text: "Year End Sales Event. Up to $55,000 for a limited time, as flex cash and a 4.99% interest rate (5.898% APR). The Harvest Green incentives page does not print an ARM term or an end date.",
+      sourceLabel: "Harvest Green builder incentives",
+      sourceUrl: "https://www.harvestgreentexas.com/builderincentives",
+    },
+    {
+      builder: "Partners in Building",
+      text: "Year End Sales Event on 90-foot homes. $30,000 Design Center incentive on to-be-built custom homes through the end of the year. The page does not print the year.",
+      sourceLabel: "Harvest Green builder incentives",
+      sourceUrl: "https://www.harvestgreentexas.com/builderincentives",
+    },
+  ],
+  "jordan-ranch": [
+    {
+      builder: "Chesmar Homes",
+      text: "Imagine Happier Bonus. Personalize a new home with fixtures, finishes, and other features. The linked flyer says the buyer can choose items worth up to 15 points, and Chesmar will include or upgrade them at no additional cost at any Houston-area community. Purchase agreements must be accepted between August 14, 2026 and December 31, 2026. The flyer does not print a dollar amount.",
+      expires: "December 31, 2026",
+      sourceLabel: "Jordan Ranch Chesmar Imagine Happier flyer",
+      sourceUrl:
+        "https://www.jordanranchtexas.com/wp-content/uploads/2024/07/Incentive-332-CHESMAR-Imagine-Happier-Bonus-flyer-AugDec2026.pdf",
+    },
+    {
+      builder: "Beazer Homes",
+      text: "Biggest savings and lowest prices of the year, with rates as low as 2.99% (5.959% APR) on select quick move-in homes. The linked flyer shows an FHA 2/1 buydown example on a $400,000 purchase price: 2.99% in year 1, 3.99% in year 2, and 4.99% in years 3 to 30, each at 5.959% APR. The offer is for select homesites on loans closed on or before December 31, 2026, and the incentive requires financing with Jet HomeLoans. A buyer is not required to use Jet to purchase the home.",
+      expires: "Close by December 31, 2026",
+      sourceLabel: "Jordan Ranch Beazer sales event flyer",
+      sourceUrl:
+        "https://www.jordanranchtexas.com/wp-content/uploads/2024/07/Incentive-844-BEAZER-Q4FY26-Sales-Event-Houston-Flyer-OctNov2026.pdf",
+    },
+    {
+      builder: "Perry Homes",
+      text: "Holiday Home Tour. Visit a Perry model home, tour an available inventory home, and be entered to win a $3,000 holiday shopping spree. The linked flyer says visits run from Sunday, November 1 through Sunday, December 6. Model hours on the flyer are Monday through Saturday, 10am to 6pm, and Sunday, 12pm to 6pm.",
+      expires: "December 6",
+      sourceLabel: "Jordan Ranch Perry Holiday Home Tour flyer",
+      sourceUrl:
+        "https://www.jordanranchtexas.com/wp-content/uploads/2024/07/Incentive-880-PERRY-HOU-HolidayHomeTour_523222_Invite-NovDec2026.pdf",
+    },
+  ],
+  "oakhill-reserve": [
+    {
+      builder: "Tri Pointe Homes",
+      text: "Special Rate on the Oakhill Reserve page: FHA 30-year fixed with a 4.875% rate (5.950% APR). The page lists this line twice. No end date is printed.",
+      sourceLabel: "Tri Pointe Homes, Oakhill Reserve",
+      sourceUrl: "https://www.tripointehomes.com/tx/houston/oakhill-reserve",
+    },
+    {
+      builder: "Tri Pointe Homes",
+      text: "Special Rate: conventional 30-year fixed with a 3.99% (5.825% APR) first-year rate. The page shows an estimated payment example for a $500,000 sales price. No end date is printed.",
+      sourceLabel: "Tri Pointe Homes, Oakhill Reserve",
+      sourceUrl: "https://www.tripointehomes.com/tx/houston/oakhill-reserve",
+    },
+    {
+      builder: "Tri Pointe Homes",
+      text: "Special Rate: conventional 30-year fixed with a 3.99% (5.591% APR) first-year rate. The page shows an estimated payment example for a $600,000 sales price. No end date is printed.",
+      sourceLabel: "Tri Pointe Homes, Oakhill Reserve",
+      sourceUrl: "https://www.tripointehomes.com/tx/houston/oakhill-reserve",
+    },
+    {
+      builder: "Toll Brothers",
+      text: "5.49% (6.27% APR) FHA 30-year fixed. Limited time only on select homes. No end date is printed on the community page.",
+      sourceLabel: "Toll Brothers at Oakhill Reserve",
+      sourceUrl: "https://www.tollbrothers.com/luxury-homes-for-sale/Texas/Toll-Brothers-at-Oakhill-Reserve",
+    },
+  ],
+  "briscoe-falls": [
+    {
+      builder: "KB Home",
+      text: "The Briscoe Falls page links to a special rate of 4.99% (5.781% APR) on a 5/1 FHA ARM through KBHS Home Loans. Qualified buyers lock the rate when they sign a purchase agreement by November 30. The rate page does not print the year on that date, and it says the advertised rate is effective as of September 24, 2026. The example uses a $471,797 loan amount. That example is not a Briscoe Falls price. A buyer is not required to use KBHS Home Loans.",
+      expires: "Sign by November 30",
+      sourceLabel: "KB Home special low rate",
+      sourceUrl: "https://www.kbhome.com/special-low-rate",
+    },
+  ],
+  "enclave-at-newport": [
+    {
+      builder: "Davidson Homes",
+      text: "Find Your Place to Gather. A 4.5% rate (6.380% APR) plus $10,000 flex cash on select homes, and a free move-in package. The Enclave at Newport page dates this card November 3, 2026 to November 15, 2026 and labels it Multiple Communities.",
+      expires: "November 15, 2026",
+      sourceLabel: "Davidson Homes, Enclave at Newport",
+      sourceUrl: "https://www.davidsonhomes.com/states/texas/houston-market-area/crosby/enclave-at-newport/",
+    },
+    {
+      builder: "Davidson Homes",
+      text: "Build Your Future. $25,000 flex cash to personalize the home, cover luxury homesite premiums, or assist with closing costs. The Enclave at Newport page dates this card November 3, 2026 to November 15, 2026 and labels it Multiple Communities.",
+      expires: "November 15, 2026",
+      sourceLabel: "Davidson Homes, Enclave at Newport",
+      sourceUrl: "https://www.davidsonhomes.com/states/texas/houston-market-area/crosby/enclave-at-newport/",
+    },
+    {
+      builder: "Davidson Homes",
+      text: "Tour On Your Time. Tour a Davidson home, write a contract, and get an extra $1,000 toward closing costs. The Enclave at Newport page labels this card Multiple Communities and does not print an end date.",
+      sourceLabel: "Davidson Homes, Enclave at Newport",
+      sourceUrl: "https://www.davidsonhomes.com/states/texas/houston-market-area/crosby/enclave-at-newport/",
+    },
+  ],
+  "river-ranch-trails": [
+    {
+      builder: "Coventry Homes",
+      text: "Interest rates starting at 2.99% (5.959% APR) when financing through Jet HomeLoans. The River Ranch Trails page points to the Coventry sales event page, which describes limited-time Black Friday savings on select quick move-in homes and does not restate the rate.",
+      sourceLabel: "Coventry Homes, River Ranch Trails",
+      sourceUrl: "https://www.coventryhomes.com/new-homes/tx/dayton/river-ranch-trails/",
+    },
+  ],
+  "grand-oaks": [
+    {
+      builder: "Century Communities",
+      text: "Hometown Heroes. First responders, and buyers who show proof of current or former work as a law enforcement officer, first responder, teacher, healthcare worker, or active or retired military, receive up to $1,000 off the sales price. The Grand Oaks page shows this Houston offer.",
+      expires: "Contract on or before 12/31/2026",
+      sourceLabel: "Century Communities Hometown Heroes",
+      sourceUrl:
+        "https://www.centurycommunities.com/promos/century-communities/texas/houston-metro/hometown-heroes-houston/",
+    },
+    {
+      builder: "Century Communities",
+      text: "Tour for a chance to win $10,000 from Wayfair. The Grand Oaks page shows this drawing. The official rules say one $10,000 Wayfair gift card will be given away by a random drawing. To be entered, tour a Century Communities or Century Complete home on or between November 4, 2026 and November 30, 2026. No purchase is necessary. The card is for Wayfair merchandise only.",
+      expires: "Tour by November 30, 2026",
+      sourceLabel: "Century Communities Wayfair tour drawing",
+      sourceUrl: "https://www.centurycommunities.com/promos/national/2026-wayfair-black-friday-10k/",
     },
   ],
 };
