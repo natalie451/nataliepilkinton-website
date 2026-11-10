@@ -95,7 +95,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Montgomery",
     headline: "Lake Conroe, FM 2854, and FM 1488",
     summary:
-      "Woodforest and Fairwater sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854. Two Step Farm is the Oxland Group community north of FM 1488, between I-45 and Highway 249.",
+      "Woodforest and Fairwater sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854. Two Step Farm is the Oxland Group community north of FM 1488, between I-45 and Highway 249. Walden Creek is the Perry Homes community in Montgomery ISD.",
   },
   {
     slug: "willis",
@@ -123,7 +123,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Waller",
     headline: "Waller ISD and Waller County, including Hockley and Brookshire",
     summary:
-      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, and Redbud use Hockley addresses and Waller ISD. Stokesbury and Oakberry Trails use Waller addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
+      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, Jubilee, and The Grand Prairie use Hockley addresses and Waller ISD. Stokesbury and Oakberry Trails use Waller addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
   },
   {
     slug: "porter",
@@ -158,14 +158,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Katy",
     headline: "FM 529, the Grand Parkway, and Fulshear south of I-10",
     summary:
-      "Elyson and Cane Island are north of Interstate 10. Grand Mason Crossing is east of the Grand Parkway, with a Katy address and Katy ISD. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, and Jordan Ranch are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
+      "Elyson and Cane Island are north of Interstate 10. Grand Mason Crossing is east of the Grand Parkway, with a Katy address and Katy ISD. Grange and Lakes of Cane Island are Perry Homes communities with Katy pages. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, Jordan Ranch, and Fulshear Lakes are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
   },
   {
     slug: "magnolia",
     name: "Magnolia",
     headline: "SH 249, FM 1488, and FM 1486",
     summary:
-      "Audubon and COLTON are the Magnolia-area master plans with current community sites. Audubon uses a Magnolia address at SH 249 and FM 1488. COLTON uses a Todd Mission address at SH 249 and FM 1486 and publishes Magnolia ISD schools.",
+      "Audubon and COLTON are the Magnolia-area master plans with current community sites. Audubon uses a Magnolia address at SH 249 and FM 1488. COLTON uses a Todd Mission address at SH 249 and FM 1486 and publishes Magnolia ISD schools. Escondido is the Perry Homes community with a Magnolia address.",
   },
   {
     slug: "humble",
@@ -193,7 +193,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Fulshear",
     headline: "FM 359, Jordan Road, and the Katy Freeway",
     summary:
-      "Cross Creek West, Tamarron, and Jordan Ranch are Fulshear communities with current builder pages that name prices and Lamar CISD. All three are south of I-10 and are also linked from the Katy page.",
+      "Cross Creek West, Tamarron, Jordan Ranch, and Fulshear Lakes are Fulshear communities with current builder pages that name prices and Lamar CISD. All four are south of I-10 and are also linked from the Katy page.",
   },
   {
     slug: "missouri-city",
@@ -892,6 +892,287 @@ const communities: NewHomeCommunity[] = [
         question: "What is Founders Park?",
         answer:
           "The community describes Founders Park as a 17-acre amenity with an activity center, fitness center, events lawn, leisure and fitness pools, a lazy river, a playground, a dog park, and tennis courts.",
+      },
+    ],
+  },
+  {
+    slug: "jubilee",
+    citySlug: "waller",
+    name: "Jubilee",
+    developer: "Perry Homes",
+    address: "16611 Cheerful Trail Street, Hockley, TX",
+    location:
+      "Perry describes Jubilee as a planned community in Hockley. The page lists homes at 16611 Cheerful Trail Street and 26110 Happy Home Street. It is filed under Waller because Hockley addresses in Waller ISD are grouped here.",
+    summary:
+      "Jubilee is a Perry Homes community in Hockley. The page lists a 60-foot section from the $490s and an 80-foot section from the $730s, with homes available in both. Perry names Waller ISD schools.",
+    priceNote:
+      "Perry lists Jubilee 60-foot homes from the $490s, about 2,700 to 4,100 square feet, and 80-foot homes from the $730s, about 3,300 to 5,600 square feet.",
+    homes:
+      "The 60-foot section lists 4 to 5 bedrooms. The 80-foot section is the larger plans. Perry shows 37 homes in one section and 34 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "60-foot from the $490s, about 2,700 to 4,100 square feet. 80-foot from the $730s, about 3,300 to 5,600 square feet. Addresses on the page include 16611 Cheerful Trail Street.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Perry names Roberts Road Elementary, Waller Junior High, and Waller High School. The same data also prints Robert Roads Elementary. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Jubilee", url: "https://www.perryhomes.com/new-homes/texas/houston/jubilee" }],
+    faqs: [
+      {
+        question: "Where is Jubilee?",
+        answer: "Perry places Jubilee in Hockley and names Waller ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "The 60-foot section is from the $490s. The 80-foot section is from the $730s.",
+      },
+    ],
+  },
+  {
+    slug: "the-grand-prairie",
+    citySlug: "waller",
+    name: "The Grand Prairie",
+    developer: "Perry Homes",
+    address: "16427 Verbena Glen Drive, Hockley, TX",
+    location:
+      "Perry says The Grand Prairie is in Hockley. Published home addresses include 16427 Verbena Glen Drive and 16431 Verbena Glen Drive. The page is filed under Waller with the other Hockley communities.",
+    summary:
+      "The Grand Prairie is a Perry Homes community in Hockley. The page lists 40-foot homes from the $290s and 50-foot homes from the $370s, and both sections show homes for sale.",
+    priceNote:
+      "Perry lists The Grand Prairie 40-foot homes from the $290s, about 1,500 to 2,500 square feet, and 50-foot homes from the $370s, about 2,100 to 3,200 square feet.",
+    homes: "The 40-foot section lists 3 bedrooms and up. Perry shows 22 homes in one section and 30 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "40-foot from the $290s, about 1,500 to 2,500 square feet. 50-foot from the $370s, about 2,100 to 3,200 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Perry names I.T. Holleman Elementary School, Waller Junior High School, and Waller High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, The Grand Prairie", url: "https://www.perryhomes.com/new-homes/texas/houston/the-grand-prairie" },
+    ],
+    faqs: [
+      {
+        question: "Where is The Grand Prairie?",
+        answer: "Perry places it in Hockley, with Waller ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "40-foot homes from the $290s. 50-foot homes from the $370s.",
+      },
+    ],
+  },
+  {
+    slug: "walden-creek",
+    citySlug: "montgomery",
+    name: "Walden Creek",
+    developer: "Perry Homes",
+    address: "18505 Scarlet Paintbrush Drive, Montgomery, TX",
+    location:
+      "Perry says Walden Creek is a new community now selling in Montgomery. Published addresses include 18505 Scarlet Paintbrush Drive and 18509 Scarlet Paintbrush Drive.",
+    summary:
+      "Walden Creek is a Perry Homes community in Montgomery. The page lists 45-foot homes from the $340s and 60-foot homes from the $540s, with homes for sale in both sections.",
+    priceNote:
+      "Perry lists Walden Creek 45-foot homes from the $340s, about 1,900 to 2,800 square feet, and 60-foot homes from the $540s, about 2,600 to 4,100 square feet.",
+    homes: "The 45-foot section lists 3 to 4 bedrooms. Perry shows 28 homes in one section and 32 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $340s, about 1,900 to 2,800 square feet. 60-foot from the $540s, about 2,600 to 4,100 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Montgomery ISD",
+    schools:
+      "Perry names Stewart Creek Elementary School, Montgomery Junior High School, and Montgomery High School. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Walden Creek", url: "https://www.perryhomes.com/new-homes/texas/houston/walden-creek" }],
+    faqs: [
+      {
+        question: "Where is Walden Creek?",
+        answer: "Perry says it is now selling in Montgomery, in Montgomery ISD.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $340s. 60-foot homes from the $540s.",
+      },
+    ],
+  },
+  {
+    slug: "escondido",
+    citySlug: "magnolia",
+    name: "Escondido",
+    developer: "Perry Homes",
+    address: "1192 Wandering Brook Street, Magnolia, TX 77354",
+    location:
+      "Perry publishes a home address of 1192 Wandering Brook Street, Magnolia, TX 77354, and names Magnolia ISD schools.",
+    summary:
+      "Escondido is a Perry Homes community in Magnolia. The page lists 45-foot homes from the $340s and 50-foot homes from the $400s, with homes for sale in both sections.",
+    priceNote:
+      "Perry lists Escondido 45-foot homes from the $340s, about 1,600 to 2,800 square feet, and 50-foot homes from the $400s, about 2,100 to 3,300 square feet.",
+    homes: "The 45-foot section lists 3 to 4 bedrooms. Perry shows 28 homes in one section and 31 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $340s, about 1,600 to 2,800 square feet. 50-foot from the $400s, about 2,100 to 3,300 square feet. One published address is 1192 Wandering Brook Street, Magnolia, TX 77354.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Magnolia ISD",
+    schools:
+      "Perry names Magnolia Elementary, Magnolia Intermediate, Magnolia Junior High, and Magnolia West High School. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Escondido", url: "https://www.perryhomes.com/new-homes/texas/houston/escondido" }],
+    faqs: [
+      {
+        question: "Where is Escondido?",
+        answer: "Perry publishes Magnolia, TX 77354, and Magnolia ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $340s. 50-foot homes from the $400s.",
+      },
+    ],
+  },
+  {
+    slug: "fulshear-lakes",
+    citySlug: "fulshear",
+    alsoListedOn: ["katy"],
+    name: "Fulshear Lakes",
+    developer: "Perry Homes",
+    address: "32510 Lakeside Park Drive, Fulshear, TX",
+    location:
+      "Perry describes Fulshear Lakes as a planned community in Fulshear. A published address is 32510 Lakeside Park Drive. The page is also linked from Katy.",
+    summary:
+      "Fulshear Lakes is a Perry Homes community in Fulshear. The page lists 80-foot homes from the $690s, about 3,400 to 5,100 square feet, with homes for sale. Perry names Lamar ISD schools.",
+    priceNote:
+      "Perry lists Fulshear Lakes 80-foot homes from the $690s, about 3,400 to 5,100 square feet.",
+    homes: "The 80-foot section lists 4 to 5 bedrooms. Perry shows 13 homes.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail: "80-foot from the $690s, about 3,400 to 5,100 square feet, 4 to 5 bedrooms.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the 80-foot section. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Lamar ISD",
+    schools:
+      "Perry names Morgan Elementary, James W. Roberts Middle School, Leaman Junior High, and Fulshear High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, Fulshear Lakes", url: "https://www.perryhomes.com/new-homes/texas/houston/fulshear-lakes" },
+    ],
+    faqs: [
+      {
+        question: "Where is Fulshear Lakes?",
+        answer: "Perry places it in Fulshear and names Lamar ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "80-foot homes from the $690s.",
+      },
+    ],
+  },
+  {
+    slug: "lakes-of-cane-island",
+    citySlug: "katy",
+    name: "Lakes of Cane Island",
+    developer: "Perry Homes",
+    address: "1201 Emerald Lake Drive, Katy, TX 77493",
+    location:
+      "Perry publishes 1201 Emerald Lake Drive, Katy, TX 77493, and names Katy ISD schools. This is separate from Cane Island.",
+    summary:
+      "Lakes of Cane Island is a Perry Homes community in Katy. The page lists four sections, from 45-foot homes from the $420s through 80-foot homes from the $820s, and each section shows homes for sale.",
+    priceNote:
+      "Perry lists Lakes of Cane Island 45-foot homes from the $420s, 55-foot from the $540s, 60-foot from the $590s, and 80-foot from the $820s.",
+    homes:
+      "45-foot about 1,900 to 2,800 square feet. 55-foot about 2,600 to 3,500. 60-foot about 2,700 to 4,100. 80-foot about 3,400 to 5,600. Perry shows homes in all four sections.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $420s, about 1,900 to 2,800 square feet. 55-foot from the $540s, about 2,600 to 3,500 square feet. 60-foot from the $590s, about 2,700 to 4,100 square feet. 80-foot from the $820s, about 3,400 to 5,600 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the four home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Perry names Robertson Elementary, Haskett Middle School, and Freeman High School. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Perry Homes, Lakes of Cane Island",
+        url: "https://www.perryhomes.com/new-homes/texas/houston/lakes-of-cane-island",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is this the same as Cane Island?",
+        answer: "No. Lakes of Cane Island is a separate Perry page, with a Katy address on Emerald Lake Drive.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $420s. The 80-foot section is from the $820s.",
+      },
+    ],
+  },
+  {
+    slug: "grange",
+    citySlug: "katy",
+    name: "Grange",
+    developer: "Perry Homes",
+    address: "417 Dove Meadow Lane, Katy, TX",
+    location:
+      "Perry names Katy ISD schools for Grange, including Robertson Elementary and Katy High School. Drees titles its Grange page as new homes for sale in Katy, TX. A Perry address on the page is 417 Dove Meadow Lane.",
+    summary:
+      "Grange is a Perry Homes community in Katy. The page lists 50-foot homes from the $490s and 60-foot homes from the $640s, with homes for sale in both. Drees also has a Katy page for Grange, and that page did not print a starting price in the text reviewed here.",
+    priceNote:
+      "Perry lists Grange 50-foot homes from the $490s, about 2,100 to 3,200 square feet, and 60-foot homes from the $640s, about 2,800 to 4,100 square feet.",
+    homes: "The 50-foot section lists 3 to 4 bedrooms. Perry shows 33 homes in one section and 34 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "50-foot from the $490s, about 2,100 to 3,200 square feet. 60-foot from the $640s, about 2,800 to 4,100 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Perry names Robertson Elementary, Katy Junior High, and Katy High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, Grange", url: "https://www.perryhomes.com/new-homes/texas/houston/grange" },
+      { label: "Drees Homes, Grange", url: "https://www.dreeshomes.com/new-homes-houston/katy/comm-grange/" },
+    ],
+    faqs: [
+      {
+        question: "Where is Grange?",
+        answer: "Drees titles the page as Katy, TX, and Perry names Katy ISD schools.",
+      },
+      {
+        question: "Does Drees publish a price?",
+        answer:
+          "Drees has a Grange page for Katy. The page text reviewed on November 10, 2026 did not include a from-price, so this page does not invent one.",
       },
     ],
   },

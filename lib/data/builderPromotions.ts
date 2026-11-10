@@ -27,6 +27,13 @@ const promoLastCheckedByCommunity: Record<string, string> = {
   "avalon-at-cypress": "November 8, 2026",
   "azalea-trails": "November 10, 2026",
   "oakberry-trails": "November 10, 2026",
+  jubilee: "November 10, 2026",
+  "the-grand-prairie": "November 10, 2026",
+  "walden-creek": "November 10, 2026",
+  escondido: "November 10, 2026",
+  "fulshear-lakes": "November 10, 2026",
+  "lakes-of-cane-island": "November 10, 2026",
+  grange: "November 10, 2026",
 };
 
 export function lastCheckedLabel(slug: string) {
@@ -471,6 +478,62 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       text: "Special Rate: Conventional 5.490% (6.277% APR) 30-year fixed rate financing. The page shows an estimated payment for a $600,000 sales price. No end date is printed.",
       sourceLabel: "Tri Pointe Homes, Azalea Trails",
       sourceUrl: "https://www.tripointehomes.com/tx/houston/azalea-trails",
+    },
+  ],
+  jubilee: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Jubilee",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/jubilee",
+    },
+  ],
+  "the-grand-prairie": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, The Grand Prairie",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/the-grand-prairie",
+    },
+  ],
+  "walden-creek": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Walden Creek",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/walden-creek",
+    },
+  ],
+  escondido: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Escondido",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/escondido",
+    },
+  ],
+  "fulshear-lakes": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Fulshear Lakes",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/fulshear-lakes",
+    },
+  ],
+  "lakes-of-cane-island": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Lakes of Cane Island",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/lakes-of-cane-island",
+    },
+  ],
+  grange: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Grange",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/grange",
     },
   ],
   "oakberry-trails": [
