@@ -25,6 +25,8 @@ const promoLastCheckedByCommunity: Record<string, string> = {
   "the-pines-at-seven-coves": "November 8, 2026",
   "mason-woods": "November 8, 2026",
   "avalon-at-cypress": "November 8, 2026",
+  "azalea-trails": "November 10, 2026",
+  "oakberry-trails": "November 10, 2026",
 };
 
 export function lastCheckedLabel(slug: string) {
@@ -463,6 +465,34 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
   "the-canopies": [],
   "the-trails": [],
   "falls-at-imperial-oaks": [],
+  "azalea-trails": [
+    {
+      builder: "Tri Pointe Homes",
+      text: "Special Rate: Conventional 5.490% (6.277% APR) 30-year fixed rate financing. The page shows an estimated payment for a $600,000 sales price. No end date is printed.",
+      sourceLabel: "Tri Pointe Homes, Azalea Trails",
+      sourceUrl: "https://www.tripointehomes.com/tx/houston/azalea-trails",
+    },
+  ],
+  "oakberry-trails": [
+    {
+      builder: "K. Hovnanian Homes",
+      text: "3.75% 7/6 ARM rates on select quick move-in homes. Limited time. The card also says fixed rate the first 7 years, and flex cash incentives available. No APR or end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+    {
+      builder: "Risewell Homes",
+      text: "Rates as low as 3.99% plus a no-cost refinance. The card says 3.99% (6.138% APR) fixed for the first 5 years, with payments as low as $2,509 per month, plus up to $10,000 flex cash. Asterisks are printed. No end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+    {
+      builder: "Village Builders",
+      text: "3.50% FHA 5/1 ARM rates on select move-in ready homes. Limited time. The same column also lists up to $10,000 toward closing costs, and appliance packages on select move-in ready inventory. No APR or end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+  ],
   "pinewood-trails": [
     {
       builder: "LGI Homes",

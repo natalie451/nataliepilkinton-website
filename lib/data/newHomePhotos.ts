@@ -280,6 +280,18 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/harrington-trails/elevation.webp","alt":"Home elevation in Harrington Trails","width":1150,"height":647},
     ],
   },
+  "oakberry-trails": {
+    creditName: "Oakberry Trails",
+    creditUrl: "https://www.oakberrytrails.com/",
+    photos: [
+      {
+        src: "/new-homes/oakberry-trails/hero.webp",
+        alt: "White barn-style gathering building and playground published on the Oakberry Trails homepage",
+        width: 1600,
+        height: 954,
+      },
+    ],
+  },
   "falls-at-imperial-oaks": {
     creditName: "Falls at Imperial Oaks",
     creditUrl: "https://www.fallsatimperialoaks.com/amenities",

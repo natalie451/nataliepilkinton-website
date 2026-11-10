@@ -116,14 +116,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Cypress",
     headline: "Northwest Houston, from FM 529 to Tuckerton",
     summary:
-      "Cypress new construction here means Bridgeland, Towne Lake, Marvida, Mason Woods, and Avalon at Cypress. Elyson uses a Katy address and has its own page under Katy.",
+      "Cypress new construction here means Bridgeland, Towne Lake, Marvida, Mason Woods, Avalon at Cypress, and Azalea Trails. Elyson uses a Katy address and has its own page under Katy.",
   },
   {
     slug: "waller",
     name: "Waller",
     headline: "Waller ISD and Waller County, including Hockley and Brookshire",
     summary:
-      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, and Redbud use Hockley addresses and Waller ISD. Stokesbury uses a Waller address and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
+      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, and Redbud use Hockley addresses and Waller ISD. Stokesbury and Oakberry Trails use Waller addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
   },
   {
     slug: "porter",
@@ -892,6 +892,134 @@ const communities: NewHomeCommunity[] = [
         question: "What is Founders Park?",
         answer:
           "The community describes Founders Park as a 17-acre amenity with an activity center, fitness center, events lawn, leisure and fitness pools, a lazy river, a playground, a dog park, and tennis courts.",
+      },
+    ],
+  },
+  {
+    slug: "azalea-trails",
+    citySlug: "cypress",
+    name: "Azalea Trails",
+    developer: "Tri Pointe Homes",
+    address: "18122 Lavender Wind Drive, Cypress, TX 77429",
+    location:
+      "Tri Pointe places Azalea Trails in Cypress, with access to the Grand Parkway (SH 99) and Highway 290. The community page lists 18122 Lavender Wind Drive, Cypress, TX 77429. Cascade at Azalea Trails lists 18126 Lavender Wind Drive. This is the Tri Pointe community. It is not the Azalea District at Valley Ranch in Porter.",
+    summary:
+      "Azalea Trails is a Tri Pointe Homes community in Cypress. The community page lists homes from the $400s, about 2,391 to 3,749 square feet. Two collections are open on the site: Cascade on 50-foot homesites and Amethyst on 60-foot homesites. A recreation center is described as future, not open.",
+    priceNote:
+      "Tri Pointe lists Azalea Trails from the $400s. Cascade at Azalea Trails is from the $400s, about 2,391 to 2,972 square feet. Amethyst at Azalea Trails is from the $500s, about 3,039 to 3,749 square feet.",
+    homes:
+      "4 to 5 bedrooms and 3 to 4 baths on the community page, 1 or 2 stories. Cascade is 4 bedrooms and 3 baths. Amethyst is 4 to 5 bedrooms and 3 to 4 baths. Hours on the community page: Monday through Saturday 10 am to 6 pm, Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Tri Pointe Homes",
+        detail:
+          "The only builder on the community page. Cascade from the $400s, about 2,391 to 2,972 square feet, 50-foot homesites, at 18126 Lavender Wind Drive. Amethyst from the $500s, about 3,039 to 3,749 square feet, at 18122 Lavender Wind Drive, Cypress, TX 77429.",
+      },
+    ],
+    amenities: [
+      "Tree-lined streets and walking trails",
+      "A recreation center described as future, not open yet",
+    ],
+    schoolDistrict: "",
+    schools:
+      "Tri Pointe says the community is near Tomball ISD schools. The page does not say the homes are zoned to Tomball ISD and does not name a campus. Confirm the address with the district.",
+    sources: [
+      { label: "Tri Pointe Homes, Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/azalea-trails" },
+      { label: "Cascade at Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/cascade-at-azalea-trails" },
+      { label: "Amethyst at Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/amethyst-at-azalea-trails" },
+    ],
+    faqs: [
+      {
+        question: "Is Azalea Trails the same as Azalea District at Valley Ranch?",
+        answer:
+          "No. Azalea Trails is the Tri Pointe community in Cypress at Lavender Wind Drive. Azalea District is the First America Homes section of Valley Ranch in Porter.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "The community page says from the $400s. Cascade is from the $400s. Amethyst is from the $500s. Move-in ready prices on those pages are higher than the from-price.",
+      },
+      {
+        question: "Which school district is it?",
+        answer:
+          "Tri Pointe says the homes are near Tomball ISD schools. That is not a zoning statement. Confirm the lot with the district.",
+      },
+    ],
+  },
+  {
+    slug: "oakberry-trails",
+    citySlug: "waller",
+    name: "Oakberry Trails",
+    developer: "Ryko Development",
+    address: "21711 Berry Ranch Drive, Waller, TX 77484",
+    location:
+      "Oakberry Trails publishes its address as 21711 Berry Ranch Drive, Waller, TX 77484, north of Highway 290. The community site spells the name Oakberry Trails, as one word. David Weekley also places it just north of Highway 290 in Waller.",
+    summary:
+      "Oakberry Trails is a Ryko Development community in Waller. The community page says new homes start in the low $300s and lists Risewell Homes, K. Hovnanian Homes, Village Builders, and David Weekley, whose section is marked coming soon. Lennar also publishes an active Oakberry Trails page. The community says homes are zoned to Waller ISD.",
+    priceNote:
+      "Lennar lists Oakberry Trails from $225,990 to $370,990. The community homepage says new homes from the low $300s. Risewell lists both collections from the low $300s. K. Hovnanian lists 40-foot homes from the low $300s and 50-foot homes from the low 300s. Village Builders lists the Avante plans from $307,990 to $360,990 and the Richmond plans from the low $300s.",
+    homes:
+      "Model park addresses on the builder pages: Village Builders and the Lennar page use 21507 Vineyard View Drive. K. Hovnanian uses 21515 Vineyard View Drive. Risewell uses 21523 Vineyard View Drive. All are Waller, TX 77484. David Weekley says homes are coming soon on 60-foot homesites and does not print a price.",
+    builders: [
+      {
+        name: "Lennar",
+        detail:
+          "Actively selling from $225,990 to $370,990. The page address is 21507 Vineyard View Drive, Waller, TX 77484. The Oakberry Trails builder directory does not list Lennar. No current promotion was printed on the Lennar page.",
+      },
+      {
+        name: "Risewell Homes",
+        detail:
+          "Cottages from the low $300s, about 1,690 to 2,686 square feet, 3 to 4 bedrooms, on 40-foot homesites. Residences from the low $300s, about 1,715 to 2,818 square feet, 3 to 4 bedrooms, on 50-foot homesites. Model at 21523 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "K. Hovnanian Homes",
+        detail:
+          "40-foot homesites from the low $300s, up to 2,253 square feet, up to 4 bedrooms. 50-foot homesites starting from the low 300s, up to 3,464 square feet, up to 5 bedrooms. Model at 21515 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "Village Builders",
+        detail:
+          "Avante plans from $307,990 to $360,990, about 1,572 to 2,400 square feet, 3 to 4 bedrooms. Richmond plans starting from the low $300s, about 1,830 to 2,924 square feet, 3 to 5 bedrooms. Model at 21507 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "David Weekley Homes",
+        detail:
+          "Coming soon. David Weekley says farmhouse-inspired homes on 60-foot homesites and does not print a from-price. No current promotion was printed.",
+      },
+    ],
+    amenities: [
+      "Gathering spaces made from older structures, including event space and game areas",
+      "Community gardens, winding trails, and green spaces",
+      "Lennar publishes photographs of a community center, a fitness center, and a pool",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "The community schools page says new homes are zoned to Waller ISD. It names Mary Alice Cure Elementary, Schultz Junior High, and Waller High School. Confirm the address with the district.",
+    sources: [
+      { label: "Oakberry Trails builders", url: "https://www.oakberrytrails.com/builders-in-waller-tx" },
+      { label: "Oakberry Trails schools", url: "https://www.oakberrytrails.com/schools-in-waller-tx" },
+      { label: "Oakberry Trails promotions", url: "https://www.oakberrytrails.com/builder-promotions" },
+      { label: "Risewell Homes at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/risewell-homes" },
+      { label: "K. Hovnanian Homes at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/k-hovnanian" },
+      { label: "Village Builders at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/village-builders" },
+      { label: "Lennar, Oakberry Trails", url: "https://www.lennar.com/new-homes/texas/houston/waller/oakberry-trails" },
+      { label: "David Weekley Homes, Oakberry Trails", url: "https://www.davidweekleyhomes.com/new-homes/tx/houston/waller/oakberry-trails" },
+    ],
+    faqs: [
+      {
+        question: "How is the name spelled?",
+        answer:
+          "The community site uses Oakberry Trails, one word. Searches for Oak Berry Trails and OakBerryTrails lead to this Waller community.",
+      },
+      {
+        question: "Who is building now?",
+        answer:
+          "The community directory lists Risewell Homes, K. Hovnanian Homes, Village Builders, and David Weekley as coming soon. Lennar publishes its own active page from $225,990 to $370,990.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Waller ISD. The schools page names Mary Alice Cure Elementary, Schultz Junior High, and Waller High School. Confirm the lot with the district.",
       },
     ],
   },

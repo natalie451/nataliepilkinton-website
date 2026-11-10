@@ -158,6 +158,16 @@ const builderHomePhotos: Record<string, Record<string, BuilderHomePhoto>> = {
       creditUrl: "https://www.tripointehomes.com/tx/houston/mason-woods",
     },
   },
+  "oakberry-trails": {
+    "Risewell Homes": {
+      src: "/new-homes/oakberry-trails/builders/risewell.webp",
+      alt: "Front of the Risewell home at 21519 Vineyard View, published on the Oakberry Trails Risewell page.",
+      width: 1600,
+      height: 1066,
+      creditName: "Oakberry Trails",
+      creditUrl: "https://www.oakberrytrails.com/builders-in-waller-tx/risewell-homes",
+    },
+  },
   "woodsons-reserve": {
     "Tri Pointe Homes": {
       src: "/new-homes/woodsons-reserve/builders/tri-pointe.webp",
