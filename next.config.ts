@@ -3,7 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   async rewrites() {
     // Static, self-contained quiz page in public/ready-to-buy (Facebook lead magnet).
-    return [{ source: "/ready-to-buy", destination: "/ready-to-buy/index.html" }];
+    return [
+      { source: "/ready-to-buy", destination: "/ready-to-buy/index.html" },
+      // Video-free version of the quiz, pinned in livestream chats.
+      { source: "/live-quiz", destination: "/live-quiz/index.html" },
+    ];
   },
   async redirects() {
     const transcriptRedirects: { source: string; destination: string }[] = [
