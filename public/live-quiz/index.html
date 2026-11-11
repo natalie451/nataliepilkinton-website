@@ -215,7 +215,9 @@ const CONFIG = {
   LEAD_URL: "/api/lead-magnet",   // the website's own lead endpoint (saves to GoHighLevel)
   PIXEL_ID: "",      // optional Meta Pixel ID for the Lead event
     EVENT: "Home Buying Seminar LIVE - Nov 11, 2026 (live chat quiz)",
-  RESOURCE: "live-seminar-quiz"
+  RESOURCE: "live-seminar-quiz",
+  // CloserControl "Live Quiz - Webhook Intake" workflow: creates the contact, adds a note and the live-seminar-quiz tag.
+  CC_WEBHOOK: "https://services.leadconnectorhq.com/hooks/p6coQEMK9WucfxjPnduV/webhook-trigger/07a40e02-0264-4eb7-b1dc-997102408ebd"
 };
 const Q = [
   { key:"credit", eyebrow:"Question 1 of 4", text:"What's your credit score?",
@@ -348,12 +350,21 @@ $("leadForm").addEventListener("submit", async e => {
     "Consent (" + new Date().toISOString() + "): " + document.querySelector(".consent span").textContent
   ].filter(Boolean).join("\n");
   const payload = { name: fname, email, phone: digits, resource: CONFIG.RESOURCE, interest: "buyer", honeypot: $("hp").value, note };
+  const parts = fname.split(/\s+/);
+  const ccPayload = { full_name: fname, first_name: parts[0], last_name: parts.slice(1).join(" "), email, phone: "+1" + digits,
+    source: UTM.utm_source || "direct", credit_score: answers[0].k, down_payment: answers[1].k, timeline: answers[2].k,
+    buyer_type: answers[3].label, readiness: sc.lvl + " (" + sc.pts + "/9)", note };
+  const ccSend = CONFIG.CC_WEBHOOK && !$("hp").value
+    ? fetch(CONFIG.CC_WEBHOOK, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(ccPayload), keepalive:true})
+        .then(r => { if (!r.ok) console.warn("CloserControl webhook failed", r.status); }).catch(() => {})
+    : Promise.resolve();
   if (CONFIG.LEAD_URL) {
     try {
       const r = await fetch(CONFIG.LEAD_URL, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload)});
       if (!r.ok) console.warn("Lead save failed", r.status);
     } catch(_) { /* still show results */ }
   }
+  await ccSend;
   if (window.fbq) fbq('track', 'Lead', {content_name: 'Live Seminar Quiz'});
   btn.disabled = false; btn.textContent = "Show my results →";
   showResult();
