@@ -6,6 +6,7 @@ export type LeadKind = LeadInterest | "general";
 const RESOURCE_KINDS: Record<string, LeadKind> = {
   "buyer-checklist": "buyer",
   "ready-to-buy-quiz": "buyer",
+  "live-seminar-quiz": "buyer",
   "presale-checklist": "seller",
   "home-valuation": "seller",
   "join-my-team": "agent",
