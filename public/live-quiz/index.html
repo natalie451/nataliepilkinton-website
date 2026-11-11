@@ -159,7 +159,7 @@ body{margin:0;background:radial-gradient(ellipse at 50% 0%,#17377f 0%,var(--navy
       <div class="teaser"><span style="font-size:30px">📋</span><div><b id="teaseLvl">Almost there</b><div>Your personal 4-step plan + a free call with Natalie</div></div></div>
       <form id="leadForm" novalidate>
         <div class="f">
-          <div><label for="fname">First name</label><input type="text" id="fname" name="first_name" autocomplete="given-name" required></div>
+          <div><label for="fname">Full name</label><input type="text" id="fname" name="full_name" autocomplete="name" placeholder="First and last name" required></div>
           <div><label for="phone">Mobile number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(281) 555-0123" required></div>
           <div><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required></div>
         </div>
@@ -331,7 +331,7 @@ $("leadForm").addEventListener("submit", async e => {
   e.preventDefault();
   const fname = $("fname").value.trim(), email = $("email").value.trim(), digits = $("phone").value.replace(/\D/g,"").replace(/^1(?=\d{10}$)/,"");
   const err = $("ferr");
-  if (!fname) return err.textContent = "Please add your first name.";
+  if (fname.split(/\s+/).length < 2) return err.textContent = "Please add your first and last name.";
   if (digits.length !== 10) return err.textContent = "Please enter a 10-digit US mobile number.";
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return err.textContent = "Please check your email address.";
   if (!$("agree").checked) return err.textContent = "Please tick the box so Natalie can send your results.";
