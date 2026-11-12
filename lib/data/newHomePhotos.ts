@@ -17,6 +17,8 @@ export type CommunityGallery = {
   photos: CommunityPhoto[];
   /** Model-home interiors, shown in their own gallery after the amenity shots. */
   interiorPhotos?: CommunityPhoto[];
+  /** Places photographed nearby. Not homes for sale. */
+  areaPhotos?: CommunityPhoto[];
 };
 
 export const communityGalleries: Record<string, CommunityGallery> = {
@@ -134,6 +136,50 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/bridgeland/creekland.webp","alt":"Creekland Village in Bridgeland","width":1200,"height":800},
       {"src":"/new-homes/bridgeland/prairieland.webp","alt":"Prairieland Village in Bridgeland","width":1200,"height":800},
     ],
+    areaPhotos: [
+      {
+        src: "/new-homes/bridgeland/area-starling.webp",
+        alt: "Starling at Bridgeland. The monument shows 16200, with multifamily buildings behind it. Starling is not a single-family home for sale.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-heb.webp",
+        alt: "H-E-B storefront photographed in the Bridgeland area. Nearby shopping, not listed here as inside the community boundary.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-building.webp",
+        alt: "A modern multi-story building photographed in the Bridgeland area. The photo does not name the building.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-art.webp",
+        alt: "A park in the Bridgeland area, with an installation of orange vertical rods. The photo does not name the park.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-costco.webp",
+        alt: "Costco gas station photographed in the Bridgeland area. The sign on the canopy reads OPENING December 5, 2026 at 6 A.M. That date is what the sign shows and can change. The photo does not show the station as open.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+      {
+        src: "/new-homes/bridgeland/area-texas-roadhouse.webp",
+        alt: "Texas Roadhouse photographed in the Bridgeland area. Nearby dining, not listed here as inside the community boundary.",
+        width: 1600,
+        height: 900,
+        creditName: "Natalie Pilkinton",
+      },
+    ],
   },
   "towne-lake": {
     creditName: "Towne Lake",
@@ -234,6 +280,54 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/harrington-trails/elevation.webp","alt":"Home elevation in Harrington Trails","width":1150,"height":647},
     ],
   },
+  "oakberry-trails": {
+    creditName: "Oakberry Trails",
+    creditUrl: "https://www.oakberrytrails.com/",
+    photos: [
+      {
+        src: "/new-homes/oakberry-trails/hero.webp",
+        alt: "White barn-style gathering building and playground published on the Oakberry Trails homepage",
+        width: 1600,
+        height: 954,
+      },
+    ],
+  },
+  "falls-at-imperial-oaks": {
+    creditName: "Falls at Imperial Oaks",
+    creditUrl: "https://www.fallsatimperialoaks.com/amenities",
+    photos: [
+      {
+        src: "/new-homes/falls-at-imperial-oaks/club.webp",
+        alt: "Stone clubhouse with a columned porch, published on the Falls at Imperial Oaks amenities page",
+        width: 1600,
+        height: 900,
+      },
+      {
+        src: "/new-homes/falls-at-imperial-oaks/club-interior.webp",
+        alt: "Clubhouse living room opening to a pool, published on the Falls at Imperial Oaks amenities page",
+        width: 1600,
+        height: 1066,
+      },
+    ],
+  },
+  "the-trails": {
+    creditName: "The Trails",
+    creditUrl: "https://www.thetrailshouston.com/",
+    photos: [
+      {
+        src: "/new-homes/the-trails/path.webp",
+        alt: "Walking path through pines, published on The Trails homepage",
+        width: 1600,
+        height: 1216,
+      },
+      {
+        src: "/new-homes/the-trails/playground.webp",
+        alt: "Playground published on The Trails homepage",
+        width: 1600,
+        height: 1228,
+      },
+    ],
+  },
   "the-canopies": {
     creditName: "The Canopies",
     creditUrl: "https://www.forestar.com/community/the-canopies/",
@@ -276,6 +370,75 @@ export const communityGalleries: Record<string, CommunityGallery> = {
       {"src":"/new-homes/evergreen/pool.webp","alt":"Pool and lounge chairs at The Arbor in Evergreen, with a wood pavilion behind the water","width":1328,"height":884},
       {"src":"/new-homes/evergreen/splash.webp","alt":"Splash pad at The Arbor in Evergreen","width":1328,"height":884},
       {"src":"/new-homes/evergreen/park.webp","alt":"Children on a climbing structure, published with Curiosity Park on the Evergreen site","width":1142,"height":958},
+    ],
+  },
+  "avalon-at-cypress": {
+    creditName: "Taylor Morrison",
+    creditUrl: "https://www.taylormorrison.com/tx/houston/avalon-at-cypress",
+    photos: [
+      {"src":"/new-homes/avalon-at-cypress/hero.webp","alt":"Front of the stone and stucco home published for 9207 Ocean Onyx at Avalon at Cypress","width":1000,"height":668},
+    ],
+  },
+  redbud: {
+    creditName: "Taylor Morrison",
+    creditUrl: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-40s-ascent",
+    photos: [
+      {
+        src: "/new-homes/redbud/hero.webp",
+        alt: "Front of the Taylor Morrison home at 18034 Old Barrel Drive. A red yard sign reads Allegro.",
+        width: 1600,
+        height: 900,
+      },
+    ],
+  },
+  stokesbury: {
+    creditName: "Centex Homes",
+    creditUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    photos: [
+      {
+        src: "/new-homes/stokesbury/hero.webp",
+        alt: "Single-story home published as a model exterior on the Centex Stokesbury page.",
+        width: 1600,
+        height: 1200,
+      },
+      {
+        src: "/new-homes/stokesbury/monument.webp",
+        alt: "Stone entrance sign reading Stokesbury, A Centex Community.",
+        width: 1600,
+        height: 1034,
+      },
+    ],
+  },
+  "the-pines-at-seven-coves": {
+    creditName: "Centex Homes",
+    creditUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    photos: [
+      {
+        src: "/new-homes/the-pines-at-seven-coves/hero.webp",
+        alt: "Front of the Centex model at 10519 Killdeer Court. A sign on the door reads Office Hours.",
+        width: 1600,
+        height: 1034,
+      },
+      {
+        src: "/new-homes/the-pines-at-seven-coves/monument.webp",
+        alt: "Entrance sign reading The Pines at Seven Coves, A Centex Community.",
+        width: 1600,
+        height: 1034,
+      },
+    ],
+  },
+  "grand-mason-crossing": {
+    creditName: "Long Lake Ltd.",
+    creditUrl: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/",
+    photos: [
+      {"src":"/new-homes/grand-mason-crossing/hero.webp","alt":"Stone and brick home published as the Grand Mason Crossing image","width":1600,"height":800},
+    ],
+  },
+  "mason-woods": {
+    creditName: "Tri Pointe Homes",
+    creditUrl: "https://www.tripointehomes.com/tx/houston/mason-woods",
+    photos: [
+      {"src":"/new-homes/mason-woods/hero.webp","alt":"Pool, pavilion, and playground published on the Tri Pointe Mason Woods page","width":1600,"height":1066},
     ],
   },
   "everly": {

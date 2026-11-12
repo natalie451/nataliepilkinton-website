@@ -18,7 +18,23 @@ export type BuilderPromo = {
 export const promoLastChecked = "November 9, 2026";
 
 /** Communities checked on a later date than promoLastChecked. */
-const promoLastCheckedByCommunity: Record<string, string> = {};
+const promoLastCheckedByCommunity: Record<string, string> = {
+  "grand-mason-crossing": "November 8, 2026",
+  redbud: "November 8, 2026",
+  stokesbury: "November 8, 2026",
+  "the-pines-at-seven-coves": "November 8, 2026",
+  "mason-woods": "November 8, 2026",
+  "avalon-at-cypress": "November 8, 2026",
+  "azalea-trails": "November 10, 2026",
+  "oakberry-trails": "November 10, 2026",
+  jubilee: "November 10, 2026",
+  "the-grand-prairie": "November 10, 2026",
+  "walden-creek": "November 10, 2026",
+  escondido: "November 10, 2026",
+  "fulshear-lakes": "November 10, 2026",
+  "lakes-of-cane-island": "November 10, 2026",
+  grange: "November 10, 2026",
+};
 
 export function lastCheckedLabel(slug: string) {
   return promoLastCheckedByCommunity[slug] ?? promoLastChecked;
@@ -454,6 +470,92 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
     },
   ],
   "the-canopies": [],
+  "the-trails": [],
+  "falls-at-imperial-oaks": [],
+  "azalea-trails": [
+    {
+      builder: "Tri Pointe Homes",
+      text: "Special Rate: Conventional 5.490% (6.277% APR) 30-year fixed rate financing. The page shows an estimated payment for a $600,000 sales price. No end date is printed.",
+      sourceLabel: "Tri Pointe Homes, Azalea Trails",
+      sourceUrl: "https://www.tripointehomes.com/tx/houston/azalea-trails",
+    },
+  ],
+  jubilee: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Jubilee",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/jubilee",
+    },
+  ],
+  "the-grand-prairie": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, The Grand Prairie",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/the-grand-prairie",
+    },
+  ],
+  "walden-creek": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Walden Creek",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/walden-creek",
+    },
+  ],
+  escondido: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Escondido",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/escondido",
+    },
+  ],
+  "fulshear-lakes": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Fulshear Lakes",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/fulshear-lakes",
+    },
+  ],
+  "lakes-of-cane-island": [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Lakes of Cane Island",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/lakes-of-cane-island",
+    },
+  ],
+  grange: [
+    {
+      builder: "Perry Homes",
+      text: "Up to $55,000 in incentives. Flex cash and a low rate are available for a limited time. Rates as low as 4.99% (5.898% APR). No end date is printed.",
+      sourceLabel: "Perry Homes, Grange",
+      sourceUrl: "https://www.perryhomes.com/new-homes/texas/houston/grange",
+    },
+  ],
+  "oakberry-trails": [
+    {
+      builder: "K. Hovnanian Homes",
+      text: "3.75% 7/6 ARM rates on select quick move-in homes. Limited time. The card also says fixed rate the first 7 years, and flex cash incentives available. No APR or end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+    {
+      builder: "Risewell Homes",
+      text: "Rates as low as 3.99% plus a no-cost refinance. The card says 3.99% (6.138% APR) fixed for the first 5 years, with payments as low as $2,509 per month, plus up to $10,000 flex cash. Asterisks are printed. No end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+    {
+      builder: "Village Builders",
+      text: "3.50% FHA 5/1 ARM rates on select move-in ready homes. Limited time. The same column also lists up to $10,000 toward closing costs, and appliance packages on select move-in ready inventory. No APR or end date is printed.",
+      sourceLabel: "Oakberry Trails builder promotions",
+      sourceUrl: "https://www.oakberrytrails.com/builder-promotions",
+    },
+  ],
   "pinewood-trails": [
     {
       builder: "LGI Homes",
@@ -875,6 +977,101 @@ export const builderPromotions: Record<string, BuilderPromo[]> = {
       sourceUrl: "https://www.centurycommunities.com/promos/national/2026-wayfair-black-friday-10k/",
     },
   ],
+  "grand-mason-crossing": [
+    {
+      builder: "Long Lake Ltd.",
+      text: "Long Lake's promotions page shows an Inventory Savings flyer: 4.99% on a 5/1 ARM, 5.99% fixed FHA/VA, and 6.5% fixed conventional, on select inventory homes. The flyer says the offer can expire without notice, covers select homes under construction and select move-in ready homes, and is available with preferred lenders. It does not print an APR or an end date, and it says to ask a sales counselor which addresses qualify.",
+      sourceLabel: "Long Lake inventory savings flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-inventory-savings.webp",
+    },
+    {
+      builder: "Long Lake Ltd.",
+      text: "The Season of Savings flyer on the same promotions page says select move-in ready homes can have reduced pricing, additional incentives, and a BTSA. The rate choices printed are 4.99% FHA fixed and 5.5% conventional fixed, on select homes only. The flyer says the offer can expire without notice and is available with preferred lenders. It does not print an APR or an end date.",
+      sourceLabel: "Long Lake Season of Savings flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-pick-rate2.webp",
+    },
+    {
+      builder: "Long Lake Ltd.",
+      text: "A separate Long Lake flyer says buyers can use a 6.5% fixed FHA/VA rate on new build homes. It says inventory homes and homes under construction are excluded. The flyer says the offer can expire without notice and is available with preferred lenders. It does not print an APR or an end date.",
+      sourceLabel: "Long Lake new-build FHA/VA flyer",
+      sourceUrl: "https://www.longlakeltd.com/wp-content/uploads/2026/10/new-homes-promotion-fha-va-6-5-fixed.webp",
+    },
+  ],
+  stokesbury: [
+    {
+      builder: "Centex Homes",
+      text: "The Stokesbury page banner says: Save up to $30k: Plus Paid Closing Costs, now through 11/30. The page marks the closing-cost line with an asterisk and a disclaimer control.",
+      expires: "11/30, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, Stokesbury",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    },
+    {
+      builder: "Centex Homes",
+      text: "A second Stokesbury banner says: Limited time offer. No down payment, plus we pay your closing costs, now through 11/30.",
+      expires: "11/30, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, Stokesbury",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    },
+    {
+      builder: "Centex Homes",
+      text: "The Stokesbury page also says the 10 Day Sales Event is live. The offer is valid on contracts signed by 11/15 on select homes. The page says to see a Centex sales consultant for details.",
+      expires: "Contracts signed by 11/15, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, Stokesbury",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    },
+    {
+      builder: "Centex Homes",
+      text: "The Stokesbury rate banner says: Enjoy rates as low as 4.75% for a limited time. The banner does not print an APR or an end date. Centex is the builder. Natalie is not a lender, and this rate is the builder's printed offer.",
+      sourceLabel: "Centex, Stokesbury",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361",
+    },
+  ],
+  "the-pines-at-seven-coves": [
+    {
+      builder: "Centex Homes",
+      text: "The Pines at Seven Coves banner says: Save up to $30k: Plus Paid Closing Costs, now through 11/30. The page marks the closing-cost line with an asterisk and a disclaimer control.",
+      expires: "11/30, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, The Pines at Seven Coves",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    },
+    {
+      builder: "Centex Homes",
+      text: "A second banner says: No Down Payment, Plus We'll Pay Your Closing Costs, now through 11/30.",
+      expires: "11/30, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, The Pines at Seven Coves",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    },
+    {
+      builder: "Centex Homes",
+      text: "The page also says the 10 Day Sales Event is live. The offer is valid on contracts signed by 11/15 on select homes. The page says to see a Centex sales consultant for details.",
+      expires: "Contracts signed by 11/15, as printed. The banner does not add a year.",
+      sourceLabel: "Centex, The Pines at Seven Coves",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    },
+    {
+      builder: "Centex Homes",
+      text: "The rate banner says: Enjoy rates as low as 4.75% for a limited time. The banner does not print an APR or an end date. Centex is the builder. Natalie is not a lender, and this rate is the builder's printed offer.",
+      sourceLabel: "Centex, The Pines at Seven Coves",
+      sourceUrl: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+    },
+  ],
+  "mason-woods": [
+    {
+      builder: "Taylor Morrison",
+      text: "The Mason Woods page banner says $0 down, zero closing costs, and a reduced FHA rate when using Taylor Morrison Home Funding. The details print 5.75% (6.57% APR) with 3.5% forgivable down payment assistance, for contracts entered from October 28, 2026 through November 11, 2026, on select Houston quick move-in homes that close by December 31, 2026. The example uses a $400,000 price, a loan amount of $392,755, 3.5% down, and a 640 credit score.",
+      expires: "Contract by November 11, 2026. Close by December 31, 2026.",
+      sourceLabel: "Taylor Morrison, Mason Woods",
+      sourceUrl: "https://www.taylormorrison.com/tx/houston/mason-woods",
+    },
+    {
+      builder: "Tri Pointe Homes",
+      text: "The Mason Woods page lists a special rate: FHA 30-year fixed at 4.875% (5.950% APR). The linked terms say the purchase agreement must be entered between October 23, 2026 and November 15, 2026, the home must close by December 31, 2026, and the rate requires financing through Tri Pointe Connect. The sample uses a $375,000 sales price.",
+      expires: "Contract by November 15, 2026. Close by December 31, 2026.",
+      sourceLabel: "Tri Pointe Homes Value of Now",
+      sourceUrl: "https://www.tripointehomes.com/promotion/tx/houston/value-of-now-sales-event-fha-4-875-fixed-rate-5-950-apr-estimated-payment-for-375k-sales-price",
+    },
+  ],
+
 };
 
 export function promosForCommunity(slug: string) {

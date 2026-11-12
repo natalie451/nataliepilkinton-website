@@ -17,6 +17,7 @@ import { WaysToMakeItWork, financingFaqs } from "@/components/new-homes/WaysToMa
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps } from "@/lib/seo/schema";
 import { siteConfig } from "@/lib/data/navigation";
+import { bridgelandDirectoryCards } from "@/lib/data/bridgelandDirectoryCards";
 import { amenityChips, getCommunityGallery, publishedPriceLabel, type CommunityPhoto } from "@/lib/data/newHomePhotos";
 import {
   communitiesForCity,
@@ -173,6 +174,20 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
         </Section>
       )}
 
+      {gallery?.areaPhotos && gallery.areaPhotos.length > 0 && (
+        <Section id="nearby">
+          <Container>
+            <h2>Nearby in the {community.name} area</h2>
+            <p className="max-w-[42rem] text-gray-dark">
+              Natalie Pilkinton took these photos in the {community.name} area. Shops and restaurants are nearby.
+              This gallery does not place them inside the community boundary, and none of these photos is a
+              single-family home for sale.
+            </p>
+            <AreaPhotoGrid photos={gallery.areaPhotos} />
+          </Container>
+        </Section>
+      )}
+
       {gallery?.interiorPhotos && gallery.interiorPhotos.length > 0 && (
         <Section>
           <Container>
@@ -232,6 +247,96 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
           </dl>
         </Container>
       </Section>
+
+      {community.directory && (
+        <Section id="directory">
+          <Container>
+            <h2>Village and neighborhood directory</h2>
+            <p className="max-w-[46rem] text-gray-dark">{community.directory.intro}</p>
+            {(["Villages", "Neighborhoods", "HOA areas", "Recorded sections"] as const).map((group) => {
+              const places = community.directory?.places.filter((place) => place.group === group) ?? [];
+              if (places.length === 0) return null;
+              const rich = group === "Villages" || group === "Neighborhoods";
+              return (
+                <div key={group} className="mt-xl">
+                  <h3 className="mb-md">{group}</h3>
+                  <div className={rich ? "grid grid-cols-1 gap-md lg:grid-cols-2" : "grid gap-md"}>
+                    {places.map((place) => {
+                      const facts = community.slug === "bridgeland" ? bridgelandDirectoryCards[place.name] : undefined;
+                      return (
+                        <article key={place.name} className="overflow-hidden rounded-xs border border-gray-light bg-white">
+                          {facts?.photo ? (
+                            <div className="relative aspect-[3/2] bg-cream">
+                              <Image
+                                src={facts.photo.src}
+                                alt={facts.photo.alt}
+                                fill
+                                sizes="(max-width: 1023px) 100vw, 50vw"
+                                className="object-cover"
+                              />
+                            </div>
+                          ) : facts ? (
+                            <div className="flex min-h-24 items-center bg-cream px-md py-md">
+                              <p className="mb-0 font-semibold text-navy">Ask Natalie for a photo</p>
+                            </div>
+                          ) : null}
+                          <div className="p-md">
+                            <p className="mb-xs text-xs font-semibold uppercase tracking-[0.12em] text-blue">
+                              {place.kind}
+                              {place.parent ? ` in ${place.parent}` : ""}
+                            </p>
+                            <h3 className="mb-xs mt-0 text-xl">{place.name}</h3>
+                            <p className="mb-sm text-navy">{place.status}</p>
+                            <p className="mb-sm text-gray-dark">{place.detail}</p>
+                            <a
+                              href={place.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm font-semibold text-blue"
+                            >
+                              {place.sourceLabel}
+                            </a>
+                            {facts ? (
+                              <div className="mt-md grid gap-sm">
+                                <div className="rounded-xs bg-cream p-sm">
+                                  <p className="mb-xs text-xs font-semibold uppercase tracking-[0.12em] text-blue">HOA</p>
+                                  <p className="mb-sm text-navy">{facts.hoa}</p>
+                                  <a href={facts.hoaSourceUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-blue">
+                                    {facts.hoaSourceLabel}
+                                  </a>
+                                </div>
+                                <div className="rounded-xs bg-cream p-sm">
+                                  <p className="mb-xs text-xs font-semibold uppercase tracking-[0.12em] text-blue">Price</p>
+                                  <p className="mb-sm text-navy">{facts.price}</p>
+                                  {facts.priceLinks && facts.priceLinks.length > 0 ? (
+                                    <ul className="mb-0">
+                                      {facts.priceLinks.map((link) => (
+                                        <li key={link.url}>
+                                          <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-blue">
+                                            {link.label}
+                                          </a>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  ) : null}
+                                </div>
+                                {facts.photo ? (
+                                  <PhotoCredit name={facts.photo.creditName} url={facts.photo.creditUrl} />
+                                ) : null}
+                              </div>
+                            ) : null}
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+            <p className="mt-xl max-w-[46rem] text-sm text-gray-dark">{community.directory.limitation}</p>
+          </Container>
+        </Section>
+      )}
 
       <BuildersInCommunity community={community} />
 
@@ -327,6 +432,30 @@ export default async function NewHomeCommunityPage({ params }: { params: Promise
       <div className="h-28" aria-hidden />
       <TourWithNatalieBar label={`Tour ${community.name} with Natalie`} />
     </>
+  );
+}
+
+function AreaPhotoGrid({ photos }: { photos: CommunityPhoto[] }) {
+  return (
+    <div className="grid grid-cols-2 gap-md max-md:grid-cols-1">
+      {photos.map((photo) => (
+        <figure key={photo.src} className="m-0 overflow-hidden rounded-xs bg-cream">
+          <div className="relative w-full" style={{ aspectRatio: `${photo.width} / ${photo.height}` }}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <figcaption className="px-md py-sm text-sm text-navy">
+            <span className="block">{photo.alt}</span>
+            {photo.creditName ? <span className="mt-xs block text-xs text-gray-dark">Photo: {photo.creditName}</span> : null}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }
 

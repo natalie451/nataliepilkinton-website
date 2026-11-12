@@ -50,6 +50,21 @@ export type NewHomeCommunity = {
   schools: string;
   sources: NewHomeSource[];
   faqs: NewHomeFaq[];
+  /** Named villages, neighborhoods, or recorded sections. Absent when the page has none. */
+  directory?: {
+    intro: string;
+    limitation: string;
+    places: {
+      name: string;
+      group: "Villages" | "Neighborhoods" | "HOA areas" | "Recorded sections";
+      kind: "Village" | "Neighborhood" | "Multifamily" | "Active-adult community" | "HOA area" | "Plat section";
+      parent?: string;
+      status: string;
+      detail: string;
+      sourceLabel: string;
+      sourceUrl: string;
+    }[];
+  };
 };
 
 const phone = "(832) 981-5271";
@@ -80,35 +95,35 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Montgomery",
     headline: "Lake Conroe, FM 2854, and FM 1488",
     summary:
-      "Woodforest and Fairwater sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854. Two Step Farm is the Oxland Group community north of FM 1488, between I-45 and Highway 249.",
+      "Woodforest and Fairwater sit south of Lake Conroe. Woodforest is the large Johnson Development community. Fairwater is the smaller Forestar community on FM 2854. Two Step Farm is the Oxland Group community north of FM 1488, between I-45 and Highway 249. Walden Creek is the Perry Homes community in Montgomery ISD.",
   },
   {
     slug: "willis",
     name: "Willis",
     headline: "I-45 north of Conroe, along FM 830",
     summary:
-      "Willis is the north end of this new-home corridor. The Woodlands Hills, a Howard Hughes community, has neighborhoods in both Willis and Conroe and is zoned to Willis ISD.",
+      "Willis is the north end of this new-home corridor. The Woodlands Hills, a Howard Hughes community, has neighborhoods in both Willis and Conroe and is zoned to Willis ISD. The Pines at Seven Coves is the Centex community off FM 830 and Highway 75, also in Willis ISD.",
   },
   {
     slug: "spring",
     name: "Spring",
     headline: "Grand Parkway, Rayford, and Natalie's home base",
     summary:
-      "Spring is where Natalie is based. Harmony and Woodson's Reserve are the master-planned communities buyers ask about along the Grand Parkway, Rayford Road, and Riley Fuzzel Road.",
+      "Spring is where Natalie is based. Harmony and Woodson's Reserve are the master-planned communities buyers ask about along the Grand Parkway, Rayford Road, and Riley Fuzzel Road. Falls at Imperial Oaks is the Holcomb community on Birnham Woods Drive, in Conroe ISD. Its site says the initial build-out finished in the late 2010s.",
   },
   {
     slug: "cypress",
     name: "Cypress",
     headline: "Northwest Houston, from FM 529 to Tuckerton",
     summary:
-      "Cypress new construction here means Bridgeland, Towne Lake, and Marvida. Elyson uses a Katy address and has its own page under Katy.",
+      "Cypress new construction here means Bridgeland, Towne Lake, Marvida, Mason Woods, Avalon at Cypress, and Azalea Trails. Elyson uses a Katy address and has its own page under Katy.",
   },
   {
     slug: "waller",
     name: "Waller",
     headline: "Waller ISD and Waller County, including Hockley and Brookshire",
     summary:
-      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose and Everly use Hockley addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
+      "The City of Waller is small. The new-home searches that use the Waller name usually mean Waller ISD in Hockley, or Waller County communities sold from Brookshire and the west Katy edge. Dellrose, Everly, Jubilee, and The Grand Prairie use Hockley addresses and Waller ISD. Stokesbury and Oakberry Trails use Waller addresses and Waller ISD. Sunterra and Sunterra Lakes are the Waller County communities.",
   },
   {
     slug: "porter",
@@ -122,14 +137,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Splendora",
     headline: "Highway 242 and east Montgomery County",
     summary:
-      "Splendora ISD covers several new-home communities whose street addresses say New Caney or Cleveland. Harrington Trails, The Canopies, and Pinewood Trails are the ones with current builder pages.",
+      "Splendora ISD covers several new-home communities whose street addresses say New Caney or Cleveland. Harrington Trails and The Canopies are Forestar communities on this corridor. The Canopies lists five builders. Pinewood Trails is the LGI community.",
   },
   {
     slug: "new-caney",
     name: "New Caney",
     headline: "US 59 and the Grand Parkway",
     summary:
-      "Tavola is the Friendswood Development community with a New Caney address. Valley Ranch, The Highlands, and Harrington Trails are nearby and linked from their own city pages.",
+      "Tavola is the Friendswood Development community with a New Caney address. The Trails is the Castle Hill Partners community in New Caney, zoned to Huffman ISD. Valley Ranch, The Highlands, Harrington Trails, and The Canopies are nearby and linked from their own city pages.",
   },
   {
     slug: "tomball",
@@ -143,14 +158,14 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Katy",
     headline: "FM 529, the Grand Parkway, and Fulshear south of I-10",
     summary:
-      "Elyson and Cane Island are north of Interstate 10. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, and Jordan Ranch are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
+      "Elyson and Cane Island are north of Interstate 10. Grand Mason Crossing is east of the Grand Parkway, with a Katy address and Katy ISD. Grange and Lakes of Cane Island are Perry Homes communities with Katy pages. Sunterra and Sunterra Lakes are linked here and filed under Waller. Cross Creek West, Tamarron, Jordan Ranch, and Fulshear Lakes are in Fulshear, south of I-10, and are linked here with their full pages under Fulshear.",
   },
   {
     slug: "magnolia",
     name: "Magnolia",
     headline: "SH 249, FM 1488, and FM 1486",
     summary:
-      "Audubon and COLTON are the Magnolia-area master plans with current community sites. Audubon uses a Magnolia address at SH 249 and FM 1488. COLTON uses a Todd Mission address at SH 249 and FM 1486 and publishes Magnolia ISD schools.",
+      "Audubon and COLTON are the Magnolia-area master plans with current community sites. Audubon uses a Magnolia address at SH 249 and FM 1488. COLTON uses a Todd Mission address at SH 249 and FM 1486 and publishes Magnolia ISD schools. Escondido is the Perry Homes community with a Magnolia address.",
   },
   {
     slug: "humble",
@@ -178,7 +193,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Fulshear",
     headline: "FM 359, Jordan Road, and the Katy Freeway",
     summary:
-      "Cross Creek West, Tamarron, and Jordan Ranch are Fulshear communities with current builder pages that name prices and Lamar CISD. All three are south of I-10 and are also linked from the Katy page.",
+      "Cross Creek West, Tamarron, Jordan Ranch, and Fulshear Lakes are Fulshear communities with current builder pages that name prices and Lamar CISD. All four are south of I-10 and are also linked from the Katy page.",
   },
   {
     slug: "missouri-city",
@@ -255,7 +270,7 @@ export const newHomeCities: NewHomeCity[] = [
     name: "Huffman",
     headline: "Lennar community in Huffman",
     summary:
-      "Sila is a Lennar community in Huffman. Lennar lists homes from $132,990. The Lennar page does not name a school district.",
+      "Sila is a Lennar community in Huffman. Lennar lists homes from $132,990. The Lennar page does not name a school district. The Trails uses a New Caney address and is zoned to Huffman ISD. Its full page is filed under New Caney and linked here.",
   },
 ];
 
@@ -881,6 +896,473 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "jubilee",
+    citySlug: "waller",
+    name: "Jubilee",
+    developer: "Perry Homes",
+    address: "16611 Cheerful Trail Street, Hockley, TX",
+    location:
+      "Perry describes Jubilee as a planned community in Hockley. The page lists homes at 16611 Cheerful Trail Street and 26110 Happy Home Street. It is filed under Waller because Hockley addresses in Waller ISD are grouped here.",
+    summary:
+      "Jubilee is a Perry Homes community in Hockley. The page lists a 60-foot section from the $490s and an 80-foot section from the $730s, with homes available in both. Perry names Waller ISD schools.",
+    priceNote:
+      "Perry lists Jubilee 60-foot homes from the $490s, about 2,700 to 4,100 square feet, and 80-foot homes from the $730s, about 3,300 to 5,600 square feet.",
+    homes:
+      "The 60-foot section lists 4 to 5 bedrooms. The 80-foot section is the larger plans. Perry shows 37 homes in one section and 34 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "60-foot from the $490s, about 2,700 to 4,100 square feet. 80-foot from the $730s, about 3,300 to 5,600 square feet. Addresses on the page include 16611 Cheerful Trail Street.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Perry names Roberts Road Elementary, Waller Junior High, and Waller High School. The same data also prints Robert Roads Elementary. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Jubilee", url: "https://www.perryhomes.com/new-homes/texas/houston/jubilee" }],
+    faqs: [
+      {
+        question: "Where is Jubilee?",
+        answer: "Perry places Jubilee in Hockley and names Waller ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "The 60-foot section is from the $490s. The 80-foot section is from the $730s.",
+      },
+    ],
+  },
+  {
+    slug: "the-grand-prairie",
+    citySlug: "waller",
+    name: "The Grand Prairie",
+    developer: "Perry Homes",
+    address: "16427 Verbena Glen Drive, Hockley, TX",
+    location:
+      "Perry says The Grand Prairie is in Hockley. Published home addresses include 16427 Verbena Glen Drive and 16431 Verbena Glen Drive. The page is filed under Waller with the other Hockley communities.",
+    summary:
+      "The Grand Prairie is a Perry Homes community in Hockley. The page lists 40-foot homes from the $290s and 50-foot homes from the $370s, and both sections show homes for sale.",
+    priceNote:
+      "Perry lists The Grand Prairie 40-foot homes from the $290s, about 1,500 to 2,500 square feet, and 50-foot homes from the $370s, about 2,100 to 3,200 square feet.",
+    homes: "The 40-foot section lists 3 bedrooms and up. Perry shows 22 homes in one section and 30 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "40-foot from the $290s, about 1,500 to 2,500 square feet. 50-foot from the $370s, about 2,100 to 3,200 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Perry names I.T. Holleman Elementary School, Waller Junior High School, and Waller High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, The Grand Prairie", url: "https://www.perryhomes.com/new-homes/texas/houston/the-grand-prairie" },
+    ],
+    faqs: [
+      {
+        question: "Where is The Grand Prairie?",
+        answer: "Perry places it in Hockley, with Waller ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "40-foot homes from the $290s. 50-foot homes from the $370s.",
+      },
+    ],
+  },
+  {
+    slug: "walden-creek",
+    citySlug: "montgomery",
+    name: "Walden Creek",
+    developer: "Perry Homes",
+    address: "18505 Scarlet Paintbrush Drive, Montgomery, TX",
+    location:
+      "Perry says Walden Creek is a new community now selling in Montgomery. Published addresses include 18505 Scarlet Paintbrush Drive and 18509 Scarlet Paintbrush Drive.",
+    summary:
+      "Walden Creek is a Perry Homes community in Montgomery. The page lists 45-foot homes from the $340s and 60-foot homes from the $540s, with homes for sale in both sections.",
+    priceNote:
+      "Perry lists Walden Creek 45-foot homes from the $340s, about 1,900 to 2,800 square feet, and 60-foot homes from the $540s, about 2,600 to 4,100 square feet.",
+    homes: "The 45-foot section lists 3 to 4 bedrooms. Perry shows 28 homes in one section and 32 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $340s, about 1,900 to 2,800 square feet. 60-foot from the $540s, about 2,600 to 4,100 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Montgomery ISD",
+    schools:
+      "Perry names Stewart Creek Elementary School, Montgomery Junior High School, and Montgomery High School. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Walden Creek", url: "https://www.perryhomes.com/new-homes/texas/houston/walden-creek" }],
+    faqs: [
+      {
+        question: "Where is Walden Creek?",
+        answer: "Perry says it is now selling in Montgomery, in Montgomery ISD.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $340s. 60-foot homes from the $540s.",
+      },
+    ],
+  },
+  {
+    slug: "escondido",
+    citySlug: "magnolia",
+    name: "Escondido",
+    developer: "Perry Homes",
+    address: "1192 Wandering Brook Street, Magnolia, TX 77354",
+    location:
+      "Perry publishes a home address of 1192 Wandering Brook Street, Magnolia, TX 77354, and names Magnolia ISD schools.",
+    summary:
+      "Escondido is a Perry Homes community in Magnolia. The page lists 45-foot homes from the $340s and 50-foot homes from the $400s, with homes for sale in both sections.",
+    priceNote:
+      "Perry lists Escondido 45-foot homes from the $340s, about 1,600 to 2,800 square feet, and 50-foot homes from the $400s, about 2,100 to 3,300 square feet.",
+    homes: "The 45-foot section lists 3 to 4 bedrooms. Perry shows 28 homes in one section and 31 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $340s, about 1,600 to 2,800 square feet. 50-foot from the $400s, about 2,100 to 3,300 square feet. One published address is 1192 Wandering Brook Street, Magnolia, TX 77354.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Magnolia ISD",
+    schools:
+      "Perry names Magnolia Elementary, Magnolia Intermediate, Magnolia Junior High, and Magnolia West High School. Confirm the lot with the district.",
+    sources: [{ label: "Perry Homes, Escondido", url: "https://www.perryhomes.com/new-homes/texas/houston/escondido" }],
+    faqs: [
+      {
+        question: "Where is Escondido?",
+        answer: "Perry publishes Magnolia, TX 77354, and Magnolia ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $340s. 50-foot homes from the $400s.",
+      },
+    ],
+  },
+  {
+    slug: "fulshear-lakes",
+    citySlug: "fulshear",
+    alsoListedOn: ["katy"],
+    name: "Fulshear Lakes",
+    developer: "Perry Homes",
+    address: "32510 Lakeside Park Drive, Fulshear, TX",
+    location:
+      "Perry describes Fulshear Lakes as a planned community in Fulshear. A published address is 32510 Lakeside Park Drive. The page is also linked from Katy.",
+    summary:
+      "Fulshear Lakes is a Perry Homes community in Fulshear. The page lists 80-foot homes from the $690s, about 3,400 to 5,100 square feet, with homes for sale. Perry names Lamar ISD schools.",
+    priceNote:
+      "Perry lists Fulshear Lakes 80-foot homes from the $690s, about 3,400 to 5,100 square feet.",
+    homes: "The 80-foot section lists 4 to 5 bedrooms. Perry shows 13 homes.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail: "80-foot from the $690s, about 3,400 to 5,100 square feet, 4 to 5 bedrooms.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the 80-foot section. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Lamar ISD",
+    schools:
+      "Perry names Morgan Elementary, James W. Roberts Middle School, Leaman Junior High, and Fulshear High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, Fulshear Lakes", url: "https://www.perryhomes.com/new-homes/texas/houston/fulshear-lakes" },
+    ],
+    faqs: [
+      {
+        question: "Where is Fulshear Lakes?",
+        answer: "Perry places it in Fulshear and names Lamar ISD schools.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "80-foot homes from the $690s.",
+      },
+    ],
+  },
+  {
+    slug: "lakes-of-cane-island",
+    citySlug: "katy",
+    name: "Lakes of Cane Island",
+    developer: "Perry Homes",
+    address: "1201 Emerald Lake Drive, Katy, TX 77493",
+    location:
+      "Perry publishes 1201 Emerald Lake Drive, Katy, TX 77493, and names Katy ISD schools. This is separate from Cane Island.",
+    summary:
+      "Lakes of Cane Island is a Perry Homes community in Katy. The page lists four sections, from 45-foot homes from the $420s through 80-foot homes from the $820s, and each section shows homes for sale.",
+    priceNote:
+      "Perry lists Lakes of Cane Island 45-foot homes from the $420s, 55-foot from the $540s, 60-foot from the $590s, and 80-foot from the $820s.",
+    homes:
+      "45-foot about 1,900 to 2,800 square feet. 55-foot about 2,600 to 3,500. 60-foot about 2,700 to 4,100. 80-foot about 3,400 to 5,600. Perry shows homes in all four sections.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "45-foot from the $420s, about 1,900 to 2,800 square feet. 55-foot from the $540s, about 2,600 to 3,500 square feet. 60-foot from the $590s, about 2,700 to 4,100 square feet. 80-foot from the $820s, about 3,400 to 5,600 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the four home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Perry names Robertson Elementary, Haskett Middle School, and Freeman High School. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Perry Homes, Lakes of Cane Island",
+        url: "https://www.perryhomes.com/new-homes/texas/houston/lakes-of-cane-island",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is this the same as Cane Island?",
+        answer: "No. Lakes of Cane Island is a separate Perry page, with a Katy address on Emerald Lake Drive.",
+      },
+      {
+        question: "What is the starting price?",
+        answer: "45-foot homes from the $420s. The 80-foot section is from the $820s.",
+      },
+    ],
+  },
+  {
+    slug: "grange",
+    citySlug: "katy",
+    name: "Grange",
+    developer: "Perry Homes",
+    address: "417 Dove Meadow Lane, Katy, TX",
+    location:
+      "Perry names Katy ISD schools for Grange, including Robertson Elementary and Katy High School. Drees titles its Grange page as new homes for sale in Katy, TX. A Perry address on the page is 417 Dove Meadow Lane.",
+    summary:
+      "Grange is a Perry Homes community in Katy. The page lists 50-foot homes from the $490s and 60-foot homes from the $640s, with homes for sale in both. Drees also has a Katy page for Grange, and that page did not print a starting price in the text reviewed here.",
+    priceNote:
+      "Perry lists Grange 50-foot homes from the $490s, about 2,100 to 3,200 square feet, and 60-foot homes from the $640s, about 2,800 to 4,100 square feet.",
+    homes: "The 50-foot section lists 3 to 4 bedrooms. Perry shows 33 homes in one section and 34 in the other.",
+    builders: [
+      {
+        name: "Perry Homes",
+        detail:
+          "50-foot from the $490s, about 2,100 to 3,200 square feet. 60-foot from the $640s, about 2,800 to 4,100 square feet.",
+      },
+    ],
+    amenities: [
+      "Perry's page is a sales listing for the two home sections. A separate amenity list was not in the price block reviewed here.",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Perry names Robertson Elementary, Katy Junior High, and Katy High School. Confirm the lot with the district.",
+    sources: [
+      { label: "Perry Homes, Grange", url: "https://www.perryhomes.com/new-homes/texas/houston/grange" },
+      { label: "Drees Homes, Grange", url: "https://www.dreeshomes.com/new-homes-houston/katy/comm-grange/" },
+    ],
+    faqs: [
+      {
+        question: "Where is Grange?",
+        answer: "Drees titles the page as Katy, TX, and Perry names Katy ISD schools.",
+      },
+      {
+        question: "Does Drees publish a price?",
+        answer:
+          "Drees has a Grange page for Katy. The page text reviewed on November 10, 2026 did not include a from-price, so this page does not invent one.",
+      },
+    ],
+  },
+  {
+    slug: "azalea-trails",
+    citySlug: "cypress",
+    name: "Azalea Trails",
+    developer: "Tri Pointe Homes",
+    address: "18122 Lavender Wind Drive, Cypress, TX 77429",
+    location:
+      "Tri Pointe places Azalea Trails in Cypress, with access to the Grand Parkway (SH 99) and Highway 290. The community page lists 18122 Lavender Wind Drive, Cypress, TX 77429. Cascade at Azalea Trails lists 18126 Lavender Wind Drive. This is the Tri Pointe community. It is not the Azalea District at Valley Ranch in Porter.",
+    summary:
+      "Azalea Trails is a Tri Pointe Homes community in Cypress. The community page lists homes from the $400s, about 2,391 to 3,749 square feet. Two collections are open on the site: Cascade on 50-foot homesites and Amethyst on 60-foot homesites. A recreation center is described as future, not open.",
+    priceNote:
+      "Tri Pointe lists Azalea Trails from the $400s. Cascade at Azalea Trails is from the $400s, about 2,391 to 2,972 square feet. Amethyst at Azalea Trails is from the $500s, about 3,039 to 3,749 square feet.",
+    homes:
+      "4 to 5 bedrooms and 3 to 4 baths on the community page, 1 or 2 stories. Cascade is 4 bedrooms and 3 baths. Amethyst is 4 to 5 bedrooms and 3 to 4 baths. Hours on the community page: Monday through Saturday 10 am to 6 pm, Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Tri Pointe Homes",
+        detail:
+          "The only builder on the community page. Cascade from the $400s, about 2,391 to 2,972 square feet, 50-foot homesites, at 18126 Lavender Wind Drive. Amethyst from the $500s, about 3,039 to 3,749 square feet, at 18122 Lavender Wind Drive, Cypress, TX 77429.",
+      },
+    ],
+    amenities: [
+      "Tree-lined streets and walking trails",
+      "A recreation center described as future, not open yet",
+    ],
+    schoolDistrict: "",
+    schools:
+      "Tri Pointe says the community is near Tomball ISD schools. The page does not say the homes are zoned to Tomball ISD and does not name a campus. Confirm the address with the district.",
+    sources: [
+      { label: "Tri Pointe Homes, Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/azalea-trails" },
+      { label: "Cascade at Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/cascade-at-azalea-trails" },
+      { label: "Amethyst at Azalea Trails", url: "https://www.tripointehomes.com/tx/houston/amethyst-at-azalea-trails" },
+    ],
+    faqs: [
+      {
+        question: "Is Azalea Trails the same as Azalea District at Valley Ranch?",
+        answer:
+          "No. Azalea Trails is the Tri Pointe community in Cypress at Lavender Wind Drive. Azalea District is the First America Homes section of Valley Ranch in Porter.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "The community page says from the $400s. Cascade is from the $400s. Amethyst is from the $500s. Move-in ready prices on those pages are higher than the from-price.",
+      },
+      {
+        question: "Which school district is it?",
+        answer:
+          "Tri Pointe says the homes are near Tomball ISD schools. That is not a zoning statement. Confirm the lot with the district.",
+      },
+    ],
+  },
+  {
+    slug: "oakberry-trails",
+    citySlug: "waller",
+    name: "Oakberry Trails",
+    developer: "Ryko Development",
+    address: "21711 Berry Ranch Drive, Waller, TX 77484",
+    location:
+      "Oakberry Trails publishes its address as 21711 Berry Ranch Drive, Waller, TX 77484, north of Highway 290. The community site spells the name Oakberry Trails, as one word. David Weekley also places it just north of Highway 290 in Waller.",
+    summary:
+      "Oakberry Trails is a Ryko Development community in Waller. The community page says new homes start in the low $300s and lists Risewell Homes, K. Hovnanian Homes, Village Builders, and David Weekley, whose section is marked coming soon. Lennar also publishes an active Oakberry Trails page. The community says homes are zoned to Waller ISD.",
+    priceNote:
+      "Lennar lists Oakberry Trails from $225,990 to $370,990. The community homepage says new homes from the low $300s. Risewell lists both collections from the low $300s. K. Hovnanian lists 40-foot homes from the low $300s and 50-foot homes from the low 300s. Village Builders lists the Avante plans from $307,990 to $360,990 and the Richmond plans from the low $300s.",
+    homes:
+      "Model park addresses on the builder pages: Village Builders and the Lennar page use 21507 Vineyard View Drive. K. Hovnanian uses 21515 Vineyard View Drive. Risewell uses 21523 Vineyard View Drive. All are Waller, TX 77484. David Weekley says homes are coming soon on 60-foot homesites and does not print a price.",
+    builders: [
+      {
+        name: "Lennar",
+        detail:
+          "Actively selling from $225,990 to $370,990. The page address is 21507 Vineyard View Drive, Waller, TX 77484. The Oakberry Trails builder directory does not list Lennar. No current promotion was printed on the Lennar page.",
+      },
+      {
+        name: "Risewell Homes",
+        detail:
+          "Cottages from the low $300s, about 1,690 to 2,686 square feet, 3 to 4 bedrooms, on 40-foot homesites. Residences from the low $300s, about 1,715 to 2,818 square feet, 3 to 4 bedrooms, on 50-foot homesites. Model at 21523 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "K. Hovnanian Homes",
+        detail:
+          "40-foot homesites from the low $300s, up to 2,253 square feet, up to 4 bedrooms. 50-foot homesites starting from the low 300s, up to 3,464 square feet, up to 5 bedrooms. Model at 21515 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "Village Builders",
+        detail:
+          "Avante plans from $307,990 to $360,990, about 1,572 to 2,400 square feet, 3 to 4 bedrooms. Richmond plans starting from the low $300s, about 1,830 to 2,924 square feet, 3 to 5 bedrooms. Model at 21507 Vineyard View Drive, Waller, TX 77484.",
+      },
+      {
+        name: "David Weekley Homes",
+        detail:
+          "Coming soon. David Weekley says farmhouse-inspired homes on 60-foot homesites and does not print a from-price. No current promotion was printed.",
+      },
+    ],
+    amenities: [
+      "Gathering spaces made from older structures, including event space and game areas",
+      "Community gardens, winding trails, and green spaces",
+      "Lennar publishes photographs of a community center, a fitness center, and a pool",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "The community schools page says new homes are zoned to Waller ISD. It names Mary Alice Cure Elementary, Schultz Junior High, and Waller High School. Confirm the address with the district.",
+    sources: [
+      { label: "Oakberry Trails builders", url: "https://www.oakberrytrails.com/builders-in-waller-tx" },
+      { label: "Oakberry Trails schools", url: "https://www.oakberrytrails.com/schools-in-waller-tx" },
+      { label: "Oakberry Trails promotions", url: "https://www.oakberrytrails.com/builder-promotions" },
+      { label: "Risewell Homes at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/risewell-homes" },
+      { label: "K. Hovnanian Homes at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/k-hovnanian" },
+      { label: "Village Builders at Oakberry Trails", url: "https://www.oakberrytrails.com/builders-in-waller-tx/village-builders" },
+      { label: "Lennar, Oakberry Trails", url: "https://www.lennar.com/new-homes/texas/houston/waller/oakberry-trails" },
+      { label: "David Weekley Homes, Oakberry Trails", url: "https://www.davidweekleyhomes.com/new-homes/tx/houston/waller/oakberry-trails" },
+    ],
+    faqs: [
+      {
+        question: "How is the name spelled?",
+        answer:
+          "The community site uses Oakberry Trails, one word. Searches for Oak Berry Trails and OakBerryTrails lead to this Waller community.",
+      },
+      {
+        question: "Who is building now?",
+        answer:
+          "The community directory lists Risewell Homes, K. Hovnanian Homes, Village Builders, and David Weekley as coming soon. Lennar publishes its own active page from $225,990 to $370,990.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Waller ISD. The schools page names Mary Alice Cure Elementary, Schultz Junior High, and Waller High School. Confirm the lot with the district.",
+      },
+    ],
+  },
+  {
+    slug: "falls-at-imperial-oaks",
+    citySlug: "spring",
+    name: "Falls at Imperial Oaks",
+    developer: "Holcomb Properties. The about page says the homeowners association now manages the community, with Goodwin and Company on site.",
+    address: "31220 Birnham Woods Drive, Spring, TX 77386",
+    location:
+      "Falls at Imperial Oaks publishes its office at 31220 Birnham Woods Drive, Spring, TX 77386, phone (832) 813-7170. David Weekley also calls it The Falls at Imperial Oaks and places it in Spring. The community site says it is minutes from The Woodlands, with access to the Grand Parkway and Interstate 45. Schools are Conroe ISD.",
+    summary:
+      "Falls at Imperial Oaks is a Holcomb Properties community of about 1,500 acres and about 2,080 homes in Spring. The about page says construction began in 2007 and the initial build-out finished in the late 2010s, when control moved to the homeowners association. David Weekley's overview page still prints section prices, but the section links redirect to the Houston index.",
+    priceNote:
+      "The community about page does not publish a current new-home starting price. It says the initial build-out finished in the late 2010s. David Weekley's overview still prints section prices, and the four section links on that page redirect to the Houston new-homes index. The figures are on the builder card. Confirm whether any new homes remain before you use them.",
+    homes:
+      "About 1,500 acres and about 2,080 homes, in gated and non-gated sections. The about page says these builders have constructed homes here: David Weekley Homes, Village Builders, Lennar, Cal-Atlantic, Ryland Homes, and Partners in Building. It does not list current model homes.",
+    builders: [
+      {
+        name: "David Weekley Homes",
+        detail:
+          "The overview page still prints Amber Forest homes from the $373s on 75-foot homesites, Angel Park homes from the $312s on 60-foot homesites, and Arbor Lake homes from the $277s and from the $355s, on 55-foot and 96-foot homesites. The links for Holly Creek, Edgewater, Sable Park, and The Enclave at Sundance Lake redirect to David Weekley's Houston index.",
+      },
+    ],
+    amenities: [
+      "The Lake Club, a 4,200-square-foot gathering space with a kitchen, gym, kids' playroom, resort-style pool, cabanas, concession stand, and splash pad",
+      "The Retreat, a 3,200-square-foot recreation center with a beach-entry pool, splash pad, pavilions, a fire pit, and grilling areas",
+      "Three playgrounds and a tennis court with pickleball striping",
+      "Lake Holcomb, about 100 acres, with trails and a fishing dock, plus about 44 acres at Woodson's Gully",
+      "A dog park and seven lakes with fountains",
+    ],
+    schoolDistrict: "Conroe ISD",
+    schools:
+      "The about page says students are zoned to Birnham Woods Elementary and Bradley Elementary, both described as inside the community, York Junior High, and Grand Oaks High School. Confirm the current zone for the address.",
+    sources: [
+      { label: "Falls at Imperial Oaks", url: "https://www.fallsatimperialoaks.com/" },
+      { label: "Falls at Imperial Oaks about page", url: "https://www.fallsatimperialoaks.com/about" },
+      { label: "Falls at Imperial Oaks amenities", url: "https://www.fallsatimperialoaks.com/amenities" },
+      {
+        label: "David Weekley: The Falls at Imperial Oaks",
+        url: "https://www.davidweekleyhomes.com/page/tx/houston/the-falls-spring",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is the name The Falls or Falls at Imperial Oaks?",
+        answer:
+          "The community site uses Falls at Imperial Oaks. David Weekley uses The Falls at Imperial Oaks. Both refer to the Spring community at 31220 Birnham Woods Drive.",
+      },
+      {
+        question: "Are builders still selling new homes here?",
+        answer:
+          "The about page says the initial build-out finished in the late 2010s and that the homeowners association now manages the community. David Weekley's overview still prints from-prices for Amber Forest, Angel Park, and Arbor Lake, but the section links redirect to the Houston index. Ask the builder whether a new home is actually available.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Conroe ISD. The about page lists Birnham Woods Elementary, Bradley Elementary, York Junior High, and Grand Oaks High School. Confirm the lot with the district.",
+      },
+    ],
+  },
+  {
     slug: "harmony",
     citySlug: "spring",
     name: "Harmony",
@@ -989,6 +1471,60 @@ const communities: NewHomeCommunity[] = [
     ],
   },
   {
+    slug: "the-pines-at-seven-coves",
+    citySlug: "willis",
+    name: "The Pines at Seven Coves",
+    developer: "Centex Homes",
+    address: "10519 Killdeer Court, Willis, TX 77378",
+    location:
+      "Centex publishes the sales address as 10519 Killdeer Court, Willis, TX 77378. The page says the community is off FM 830 and TX Highway 75, next to Willis High School, less than one mile from I-45, and six miles from Lake Conroe. Centex also describes it as north Conroe. The monument reads The Pines at Seven Coves.",
+    summary:
+      "The Pines at Seven Coves is a Centex community in Willis. The page lists carriage homes and single-family homes from $193,990, about 1,204 to 2,531 square feet. Schools on the page are Willis ISD. This is the Centex community by that name, not a section inside another master plan.",
+    priceNote:
+      "Centex lists The Pines at Seven Coves from $193,990, about 1,204 to 2,531 square feet. Inventory cards on the page are labeled Villages. One example checked November 8, 2026 is 10646 Willet Way, the Springfield plan, at $245,489, with $254,489 shown with a line through it. Prices change.",
+    homes:
+      "Carriage homes and single-family homes. Villages is the series name on the inventory cards, not a separate neighborhood. Sales hours are Monday, Tuesday, Thursday, Friday, and Saturday 10 am to 6 pm, and Wednesday and Sunday 12 pm to 6 pm. Phone (936) 755-5262.",
+    builders: [
+      {
+        name: "Centex Homes",
+        detail:
+          "From $193,990, about 1,204 to 2,531 square feet. Sales address 10519 Killdeer Court, Willis, TX 77378. The page lists carriage homes and single-family homes.",
+      },
+    ],
+    amenities: [
+      "Walking trails",
+      "Less than one mile from I-45",
+      "Less than 15 miles from The Woodlands",
+      "Six miles from Lake Conroe",
+    ],
+    schoolDistrict: "Willis ISD",
+    schools:
+      "Centex lists Turner Elementary School at 10575 HWY 75 N, Robert P. Brabham Middle School at 10000 FM 830, and Willis High School. The page prints a phone for Willis High School, (936) 856-1250, and does not print the high school street address. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Centex, The Pines at Seven Coves",
+        url: "https://www.centex.com/homes/texas/houston/willis/the-pines-at-seven-coves-210502",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is The Pines at Seven Coves?",
+        answer:
+          "Centex lists 10519 Killdeer Court, Willis, TX 77378, off FM 830 and TX Highway 75, next to Willis High School. The page says it is six miles from Lake Conroe.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "The Centex page starts at $193,990, with homes about 1,204 to 2,531 square feet. Confirm the plan.",
+      },
+      {
+        question: "What schools does Centex name?",
+        answer:
+          "Willis ISD: Turner Elementary, Robert P. Brabham Middle School, and Willis High School.",
+      },
+    ],
+  },
+  {
     slug: "bridgeland",
     citySlug: "cypress",
     name: "Bridgeland",
@@ -997,7 +1533,7 @@ const communities: NewHomeCommunity[] = [
     location:
       "Bridgeland is in Cypress, in northwest Houston. Howard Hughes describes it as one of the largest communities in that corridor. Model homes on the builder page use Cypress addresses along streets such as Skylark Forest Drive, Medina River Drive, and Linnaeus Lane.",
     summary:
-      "Bridgeland is an 11,500-acre Howard Hughes community in Cypress. The homepage cites 250 miles of trails, more than 75 parks, about 90,000 square feet of retail and restaurants, and 70,000 residents at buildout. Villages include Prairieland, Parkland, Creekland, and Bridgeland Central.",
+      "Bridgeland is an 11,500-acre Howard Hughes community in Cypress. The homepage cites 250 miles of trails, more than 75 parks, about 90,000 square feet of retail and restaurants, and 70,000 residents at buildout. The villages page names five villages: Lakeland, Parkland, Prairieland, Creekland, and Bridgeland Central.",
     priceNote:
       "Bridgeland does not publish one price for every village. Century Communities lists Creekland Village homes from $329,990. Other builders on the model list publish their own prices. Expect a wide range, including a Del Webb active-adult section.",
     homes:
@@ -1031,7 +1567,20 @@ const communities: NewHomeCommunity[] = [
       "Bridgeland's homepage says the community is home to top-ranked schools and does not assign one district to every village. Creekland Village has been marketed with Waller ISD in builder materials, while other villages are commonly checked against Cypress-Fairbanks ISD. Confirm the homesite with the district before you compare schools.",
     sources: [
       { label: "Bridgeland homepage", url: "https://www.bridgeland.com/" },
+      { label: "Bridgeland villages", url: "https://www.bridgeland.com/homes/villages/" },
       { label: "Builders and model homes", url: "https://www.bridgeland.com/homes/builders-model-homes/" },
+      {
+        label: "2025 HOA rates",
+        url: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+      },
+      {
+        label: "2024 tax rates by area",
+        url: "https://www.bridgeland.com/wp-content/uploads/2025/04/Tax-Rates-for-2024.xlsx",
+      },
+      {
+        label: "Bridgeland inventory list",
+        url: "https://dts.bridgeland.com/DTS/lots/fb_inventory.asp",
+      },
       {
         label: "Century Communities, Creekland Village",
         url: "https://www.centurycommunities.com/find-your-new-home/texas/houston-metro/cypress/bridgeland/",
@@ -1054,6 +1603,318 @@ const communities: NewHomeCommunity[] = [
           "No. The community covers more than one attendance zone. Confirm the district and campus for the lot. Do not assume a Cypress mailing address means Cypress-Fairbanks ISD.",
       },
     ],
+    directory: {
+      intro:
+        "Howard Hughes says the Bridgeland master plan features five villages. This directory separates those villages, the neighborhoods Bridgeland's own pages describe, and the extra-fee areas printed on the 2025 HOA rate sheet. Parks on the village pages are left off.",
+      limitation:
+        "Checked November 8, 2026 against the villages page, the five village pages, the news posts linked below, the 2025 HOA rate PDF, and the 2024 tax sheet. This is not a complete plat list. The HOA sheet names areas that pay an extra 2025 assessment. Sections that pay only the village fee do not appear on it. Parkland's page says its neighborhoods are named after Texas State Parks and does not publish that full list. Lockhart, San Angelo, Colorado Bend, Falcon, and Sheldon Lake are the park-style names that do appear on the HOA sheet. Prairieland and Creekland village pages name parks and do not name smaller neighborhoods. The 2025 HOA sheet has no Bridgeland Central column, so Southbridge, Easthaven, Emerald Heights, Starling, and Del Webb are not on it. The 2024 tax sheet groups Lakeland Village, Parkland Village Section 1-8, Parkland Village Section 9+, Prairieland Village Section 1-4, Prairieland Village Section 5+, Creekland Village, Bridgeland Central, and Harmony Grove. Those section ranges are tax groups. The Easthaven announcement describes Village Green as shops, restaurants, workplaces, and entertainment. City Series by Highland Homes is a townhome product. Builder lot-width labels are not neighborhoods. Extra 2025 fees are shown on a neighborhood card only when the HOA sheet uses that neighborhood's name. Other extra-fee names stay in the HOA areas list. Renderings on the Bridgeland news posts are not used as photos. Prices on the cards were read November 9, 2026.",
+      places: [
+        {
+          name: "Lakeland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "Opened in 2006. Bridgeland's first village.",
+          detail: "The village page says it has grown to more than 3,000 families.",
+          sourceLabel: "Lakeland Village",
+          sourceUrl: "https://www.bridgeland.com/village/lakeland-village/",
+        },
+        {
+          name: "Lakeland Heights",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Lakeland Village",
+          status: "Existing. The village page calls it Bridgeland's first traditional neighborhood design. The 2025 HOA sheet lists a $50 Lakeland Heights assessment.",
+          detail: "A separate HOA line, TH @ Lakeland Heights, is $2,142. That line is listed with the HOA areas below.",
+          sourceLabel: "Lakeland Village",
+          sourceUrl: "https://www.bridgeland.com/village/lakeland-village/",
+        },
+        {
+          name: "Harmony Grove",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Lakeland Village",
+          status: "Announced February 10, 2020 as the final neighborhood in Lakeland Village. The 2025 HOA sheet lists a $2,544 Harmony Grove assessment. The 2024 tax sheet also lists Harmony Grove as its own tax area.",
+          detail: "The post says Beazer Homes townhomes, 68 homesites, about 1,563 to 2,063 square feet, from the $220s in that announcement, with front-yard maintenance. The post's event dates say 2019 while the publish date is February 10, 2020.",
+          sourceLabel: "Harmony Grove announcement",
+          sourceUrl: "https://www.bridgeland.com/news/find-peace-at-harmony-grove/",
+        },
+        {
+          name: "Parkland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "One of the five villages on the master-plan page.",
+          detail: "The page says its neighborhoods are named after Texas State Parks. It does not list those neighborhood names. The highlights on that page are parks.",
+          sourceLabel: "Parkland Village",
+          sourceUrl: "https://www.bridgeland.com/village/parkland-village/",
+        },
+        {
+          name: "Parkland Square",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Parkland Village",
+          status: "The October 6, 2021 article says it sold out earlier that year. The 2025 HOA sheet still lists a $110 Parkland Square assessment.",
+          detail: "The article calls it the traditional neighborhood design that Parkland Row follows.",
+          sourceLabel: "Parkland Row article",
+          sourceUrl: "https://www.bridgeland.com/parkland-row-a-new-tnd-coming-to-parkland-village/",
+        },
+        {
+          name: "Parkland Row",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Parkland Village",
+          status: "Announced October 6, 2021. Models were anticipated in winter 2022. The 2025 HOA sheet lists a $110 Parkland Row assessment. The article does not give a later sales update.",
+          detail: "Near Fry Road and Tuckerton Road. 288 homesites. The article's first sentence names David Weekley Homes. A later sentence prints David Weekly. About 1,400 to 3,400 square feet.",
+          sourceLabel: "Parkland Row article",
+          sourceUrl: "https://www.bridgeland.com/parkland-row-a-new-tnd-coming-to-parkland-village/",
+        },
+        {
+          name: "Prairieland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "One of the five villages on the master-plan page.",
+          detail: "The village page says it includes about 7,000 homesites. It names parks and an activity center, not smaller neighborhoods.",
+          sourceLabel: "Prairieland Village",
+          sourceUrl: "https://www.bridgeland.com/village/prairieland-village/",
+        },
+        {
+          name: "Creekland Village",
+          group: "Villages",
+          kind: "Village",
+          status: "Selling. The January 10, 2023 post called it the fourth and final residential village and said the first homesites were available.",
+          detail: "The post says nearly 2,300 acres and about 3,000 single-family homes, with lots from 28 to 50 feet, and homes from the $290s at that announcement. The village page names parks and does not name smaller neighborhoods.",
+          sourceLabel: "Creekland Village",
+          sourceUrl: "https://www.bridgeland.com/village/creekland-village/",
+        },
+        {
+          name: "Bridgeland Central",
+          group: "Villages",
+          kind: "Village",
+          status: "Described as a 925-acre emerging urban district.",
+          detail: "The page says it will include office, retail, dining, medical, entertainment, single-family homes, and multifamily homes.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Southbridge",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "The Bridgeland Central page says new homes here are now selling.",
+          detail: "Named in the same sentence as Easthaven. The page does not add a separate description.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Easthaven",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "The Bridgeland Central page says new homes here are now selling.",
+          detail: "Also called the Easthaven Collection on that page. DRB Homes and David Weekley Homes. Floor plans about 2,500 to 3,150 square feet, with 2 to 4 bedrooms.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Emerald Heights",
+          group: "Neighborhoods",
+          kind: "Neighborhood",
+          parent: "Bridgeland Central",
+          status: "Newest traditional neighborhood design in Bridgeland Central. The January 21, 2026 post says presales are underway and models will begin construction soon.",
+          detail: "350 homesites, 35-foot, 42-foot, and 50-foot. David Weekley Homes and Perry Homes. Off North Bridgeland Lake Parkway and Emerald Enclave Drive. The Bridgeland Central page says presales will begin soon and model homes will be complete this spring. The Bridgeland inventory list dated November 7, 2026 includes Emerald Heights rows on Emerald Enclave Drive, and some of those rows say Available Now.",
+          sourceLabel: "Emerald Heights news post",
+          sourceUrl: "https://www.bridgeland.com/news/emerald-heights-the-latest-neighborhood-coming-to-bridgeland-central/",
+        },
+        {
+          name: "Starling at Bridgeland",
+          group: "Neighborhoods",
+          kind: "Multifamily",
+          parent: "Bridgeland Central",
+          status: "Named on the Bridgeland Central page as multifamily.",
+          detail: "Apartments, not single-family homes for sale. The page describes a clubhouse, fitness center, and a resort-style pool.",
+          sourceLabel: "Bridgeland Central",
+          sourceUrl: "https://www.bridgeland.com/village/bridgeland-central/",
+        },
+        {
+          name: "Del Webb Bridgeland",
+          group: "Neighborhoods",
+          kind: "Active-adult community",
+          status: "Announced February 5, 2026. Model homes are slated to be complete this fall. The announcement does not name a parent village.",
+          detail: "Gated 55+ community. 190 acres. 672 homes on 50-foot and 65-foot homesites, with a Del Webb amenity center. The 2025 HOA sheet does not list it.",
+          sourceLabel: "Del Webb Bridgeland announcement",
+          sourceUrl: "https://www.bridgeland.com/news/del-webb-announces-first-active-adult-community-in-bridgeland/",
+        },
+        {
+          name: "Allen Shores",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $500. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Hidden Creek Estates",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $935. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Hidden Creek Reserve",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $935. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Reserve at First Bend",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $1,900. The village page does not describe it.",
+          detail: "Printed under Lakeland Village CAI on the 2025 HOA rate sheet.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "TH @ Lakeland Heights",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Lakeland Village",
+          status: "Extra 2025 assessment of $2,142. Separate from the $50 Lakeland Heights line.",
+          detail: "Printed under Lakeland Village CAI. The sheet does not spell out the TH abbreviation.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "BL Central (Sec 1)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,100. Printed in the Parkland Village column.",
+          detail: "The sheet prints BL Central (Sec 1) under Parkland Village CAI. It is a different label from the Bridgeland Central village.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Lockhart",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,200. The village page does not list this name.",
+          detail: "Printed under Parkland Village CAI. Lockhart is also the name of a Texas state park. The sheet does not say this is one of the park-named neighborhoods.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "San Angelo (Sec 42)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,250.",
+          detail: "Printed under Parkland Village CAI with section 42.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Colorado Bend Quads (Sec 55/60)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $75.",
+          detail: "Printed under Parkland Village CAI with sections 55 and 60.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Falcon (Sec 57)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $1,250.",
+          detail: "Printed under Parkland Village CAI with section 57.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Sheldon Lake",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Parkland Village",
+          status: "Extra 2025 assessment of $800. The village page does not list this name.",
+          detail: "Printed under Parkland Village CAI.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Desert Marble (Sec 24)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $800.",
+          detail: "Printed under Prairieland Village CAI with section 24. The village page does not describe it.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Olympia Marble (Sec 28)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $800.",
+          detail: "Printed under Prairieland Village CAI with section 28.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Zebra Swallowtail (Sec 34)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Prairieland Village CAI with section 34.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Fiery Skipper (Sec 10)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Prairieland Village",
+          status: "Extra 2025 assessment of $75.",
+          detail: "Printed under Prairieland Village CAI with section 10.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Medina (Sec 2)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Creekland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Creekland Village CAI with section 2. The village page does not describe it.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+        {
+          name: "Maravillas (Sec 5)",
+          group: "HOA areas",
+          kind: "HOA area",
+          parent: "Creekland Village",
+          status: "Extra 2025 assessment of $1,200.",
+          detail: "Printed under Creekland Village CAI with section 5.",
+          sourceLabel: "2025 HOA rates",
+          sourceUrl: "https://www.bridgeland.com/wp-content/uploads/2025/04/HOA-2025-Approved-Rates-FINAL.pdf",
+        },
+      ],
+    },
   },
   {
     slug: "towne-lake",
@@ -1171,6 +2032,120 @@ const communities: NewHomeCommunity[] = [
         question: "Who develops Marvida?",
         answer:
           "Starwood Land is the developer. The community is 856 acres in Cypress, north of FM 529 between Fry Road and the Grand Parkway, planned for about 2,500 homes.",
+      },
+    ],
+  },
+  {
+    slug: "mason-woods",
+    citySlug: "cypress",
+    name: "Mason Woods",
+    developer: "Taylor Morrison and Tri Pointe Homes",
+    address: "22038 Mason Woods Road, Cypress, TX 77433",
+    location:
+      "Tri Pointe Homes publishes the community address as 22038 Mason Woods Road, Cypress, TX 77433. Taylor Morrison says Mason Woods is about 300 acres between Cypress and Katy, with access to the Grand Parkway, I-10, and US 290. This is a different community from Grand Mason Crossing, which uses a Katy address east of the Grand Parkway.",
+    summary:
+      "Mason Woods is a master-planned community in Cypress. Taylor Morrison says it covers about 300 acres, with 40-foot and 45-foot collections, and that it is zoned to Cy-Fair ISD. Tri Pointe Homes also sells The Cove, The Ridge, and The Timbers at Mason Woods.",
+    priceNote:
+      "Taylor Morrison lists the Burton plan at 21823 Lush Pampa Lane from $298,990. That card also shows $319,990. The 40-foot collection is labeled the upper $200s, about 1,366 to 2,236 square feet, and the 45-foot collection is labeled the low $300s, about 1,612 to 2,897 square feet. Tri Pointe lists The Cove and The Ridge in the low $300s and The Timbers in the mid $300s. Prices change.",
+    homes:
+      "About 300 acres, with Taylor Morrison collections on 40-foot and 45-foot lots. Tri Pointe lists The Cove at about 1,492 to 2,492 square feet, The Ridge at about 1,474 to 2,313 square feet, and The Timbers at about 1,622 to 2,442 square feet. Tri Pointe hours are Monday through Saturday 10 am to 6 pm, and Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "40-foot collection from the upper $200s, about 1,366 to 2,236 square feet. 45-foot collection from the low $300s, about 1,612 to 2,897 square feet. A Burton plan at 21823 Lush Pampa Lane is listed at $298,990, reduced from $319,990. The published model photo is at 22026 Mason Woods Road.",
+      },
+      {
+        name: "Tri Pointe Homes",
+        detail:
+          "The Cove and The Ridge are priced from the low $300s. The Timbers are priced from the mid $300s. Square footage on the page runs about 1,474 to 2,492. Sales address 22038 Mason Woods Road, Cypress, TX 77433.",
+      },
+    ],
+    amenities: [
+      "Community pool, trails, and a fitness center on the Taylor Morrison page",
+      "Pavilion and playground on the Tri Pointe page",
+    ],
+    schoolDistrict: "Cy-Fair ISD",
+    schools:
+      "Taylor Morrison says Mason Woods is zoned to Cy-Fair ISD. The page does not name the campuses. Confirm the lot with the district.",
+    sources: [
+      { label: "Taylor Morrison, Mason Woods", url: "https://www.taylormorrison.com/tx/houston/mason-woods" },
+      { label: "Tri Pointe Homes, Mason Woods", url: "https://www.tripointehomes.com/tx/houston/mason-woods" },
+      {
+        label: "Tri Pointe Homes Value of Now",
+        url: "https://www.tripointehomes.com/promotion/tx/houston/value-of-now-sales-event-fha-4-875-fixed-rate-5-950-apr-estimated-payment-for-375k-sales-price",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Mason Woods the same community as Grand Mason Crossing?",
+        answer:
+          "No. Mason Woods uses a Cypress address on Mason Woods Road and is sold by Taylor Morrison and Tri Pointe Homes. Grand Mason Crossing uses 5658 Belton Hollow Lane, Katy, TX 77449, and is sold by Long Lake.",
+      },
+      {
+        question: "What do homes at Mason Woods cost?",
+        answer:
+          "Taylor Morrison labels the 40-foot collection from the upper $200s and lists a Burton plan at $298,990. Tri Pointe labels The Cove and The Ridge from the low $300s and The Timbers from the mid $300s. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Mason Woods name?",
+        answer:
+          "Cy-Fair ISD. Taylor Morrison does not name the campuses on the Mason Woods page. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "avalon-at-cypress",
+    citySlug: "cypress",
+    name: "Avalon at Cypress",
+    developer: "Taylor Morrison",
+    address: "21835 Brooking Gorge Lane, Cypress, TX 77433",
+    location:
+      "Taylor Morrison's directions page lists the sales center at 21835 Brooking Gorge Lane, Cypress, TX 77433. From Grand Parkway, the page says to exit West Road, go east toward Mason Road, turn left on Mason Road, and turn right toward Avalon Landing. The community page also mentions the Grand Parkway and future access to the Mason Road expansion.",
+    summary:
+      "Avalon at Cypress is a Taylor Morrison community in Cypress. The builder page lists four collections, from the 40-foot Milestone homes in the high $300s through the 70-foot Affinity homes in the high $500s, and says the community is in Cy-Fair ISD.",
+    priceNote:
+      "Taylor Morrison labels Avalon at Cypress 40s, Milestone, from the high $300s, about 1,675 to 2,462 square feet. The 50s, Endeavor, are from the low $400s, about 2,380 to 3,432 square feet. The 60s, Venture, are from the mid $500s, about 2,796 to 3,934 square feet. The 70s, Affinity, are from the high $500s, about 3,174 to 4,925 square feet. Prices change.",
+    homes:
+      "Four Taylor Morrison collections on the Avalon at Cypress page: 40-foot Milestone, 50-foot Endeavor, 60-foot Venture, and 70-foot Affinity. Sales center hours on the directions page are Monday through Saturday 10 am to 6 pm, and Sunday 12 pm to 6 pm.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "40s Milestone from the high $300s. 50s Endeavor from the low $400s. 60s Venture from the mid $500s. 70s Affinity from the high $500s. The Avalon at Cypress page did not print a Houston incentive on November 8, 2026. Ask Natalie about current incentives.",
+      },
+    ],
+    amenities: [
+      "Community pool",
+      "Outdoor fireplace",
+      "Playscape",
+      "Tennis and pickleball courts",
+    ],
+    schoolDistrict: "Cy-Fair ISD",
+    schools:
+      "Taylor Morrison says Avalon at Cypress is surrounded by the Cy-Fair Independent School District. The page does not name the campuses. Confirm the lot with the district.",
+    sources: [
+      { label: "Taylor Morrison, Avalon at Cypress", url: "https://www.taylormorrison.com/tx/houston/avalon-at-cypress" },
+      {
+        label: "Avalon at Cypress directions",
+        url: "https://www.taylormorrison.com/tx/houston/cypress/avalon-at-cypress-50s-endeavor/directions",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Avalon at Cypress?",
+        answer:
+          "The Taylor Morrison sales center is 21835 Brooking Gorge Lane, Cypress, TX 77433, near the Grand Parkway and West Road.",
+      },
+      {
+        question: "What do homes at Avalon at Cypress cost?",
+        answer:
+          "Taylor Morrison labels the 40-foot collection from the high $300s, the 50-foot collection from the low $400s, the 60-foot collection from the mid $500s, and the 70-foot collection from the high $500s. Confirm the homesite.",
+      },
+      {
+        question: "Did the Avalon page list a current incentive?",
+        answer:
+          "On November 8, 2026 the legal text attached to the rate banner on the Avalon at Cypress page described Treasure Coast quick move-in homes, not Houston. That offer is not listed here. Ask Natalie about a current Houston incentive.",
       },
     ],
   },
@@ -1301,6 +2276,123 @@ const communities: NewHomeCommunity[] = [
         question: "What are the HOA dues?",
         answer:
           "The FAQ says the current annual HOA assessment is $1,100, managed by Sterling Association Services.",
+      },
+    ],
+  },
+  {
+    slug: "redbud",
+    citySlug: "waller",
+    name: "Redbud",
+    developer: "Taylor Morrison",
+    address: "18034 Old Barrel Drive, Hockley, TX 77447",
+    location:
+      "Taylor Morrison's January 2026 fact sheet lists 18034 Old Barrel Drive, Hockley, TX 77447. It says the entrance is off Bauer Hockley Road and Hopfe Road, along the Grand Parkway. The mailing city is Hockley. The page is under Waller because the fact sheet names Waller ISD.",
+    summary:
+      "Redbud is a Taylor Morrison community in Hockley. The fact sheet names Waller ISD schools, a $950 annual HOA fee, and planned resort-style amenities. Taylor Morrison sells two collections, Redbud 40s (Ascent) and Redbud 45s (Passage).",
+    priceNote:
+      "The January 2026 fact sheet does not print a starting price. A Redbud 45s home page checked November 8, 2026 listed 21938 Longhorn Ridge Drive, the Barrett plan, at $275,000, with $301,990 shown with a line through it. That is one home, not a community-wide starting price.",
+    homes:
+      "Redbud 40s is the Ascent collection. Redbud 45s is the Passage collection. Those names are lot-width series. The fact sheet does not name other internal neighborhoods. The directions page lists sales hours of Monday through Saturday 10 am to 6 pm and Sunday 12 pm to 6 pm. Phone on the fact sheet: (281) 619-8241.",
+    builders: [
+      {
+        name: "Taylor Morrison",
+        detail:
+          "Builder of Redbud 40s (Ascent) and Redbud 45s (Passage). Sales address 18034 Old Barrel Drive, Hockley, TX 77447. The fact sheet does not print a starting price. One Redbud 45s home, 21938 Longhorn Ridge Drive, was listed at $275,000 on November 8, 2026.",
+      },
+    ],
+    amenities: [
+      "The fact sheet says Redbud has planned resort-style amenities",
+      "A Redbud 45s home page says community amenities are coming soon, including a pool, a playground, and greenspace",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "The fact sheet names Waller ISD: Lowe Elementary at 31502 Conifer Farm Dr, Schultz Junior High at 20950 Fields Store Rd, and Waller High School at 31213 Waller Spring Creek Rd. Confirm the lot with the district.",
+    sources: [
+      {
+        label: "Taylor Morrison Redbud fact sheet, January 2026",
+        url: "https://www.taylormorrison.com/-/media/sites/tm/homes/texas/houston/hockley/redbud/collateral/redbud-community-fact-sheet-jan-2026-(1).pdf",
+      },
+      {
+        label: "Redbud 40s directions",
+        url: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-40s-ascent/directions",
+      },
+      {
+        label: "Redbud 45s, Barrett at 21938 Longhorn Ridge Drive",
+        url: "https://www.taylormorrison.com/tx/houston/hockley/red-bud-45s-passage/floor-plans/barrett/home-available-now-at-21938-longhorn-ridge-drive",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is Redbud in Cypress or Hockley?",
+        answer:
+          "The fact sheet address is 18034 Old Barrel Drive, Hockley, TX 77447. The entrance is off Bauer Hockley Road and Hopfe Road. Schools on the fact sheet are Waller ISD.",
+      },
+      {
+        question: "What is the HOA fee?",
+        answer:
+          "The fact sheet lists a homeowners association fee of $950 a year and a $950 capital fee due once at closing. It names Inframark Community Management.",
+      },
+      {
+        question: "What schools does the fact sheet name?",
+        answer:
+          "Waller ISD: Lowe Elementary, Schultz Junior High, and Waller High School. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "stokesbury",
+    citySlug: "waller",
+    name: "Stokesbury",
+    developer: "Centex Homes",
+    address: "23134 Deanston Drive, Waller, TX 77484",
+    location:
+      "Centex publishes the Stokesbury sales address as 23134 Deanston Drive, Waller, TX 77484. The page describes the community as new construction in Waller. Centex also publishes a separate community, The Courtyards at Stokesbury, at 23126 Deanston Drive.",
+    summary:
+      "Stokesbury is a Centex community in Waller. The page lists single-family homes from $220,990, about 1,204 to 2,947 square feet, in three series: Villages, Arbors, and Villas. Schools on the page are Waller ISD.",
+    priceNote:
+      "Centex lists Stokesbury from $220,990. Villages start at $220,990 and about 1,204 square feet. Arbors start at $245,990 and about 1,408 square feet. Villas start at $279,990, with plans from about 1,762 to 2,947 square feet. Prices change.",
+    homes:
+      "One and two story single-family homes. Villages, Arbors, and Villas are home series on this page, not separate neighborhoods. The Courtyards at Stokesbury is a different Centex page, with plans from $184,990 and about 1,056 to 1,353 square feet, at 23126 Deanston Drive. Sales hours are Monday through Saturday 10 am to 6 pm and Sunday 12 pm to 6 pm. Phone (936) 296-3200.",
+    builders: [
+      {
+        name: "Centex Homes",
+        detail:
+          "From $220,990, about 1,204 to 2,947 square feet. Villages from $220,990, Arbors from $245,990, and Villas from $279,990. Sales address 23134 Deanston Drive, Waller, TX 77484.",
+      },
+    ],
+    amenities: [
+      "Resort-style pool",
+      "Pickleball courts",
+      "Bocce ball court",
+      "Playground",
+      "Walking trails",
+      "Lake",
+    ],
+    schoolDistrict: "Waller ISD",
+    schools:
+      "Centex lists Waller High School at 31213 Waller Spring Creek Road, Schultz Junior High School at 20950 Field Store Road, and Cure Elementary. The page does not print a street address or phone for Cure Elementary. Confirm the lot with the district.",
+    sources: [
+      { label: "Centex, Stokesbury", url: "https://www.centex.com/homes/texas/houston/waller/stokesbury-211361" },
+      {
+        label: "Centex, The Courtyards at Stokesbury",
+        url: "https://www.centex.com/homes/texas/houston/waller/the-courtyards-at-stokesbury-211630/davilla-699894",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Stokesbury?",
+        answer:
+          "Centex lists the sales address as 23134 Deanston Drive, Waller, TX 77484. The Courtyards at Stokesbury is a separate Centex page at 23126 Deanston Drive.",
+      },
+      {
+        question: "What do homes in Stokesbury cost?",
+        answer:
+          "The community page starts at $220,990. Villages, Arbors, and Villas are the three series, from $220,990, $245,990, and $279,990.",
+      },
+      {
+        question: "What schools does Centex name?",
+        answer:
+          "Waller High School, Schultz Junior High School, and Cure Elementary. The page prints addresses for the high school and junior high, and the name only for Cure Elementary.",
       },
     ],
   },
@@ -1493,50 +2585,144 @@ const communities: NewHomeCommunity[] = [
     alsoListedOn: ["new-caney"],
     name: "Valley Ranch",
     developer: "The Signorelli Company",
-    address: "US 59 and the Grand Parkway, Porter, TX",
+    address: "Azalea Boulevard at Valley Ranch Parkway, Porter, TX 77365",
     location:
-      "Valley Ranch is a Signorelli Company community at US 59/69 and the Grand Parkway. The developer markets it as Porter and says downtown Houston is about 25 minutes away. The Kingwood and Humble area and The Woodlands are the nearby job and shopping centers it names.",
+      "Valley Ranch is the Signorelli community in New Caney and Porter, in Montgomery County, at Interstate 69 (US 59) and the Grand Parkway. First America Homes directions turn onto Valley Ranch Parkway and then Azalea Boulevard. This is the Houston-area community. It is separate from Valley Ranch in Irving.",
     summary:
-      "Valley Ranch is a 1,400-acre master-planned community planned for 1,500 single-family homes and more than 1,000 multifamily residences. The about page lists New Caney ISD schools inside the community and a planned 240-acre town center.",
+      "Valley Ranch is a Signorelli master-planned community. The current live page says Azalea District is the single-family neighborhood, with 359 homesites, and First America Homes is the exclusive builder there. The Pointe at Valley Ranch Town Center and The Gregory are apartments, not the single-family section.",
     priceNote:
-      "The about page says new homes by First America Homes, Legend Homes, D.R. Horton, and CastleRock Communities are priced from the $200,000s to the $400,000s. A new-homes page on the same site says prices range from the $180s to the $400s. Use the builder's current price.",
+      "First America Homes lists the Heritage Collection from $302,990. Plans run about 1,556 to 2,416 square feet. The Signature Collection is from $366,990. Plans run about 1,799 to 3,226 square feet. The collection pages say the model home is coming soon. Prices change.",
     homes:
-      "1,400 acres, with 1,500 single-family homes and more than 1,000 multifamily homes in the plan. The new-homes page also names Signorelli Homes among the model builders.",
+      "Azalea District: 359 single-family homesites. Heritage has 6 floor plans, 3 to 6 bedrooms, 2 to 3 baths, 1 or 2 stories. Signature has 8 floor plans, 3 to 5 bedrooms, 2 to 3.5 baths, 1 or 2 stories. Sales phone on the First America pages: (713) 897-8986.",
     builders: [
-      { name: "First America Homes", detail: "Named on the Valley Ranch about page and the new-homes page" },
-      { name: "Legend Homes", detail: "Named on both Valley Ranch pages" },
-      { name: "D.R. Horton", detail: "Named on the about page" },
-      { name: "CastleRock Communities", detail: "Named on the about page" },
-      { name: "Signorelli Homes", detail: "Named on the new-homes page as a current model builder" },
+      {
+        name: "First America Homes",
+        detail:
+          "Exclusive builder named for Azalea District. Heritage Collection from $302,990, about 1,556 to 2,416 square feet. Signature Collection from $366,990, about 1,799 to 3,226 square feet. Porter, TX 77365. Model homes are listed as coming soon.",
+      },
     ],
     amenities: [
-      "Valley Ranch Recreation Center",
-      "150 acres of parks and green space",
-      "The Grove, a planned 135-acre nature preserve with seven lakes and forested trails",
-      "A planned 240-acre Valley Ranch Town Center, described as more than 1.5 million square feet of shopping, dining, and entertainment",
+      "Recreation center with a pool, playground, and pavilion, listed on the First America Valley Ranch page",
+      "Community clubhouse",
+      "Seven lakes with fountains, described as stocked with fish",
+      "Walking trails connecting neighborhoods to retail",
+      "Valley Ranch Town Center for shopping and dining",
     ],
     schoolDistrict: "New Caney ISD",
     schools:
-      "Both Valley Ranch pages say children can attend New Caney ISD, and the new-homes page says schools are located within the community. The pages reviewed here do not name the campuses. Confirm the address with New Caney ISD.",
+      "The First America Heritage page lists New Caney ISD schools: Valley Ranch Elementary, Pine Valley Middle School, and Porter High School. The Valley Ranch site says attendance zones can change. Confirm the lot with the district.",
     sources: [
-      { label: "About Valley Ranch", url: "https://www.valley-ranch.com/valley-ranch-residential" },
-      { label: "New homes in Porter", url: "https://www.valley-ranch.com/new-homes-porter" },
+      { label: "Valley Ranch, where to live", url: "https://www.valley-ranch.com/live/" },
+      { label: "Valley Ranch, First America Homes", url: "https://www.valley-ranch.com/single-family-page-first-america-homes/" },
+      {
+        label: "First America Homes, Heritage Collection",
+        url: "https://www.firstamericahomes.com/new-homes/tx/houston-metro/porter/valley-ranch-heritage-collection/",
+      },
+      {
+        label: "First America Homes, Signature Collection",
+        url: "https://www.firstamericahomes.com/new-homes/tx/houston-metro/porter/valley-ranch-signature-collection/",
+      },
     ],
     faqs: [
       {
         question: "Is Valley Ranch in Porter or New Caney?",
         answer:
-          "The Signorelli Company markets Valley Ranch as a Porter community at US 59 and the Grand Parkway, and says students attend New Caney ISD. New Caney is the neighboring city and the school district. Use the homesite address when you check taxes.",
+          "Both names are used. The Valley Ranch site says the community is in New Caney, Texas. First America Homes publishes the collections as Porter, TX 77365, at Interstate 69 and the Grand Parkway, in Montgomery County. Schools on the builder page are New Caney ISD.",
       },
       {
-        question: "Who is building in Valley Ranch?",
+        question: "Who is building in Valley Ranch now?",
         answer:
-          "The about page lists First America Homes, Legend Homes, D.R. Horton, and CastleRock Communities, from the $200,000s to the $400,000s. The new-homes page also lists Signorelli Homes and a range from the $180s to the $400s.",
+          "The current Valley Ranch live page says First America Homes is the exclusive homebuilder in Azalea District. Heritage starts at $302,990 and Signature starts at $366,990. The Pointe and The Gregory are apartments.",
       },
       {
-        question: "What is The Grove?",
+        question: "What schools does the builder name?",
         answer:
-          "The developer describes The Grove as a 135-acre nature preserve and park next to the planned town center, with seven lakes and forested trails. The town center itself is described as 240 acres and still planned.",
+          "New Caney ISD. The First America page lists Valley Ranch Elementary, Pine Valley Middle School, and Porter High School. Confirm the address with the district.",
+      },
+    ],
+  },
+  {
+    slug: "the-trails",
+    citySlug: "new-caney",
+    alsoListedOn: ["huffman"],
+    name: "The Trails",
+    developer: "Castle Hill Partners",
+    address: "28827 Cross Pines Drive, New Caney, TX 77357",
+    location:
+      "The Trails publishes its directions address as 28827 Cross Pines Drive, New Caney, TX 77357. The community site says it is in Harris County, along the northeast section of the Grand Parkway. This is the Castle Hill Partners community at thetrailshouston.com. It is separate from Harrington Trails, Pinewood Trails, and other Houston communities that use Trails in the name.",
+    summary:
+      "The Trails is a Castle Hill Partners community of nearly 1,400 acres in New Caney. The FAQ names Chesmar Homes, Coventry Homes, Lennar, and Westin Homes. A Village Builders page is also live on the community site. Students are zoned to Huffman ISD. The playground is open, and the amenity center is under construction.",
+    priceNote:
+      "Lennar lists homes from the $200s, about 1,500 square feet and up. Coventry lists a 40-foot section from the $260s, about 1,500 square feet, and a 50-foot section from the $310s, about 1,900 square feet. Village Builders lists homes from the $280s, about 1,500 square feet and up. Chesmar lists homes from the $320s, about 1,900 square feet and up. Westin lists homes from the $390s, about 2,100 square feet and up. The homepage also says homes for sale starting in the $260s. The FAQ says homes range from the upper $200s to the $500s and up.",
+    homes:
+      "Model contacts published on the builder pages: Chesmar at 411 Aztec Cave Dr, Coventry at 407 Aztec Cave Dr and 405 Aztec Cave Dr, Westin at 409 Aztec Cave Drive, and Lennar and Village Builders at 28802 Arbor Hills Drive. Those street addresses are printed as New Caney, TX, without a ZIP on the builder cards. The community GPS address is 28827 Cross Pines Drive, New Caney, TX 77357.",
+    builders: [
+      {
+        name: "Lennar",
+        detail:
+          "From the $200s, about 1,500 square feet and up. Sales contact on the Trails page: Cristina Kidd, 888.371.0118, 28802 Arbor Hills Drive, New Caney, TX.",
+      },
+      {
+        name: "Coventry Homes",
+        detail:
+          "40-foot homes from the $260s, about 1,500 square feet, at 407 Aztec Cave Dr. 50-foot homes from the $310s, about 1,900 square feet, at 405 Aztec Cave Dr. Sales phone 713.597.5881. New Caney, TX.",
+      },
+      {
+        name: "Village Builders",
+        detail:
+          "From the $280s, about 1,500 square feet and up, at 28802 Arbor Hills Drive, New Caney, TX. The FAQ still names four builders and does not list Village Builders. The Village Builders page on thetrailshouston.com is live.",
+      },
+      {
+        name: "Chesmar Homes",
+        detail:
+          "From the $320s, about 1,900 square feet and up. Online sales consultant Ivette Villarreal, 281-720-6257, 411 Aztec Cave Dr, New Caney, TX.",
+      },
+      {
+        name: "Westin Homes",
+        detail:
+          "From the $390s, about 2,100 square feet and up. Sales manager Laidy Higuera, 832.971.4415, 409 Aztec Cave Drive, New Caney, TX.",
+      },
+    ],
+    amenities: [
+      "Playground is open now, according to the FAQ",
+      "Amenity center is under construction. The FAQ says completion is anticipated later this year and lists a resort-style pool, splash pad, and amenity center",
+      "About 600 acres of open space and miles of nature trails, listed on the FAQ",
+      "Caterpillar Park is a named park on the community site",
+    ],
+    schoolDistrict: "Huffman ISD",
+    schools:
+      "The schools page says children who live in The Trails attend Huffman ISD, and that an on-site school is proposed. It lists Falcon Ridge Elementary at 26503 FM 2100, Huffman, TX 77336, Huffman Middle School at 3407 Huffman Eastgate Road, Huffman, TX 77336, and Hargrave High School at 25400 Willy Lane, Huffman, TX 77336. Confirm the current zone for the lot.",
+    sources: [
+      { label: "The Trails homepage", url: "https://www.thetrailshouston.com/" },
+      { label: "The Trails FAQ", url: "https://www.thetrailshouston.com/faq/" },
+      { label: "The Trails builders", url: "https://www.thetrailshouston.com/builders/" },
+      { label: "The Trails schools", url: "https://www.thetrailshouston.com/schools/" },
+      { label: "Chesmar Homes at The Trails", url: "https://www.thetrailshouston.com/builder/chesmar-homes/" },
+      { label: "Coventry Homes at The Trails", url: "https://www.thetrailshouston.com/builder/coventry-homes/" },
+      { label: "Lennar at The Trails", url: "https://www.thetrailshouston.com/builder/lennar/" },
+      { label: "Village Builders at The Trails", url: "https://www.thetrailshouston.com/builder/village-builders/" },
+      { label: "Westin Homes at The Trails", url: "https://www.thetrailshouston.com/builder/westin-homes/" },
+    ],
+    faqs: [
+      {
+        question: "Which Trails community is this?",
+        answer:
+          "This page is The Trails in New Caney, published at thetrailshouston.com, by Castle Hill Partners. It is not Harrington Trails at The Canopies, and it is not Pinewood Trails.",
+      },
+      {
+        question: "What do homes cost?",
+        answer:
+          "Builder pages list Lennar from the $200s, Coventry from the $260s and the $310s, Village Builders from the $280s, Chesmar from the $320s, and Westin from the $390s. The homepage says homes for sale starting in the $260s. The FAQ says the upper $200s to the $500s and up.",
+      },
+      {
+        question: "What is open at the amenity center?",
+        answer:
+          "The FAQ says the playground is open and construction on the amenity center is in progress, with completion anticipated later this year. It lists a resort-style pool, splash pad, playground, about 600 acres of open space, and miles of trails. Do not count the pool as open until the sales office confirms it.",
+      },
+      {
+        question: "What schools does the community name?",
+        answer:
+          "Huffman ISD. The schools page lists Falcon Ridge Elementary, Huffman Middle School, and Hargrave High School, and says an on-site school is proposed. Confirm the address with the district.",
       },
     ],
   },
@@ -1601,53 +2787,82 @@ const communities: NewHomeCommunity[] = [
   {
     slug: "the-canopies",
     citySlug: "splendora",
+    alsoListedOn: ["new-caney"],
     name: "The Canopies",
-    developer: "Sold by D.R. Horton. School sites involve Splendora ISD.",
-    address: "Splendora, TX 77372",
+    developer: "Forestar",
+    address: "14104 Golden Rays Drive, Splendora, TX 77372",
     location:
-      "D.R. Horton lists The Canopies in Splendora, TX 77372, as a nearby community on the Harrington Trails page. Splendora ISD has described The Canopies as the site of a junior high and as the alternate site for a replacement elementary school.",
+      "The Canopies is a 611-acre Forestar community in the New Caney and Splendora area. Forestar publishes the location as F.M. 242 and Harrington Drive, New Caney, TX 77357. The community site gives model directions in Splendora, TX 77372, and says Canopies Parkway and Harrington Trails are planned to connect FM 2090 and Highway 242, but that road is not complete. Harrington Trails is the D.R. Horton section at the western entrance, with its own page.",
     summary:
-      "The Canopies is a D.R. Horton community in Splendora. The Harrington Trails page lists it with homes from the $200s and plans from about 1,156 square feet. It is also a school site for Splendora ISD, separate from the homes themselves.",
+      "The Canopies is the Forestar community at thecanopies.com. The homepage says new homes start in the low $200s, in Splendora ISD, with a trail system and a recreation center. Five builders have pages: Imagination Homes, D.R. Horton, CastleRock, Risewell Homes, and Smith Douglas Homes.",
     priceNote:
-      "The nearby-community card says homes from the $200s, 3 to 6 bedrooms, 2 to 3 baths, and from 1,156 square feet. That card is a snapshot. Open the current D.R. Horton price list before you compare it with Harrington Trails.",
-    homes: "D.R. Horton describes 1 and 2 story plans with 3 to 6 bedrooms, from about 1,156 square feet.",
+      "The Canopies homepage says new homes from the low $200s. Builder pages: Imagination Homes from the $200s, with the model address listed as coming soon. CastleRock from the $210s, about 1,201 to 2,334 square feet. The builders directory card for CastleRock says from the $200s. D.R. Horton from the mid $200s, about 1,573 to 2,729 square feet. The homes list also shows a D.R. Horton home at 14404 Tawny Street for $209,990. Risewell Homes from the high $200s, about 1,676 to 2,566 square feet. Smith Douglas Homes from the $220s, about 1,450 to 2,397 square feet.",
+    homes:
+      "Model addresses on the community site: D.R. Horton at 14104 Golden Rays Drive, Splendora, TX 77372. CastleRock at 14203 Firecracker Lane. Risewell Homes at 14235 Moonflower Drive. Smith Douglas Homes at 14202 Firecracker Lane. Imagination Homes lists the model address as coming soon.",
     builders: [
       {
+        name: "Imagination Homes",
+        detail:
+          "From the $200s on 40-foot homesites. The builder page says the model address is coming soon and does not list a square-foot range.",
+      },
+      {
+        name: "CastleRock",
+        detail:
+          "From the $210s, about 1,201 to 2,334 square feet, on 40-foot homesites. Model at 14203 Firecracker Lane. The builders directory card says from the $200s.",
+      },
+      {
         name: "D.R. Horton",
-        detail: "Listed from the $200s, from about 1,156 square feet, in Splendora, TX 77372",
+        detail:
+          "From the mid $200s, about 1,573 to 2,729 square feet. Model at 14104 Golden Rays Drive, Splendora, TX 77372. The community homes list includes 14404 Tawny Street at $209,990.",
+      },
+      {
+        name: "Risewell Homes",
+        detail:
+          "From the high $200s, about 1,676 to 2,566 square feet, on 50-foot homesites. Model at 14235 Moonflower Drive.",
+      },
+      {
+        name: "Smith Douglas Homes",
+        detail:
+          "From the $220s, about 1,450 to 2,397 square feet, on 40-foot homesites. Model at 14202 Firecracker Lane.",
       },
     ],
     amenities: [
-      "Amenity details beyond the home card were not on the page reviewed here. Ask the sales office what is open before you count on a pool or park.",
+      "Walking paths",
+      "Open-air pavilion, event lawn, and food-truck parking",
+      "Playgrounds and parks, including a butterfly garden",
+      "Recreation center with a resort-style pool and a large deck",
     ],
     schoolDistrict: "Splendora ISD",
     schools:
-      "In a May 9, 2024 letter, Splendora ISD said it moved a planned Greenleaf Elementary replacement to The Canopies, next to a junior high site the district said was slated to open in August 2025. Confirm which campus a specific lot is zoned to now.",
+      "The community schools page says two elementary schools and a junior high are in the land plan. It lists Timber Lakes Elementary at 15450 Harrington Drive, New Caney, TX 77357, Piney Woods Elementary at 23395 FM 2090, Splendora, TX 77372, Splendora Junior High at 14395 Canopies Parkway, Splendora, TX 77372, and Splendora High School at 23747 FM 2090, Splendora, TX 77372. The page says a junior high opened in The Canopies in August 2025 and that a new elementary is planned beside it in August 2026. The page also says zoning can change. Confirm the lot with Splendora ISD.",
     sources: [
-      {
-        label: "D.R. Horton nearby listing on the Harrington Trails page",
-        url: "https://www.drhorton.com/texas/houston/new-caney/harrington-trails-at-the-canopies",
-      },
-      {
-        label: "Splendora ISD letter, May 9, 2024",
-        url: "https://www.splendoraisd.org/view-all-news/news-details/~board/district-news/post/greenleaf-elementary-school-replacement-project-update",
-      },
+      { label: "The Canopies homepage", url: "https://thecanopies.com/" },
+      { label: "The Canopies builders", url: "https://thecanopies.com/builders" },
+      { label: "The Canopies homes", url: "https://thecanopies.com/homes" },
+      { label: "The Canopies amenities", url: "https://thecanopies.com/amenities" },
+      { label: "The Canopies schools", url: "https://thecanopies.com/schools" },
+      { label: "Forestar: The Canopies", url: "https://www.forestar.com/community/the-canopies/" },
+      { label: "D.R. Horton at The Canopies", url: "https://thecanopies.com/builder/dr-horton" },
+      { label: "CastleRock at The Canopies", url: "https://thecanopies.com/builder/castlerock" },
+      { label: "Risewell Homes at The Canopies", url: "https://thecanopies.com/builder/risewell-homes" },
+      { label: "Smith Douglas Homes at The Canopies", url: "https://thecanopies.com/builder/smith-douglas-homes" },
+      { label: "Imagination Homes at The Canopies", url: "https://thecanopies.com/builder/imagination-homes" },
     ],
     faqs: [
       {
         question: "How is The Canopies different from Harrington Trails?",
         answer:
-          "D.R. Horton lists them as separate communities. Harrington Trails at The Canopies uses a New Caney model address and starts at $249,990 on that page. The Canopies card says Splendora and homes from the $200s. Tour the model that matches the lot, not the similar name.",
+          "Harrington Trails is the D.R. Horton section at the western entrance of The Canopies. It has its own page and its own model address, 20715 Central Concave Drive. The Canopies is the larger Forestar community, with Imagination Homes, CastleRock, Risewell Homes, Smith Douglas Homes, and D.R. Horton.",
       },
       {
-        question: "Why do school plans mention The Canopies?",
+        question: "Is The Canopies in Splendora or New Caney?",
         answer:
-          "Splendora ISD said in May 2024 that a junior high site and a replacement elementary site were at The Canopies. That is a district plan. Confirm today's zone for the address.",
+          "Both names are used. Forestar publishes F.M. 242 and Harrington Drive, New Caney, TX 77357. The D.R. Horton model directions are 14104 Golden Rays Drive, Splendora, TX 77372. The community says schools are Splendora ISD.",
       },
       {
-        question: "What home sizes are listed?",
+        question: "What schools does the community list?",
         answer:
-          "The D.R. Horton card lists 3 to 6 bedrooms, 2 to 3 baths, one and two story plans, from about 1,156 square feet, priced from the $200s.",
+          "Timber Lakes Elementary, Piney Woods Elementary, Splendora Junior High, and Splendora High School. The page says a junior high opened in the community in August 2025 and a new elementary is planned for August 2026. Confirm the address with the district.",
       },
     ],
   },
@@ -1845,6 +3060,119 @@ const communities: NewHomeCommunity[] = [
           "The April 2026 opening note lists a resort-style pool, green space, walking and biking trails, pickleball courts, and a playground.",
       },
     ],
+  },
+  {
+    slug: "grand-mason-crossing",
+    citySlug: "katy",
+    name: "Grand Mason Crossing",
+    developer: "Long Lake Ltd",
+    address: "5658 Belton Hollow Lane, Katy, TX 77449",
+    location:
+      "Long Lake publishes 5658 Belton Hollow Lane, Katy, TX 77449, and calls the area Katy/Fulshear. The page says the community is on the east side of the Grand Parkway (Highway 99), about seven miles north of I-10, and minutes from Elyson Town Center and Katy Asian Town. It is not Mason Woods. Mason Woods uses a Cypress address on Mason Woods Road.",
+    summary:
+      "Grand Mason Crossing is a Long Lake community in Katy. The page lists Katy ISD schools, future amenities, and current inventory from $400,480. Long Lake is the builder. The model lines named on the page are Briarwood, Discovery, Lake Ridge, and Lakewood.",
+    priceNote:
+      "Current inventory on the Grand Mason Crossing page runs from $400,480. On November 8, 2026 the page listed 5618 Toledo Pines Lane, Plan 264, at $400,480, with $498,325 shown with a line through it, and 5627 Toldeo Pines Lane, Plan 265, at $453,990. Prices change.",
+    homes:
+      "The page lists homes now for sale on Toledo Pines Lane and Cisco Point Lane. Hours are Monday through Saturday 10 am to 7 pm, and Sunday 12 pm to 7 pm. The page names Crest Management as the HOA contact and lists water service as NW Harris County MUD 12.",
+    builders: [
+      {
+        name: "Long Lake Ltd.",
+        detail:
+          "Inventory on the community page starts at $400,480 for 5618 Toledo Pines Lane, Plan 264. 5627 Toldeo Pines Lane, Plan 265, is listed at $453,990. Other homes on the same list are in the $410,000s to the $430,000s. Sales office 5658 Belton Hollow Lane, Katy, TX 77449.",
+      },
+    ],
+    amenities: [
+      "Future pickleball court",
+      "Future playground with shade",
+      "Future pavilion seating",
+      "Future synthetic turf lawn and landscaped gathering areas",
+    ],
+    schoolDistrict: "Katy ISD",
+    schools:
+      "Long Lake says Grand Mason Crossing is in Katy ISD. The page lists McRoberts Elementary at 3535 Fry Rd, Katy, TX 77449, McDonald Junior High at 3635 Lakes of Bridgewater Dr, Katy, TX 77449, and Paetow High School at 23111 Stockdick School Rd, Katy, TX 77493. Confirm the lot with the district.",
+    sources: [
+      { label: "Grand Mason Crossing", url: "https://www.longlakeltd.com/new-homes/communities/grand-mason-crossing/" },
+      {
+        label: "Houston Planning staff report, Mason Road",
+        url: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+      },
+      { label: "TDLR TABS2026000447", url: "https://www.tdlr.texas.gov/TABS/Projects/TABS2026000447" },
+      {
+        label: "Briarwood Crossing model series",
+        url: "https://www.longlakeltd.com/new-homes/communities/briarwood/",
+      },
+      { label: "Long Lake promotions", url: "https://www.longlakeltd.com/promotions/" },
+      {
+        label: "Long Lake inventory savings flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-inventory-savings.webp",
+      },
+      {
+        label: "Long Lake Season of Savings flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/11/new-homes-promotion-pick-rate2.webp",
+      },
+      {
+        label: "Long Lake new-build FHA/VA flyer",
+        url: "https://www.longlakeltd.com/wp-content/uploads/2026/10/new-homes-promotion-fha-va-6-5-fixed.webp",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where is Grand Mason Crossing?",
+        answer:
+          "The published address is 5658 Belton Hollow Lane, Katy, TX 77449, on the east side of the Grand Parkway. It is a Long Lake community, separate from Mason Woods in Cypress.",
+      },
+      {
+        question: "What do homes in Grand Mason Crossing cost?",
+        answer:
+          "On November 8, 2026 the community page listed inventory from $400,480, including 5618 Toledo Pines Lane at $400,480 and 5627 Toldeo Pines Lane at $453,990. Confirm the homesite.",
+      },
+      {
+        question: "What schools does Grand Mason Crossing name?",
+        answer:
+          "Katy ISD. The page lists McRoberts Elementary, McDonald Junior High, and Paetow High School. Confirm the lot with the district.",
+      },
+      {
+        question: "Are the amenities open?",
+        answer:
+          "The page describes a future amenity area with a pickleball court, shaded playground, pavilion, synthetic turf, and landscaped gathering areas. It does not say that area is open.",
+      },
+    ],
+    directory: {
+      intro:
+        "Long Lake does not name internal villages or neighborhoods on the Grand Mason Crossing page. Briarwood, Discovery, Lake Ridge, and Lakewood are the model series on that page. The same four series are also printed on Briarwood Crossing in Rosenberg. Mason Woods is a separate community on Mason Woods Road in Cypress.",
+      limitation:
+        "Checked November 8, 2026: the Long Lake community page, the Long Lake neighborhoods index, the Long Lake communities list, a City of Houston Planning staff report, and a Texas Department of Licensing and Regulation project record. None of those sources gives Grand Mason Crossing a set of named villages. The records below use section numbers. This page does not treat those numbers as neighborhood names, and it does not claim later sections will not be platted. The Houston staff report's table is plats within a quarter mile of a Mason Road study. Elyson, Westfield Village, and the 1,138-acre Grand Mason GP in that table are nearby plans. Grand Mason GP is a separate general plan from Grand Mason Crossing GP.",
+      places: [
+        {
+          name: "Grand Mason Crossing GP",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "General plan. 0 lots on the staff-report table.",
+          detail: "The Houston Planning staff report lists Grand Mason Crossing GP, cycle 2023-21, as a general plan of 217.52 acres.",
+          sourceLabel: "Houston Planning staff report, Mason Road",
+          sourceUrl: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+        },
+        {
+          name: "Grand Mason Crossing Sec 2",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "Recorded single-family section. 60 lots.",
+          detail: "The same staff report lists Grand Mason Crossing Sec 2, cycle 2024-10, as single-family residential with drainage and detention, 23.31 acres and 60 lots.",
+          sourceLabel: "Houston Planning staff report, Mason Road",
+          sourceUrl: "https://houstontx.gov/planning/transportation/MTFP_26/PH-Staff-Report-Mason-Road.pdf",
+        },
+        {
+          name: "Section 1 landscape improvements",
+          group: "Recorded sections",
+          kind: "Plat section",
+          status: "Landscape and amenity permit. The record dates the work from January 1, 2026 to May 1, 2026.",
+          detail: "TDLR project TABS2026000447 is named Grand Mason Crossing Section 1 Landscape Improvements. The scope lists a sidewalk, site furniture, drainage, a pavilion, a pickleball court, synthetic lawn, a playground, amenity fountains, irrigation, and planting. The record address is W. Little York Rd / Mason Rd, Katy, TX 77449.",
+          sourceLabel: "TDLR TABS2026000447",
+          sourceUrl: "https://www.tdlr.texas.gov/TABS/Projects/TABS2026000447",
+        },
+      ],
+    },
   },
   {
     slug: "elyson",
@@ -2588,7 +3916,7 @@ export function communitiesForCity(citySlug: string) {
 }
 
 /** Content date for sitemap lastmod. Not a build clock. */
-export const newHomesContentDate = "2026-11-08";
+export const newHomesContentDate = "2026-11-09";
 
 export function newHomePaths() {
   return [
